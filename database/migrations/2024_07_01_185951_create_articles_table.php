@@ -16,13 +16,13 @@ return new class extends Migration
             $table->string('title');
             $table->integer('price');
             $table->longText('body');
-            $table->string('image');
+            $table->string('image')->nullable();
             $table->foreignId('user_id')->constrained();
             $table->foreignId('category_id')->constrained();
             $table->string('country');
             $table->string('city');
             $table->string('condition');
-            $table->boolean('status');
+            $table->boolean('status')->default(false);
             $table->timestamps();
         });
     }
