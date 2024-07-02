@@ -3,6 +3,7 @@
 namespace App\Livewire;
 
 use App\Models\Article;
+use App\Models\Category;
 use Livewire\Attributes\Validate;
 use Livewire\Component;
 
@@ -46,6 +47,7 @@ class CreateArticleForm extends Component
 
     public function render()
     {
-        return view('livewire.create-article-form');
+        $categories = Category::all();
+        return view('livewire.create-article-form',compact('categories'));
     }
 }

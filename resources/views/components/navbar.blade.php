@@ -67,7 +67,7 @@
                     </form>
                     @endauth
                     <div class="button header-button">
-                        <a href="post-item.html" class="btn">Crea un annuncio</a>
+                        <a href="{{route('articles.create')}}" class="btn">Crea un annuncio</a>
                     </div>
                 </nav> <!-- navbar -->
             </div>

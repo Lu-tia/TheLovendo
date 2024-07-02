@@ -7,19 +7,8 @@
       </p>
     <![endif]-->
 
-    <!-- Preloader -->
-    <div class="preloader">
-        <div class="preloader-inner">
-            <div class="preloader-icon">
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-    </div>
-    <!-- /End Preloader -->
+   
 
-    <x-layouts.navbar>
-    </x-layouts.navbar>
 
     <!-- Start Hero Area -->
     <section class="hero-area overlay">
@@ -676,6 +665,4 @@
         </div>
     </div>
     <!-- End Newsletter Area -->
-    <x-layouts.footer>
-    </x-layouts.footer>
 </x-layouts.main>
