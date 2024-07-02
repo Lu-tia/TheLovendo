@@ -11,13 +11,17 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('posts', function (Blueprint $table) {
+        Schema::create('articles', function (Blueprint $table) {
             $table->id();
             $table->string('title');
             $table->integer('price');
             $table->longText('body');
+            $table->string('image');
             $table->foreignId('user_id')->constrained();
             $table->foreignId('category_id')->constrained();
+            $table->string('country');
+            $table->string('city');
+            $table->string('condition');
             $table->boolean('status');
             $table->timestamps();
         });
