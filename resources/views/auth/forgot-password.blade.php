@@ -1,8 +1,7 @@
-<x-main>
+<x-layouts.main>
     <div class="container my-5">
         <div class="row justify-content-center">
             <div class="col-12 col-md-8">
-                {{-- password.email --}}
                 <form class="p-5 border rounded" action="{{ route('password.email') }}" method="POST">
                     @csrf
                     <div class="mb-3">
@@ -17,4 +16,4 @@
             </div>
         </div>
     </div>
-</x-main>
+</x-layouts.main>

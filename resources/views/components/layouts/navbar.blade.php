@@ -111,6 +111,16 @@
                             </ul>
                         </div>
                         @endguest
+
+                        @auth
+                        <span>Benvenuto, {{ auth()->user()->name }}</span>
+                        <a class="btn btn-sm btn-outline-secondary mx-2" href="{{ route('homepage') }}">Dashboard</a>
+
+                        <form method="POST" action="{{ route('logout') }}">
+                            @csrf
+                            <button class="btn btn-sm btn-outline-secondary mx-2" type="submit">Logout</button>
+                        </form>
+                        @endauth
                         <div class="button header-button">
                             <a href="post-item.html" class="btn">Post an Ad</a>
                         </div>

@@ -1,8 +1,7 @@
-<x-main>
+<x-layouts.main>
     <div class="container my-5">
         <div class="row justify-content-center">
             <div class="col-12 col-md-8">
-                {{-- password.store --}}
                 <form class="p-5 border rounded" action="{{ route('password.update') }}" method="POST">
                     @csrf
                     <input type="hidden" name="token" value="{{ $request->route('token') }}">
@@ -28,4 +27,4 @@
             </div>
         </div>
     </div>
-</x-main>
+</x-layouts.main>

@@ -72,10 +72,12 @@
                                                 <ul>
                                                     <li class="mega-menu-title">Essential Pages</li>
                                                     <li class="nav-item"><a href="about-us.html">About Us</a></li>
-                                                    <li class="nav-item"><a href="item-details.html">Ads Details</a></li>
+                                                    <li class="nav-item"><a href="item-details.html">Ads Details</a>
+                                                    </li>
                                                     <li class="nav-item"><a href="post-item.html">Ads Post</a></li>
                                                     <li class="nav-item"><a href="pricing.html">Pricing Table</a></li>
-                                                    <li class="nav-item active"><a href="registration.html">Sign Up</a></li>
+                                                    <li class="nav-item active"><a href="registration.html">Sign Up</a>
+                                                    </li>
                                                     <li class="nav-item"><a href="login.html">Sign In</a></li>
                                                     <li class="nav-item"><a href="contact.html">Contact Us</a></li>
                                                     <li class="nav-item"><a href="faq.html">FAQ</a></li>
@@ -97,7 +99,8 @@
                                                     <li class="nav-item"><a href="favourite-items.html">Favorite Ads</a>
                                                     </li>
                                                     <li class="nav-item"><a href="post-item.html">Ad post</a></li>
-                                                    <li class="nav-item"><a href="bookmarked-items.html">Bookmarked Ad</a>
+                                                    <li class="nav-item"><a href="bookmarked-items.html">Bookmarked
+                                                            Ad</a>
                                                     </li>
                                                     <li class="nav-item"><a href="messages.html">Messages</a></li>
                                                     <li class="nav-item"><a href="delete-account.html">Close account</a>
@@ -169,40 +172,68 @@
             <div class="row">
                 <div class="col-lg-6 offset-lg-3 col-md-8 offset-md-2 col-12">
                     <div class="form-head">
-                        <h4 class="title">Registrati</h4>
-                        <form action="#!" method="post">
+                        <h4 class="title">Registration</h4>
+                        <form action="{{route('register')}}" method="POST">
+                            @csrf
                             <div class="socila-login">
                                 <ul>
-                                    <li><a href="javascript:void(0)" class="facebook"><i class="lni lni-facebook-original"></i>Import
+                                    <li><a href="javascript:void(0)" class="facebook"><i
+                                                class="lni lni-facebook-original"></i>Import
                                             From Facebook</a></li>
-                                    <li><a href="javascript:void(0)" class="google"><i class="lni lni-google"></i>Import From Google
+                                    <li><a href="javascript:void(0)" class="google"><i class="lni lni-google"></i>Import
+                                            From Google
                                             Plus</a>
                                     </li>
                                 </ul>
                             </div>
                             <div class="alt-option">
-                                <span>Oppure</span>
+                                <span>Or</span>
                             </div>
                             <div class="form-group">
-                                <label>Nome</label>
+                                <label>Name</label>
                                 <input name="name" type="text">
+                                @error('email')
+                                {{ $message }}
+                                @enderror
                             </div>
                             <div class="form-group">
                                 <label>Email</label>
                                 <input name="email" type="email">
+                                @error('email')
+                                {{ $message }}
+                                @enderror
                             </div>
                             <div class="form-group">
                                 <label>Password</label>
-                                <input name="password" type="password">
+                                <input name="password" type="password" id="password">
+                                @error('password')
+                                {{ $message }}
+                                @enderror
                             </div>
                             <div class="form-group">
                                 <label>Confirm Password</label>
-                                <input name="password" type="password">
+                                <input name="password_confirmation" type="password" id="password_confirmation">
+                                @error('password_confirmation')
+                                {{ $message }}
+                                @enderror
+                            </div>
+                            <div class="check-and-pass">
+                                <div class="row align-items-center">
+                                    <div class="col-12">
+                                        <div class="form-check">
+                                            <input type="checkbox" class="form-check-input width-auto"
+                                                id="exampleCheck1">
+                                            <label class="form-check-label">Agree to our <a
+                                                    href="javascript:void(0)">Terms and
+                                                    Conditions</a></label>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                             <div class="button">
                                 <button type="submit" class="btn">Registration</button>
                             </div>
-                            <p class="outer-link">Hai già un account? <a href="login.html"> Accedi adesso</a>
+                            <p class="outer-link">Sei già registrato? <a href="{{route('login')}}"> Accedi ora</a>
                             </p>
                         </form>
                     </div>

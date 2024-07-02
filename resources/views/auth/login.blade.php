@@ -72,7 +72,8 @@
                                                 <ul>
                                                     <li class="mega-menu-title">Essential Pages</li>
                                                     <li class="nav-item"><a href="about-us.html">About Us</a></li>
-                                                    <li class="nav-item"><a href="item-details.html">Ads Details</a></li>
+                                                    <li class="nav-item"><a href="item-details.html">Ads Details</a>
+                                                    </li>
                                                     <li class="nav-item"><a href="post-item.html">Ads Post</a></li>
                                                     <li class="nav-item"><a href="pricing.html">Pricing Table</a></li>
                                                     <li class="nav-item"><a href="registration.html">Sign Up</a></li>
@@ -97,7 +98,8 @@
                                                     <li class="nav-item"><a href="favourite-items.html">Favorite Ads</a>
                                                     </li>
                                                     <li class="nav-item"><a href="post-item.html">Ad post</a></li>
-                                                    <li class="nav-item"><a href="bookmarked-items.html">Bookmarked Ad</a>
+                                                    <li class="nav-item"><a href="bookmarked-items.html">Bookmarked
+                                                            Ad</a>
                                                     </li>
                                                     <li class="nav-item"><a href="messages.html">Messages</a></li>
                                                     <li class="nav-item"><a href="delete-account.html">Close account</a>
@@ -164,25 +166,34 @@
     <!-- End Breadcrumbs -->
 
     <!-- start login section -->
+
     <section class="login section">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 offset-lg-3 col-md-8 offset-md-2 col-12">
                     <div class="form-head">
                         <h4 class="title">Login</h4>
-                        <form action="#!" method="post">
+                        <form action="{{route('login')}}" method="POST">
+                            @csrf
                             <div class="form-group">
                                 <label>Email</label>
                                 <input name="email" type="email">
+                                @error('email')
+                                {{ $message }}
+                                @enderror
                             </div>
                             <div class="form-group">
                                 <label>Password</label>
                                 <input name="password" type="password">
+                                @error('password')
+                                {{ $message }}
+                                @enderror
                             </div>
                             <div class="check-and-pass">
                                 <div class="row align-items-center">
                                     <div class="col-lg-6 col-md-6 col-12">
-                                        <a href="javascript:void(0)" class="lost-pass">Password dimenticata?</a>
+                                        <a href="{{route('password.request')}}" class="lost-pass">Password
+                                            dimenticata?</a>
                                     </div>
                                 </div>
                             </div>
@@ -194,14 +205,16 @@
                             </div>
                             <div class="socila-login">
                                 <ul>
-                                    <li><a href="javascript:void(0)" class="facebook"><i class="lni lni-facebook-original"></i>Login With
+                                    <li><a href="javascript:void(0)" class="facebook"><i
+                                                class="lni lni-facebook-original"></i>Login With
                                             Facebook</a></li>
-                                    <li><a href="javascript:void(0)" class="google"><i class="lni lni-google"></i>Login With Google
+                                    <li><a href="javascript:void(0)" class="google"><i class="lni lni-google"></i>Login
+                                            With Google
                                             Plus</a>
                                     </li>
                                 </ul>
                             </div>
-                            <p class="outer-link">Non hai un account? <a href="registration.html">Registrati ora</a>
+                            <p class="outer-link">Non hai un account? <a href="{{route('register')}}">Registrati ora</a>
                             </p>
                         </form>
                     </div>
