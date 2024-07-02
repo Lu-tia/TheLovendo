@@ -8,19 +8,21 @@ use Livewire\Component;
 
 class CreateArticleForm extends Component
 {
-    #[Validate('required|min:5')]
+    #[Validate('required', message:'Inserisci un titolo')]
+    #[Validate('min:5' , message: 'Il titolo deve essere almeno da 5 caratteri')]
     public $title;
-    #[Validate('required|numeric')]
+    #[Validate('required', message:'Inserisci un prezzo')]
+    #[Validate('numeric', message:'Il prezzo deve essere formato da numeri')]
     public $price;
-    #[Validate('required')]
+    #[Validate('required',message:'Inserisci una descrizione')]
     public $body;
-    #[Validate('required')]
+    #[Validate('required',message:'Inserisci una nazione')]
     public $country;
-    #[Validate('required')]
+    #[Validate('required',message:'Inserisci una città')]
     public $city;
-    #[Validate('required')]
+    #[Validate('required',message:"Inserisci lo stato dell'oggetto")]
     public $condition;
-    #[Validate('required')]
+    #[Validate('required',message:'Imposta una categoria')]
     public $category;
 
     public function store()
