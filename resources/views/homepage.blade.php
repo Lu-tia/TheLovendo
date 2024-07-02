@@ -29,10 +29,9 @@
                     <div class="hero-text text-center">
                         <!-- Start Hero Text -->
                         <div class="section-heading">
-                            <h2 class="wow fadeInUp" data-wow-delay=".3s">Welcome to ClassiGrids</h2>
-                            <p class="wow fadeInUp" data-wow-delay=".5s">Buy And Sell Everything From Used Cars To
-                                Mobile Phones And <br>Computers,
-                                Or Search For Property, Jobs And More.</p>
+                            <h2 class="wow fadeInUp" data-wow-delay=".3s">Benvenuti su TheLovendo!</h2>
+                            <p class="wow fadeInUp" data-wow-delay=".5s">Compra e Vendi da macchine usate
+                                a telefoni e computer, <br> oppure cerca proprietà, lavori e altro.</p>
                         </div>
                         <!-- End Search Form -->
                         <!-- Start Search Form -->
@@ -49,17 +48,17 @@
                                     <div class="search-input">
                                         <label for="category"><i class="lni lni-grid-alt theme-color"></i></label>
                                         <select name="category" id="category">
-                                            <option value="none" selected disabled>Categories</option>
-                                            <option value="none">Vehicle</option>
-                                            <option value="none">Electronics</option>
-                                            <option value="none">Mobiles</option>
-                                            <option value="none">Furniture</option>
-                                            <option value="none">Fashion</option>
-                                            <option value="none">Jobs</option>
-                                            <option value="none">Real Estate</option>
-                                            <option value="none">Animals</option>
-                                            <option value="none">Education</option>
-                                            <option value="none">Matrimony</option>
+                                            <option value="none" selected disabled>Categorie</option>
+                                            <option value="none">Veicoli</option>
+                                            <option value="none">Elettronica</option>
+                                            <option value="none">Telefoni</option>
+                                            <option value="none">Forniture</option>
+                                            <option value="none">Moda</option>
+                                            <option value="none">Lavori</option>
+                                            <option value="none">Case Vacanze</option>
+                                            <option value="none">Animali</option>
+                                            <option value="none">Formazione</option>
+                                            <option value="none">Matrimoni</option>
                                         </select>
                                     </div>
                                 </div>
@@ -67,7 +66,7 @@
                                     <div class="search-input">
                                         <label for="location"><i class="lni lni-map-marker theme-color"></i></label>
                                         <select name="location" id="location">
-                                            <option value="none" selected disabled>Locations</option>
+                                            <option value="none" selected disabled>Locazione</option>
                                             <option value="none">New York</option>
                                             <option value="none">California</option>
                                             <option value="none">Washington</option>
@@ -79,7 +78,7 @@
                                 </div>
                                 <div class="col-lg-2 col-md-2 col-12 p-0">
                                     <div class="search-btn button">
-                                        <button class="btn"><i class="lni lni-search-alt"></i> Search</button>
+                                        <button class="btn"><i class="lni lni-search-alt"></i> Cerca</button>
                                     </div>
                                 </div>
                             </div>
@@ -104,7 +103,7 @@
                                 <div class="icon">
                                     <img src="assets/images/categories/car.svg" alt="#">
                                 </div>
-                                <h3>Vehicle</h3>
+                                <h3>Veicoli</h3>
                                 <h5 class="total">35</h5>
                             </a>
                             <!-- End Single Category -->
@@ -113,7 +112,7 @@
                                 <div class="icon">
                                     <img src="assets/images/categories/laptop.svg" alt="#">
                                 </div>
-                                <h3>Electronics</h3>
+                                <h3>Elettronica</h3>
                                 <h5 class="total">22</h5>
                             </a>
                             <!-- End Single Category -->
@@ -122,7 +121,7 @@
                                 <div class="icon">
                                     <img src="assets/images/categories/matrimony.svg" alt="#">
                                 </div>
-                                <h3>Matrimony</h3>
+                                <h3>Matrimoni</h3>
                                 <h5 class="total">55</h5>
                             </a>
                             <!-- End Single Category -->
@@ -131,7 +130,7 @@
                                 <div class="icon">
                                     <img src="assets/images/categories/furniture.svg" alt="#">
                                 </div>
-                                <h3>Furnitures</h3>
+                                <h3>Forniture</h3>
                                 <h5 class="total">21</h5>
                             </a>
                             <!-- End Single Category -->
@@ -149,7 +148,7 @@
                                 <div class="icon">
                                     <img src="assets/images/categories/real-estate.svg" alt="#">
                                 </div>
-                                <h3>Real Estate</h3>
+                                <h3>Case Vacanze</h3>
                                 <h5 class="total">65</h5>
                             </a>
                             <!-- End Single Category -->
@@ -158,7 +157,7 @@
                                 <div class="icon">
                                     <img src="assets/images/categories/laptop.svg" alt="#">
                                 </div>
-                                <h3>Education</h3>
+                                <h3>Formazione</h3>
                                 <h5 class="total">35</h5>
                             </a>
                             <!-- End Single Category -->
@@ -167,7 +166,7 @@
                                 <div class="icon">
                                     <img src="assets/images/categories/hospital.svg" alt="#">
                                 </div>
-                                <h3>Health & Beauty</h3>
+                                <h3>Salute e Bellezza</h3>
                                 <h5 class="total">22</h5>
                             </a>
                             <!-- End Single Category -->
@@ -176,7 +175,7 @@
                                 <div class="icon">
                                     <img src="assets/images/categories/tshirt.svg" alt="#">
                                 </div>
-                                <h3>Fashion</h3>
+                                <h3>Moda</h3>
                                 <h5 class="total">25</h5>
                             </a>
                             <!-- End Single Category -->
@@ -185,7 +184,7 @@
                                 <div class="icon">
                                     <img src="assets/images/categories/education.svg" alt="#">
                                 </div>
-                                <h3>Education</h3>
+                                <h3>Formazione</h3>
                                 <h5 class="total">42</h5>
                             </a>
                             <!-- End Single Category -->
@@ -203,7 +202,7 @@
                                 <div class="icon">
                                     <img src="assets/images/categories/travel.svg" alt="#">
                                 </div>
-                                <h3>Backpacks</h3>
+                                <h3>Zaini</h3>
                                 <h5 class="total">15</h5>
                             </a>
                             <!-- End Single Category -->
@@ -212,7 +211,7 @@
                                 <div class="icon">
                                     <img src="assets/images/categories/watch.svg" alt="#">
                                 </div>
-                                <h3>Watches</h3>
+                                <h3>Orologi</h3>
                                 <h5 class="total">65</h5>
                             </a>
                             <!-- End Single Category -->
@@ -231,9 +230,10 @@
             <div class="row">
                 <div class="col-12">
                     <div class="section-title">
-                        <h2 class="wow fadeInUp" data-wow-delay=".4s">How it Works</h2>
-                        <p class="wow fadeInUp" data-wow-delay=".6s">There are many variations of passages of Lorem
-                            Ipsum available, but the majority have suffered alteration in some form.</p>
+                        <h2 class="wow fadeInUp" data-wow-delay=".4s">Come funziona</h2>
+                        <p class="wow fadeInUp" data-wow-delay=".6s">
+                            There are many variations of passages of TheLovendo available, but the majority have
+                            suffered alteration in some form.</p>
                     </div>
                 </div>
             </div>
@@ -242,7 +242,7 @@
                     <!-- Start Single Work -->
                     <div class="single-work wow fadeInUp" data-wow-delay=".2s">
                         <span class="serial">01</span>
-                        <h3>Create Account</h3>
+                        <h3>Crea Account</h3>
                         <p>Lorem ipsum dolor sit amet constur adipisicing sed do eiusmod tempor incididunt labore.</p>
                     </div>
                     <!-- End Single Work -->
@@ -251,7 +251,7 @@
                     <!-- Start Single Work -->
                     <div class="single-work wow fadeInUp" data-wow-delay=".4s">
                         <span class="serial">02</span>
-                        <h3>Post Your Ads</h3>
+                        <h3>Posta il tuo annuncio!</h3>
                         <p>Lorem ipsum dolor sit amet constur adipisicing sed do eiusmod tempor incididunt labore.</p>
                     </div>
                     <!-- End Single Work -->
@@ -260,7 +260,7 @@
                     <!-- Start Single Work -->
                     <div class="single-work wow fadeInUp" data-wow-delay=".6s">
                         <span class="serial">03</span>
-                        <h3>Sell Your Item</h3>
+                        <h3>Vendi i tuoi oggetti</h3>
                         <p>Lorem ipsum dolor sit amet constur adipisicing sed do eiusmod tempor incididunt labore.</p>
                     </div>
                     <!-- End Single Work -->
@@ -276,9 +276,10 @@
             <div class="row">
                 <div class="col-12">
                     <div class="section-title">
-                        <h2 class="wow fadeInUp" data-wow-delay=".4s">Latest Products</h2>
-                        <p class="wow fadeInUp" data-wow-delay=".6s">There are many variations of passages of Lorem
-                            Ipsum available, but the majority have suffered alteration in some form.</p>
+                        <h2 class="wow fadeInUp" data-wow-delay=".4s">Ultimi Prodotti</h2>
+                        <p class="wow fadeInUp" data-wow-delay=".6s">There are many variations of passages of
+                            TheLovendo available, but the majority have
+                            suffered alteration in some form.</p>
                     </div>
                 </div>
             </div>
@@ -296,12 +297,12 @@
                                                 alt="#">
                                             <span>Smith jeko</span></a>
                                     </div>
-                                    <p class="sale">For Sale</p>
+                                    <p class="sale">In vendita</p>
                                 </div>
                             </div>
                             <div class="content">
                                 <div class="top-content">
-                                    <a href="javascript:void(0)" class="tag">Mobile Phones</a>
+                                    <a href="javascript:void(0)" class="tag">Telefoni</a>
                                     <h3 class="title">
                                         <a href="item-details.html">Apple Iphone X</a>
                                     </h3>
@@ -322,7 +323,7 @@
                                     </ul>
                                 </div>
                                 <div class="bottom-content">
-                                    <p class="price">Start From: <span>$200.00</span></p>
+                                    <p class="price">A partire da: <span>$200.00</span></p>
                                     <a href="javascript:void(0)" class="like"><i class="lni lni-heart"></i></a>
                                 </div>
                             </div>
@@ -346,11 +347,11 @@
                             </div>
                             <div class="content">
                                 <div class="top-content">
-                                    <a href="javascript:void(0)" class="tag">Real Estate</a>
+                                    <a href="javascript:void(0)" class="tag">Case Vacanze</a>
                                     <h3 class="title">
-                                        <a href="item-details.html">Amazing Room for Rent</a>
+                                        <a href="item-details.html">Fantastico appartamento in affitto</a>
                                     </h3>
-                                    <p class="update-time">Last Updated: 2 hours ago</p>
+                                    <p class="update-time">Ultimo aggiornamento: 2 ore fa</p>
                                     <ul class="rating">
                                         <li><i class="lni lni-star-filled"></i></li>
                                         <li><i class="lni lni-star-filled"></i></li>
@@ -367,7 +368,7 @@
                                     </ul>
                                 </div>
                                 <div class="bottom-content">
-                                    <p class="price">Start From: <span>$450.00</span></p>
+                                    <p class="price">A partire da: <span>$450.00</span></p>
                                     <a href="javascript:void(0)" class="like"><i class="lni lni-heart"></i></a>
                                 </div>
                             </div>
@@ -386,17 +387,17 @@
                                                 alt="#">
                                             <span>Devid Milan</span></a>
                                     </div>
-                                    <p class="sale">For Sale</p>
+                                    <p class="sale">In vendita</p>
                                 </div>
-                                <p class="item-position"><i class="lni lni-bolt"></i> Featured</p>
+                                <p class="item-position"><i class="lni lni-bolt"></i> In primo piano</p>
                             </div>
                             <div class="content">
                                 <div class="top-content">
-                                    <a href="javascript:void(0)" class="tag">Mobile Phones</a>
+                                    <a href="javascript:void(0)" class="tag">Telefoni</a>
                                     <h3 class="title">
                                         <a href="item-details.html">Canon SX Powershot D-SLR</a>
                                     </h3>
-                                    <p class="update-time">Last Updated: 3 hours ago</p>
+                                    <p class="update-time">Ultimo aggiornamento: 3 ore fa</p>
                                     <ul class="rating">
                                         <li><i class="lni lni-star-filled"></i></li>
                                         <li><i class="lni lni-star-filled"></i></li>
@@ -413,7 +414,7 @@
                                     </ul>
                                 </div>
                                 <div class="bottom-content">
-                                    <p class="price">Start From: <span>$700.00</span></p>
+                                    <p class="price">A partire da: <span>$700.00</span></p>
                                     <a href="javascript:void(0)" class="like"><i class="lni lni-heart"></i></a>
                                 </div>
                             </div>
@@ -432,16 +433,16 @@
                                                 alt="#">
                                             <span>Jesia Jully</span></a>
                                     </div>
-                                    <p class="sale">For Sale</p>
+                                    <p class="sale">In vendita</p>
                                 </div>
                             </div>
                             <div class="content">
                                 <div class="top-content">
-                                    <a href="javascript:void(0)" class="tag">Vehicles</a>
+                                    <a href="javascript:void(0)" class="tag">Veicoli</a>
                                     <h3 class="title">
                                         <a href="item-details.html">BMW 5 Series GT Car</a>
                                     </h3>
-                                    <p class="update-time">Last Updated: 4 hours ago</p>
+                                    <p class="update-time">Ultimo aggiornamento: 4 ore fa</p>
                                     <ul class="rating">
                                         <li><i class="lni lni-star-filled"></i></li>
                                         <li><i class="lni lni-star-filled"></i></li>
@@ -458,7 +459,7 @@
                                     </ul>
                                 </div>
                                 <div class="bottom-content">
-                                    <p class="price">Start From: <span>$1000.00</span></p>
+                                    <p class="price">A partire da: <span>$1000.00</span></p>
                                     <a href="javascript:void(0)" class="like"><i class="lni lni-heart"></i></a>
                                 </div>
                             </div>
@@ -477,9 +478,9 @@
                                                 alt="#">
                                             <span>Thomas Deco</span></a>
                                     </div>
-                                    <p class="sale">For Sale</p>
+                                    <p class="sale">In vendita</p>
                                 </div>
-                                <p class="item-position"><i class="lni lni-bolt"></i> Featured</p>
+                                <p class="item-position"><i class="lni lni-bolt"></i> In primo piano</p>
                             </div>
                             <div class="content">
                                 <div class="top-content">
@@ -487,7 +488,7 @@
                                     <h3 class="title">
                                         <a href="item-details.html">Apple Macbook Pro 13 Inch</a>
                                     </h3>
-                                    <p class="update-time">Last Updated: 5 hours ago</p>
+                                    <p class="update-time">Ultimo aggiornamento: 5 ore fa</p>
                                     <ul class="rating">
                                         <li><i class="lni lni-star-filled"></i></li>
                                         <li><i class="lni lni-star-filled"></i></li>
@@ -504,7 +505,7 @@
                                     </ul>
                                 </div>
                                 <div class="bottom-content">
-                                    <p class="price">Start From: <span>$550.00</span></p>
+                                    <p class="price">A partire da: <span>$550.00</span></p>
                                     <a href="javascript:void(0)" class="like"><i class="lni lni-heart"></i></a>
                                 </div>
                             </div>
@@ -523,16 +524,16 @@
                                                 alt="#">
                                             <span>Jonson zack</span></a>
                                     </div>
-                                    <p class="sale">For Sale</p>
+                                    <p class="sale">In vendita</p>
                                 </div>
                             </div>
                             <div class="content">
                                 <div class="top-content">
-                                    <a href="javascript:void(0)" class="tag">Restaurant</a>
+                                    <a href="javascript:void(0)" class="tag">Ristorante</a>
                                     <h3 class="title">
                                         <a href="item-details.html">Cream Restaurant</a>
                                     </h3>
-                                    <p class="update-time">Last Updated: 7 hours ago</p>
+                                    <p class="update-time">Ultimo aggiornamento: 5 ore fa</p>
                                     <ul class="rating">
                                         <li><i class="lni lni-star-filled"></i></li>
                                         <li><i class="lni lni-star-filled"></i></li>
@@ -549,7 +550,7 @@
                                     </ul>
                                 </div>
                                 <div class="bottom-content">
-                                    <p class="price">Start From: <span>$500.00</span></p>
+                                    <p class="price">A partire da: <span>$500.00</span></p>
                                     <a href="javascript:void(0)" class="like"><i class="lni lni-heart"></i></a>
                                 </div>
                             </div>
@@ -562,946 +563,6 @@
     </section>
     <!-- /End Items Grid Area -->
 
-    {{-- 
-    <!-- Start Browse Cities Area -->
-    <section class="browse-cities section">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="section-title">
-                        <h2 class="wow fadeInUp" data-wow-delay=".4s">Browse By Cities</h2>
-                        <p class="wow fadeInUp" data-wow-delay=".6s">There are many variations of passages of Lorem
-                            Ipsum available, but the majority have suffered alteration in some form.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="row ">
-                <div class="col-lg-4 col-md-4 col-12">
-                    <!-- Start Single City -->
-                    <div class="single-city wow fadeInUp" data-wow-delay=".2s">
-                        <a href="category.html" class="info-box">
-                            <div class="image">
-                                <img src="https://via.placeholder.com/425x290" alt="#">
-                            </div>
-                            <div class="content">
-                                <h4 class="name">
-                                    New York City
-                                    <span>155 Ads</span>
-                                </h4>
-                            </div>
-                            <div class="more-btn">
-                                <i class="lni lni-circle-plus"></i>
-                            </div>
-                        </a>
-                    </div>
-                    <!-- Start Single City -->
-                </div>
-                <div class="col-lg-4 col-md-4 col-12">
-                    <!-- Start Single City -->
-                    <div class="single-city wow fadeInUp" data-wow-delay=".4s">
-                        <a href="category.html" class="info-box">
-                            <div class="image">
-                                <img src="https://via.placeholder.com/425x290" alt="#">
-                            </div>
-                            <div class="content">
-                                <h4 class="name">
-                                    Philadelphia
-                                    <span>288 Ads</span>
-                                </h4>
-                            </div>
-                            <div class="more-btn">
-                                <i class="lni lni-circle-plus"></i>
-                            </div>
-                        </a>
-                    </div>
-                    <!-- Start Single City -->
-                </div>
-                <div class="col-lg-4 col-md-4 col-12">
-                    <!-- Start Single City -->
-                    <div class="single-city wow fadeInUp" data-wow-delay=".6s">
-                        <a href="category.html" class="info-box">
-                            <div class="image">
-                                <img src="https://via.placeholder.com/425x290" alt="#">
-                            </div>
-                            <div class="content">
-                                <h4 class="name">
-                                    Los Angeles
-                                    <span>95 Ads</span>
-                                </h4>
-                            </div>
-                            <div class="more-btn">
-                                <i class="lni lni-circle-plus"></i>
-                            </div>
-                        </a>
-                    </div>
-                    <!-- Start Single City -->
-                </div>
-                <div class="col-lg-6 col-md-6 col-12">
-                    <!-- Start Single City -->
-                    <div class="single-city wow fadeInUp" data-wow-delay=".2s">
-                        <a href="category.html" class="info-box">
-                            <div class="image">
-                                <img src="https://via.placeholder.com/635x325" alt="#">
-                            </div>
-                            <div class="content">
-                                <h4 class="name">
-                                    San Francisco
-                                    <span>355 Ads</span>
-                                </h4>
-                            </div>
-                            <div class="more-btn">
-                                <i class="lni lni-circle-plus"></i>
-                            </div>
-                        </a>
-                    </div>
-                    <!-- Start Single City -->
-                </div>
-                <div class="col-lg-6 col-md-6 col-12">
-                    <!-- Start Single City -->
-                    <div class="single-city wow fadeInUp" data-wow-delay=".4s">
-                        <a href="category.html" class="info-box">
-                            <div class="image">
-                                <img src="https://via.placeholder.com/635x325" alt="#">
-                            </div>
-                            <div class="content">
-                                <h4 class="name">
-                                    Newe Orleans
-                                    <span>76 Ads</span>
-                                </h4>
-                            </div>
-                            <div class="more-btn">
-                                <i class="lni lni-circle-plus"></i>
-                            </div>
-                        </a>
-                    </div>
-                    <!-- Start Single City -->
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- /End Browse Cities Area --> --}}
-
-    {{-- <!-- Start Call Action Area -->
-    <section class="call-action overlay section">
-        <div class="container">
-            <div class="row ">
-                <div class="col-lg-8 offset-lg-2 col-12">
-                    <div class="inner">
-                        <div class="content">
-                            <h2 class="wow fadeInUp" data-wow-delay=".4s">Do you have something to sell?</h2>
-                            <p class="wow fadeInUp" data-wow-delay=".6s">Post your ad for free on ClassiGrids</p>
-                            <div class="button wow fadeInUp" data-wow-delay=".8s">
-                                <a href="javascript:void(0)" class="btn">Post an ad now</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- End Call Action Area --> --}}
-
-    {{-- <!-- Start Items Tab Area -->
-    <section class="items-tab section">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="section-title">
-                        <h2 class="wow fadeInUp" data-wow-delay=".4s">Trending Ads</h2>
-                        <p class="wow fadeInUp" data-wow-delay=".6s">There are many variations of passages of Lorem
-                            Ipsum available, but the majority have suffered alteration in some form.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-12">
-                    <nav>
-                        <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                            <button class="nav-link active" id="nav-latest-tab" data-bs-toggle="tab"
-                                data-bs-target="#nav-latest" type="button" role="tab"
-                                aria-controls="nav-latest" aria-selected="true">Latest Ads</button>
-                            <button class="nav-link" id="nav-popular-tab" data-bs-toggle="tab"
-                                data-bs-target="#nav-popular" type="button" role="tab"
-                                aria-controls="nav-popular" aria-selected="false">Popular Ads</button>
-                            <button class="nav-link" id="nav-random-tab" data-bs-toggle="tab"
-                                data-bs-target="#nav-random" type="button" role="tab"
-                                aria-controls="nav-random" aria-selected="false">Random Ads</button>
-                        </div>
-                    </nav>
-                    <div class="tab-content" id="nav-tabContent">
-                        <div class="tab-pane fade show active" id="nav-latest" role="tabpanel"
-                            aria-labelledby="nav-latest-tab">
-                            <div class="row">
-                                <div class="col-lg-3 col-md-4 col-12">
-                                    <!-- Start Single Item -->
-                                    <div class="single-item-grid">
-                                        <div class="image">
-                                            <a href="item-details.html"><img src="https://via.placeholder.com/600x400"
-                                                    alt="#"></a>
-                                            <i class=" cross-badge lni lni-bolt"></i>
-                                            <span class="flat-badge sale">Sale</span>
-                                        </div>
-                                        <div class="content">
-                                            <a href="javascript:void(0)" class="tag">Mobile</a>
-                                            <h3 class="title">
-                                                <a href="item-details.html">Apple Iphone X</a>
-                                            </h3>
-                                            <p class="location"><a href="javascript:void(0)"><i
-                                                        class="lni lni-map-marker">
-                                                    </i>Boston</a></p>
-                                            <ul class="info">
-                                                <li class="price">$890.00</li>
-                                                <li class="like"><a href="javascript:void(0)"><i
-                                                            class="lni lni-heart"></i></a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <!-- End Single Item -->
-                                </div>
-                                <div class="col-lg-3 col-md-4 col-12">
-                                    <!-- Start Single Item -->
-                                    <div class="single-item-grid">
-                                        <div class="image">
-                                            <a href="item-details.html"><img src="https://via.placeholder.com/600x400"
-                                                    alt="#"></a>
-                                            <i class=" cross-badge lni lni-bolt"></i>
-                                            <span class="flat-badge sale">Sale</span>
-                                        </div>
-                                        <div class="content">
-                                            <a href="javascript:void(0)" class="tag">Others</a>
-                                            <h3 class="title">
-                                                <a href="item-details.html">Travel Kit</a>
-                                            </h3>
-                                            <p class="location"><a href="javascript:void(0)"><i
-                                                        class="lni lni-map-marker">
-                                                    </i>San Francisco</a></p>
-                                            <ul class="info">
-                                                <li class="price">$580.00</li>
-                                                <li class="like"><a href="javascript:void(0)"><i
-                                                            class="lni lni-heart"></i></a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <!-- End Single Item -->
-                                </div>
-                                <div class="col-lg-3 col-md-4 col-12">
-                                    <!-- Start Single Item -->
-                                    <div class="single-item-grid">
-                                        <div class="image">
-                                            <a href="item-details.html"><img src="https://via.placeholder.com/600x400"
-                                                    alt="#"></a>
-                                            <i class=" cross-badge lni lni-bolt"></i>
-                                            <span class="flat-badge sale">Sale</span>
-                                        </div>
-                                        <div class="content">
-                                            <a href="javascript:void(0)" class="tag">Electronic</a>
-                                            <h3 class="title">
-                                                <a href="item-details.html">Nikon DSLR Camera</a>
-                                            </h3>
-                                            <p class="location"><a href="javascript:void(0)"><i
-                                                        class="lni lni-map-marker">
-                                                    </i>Alaska, USA</a></p>
-                                            <ul class="info">
-                                                <li class="price">$560.00</li>
-                                                <li class="like"><a href="javascript:void(0)"><i
-                                                            class="lni lni-heart"></i></a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <!-- End Single Item -->
-                                </div>
-                                <div class="col-lg-3 col-md-4 col-12">
-                                    <!-- Start Single Item -->
-                                    <div class="single-item-grid">
-                                        <div class="image">
-                                            <a href="item-details.html"><img src="https://via.placeholder.com/600x400"
-                                                    alt="#"></a>
-                                            <i class=" cross-badge lni lni-bolt"></i>
-                                            <span class="flat-badge sale">Sale</span>
-                                        </div>
-                                        <div class="content">
-                                            <a href="javascript:void(0)" class="tag">Furniture</a>
-                                            <h3 class="title">
-                                                <a href="item-details.html">Poster Paint</a>
-                                            </h3>
-                                            <p class="location"><a href="javascript:void(0)"><i
-                                                        class="lni lni-map-marker">
-                                                    </i>Las Vegas</a></p>
-                                            <ul class="info">
-                                                <li class="price">$85.00</li>
-                                                <li class="like"><a href="javascript:void(0)"><i
-                                                            class="lni lni-heart"></i></a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <!-- End Single Item -->
-                                </div>
-                                <div class="col-lg-3 col-md-4 col-12">
-                                    <!-- Start Single Item -->
-                                    <div class="single-item-grid">
-                                        <div class="image">
-                                            <a href="item-details.html"><img src="https://via.placeholder.com/600x400"
-                                                    alt="#"></a>
-                                            <i class=" cross-badge lni lni-bolt"></i>
-                                            <span class="flat-badge sale">Sale</span>
-                                        </div>
-                                        <div class="content">
-                                            <a href="javascript:void(0)" class="tag">Furniture</a>
-                                            <h3 class="title">
-                                                <a href="item-details.html">Official Metting Chair</a>
-                                            </h3>
-                                            <p class="location"><a href="javascript:void(0)"><i
-                                                        class="lni lni-map-marker">
-                                                    </i>Alaska, USA</a></p>
-                                            <ul class="info">
-                                                <li class="price">$750.00</li>
-                                                <li class="like"><a href="javascript:void(0)"><i
-                                                            class="lni lni-heart"></i></a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <!-- End Single Item -->
-                                </div>
-                                <div class="col-lg-3 col-md-4 col-12">
-                                    <!-- Start Single Item -->
-                                    <div class="single-item-grid">
-                                        <div class="image">
-                                            <a href="item-details.html"><img src="https://via.placeholder.com/600x400"
-                                                    alt="#"></a>
-                                            <i class=" cross-badge lni lni-bolt"></i>
-                                            <span class="flat-badge rent">Rent</span>
-                                        </div>
-                                        <div class="content">
-                                            <a href="javascript:void(0)" class="tag">Books & Magazine</a>
-                                            <h3 class="title">
-                                                <a href="item-details.html">Story Book</a>
-                                            </h3>
-                                            <p class="location"><a href="javascript:void(0)"><i
-                                                        class="lni lni-map-marker">
-                                                    </i>New York, USA</a></p>
-                                            <ul class="info">
-                                                <li class="price">$120.00</li>
-                                                <li class="like"><a href="javascript:void(0)"><i
-                                                            class="lni lni-heart"></i></a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <!-- End Single Item -->
-                                </div>
-                                <div class="col-lg-3 col-md-4 col-12">
-                                    <!-- Start Single Item -->
-                                    <div class="single-item-grid">
-                                        <div class="image">
-                                            <a href="item-details.html"><img src="https://via.placeholder.com/600x400"
-                                                    alt="#"></a>
-                                            <i class=" cross-badge lni lni-bolt"></i>
-                                            <span class="flat-badge sale">Sale</span>
-                                        </div>
-                                        <div class="content">
-                                            <a href="javascript:void(0)" class="tag">Electronic</a>
-                                            <h3 class="title">
-                                                <a href="item-details.html">Cctv camera</a>
-                                            </h3>
-                                            <p class="location"><a href="javascript:void(0)"><i
-                                                        class="lni lni-map-marker">
-                                                    </i>Delhi, India</a></p>
-                                            <ul class="info">
-                                                <li class="price">$350.00</li>
-                                                <li class="like"><a href="javascript:void(0)"><i
-                                                            class="lni lni-heart"></i></a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <!-- End Single Item -->
-                                </div>
-                                <div class="col-lg-3 col-md-4 col-12">
-                                    <!-- Start Single Item -->
-                                    <div class="single-item-grid">
-                                        <div class="image">
-                                            <a href="item-details.html"><img src="https://via.placeholder.com/600x400"
-                                                    alt="#"></a>
-                                            <i class=" cross-badge lni lni-bolt"></i>
-                                            <span class="flat-badge sale">Sale</span>
-                                        </div>
-                                        <div class="content">
-                                            <a href="javascript:void(0)" class="tag">Mobile</a>
-                                            <h3 class="title">
-                                                <a href="item-details.html">Samsung Glalaxy S8</a>
-                                            </h3>
-                                            <p class="location"><a href="javascript:void(0)"><i
-                                                        class="lni lni-map-marker">
-                                                    </i>Delaware, USA</a></p>
-                                            <ul class="info">
-                                                <li class="price">$299.00</li>
-                                                <li class="like"><a href="javascript:void(0)"><i
-                                                            class="lni lni-heart"></i></a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <!-- End Single Item -->
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tab-pane fade" id="nav-popular" role="tabpanel"
-                            aria-labelledby="nav-popular-tab">
-                            <div class="row">
-                                <div class="col-lg-3 col-md-4 col-12">
-                                    <!-- Start Single Item -->
-                                    <div class="single-item-grid">
-                                        <div class="image">
-                                            <a href="item-details.html"><img src="https://via.placeholder.com/600x400"
-                                                    alt="#"></a>
-                                            <i class=" cross-badge lni lni-bolt"></i>
-                                            <span class="flat-badge sale">Sale</span>
-                                        </div>
-                                        <div class="content">
-                                            <a href="javascript:void(0)" class="tag">Others</a>
-                                            <h3 class="title">
-                                                <a href="item-details.html">Travel Kit</a>
-                                            </h3>
-                                            <p class="location"><a href="javascript:void(0)"><i
-                                                        class="lni lni-map-marker">
-                                                    </i>San Francisco</a></p>
-                                            <ul class="info">
-                                                <li class="price">$580.00</li>
-                                                <li class="like"><a href="javascript:void(0)"><i
-                                                            class="lni lni-heart"></i></a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <!-- End Single Item -->
-                                </div>
-                                <div class="col-lg-3 col-md-4 col-12">
-                                    <!-- Start Single Item -->
-                                    <div class="single-item-grid">
-                                        <div class="image">
-                                            <a href="item-details.html"><img src="https://via.placeholder.com/600x400"
-                                                    alt="#"></a>
-                                            <i class=" cross-badge lni lni-bolt"></i>
-                                            <span class="flat-badge sale">Sale</span>
-                                        </div>
-                                        <div class="content">
-                                            <a href="javascript:void(0)" class="tag">Electronic</a>
-                                            <h3 class="title">
-                                                <a href="item-details.html">Nikon DSLR Camera</a>
-                                            </h3>
-                                            <p class="location"><a href="javascript:void(0)"><i
-                                                        class="lni lni-map-marker">
-                                                    </i>Alaska, USA</a></p>
-                                            <ul class="info">
-                                                <li class="price">$560.00</li>
-                                                <li class="like"><a href="javascript:void(0)"><i
-                                                            class="lni lni-heart"></i></a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <!-- End Single Item -->
-                                </div>
-                                <div class="col-lg-3 col-md-4 col-12">
-                                    <!-- Start Single Item -->
-                                    <div class="single-item-grid">
-                                        <div class="image">
-                                            <a href="item-details.html"><img src="https://via.placeholder.com/600x400"
-                                                    alt="#"></a>
-                                            <i class=" cross-badge lni lni-bolt"></i>
-                                            <span class="flat-badge sale">Sale</span>
-                                        </div>
-                                        <div class="content">
-                                            <a href="javascript:void(0)" class="tag">Mobile</a>
-                                            <h3 class="title">
-                                                <a href="item-details.html">Apple Iphone X</a>
-                                            </h3>
-                                            <p class="location"><a href="javascript:void(0)"><i
-                                                        class="lni lni-map-marker">
-                                                    </i>Boston</a></p>
-                                            <ul class="info">
-                                                <li class="price">$890.00</li>
-                                                <li class="like"><a href="javascript:void(0)"><i
-                                                            class="lni lni-heart"></i></a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <!-- End Single Item -->
-                                </div>
-                                <div class="col-lg-3 col-md-4 col-12">
-                                    <!-- Start Single Item -->
-                                    <div class="single-item-grid">
-                                        <div class="image">
-                                            <a href="item-details.html"><img src="https://via.placeholder.com/600x400"
-                                                    alt="#"></a>
-                                            <i class=" cross-badge lni lni-bolt"></i>
-                                            <span class="flat-badge sale">Sale</span>
-                                        </div>
-                                        <div class="content">
-                                            <a href="javascript:void(0)" class="tag">Furniture</a>
-                                            <h3 class="title">
-                                                <a href="item-details.html">Poster Paint</a>
-                                            </h3>
-                                            <p class="location"><a href="javascript:void(0)"><i
-                                                        class="lni lni-map-marker">
-                                                    </i>Las Vegas</a></p>
-                                            <ul class="info">
-                                                <li class="price">$85.00</li>
-                                                <li class="like"><a href="javascript:void(0)"><i
-                                                            class="lni lni-heart"></i></a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <!-- End Single Item -->
-                                </div>
-                                <div class="col-lg-3 col-md-4 col-12">
-                                    <!-- Start Single Item -->
-                                    <div class="single-item-grid">
-                                        <div class="image">
-                                            <a href="item-details.html"><img src="https://via.placeholder.com/600x400"
-                                                    alt="#"></a>
-                                            <i class=" cross-badge lni lni-bolt"></i>
-                                            <span class="flat-badge sale">Sale</span>
-                                        </div>
-                                        <div class="content">
-                                            <a href="javascript:void(0)" class="tag">Electronic</a>
-                                            <h3 class="title">
-                                                <a href="item-details.html">Cctv camera</a>
-                                            </h3>
-                                            <p class="location"><a href="javascript:void(0)"><i
-                                                        class="lni lni-map-marker">
-                                                    </i>Delhi, India</a></p>
-                                            <ul class="info">
-                                                <li class="price">$350.00</li>
-                                                <li class="like"><a href="javascript:void(0)"><i
-                                                            class="lni lni-heart"></i></a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <!-- End Single Item -->
-                                </div>
-                                <div class="col-lg-3 col-md-4 col-12">
-                                    <!-- Start Single Item -->
-                                    <div class="single-item-grid">
-                                        <div class="image">
-                                            <a href="item-details.html"><img src="https://via.placeholder.com/600x400"
-                                                    alt="#"></a>
-                                            <i class=" cross-badge lni lni-bolt"></i>
-                                            <span class="flat-badge sale">Sale</span>
-                                        </div>
-                                        <div class="content">
-                                            <a href="javascript:void(0)" class="tag">Mobile</a>
-                                            <h3 class="title">
-                                                <a href="item-details.html">Samsung Glalaxy S8</a>
-                                            </h3>
-                                            <p class="location"><a href="javascript:void(0)"><i
-                                                        class="lni lni-map-marker">
-                                                    </i>Delaware, USA</a></p>
-                                            <ul class="info">
-                                                <li class="price">$299.00</li>
-                                                <li class="like"><a href="javascript:void(0)"><i
-                                                            class="lni lni-heart"></i></a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <!-- End Single Item -->
-                                </div>
-                                <div class="col-lg-3 col-md-4 col-12">
-                                    <!-- Start Single Item -->
-                                    <div class="single-item-grid">
-                                        <div class="image">
-                                            <a href="item-details.html"><img src="https://via.placeholder.com/600x400"
-                                                    alt="#"></a>
-                                            <i class=" cross-badge lni lni-bolt"></i>
-                                            <span class="flat-badge sale">Sale</span>
-                                        </div>
-                                        <div class="content">
-                                            <a href="javascript:void(0)" class="tag">Furniture</a>
-                                            <h3 class="title">
-                                                <a href="item-details.html">Official Metting Chair</a>
-                                            </h3>
-                                            <p class="location"><a href="javascript:void(0)"><i
-                                                        class="lni lni-map-marker">
-                                                    </i>Alaska, USA</a></p>
-                                            <ul class="info">
-                                                <li class="price">$750.00</li>
-                                                <li class="like"><a href="javascript:void(0)"><i
-                                                            class="lni lni-heart"></i></a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <!-- End Single Item -->
-                                </div>
-                                <div class="col-lg-3 col-md-4 col-12">
-                                    <!-- Start Single Item -->
-                                    <div class="single-item-grid">
-                                        <div class="image">
-                                            <a href="item-details.html"><img src="https://via.placeholder.com/600x400"
-                                                    alt="#"></a>
-                                            <i class=" cross-badge lni lni-bolt"></i>
-                                            <span class="flat-badge rent">Rent</span>
-                                        </div>
-                                        <div class="content">
-                                            <a href="javascript:void(0)" class="tag">Books & Magazine</a>
-                                            <h3 class="title">
-                                                <a href="item-details.html">Story Book</a>
-                                            </h3>
-                                            <p class="location"><a href="javascript:void(0)"><i
-                                                        class="lni lni-map-marker">
-                                                    </i>New York, USA</a></p>
-                                            <ul class="info">
-                                                <li class="price">$120.00</li>
-                                                <li class="like"><a href="javascript:void(0)"><i
-                                                            class="lni lni-heart"></i></a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <!-- End Single Item -->
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tab-pane fade" id="nav-random" role="tabpanel" aria-labelledby="nav-random-tab">
-                            <div class="row">
-                                <div class="col-lg-3 col-md-4 col-12">
-                                    <!-- Start Single Item -->
-                                    <div class="single-item-grid">
-                                        <div class="image">
-                                            <a href="item-details.html"><img src="https://via.placeholder.com/600x400"
-                                                    alt="#"></a>
-                                            <i class=" cross-badge lni lni-bolt"></i>
-                                            <span class="flat-badge sale">Sale</span>
-                                        </div>
-                                        <div class="content">
-                                            <a href="javascript:void(0)" class="tag">Electronic</a>
-                                            <h3 class="title">
-                                                <a href="item-details.html">Nikon DSLR Camera</a>
-                                            </h3>
-                                            <p class="location"><a href="javascript:void(0)"><i
-                                                        class="lni lni-map-marker">
-                                                    </i>Alaska, USA</a></p>
-                                            <ul class="info">
-                                                <li class="price">$560.00</li>
-                                                <li class="like"><a href="javascript:void(0)"><i
-                                                            class="lni lni-heart"></i></a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <!-- End Single Item -->
-                                </div>
-                                <div class="col-lg-3 col-md-4 col-12">
-                                    <!-- Start Single Item -->
-                                    <div class="single-item-grid">
-                                        <div class="image">
-                                            <a href="item-details.html"><img src="https://via.placeholder.com/600x400"
-                                                    alt="#"></a>
-                                            <i class=" cross-badge lni lni-bolt"></i>
-                                            <span class="flat-badge sale">Sale</span>
-                                        </div>
-                                        <div class="content">
-                                            <a href="javascript:void(0)" class="tag">Furniture</a>
-                                            <h3 class="title">
-                                                <a href="item-details.html">Poster Paint</a>
-                                            </h3>
-                                            <p class="location"><a href="javascript:void(0)"><i
-                                                        class="lni lni-map-marker">
-                                                    </i>Las Vegas</a></p>
-                                            <ul class="info">
-                                                <li class="price">$85.00</li>
-                                                <li class="like"><a href="javascript:void(0)"><i
-                                                            class="lni lni-heart"></i></a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <!-- End Single Item -->
-                                </div>
-                                <div class="col-lg-3 col-md-4 col-12">
-                                    <!-- Start Single Item -->
-                                    <div class="single-item-grid">
-                                        <div class="image">
-                                            <a href="item-details.html"><img src="https://via.placeholder.com/600x400"
-                                                    alt="#"></a>
-                                            <i class=" cross-badge lni lni-bolt"></i>
-                                            <span class="flat-badge sale">Sale</span>
-                                        </div>
-                                        <div class="content">
-                                            <a href="javascript:void(0)" class="tag">Furniture</a>
-                                            <h3 class="title">
-                                                <a href="item-details.html">Official Metting Chair</a>
-                                            </h3>
-                                            <p class="location"><a href="javascript:void(0)"><i
-                                                        class="lni lni-map-marker">
-                                                    </i>Alaska, USA</a></p>
-                                            <ul class="info">
-                                                <li class="price">$750.00</li>
-                                                <li class="like"><a href="javascript:void(0)"><i
-                                                            class="lni lni-heart"></i></a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <!-- End Single Item -->
-                                </div>
-                                <div class="col-lg-3 col-md-4 col-12">
-                                    <!-- Start Single Item -->
-                                    <div class="single-item-grid">
-                                        <div class="image">
-                                            <a href="item-details.html"><img src="https://via.placeholder.com/600x400"
-                                                    alt="#"></a>
-                                            <i class=" cross-badge lni lni-bolt"></i>
-                                            <span class="flat-badge sale">Sale</span>
-                                        </div>
-                                        <div class="content">
-                                            <a href="javascript:void(0)" class="tag">Mobile</a>
-                                            <h3 class="title">
-                                                <a href="item-details.html">Apple Iphone X</a>
-                                            </h3>
-                                            <p class="location"><a href="javascript:void(0)"><i
-                                                        class="lni lni-map-marker">
-                                                    </i>Boston</a></p>
-                                            <ul class="info">
-                                                <li class="price">$890.00</li>
-                                                <li class="like"><a href="javascript:void(0)"><i
-                                                            class="lni lni-heart"></i></a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <!-- End Single Item -->
-                                </div>
-                                <div class="col-lg-3 col-md-4 col-12">
-                                    <!-- Start Single Item -->
-                                    <div class="single-item-grid">
-                                        <div class="image">
-                                            <a href="item-details.html"><img
-                                                    src="https://via.placeholder.com/600x400" alt="#"></a>
-                                            <i class=" cross-badge lni lni-bolt"></i>
-                                            <span class="flat-badge sale">Sale</span>
-                                        </div>
-                                        <div class="content">
-                                            <a href="javascript:void(0)" class="tag">Others</a>
-                                            <h3 class="title">
-                                                <a href="item-details.html">Travel Kit</a>
-                                            </h3>
-                                            <p class="location"><a href="javascript:void(0)"><i
-                                                        class="lni lni-map-marker">
-                                                    </i>San Francisco</a></p>
-                                            <ul class="info">
-                                                <li class="price">$580.00</li>
-                                                <li class="like"><a href="javascript:void(0)"><i
-                                                            class="lni lni-heart"></i></a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <!-- End Single Item -->
-                                </div>
-                                <div class="col-lg-3 col-md-4 col-12">
-                                    <!-- Start Single Item -->
-                                    <div class="single-item-grid">
-                                        <div class="image">
-                                            <a href="item-details.html"><img
-                                                    src="https://via.placeholder.com/600x400" alt="#"></a>
-                                            <i class=" cross-badge lni lni-bolt"></i>
-                                            <span class="flat-badge rent">Rent</span>
-                                        </div>
-                                        <div class="content">
-                                            <a href="javascript:void(0)" class="tag">Books & Magazine</a>
-                                            <h3 class="title">
-                                                <a href="item-details.html">Story Book</a>
-                                            </h3>
-                                            <p class="location"><a href="javascript:void(0)"><i
-                                                        class="lni lni-map-marker">
-                                                    </i>New York, USA</a></p>
-                                            <ul class="info">
-                                                <li class="price">$120.00</li>
-                                                <li class="like"><a href="javascript:void(0)"><i
-                                                            class="lni lni-heart"></i></a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <!-- End Single Item -->
-                                </div>
-                                <div class="col-lg-3 col-md-4 col-12">
-                                    <!-- Start Single Item -->
-                                    <div class="single-item-grid">
-                                        <div class="image">
-                                            <a href="item-details.html"><img
-                                                    src="https://via.placeholder.com/600x400" alt="#"></a>
-                                            <i class=" cross-badge lni lni-bolt"></i>
-                                            <span class="flat-badge sale">Sale</span>
-                                        </div>
-                                        <div class="content">
-                                            <a href="javascript:void(0)" class="tag">Electronic</a>
-                                            <h3 class="title">
-                                                <a href="item-details.html">Cctv camera</a>
-                                            </h3>
-                                            <p class="location"><a href="javascript:void(0)"><i
-                                                        class="lni lni-map-marker">
-                                                    </i>Delhi, India</a></p>
-                                            <ul class="info">
-                                                <li class="price">$350.00</li>
-                                                <li class="like"><a href="javascript:void(0)"><i
-                                                            class="lni lni-heart"></i></a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <!-- End Single Item -->
-                                </div>
-                                <div class="col-lg-3 col-md-4 col-12">
-                                    <!-- Start Single Item -->
-                                    <div class="single-item-grid">
-                                        <div class="image">
-                                            <a href="item-details.html"><img
-                                                    src="https://via.placeholder.com/600x400" alt="#"></a>
-                                            <i class=" cross-badge lni lni-bolt"></i>
-                                            <span class="flat-badge sale">Sale</span>
-                                        </div>
-                                        <div class="content">
-                                            <a href="javascript:void(0)" class="tag">Mobile</a>
-                                            <h3 class="title">
-                                                <a href="item-details.html">Samsung Glalaxy S8</a>
-                                            </h3>
-                                            <p class="location"><a href="javascript:void(0)"><i
-                                                        class="lni lni-map-marker">
-                                                    </i>Delaware, USA</a></p>
-                                            <ul class="info">
-                                                <li class="price">$299.00</li>
-                                                <li class="like"><a href="javascript:void(0)"><i
-                                                            class="lni lni-heart"></i></a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <!-- End Single Item -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- End Items Tab Area --> --}}
-
-    {{-- <!-- Start Pricing Table Area -->
-    <section class="pricing-table section">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="section-title">
-                        <h2 class="wow fadeInUp" data-wow-delay=".4s">Pricing Plan</h2>
-                        <p class="wow fadeInUp" data-wow-delay=".6s">There are many variations of passages of Lorem
-                            Ipsum available, but the majority have suffered alteration in some form.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-4 col-md-6 col-12">
-                    <!-- Single Table -->
-                    <div class="single-table wow fadeInUp" data-wow-delay=".2s">
-                        <!-- Table Head -->
-                        <div class="table-head">
-                            <div class="price">
-                                <h2 class="amount">$00<span class="duration">/ Month</span></h2>
-                            </div>
-                            <h4 class="title">Free</h4>
-                        </div>
-                        <!-- End Table Head -->
-                        <!-- Table List -->
-                        <ul class="table-list">
-                            <li>One Listing</li>
-                            <li>Contact Display</li>
-                            <li>Image Gallery</li>
-                            <li>30 Days Availablity</li>
-                            <li>Non-Featured</li>
-                            <li>Business Tagline</li>
-                        </ul>
-                        <!-- End Table List -->
-                        <!-- Table Bottom -->
-                        <div class="button">
-                            <a class="btn" href="javascript:void(0)">Select Plan</a>
-                        </div>
-                        <!-- End Table Bottom -->
-                    </div>
-                    <!-- End Single Table-->
-                </div>
-                <div class="col-lg-4 col-md-6 col-12">
-                    <!-- Single Table -->
-                    <div class="single-table wow fadeInUp" data-wow-delay=".4s">
-                        <!-- Table Head -->
-                        <div class="table-head">
-                            <div class="price">
-                                <h2 class="amount">$59<span class="duration">/ Month</span></h2>
-                            </div>
-                            <h4 class="title">Standard</h4>
-                        </div>
-                        <!-- End Table Head -->
-                        <!-- Table List -->
-                        <ul class="table-list">
-                            <li>One Listing</li>
-                            <li>Contact Display</li>
-                            <li>Image Gallery</li>
-                            <li>60 Days Availablity</li>
-                            <li>Non-Featured</li>
-                            <li>Business Tagline</li>
-                        </ul>
-                        <!-- End Table List -->
-                        <!-- Table Bottom -->
-                        <div class="button">
-                            <a class="btn" href="javascript:void(0)">Select Plan</a>
-                        </div>
-                        <!-- End Table Bottom -->
-                    </div>
-                    <!-- End Single Table-->
-                </div>
-                <div class="col-lg-4 col-md-6 col-12">
-                    <!-- Single Table -->
-                    <div class="single-table wow fadeInUp" data-wow-delay=".6s">
-                        <!-- Table Head -->
-                        <div class="table-head">
-                            <div class="price">
-                                <h2 class="amount">$99<span class="duration">/ Month</span></h2>
-                            </div>
-                            <h4 class="title">Premium</h4>
-                        </div>
-                        <!-- End Table Head -->
-                        <!-- Table List -->
-                        <ul class="table-list">
-                            <li>One Listing</li>
-                            <li>Contact Display</li>
-                            <li>Image Gallery</li>
-                            <li>90 Days Availablity</li>
-                            <li>Non-Featured</li>
-                            <li>Business Tagline</li>
-                        </ul>
-                        <!-- End Table List -->
-                        <!-- Table Bottom -->
-                        <div class="button">
-                            <a class="btn" href="javascript:void(0)">Select Plan</a>
-                        </div>
-                        <!-- End Table Bottom -->
-                    </div>
-                    <!-- End Single Table-->
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--/ End Pricing Table Area --> --}}
 
     <!-- Start Testimonials Area -->
     <section class="testimonials section">
@@ -1509,9 +570,10 @@
             <div class="row">
                 <div class="col-12">
                     <div class="section-title align-center gray-bg">
-                        <h2 class="wow fadeInUp" data-wow-delay=".4s">What People Say</h2>
-                        <p class="wow fadeInUp" data-wow-delay=".6s">There are many variations of passages of Lorem
-                            Ipsum available, but the majority have suffered alteration in some form.</p>
+                        <h2 class="wow fadeInUp" data-wow-delay=".4s">Cosa dicono di Noi!</h2>
+                        <p class="wow fadeInUp" data-wow-delay=".6s">
+                            Esistono molte varianti dei passaggi di TheLovendo disponibile, ma la maggior parte ha
+                            subito alterazioni in qualche forma.</p>
                     </div>
                 </div>
             </div>
@@ -1530,9 +592,10 @@
                             </h4>
                         </div>
                         <div class="text">
-                            <p>"It’s amazing how much easier it has been to meet new people and create instant
-                                connections. I have the exact same personality, the only thing that has changed is my
-                                mindset and a few behaviors."</p>
+                            <p>"È incredibile quanto sia stato più facile incontrare nuove persone e creare
+                                istantaneamente
+                                connessioni. Ho la stessa identica personalità, l'unica cosa che è cambiata è la mia
+                                mentalità e alcuni comportamenti."</p>
                         </div>
                     </div>
                     <!-- End Single Testimonial -->
@@ -1551,9 +614,10 @@
                             </h4>
                         </div>
                         <div class="text">
-                            <p>"It’s amazing how much easier it has been to meet new people and create instant
-                                connections. I have the exact same personality, the only thing that has changed is my
-                                mindset and a few behaviors."</p>
+                            <p>"È incredibile quanto sia stato più facile incontrare nuove persone e creare
+                                istantaneamente
+                                connessioni. Ho la stessa identica personalità, l'unica cosa che è cambiata è la mia
+                                mentalità e alcuni comportamenti."</p>
                         </div>
                     </div>
                     <!-- End Single Testimonial -->
@@ -1572,9 +636,10 @@
                             </h4>
                         </div>
                         <div class="text">
-                            <p>"It’s amazing how much easier it has been to meet new people and create instant
-                                connections. I have the exact same personality, the only thing that has changed is my
-                                mindset and a few behaviors."</p>
+                            <p>"È incredibile quanto sia stato più facile incontrare nuove persone e creare
+                                istantaneamente
+                                connessioni. Ho la stessa identica personalità, l'unica cosa che è cambiata è la mia
+                                mentalità e alcuni comportamenti."</p>
                         </div>
                     </div>
                     <!-- End Single Testimonial -->
@@ -1583,138 +648,6 @@
         </div>
     </section>
     <!-- End Testimonial Area -->
-    {{-- 
-    <!-- Start How Works Area -->
-    <section class="how-works section">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="section-title">
-                        <h2 class="wow fadeInUp" data-wow-delay=".4s">How it Works</h2>
-                        <p class="wow fadeInUp" data-wow-delay=".6s">There are many variations of passages of Lorem
-                            Ipsum available, but the majority have suffered alteration in some form.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-4 col-md-4 col-12">
-                    <!-- Start Single Work -->
-                    <div class="single-work wow fadeInUp" data-wow-delay=".2s">
-                        <span class="serial">01</span>
-                        <h3>Create Account</h3>
-                        <p>Lorem ipsum dolor sit amet constur adipisicing sed do eiusmod tempor incididunt labore.</p>
-                    </div>
-                    <!-- End Single Work -->
-                </div>
-                <div class="col-lg-4 col-md-4 col-12">
-                    <!-- Start Single Work -->
-                    <div class="single-work wow fadeInUp" data-wow-delay=".4s">
-                        <span class="serial">02</span>
-                        <h3>Post Your Ads</h3>
-                        <p>Lorem ipsum dolor sit amet constur adipisicing sed do eiusmod tempor incididunt labore.</p>
-                    </div>
-                    <!-- End Single Work -->
-                </div>
-                <div class="col-lg-4 col-md-4 col-12">
-                    <!-- Start Single Work -->
-                    <div class="single-work wow fadeInUp" data-wow-delay=".6s">
-                        <span class="serial">03</span>
-                        <h3>Sell Your Item</h3>
-                        <p>Lorem ipsum dolor sit amet constur adipisicing sed do eiusmod tempor incididunt labore.</p>
-                    </div>
-                    <!-- End Single Work -->
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- End How Works Area --> --}}
-
-    {{-- <!-- Start Latest News Area -->
-    <div class="latest-news-area section">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="section-title">
-                        <h2 class="wow fadeInUp" data-wow-delay=".4s">latest news</h2>
-                        <p class="wow fadeInUp" data-wow-delay=".6s">There are many variations of passages of Lorem
-                            Ipsum available, but the majority have suffered alteration in some form.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-4 col-md-6 col-12">
-                    <!-- Single News -->
-                    <div class="single-news wow fadeInUp" data-wow-delay=".3s">
-                        <div class="image">
-                            <a href="blog-single-sidebar.html"><img class="thumb"
-                                    src="https://via.placeholder.com/370x230" alt="#"></a>
-                        </div>
-                        <div class="content-body">
-                            <h4 class="title"><a href="blog-single-sidebar.html">10 Things Successful Mompreneurs
-                                    Do
-                                    Different</a></h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis soluta libero molestiae,
-                                id reiciendis ipsum. </p>
-                            <div class="meta-details">
-                                <ul>
-                                    <li><a href="javascript:void(0)">Jan 24,2023</a></li>
-                                    <li><a href="javascript:void(0)">Technology</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- End Single News -->
-                </div>
-                <div class="col-lg-4 col-md-6 col-12">
-                    <!-- Single News -->
-                    <div class="single-news wow fadeInUp" data-wow-delay=".5s">
-                        <div class="image">
-                            <a href="blog-single-sidebar.html"><img class="thumb"
-                                    src="https://via.placeholder.com/370x230" alt="#"></a>
-                        </div>
-                        <div class="content-body">
-                            <h4 class="title"><a href="blog-single-sidebar.html">A digital prescription for the
-                                    industry.</a>
-                            </h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis soluta libero molestiae,
-                                id reiciendis ipsum. </p>
-                            <div class="meta-details">
-                                <ul>
-                                    <li><a href="javascript:void(0)">Feb 20,2023</a></li>
-                                    <li><a href="javascript:void(0)">Magazine</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- End Single News -->
-                </div>
-                <div class="col-lg-4 col-md-6 col-12">
-                    <!-- Single News -->
-                    <div class="single-news wow fadeInUp" data-wow-delay=".7s">
-                        <div class="image">
-                            <a href="blog-single-sidebar.html"><img class="thumb"
-                                    src="https://via.placeholder.com/370x230" alt="#"></a>
-                        </div>
-                        <div class="content-body">
-                            <h4 class="title"><a href="blog-single-sidebar.html">Strategic & commercial approach
-                                    with
-                                    issues.</a></h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis soluta libero molestiae,
-                                id reiciendis ipsum. </p>
-                            <div class="meta-details">
-                                <ul>
-                                    <li><a href="javascript:void(0)">Mar 15,2023</a></li>
-                                    <li><a href="javascript:void(0)">Technology</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- End Single News -->
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- End Latest News Area --> --}}
 
     <!-- Start Newsletter Area -->
     <div class="newsletter section">
@@ -1725,7 +658,7 @@
                         <div class="title">
                             <i class="lni lni-alarm"></i>
                             <h2>Newsletter</h2>
-                            <p>We don't send spam so don't worry.</p>
+                            <p>Non invieremo Spam, non preoccuparti!</p>
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-6 col-12">
@@ -1743,6 +676,6 @@
         </div>
     </div>
     <!-- End Newsletter Area -->
-<x-layouts.footer>
-</x-layouts.footer>
+    <x-layouts.footer>
+    </x-layouts.footer>
 </x-layouts.main>
