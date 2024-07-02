@@ -169,7 +169,7 @@
             <div class="row">
                 <div class="col-lg-6 offset-lg-3 col-md-8 offset-md-2 col-12">
                     <div class="form-head">
-                        <h4 class="title">Registration</h4>
+                        <h4 class="title">Registrati</h4>
                         <form action="#!" method="post">
                             <div class="socila-login">
                                 <ul>
@@ -181,11 +181,11 @@
                                 </ul>
                             </div>
                             <div class="alt-option">
-                                <span>Or</span>
+                                <span>Oppure</span>
                             </div>
                             <div class="form-group">
-                                <label>Name</label>
-                                <input name="password" type="text">
+                                <label>Nome</label>
+                                <input name="name" type="text">
                             </div>
                             <div class="form-group">
                                 <label>Email</label>
@@ -199,22 +199,10 @@
                                 <label>Confirm Password</label>
                                 <input name="password" type="password">
                             </div>
-                            <div class="check-and-pass">
-                                <div class="row align-items-center">
-                                    <div class="col-12">
-                                        <div class="form-check">
-                                            <input type="checkbox" class="form-check-input width-auto"
-                                                id="exampleCheck1">
-                                            <label class="form-check-label">Agree to our <a href="javascript:void(0)">Terms and
-                                                    Conditions</a></label>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
                             <div class="button">
                                 <button type="submit" class="btn">Registration</button>
                             </div>
-                            <p class="outer-link">Already have an account? <a href="login.html"> Login Now</a>
+                            <p class="outer-link">Hai già un account? <a href="login.html"> Accedi adesso</a>
                             </p>
                         </form>
                     </div>
