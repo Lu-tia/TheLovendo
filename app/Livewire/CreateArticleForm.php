@@ -4,31 +4,52 @@ namespace App\Livewire;
 
 use App\Models\Article;
 use App\Models\Category;
-use Livewire\Attributes\Validate;
 use Livewire\Component;
+use Illuminate\Validation\Rule;
 
 class CreateArticleForm extends Component
 {
-    #[Validate('required', message:'Inserisci un titolo')]
-    #[Validate('min:5' , message: 'Il titolo deve essere almeno da 5 caratteri')]
     public $title;
-    #[Validate('required', message:'Inserisci un prezzo')]
-    #[Validate('numeric', message:'Il prezzo deve essere formato da numeri')]
     public $price;
-    #[Validate('required',message:'Inserisci una descrizione')]
     public $body;
-    #[Validate('required',message:'Inserisci una nazione')]
     public $country;
-    #[Validate('required',message:'Inserisci una città')]
     public $city;
-    #[Validate('required',message:"Inserisci lo stato dell'oggetto")]
     public $condition;
-    #[Validate('required',message:'Imposta una categoria')]
     public $category;
-
+    
+    protected function rules()
+    {
+        return [
+            'title' => 'required|min:5',
+            'price' => 'required|numeric',
+            'body' => 'required',
+            'country' => 'required',
+            'city' => 'required',
+            'condition' => ['required', Rule::in(['Usato', 'Nuovo'])],
+            'category' => 'required|exists:categories,id',
+        ];
+    }
+    
+    protected function messages()
+    {
+        return [
+            'title.required' => 'Inserisci un titolo valido',
+            'title.min' => 'Il titolo deve contenere almeno 5 caratteri',
+            'price.required' => 'Inserisci un prezzo',
+            'price.numeric' => 'Il prezzo deve essere formato da numeri',
+            'body.required' => 'Inserisci una descrizione',
+            'country.required' => 'Inserisci una nazione',
+            'city.required' => 'Inserisci una città',
+            'condition.required' => "Inserisci lo stato dell'oggetto",
+            'category.required' => 'Imposta una categoria',
+            'category.exists' => 'La categoria selezionata non è valida',
+        ];
+    }
+    
     public function store()
     {
         $this->validate();
+        
         Article::create([
             'title' => $this->title,
             'price' => $this->price,
@@ -39,15 +60,14 @@ class CreateArticleForm extends Component
             'user_id' => auth()->user()->id,
             'category_id' => $this->category,
         ]);
-
-        session()->flash('success','Articolo creato con successo');
-        return $this->redirect('/');
-
+        
+        session()->flash('success', 'Articolo creato con successo');
+        return redirect('/');
     }
-
+    
     public function render()
     {
         $categories = Category::all();
-        return view('livewire.create-article-form',compact('categories'));
+        return view('livewire.create-article-form', compact('categories'));
     }
 }
