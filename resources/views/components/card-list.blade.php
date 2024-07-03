@@ -1,8 +1,5 @@
-<div class="col-12">
-    <div class="tab-content " id="nav-tabContent">
-        <div class="tab-pane fade show active" id="nav-grid" role="tabpanel" aria-labelledby="nav-grid-tab">
-            <div class="row ">
-                <div class="col-lg-4 col-md-6 col-12">
+
+               <div class="col-lg-4 col-md-6 col-12">
                     <!-- Start Single Item -->
                     <div class="single-item-grid">
                         <div class="image">
@@ -23,8 +20,4 @@
                         </div>
                     </div>
                     <!-- End Single Item -->
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+                </div>   
