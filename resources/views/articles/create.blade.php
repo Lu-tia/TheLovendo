@@ -54,7 +54,7 @@
                 </div>
                 <div class="col-lg-9 col-md-8 col-12">
                     <div class="main-content">
-                        @livewire('create-article-form')
+                        @livewire('articles.create-article-form')
                         <!-- End Post Ad Block Area -->
                     </div>
                 </div>
