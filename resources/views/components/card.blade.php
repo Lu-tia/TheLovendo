@@ -34,7 +34,6 @@
             </div>
             <div class="bottom-content">
                 <p class="price">A partire da: <span>{{ $article->price }}€</span></p>
-                <a href="javascript:void(0)" class="like"><i class="lni lni-heart"></i></a>
             </div>
         </div>
     </div>
