@@ -17,9 +17,17 @@
                         <ul id="nav" class="navbar-nav ms-auto">
 
                             <li class="nav-item">
-                                <a class=" dd-menu collapsed" href="{{ route('homepage') }}"
-                                    data-bs-target="#submenu-1-1" aria-expanded="false"
-                                    aria-label="Toggle navigation">Home</a>
+                                <a class=" dd-menu collapsed" href="{{ route('homepage') }}" data-bs-toggle="collapse"
+                                    data-bs-target="#submenu-1-1" aria-controls="navbarSupportedContent"
+                                    aria-expanded="false" aria-label="Toggle navigation">Home</a>
+                                <ul class="sub-menu collapse" id="submenu-1-1">
+                                    <li class="nav-item active"><a href="{{ route('login') }}"><i
+                                                class="lni lni-enter"></i> Login</a></li>
+                                    <li class="nav-item"><a href="{{ route('register') }}"><i class="lni lni-user"></i>
+                                            Register</a>
+                                    </li>
+
+                                </ul>
                             </li>
                             <li class="nav-item">
                                 <a href="{{ route('articles.index') }}" aria-label="Toggle navigation">Articoli</a>

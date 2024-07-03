@@ -29,7 +29,7 @@
     <!-- /End Preloader -->
 
 
-    <header>
+    <header class="header navbar-area">
         <x-navbar />
     </header>
 
