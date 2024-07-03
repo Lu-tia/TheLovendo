@@ -17,9 +17,8 @@
                         <ul id="nav" class="navbar-nav ms-auto">
 
                             <li class="nav-item">
-                                <a class="dd-menu collapsed" href="{{ route('homepage') }}" data-bs-toggle="collapse"
-                                    data-bs-target="#submenu-1-1" aria-controls="navbarSupportedContent"
-                                    aria-expanded="false" aria-label="Toggle navigation">Home</a>
+                                <a href="{{ route('homepage') }}" aria-label="Toggle navigation">Home</a>
+                            </li>
 
                                 {{-- <a class=" dd-menu collapsed" href="{{ route('homepage') }}" data-bs-toggle="collapse"
                                     data-bs-target="#submenu-1-1" aria-controls="navbarSupportedContent"
