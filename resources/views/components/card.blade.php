@@ -1,4 +1,4 @@
-<div>
+<div class="col-lg-4 col-md-6 col-12">
     <!-- Start Single Grid -->
     <div class="single-grid wow fadeInUp" data-wow-delay=".2s">
         <div class="image">
@@ -15,9 +15,9 @@
             <div class="top-content">
                 {{-- <a href="javascript:void(0)" class="tag">Telefoni</a> --}}
                 <h3 class="title">
-                    <a href="item-details.html">{{$article->title}}</a>
+                    <a href="item-details.html">{{ $article->title }}</a>
                 </h3>
-                <p class="update-time">{{$article->created_at->locale('it_IT')->isoFormat('DD MMM YYYY')}}</p>
+                <p class="update-time">{{ $article->created_at->locale('it_IT')->isoFormat('DD MMM YYYY') }}</p>
                 <ul class="rating">
                     <li><i class="lni lni-star-filled"></i></li>
                     <li><i class="lni lni-star-filled"></i></li>
@@ -27,13 +27,13 @@
                     <li><a href="javascript:void(0)">(35)</a></li>
                 </ul>
                 <ul class="info-list">
-                    <li><a href="javascript:void(0)"><i class="lni lni-map-marker"></i> {{$article->city}}</a></li>
+                    <li><a href="javascript:void(0)"><i class="lni lni-map-marker"></i> {{ $article->city }}</a></li>
                     {{-- <li><a href="javascript:void(0)"><i class="lni lni-timer"></i> Feb 18,
                             2023</a></li> --}}
                 </ul>
             </div>
             <div class="bottom-content">
-                <p class="price">A partire da: <span>{{$article->price}}€</span></p>
+                <p class="price">A partire da: <span>{{ $article->price }}€</span></p>
                 <a href="javascript:void(0)" class="like"><i class="lni lni-heart"></i></a>
             </div>
         </div>

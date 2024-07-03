@@ -18,7 +18,8 @@
                                 <div class="col-lg-4 col-md-4 col-12 p-0">
                                     <div class="search-input">
                                         <label for="keyword"><i class="lni lni-search-alt theme-color"></i></label>
-                                        <input type="text" name="keyword" id="keyword" placeholder="Product keyword">
+                                        <input type="text" name="keyword" id="keyword"
+                                            placeholder="Product keyword">
                                     </div>
                                 </div>
                                 <div class="col-lg-3 col-md-3 col-12 p-0">
@@ -27,9 +28,8 @@
                                         <select name="category" id="category">
                                             <option value="" selected disabled>Categorie</option>
                                             @forelse ($categories as $category)
-                                            <option value="{{$category->id}}">{{$category->name}}</option>
+                                                <option value="{{ $category->id }}">{{ $category->name }}</option>
                                             @empty
-                                                
                                             @endforelse
                                         </select>
                                     </div>
@@ -257,14 +257,11 @@
             </div>
             <div class="single-head">
                 <div class="row">
-                    <div class="col-lg-4 col-md-6 col-12 d-flex justify-content-center">
 
-                        @foreach ($articles as $article )
-
+                    @foreach ($articles as $article)
                         <x-card :article=$article />
-                        @endforeach
+                    @endforeach
 
-                    </div>
 
                 </div>
             </div>
