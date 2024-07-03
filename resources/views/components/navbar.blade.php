@@ -13,7 +13,7 @@
                         <span class="toggler-icon"></span>
                         <span class="toggler-icon"></span>
                     </button>
-                    <div class="colla pse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
+                    <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
                         <ul id="nav" class="navbar-nav ms-auto">
 
                             <li class="nav-item">
@@ -49,7 +49,7 @@
                                     <a href="{{ route('login') }}"><i class="lni lni-enter"></i> Accedi</a>
                                 </li>
                                 <li>
-                                    <a href="{{ route('register') }}"><i class="lni lni-user"></i> Registrazione</a>
+                                    <a href="{{ route('register') }}"><i class="lni lni-user"></i> Registrati</a>
                                 </li>
                             </ul>
                         </div>

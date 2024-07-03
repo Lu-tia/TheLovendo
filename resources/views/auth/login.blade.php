@@ -46,8 +46,11 @@
                             <div class="check-and-pass">
                                 <div class="row align-items-center">
                                     <div class="col-lg-6 col-md-6 col-12">
-                                        <a href="{{ route('password.request') }}" class="lost-pass">Password
-                                            dimenticata?</a>
+                                        <div class="form-check">  
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-12">
+                                        <a href="{{ route('password.request') }}" class="lost-pass">Password dimenticata?</a>
                                     </div>
                                 </div>
                             </div>
@@ -59,13 +62,8 @@
                             </div>
                             <div class="socila-login">
                                 <ul>
-                                    <li><a href="javascript:void(0)" class="facebook"><i
-                                                class="lni lni-facebook-original"></i>Login With
-                                            Facebook</a></li>
-                                    <li><a href="javascript:void(0)" class="google"><i class="lni lni-google"></i>Login
-                                            With Google
-                                            Plus</a>
-                                    </li>
+                                    <li><a href="javascript:void(0)" class="facebook"><i class="lni lni-facebook-original"></i>Accedi con Facebook</a></li>
+                                    <li><a href="javascript:void(0)" class="google"><i class="lni lni-google"></i>Accedi con Google</a></li>
                                 </ul>
                             </div>
                             <p class="outer-link">Non hai un account? <a href="{{ route('register') }}">Registrati

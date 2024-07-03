@@ -32,20 +32,15 @@
                             @csrf
                             <div class="socila-login">
                                 <ul>
-                                    <li><a href="javascript:void(0)" class="facebook"><i
-                                                class="lni lni-facebook-original"></i>Import
-                                            From Facebook</a></li>
-                                    <li><a href="javascript:void(0)" class="google"><i class="lni lni-google"></i>Import
-                                            From Google
-                                            Plus</a>
-                                    </li>
+                                    <li><a href="javascript:void(0)" class="facebook"><i class="lni lni-facebook-original"></i>Accedi con Facebook</a></li>
+                                    <li><a href="javascript:void(0)" class="google"><i class="lni lni-google"></i>Accedi con Google</a></li>
                                 </ul>
                             </div>
                             <div class="alt-option">
-                                <span>Or</span>
+                                <span>Oppure</span>
                             </div>
                             <div class="form-group">
-                                <label>Name</label>
+                                <label>Nome</label>
                                 <input name="name" type="text">
                                 @error('name')
                                     {{ $message }}
@@ -66,27 +61,14 @@
                                 @enderror
                             </div>
                             <div class="form-group">
-                                <label>Confirm Password</label>
+                                <label>Conferma Password</label>
                                 <input name="password_confirmation" type="password" id="password_confirmation">
                                 @error('password_confirmation')
                                     {{ $message }}
                                 @enderror
                             </div>
-                            <div class="check-and-pass">
-                                <div class="row align-items-center">
-                                    <div class="col-12">
-                                        <div class="form-check">
-                                            <input type="checkbox" class="form-check-input width-auto"
-                                                id="exampleCheck1">
-                                            <label class="form-check-label">Agree to our <a
-                                                    href="javascript:void(0)">Terms and
-                                                    Conditions</a></label>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
                             <div class="button">
-                                <button type="submit" class="btn">Registration</button>
+                                <button type="submit" class="btn">Registrati</button>
                             </div>
                             <p class="outer-link">Sei già registrato? <a href="{{ route('login') }}"> Accedi ora</a>
                             </p>
