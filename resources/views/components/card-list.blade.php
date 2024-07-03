@@ -3,19 +3,18 @@
                     <!-- Start Single Item -->
                     <div class="single-item-grid">
                         <div class="image">
-                            <a href="item-details.html"><img src="https://via.placeholder.com/600x400" alt="#"></a>
-                            <i class=" cross-badge lni lni-bolt"></i>
-                            <span class="flat-badge sale">Sale</span>
+                            <a href="{{route('articles.show',['id'=> $article])}}"><img src="https://via.placeholder.com/600x400" alt="#"></a>
                         </div>
                         <div class="content">
-                            <a href="javascript:void(0)" class="tag">Mobile</a>
+                            <a href="{{route('articles.show',['id'=> $article])}}" class="tag">{{$article->category->name}}</a>
                             <h3 class="title">
-                                <a href="item-details.html">{{ $article->title }}</a>
+                                <a href="{{route('articles.show',['id'=> $article])}}">{{ $article->title }}</a>
                             </h3>
-                            <p class="location"><a href="javascript:void(0)"><i class="lni lni-map-marker">
+                            <p class="location"><a href="{{route('articles.show',['id'=> $article])}}"><i class="lni lni-map-marker">
                                     </i>{{ $article->city }}</a></p>
-                            <ul class="info">
+                            <ul class="info d-flex">
                                 <li class="price">{{ $article->price }}€</li>
+                                <li class="ms-auto mt-2"><p class="update-time">{{ $article->created_at->locale('it_IT')->isoFormat('DD MMM YYYY') }}</p></li>
                             </ul>
                         </div>
                     </div>

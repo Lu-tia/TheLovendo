@@ -2,7 +2,7 @@
     <!-- Start Single Grid -->
     <div class="single-grid wow fadeInUp" data-wow-delay=".2s">
         <div class="image">
-            <a href="item-details.html" class="thumbnail"><img src="https://via.placeholder.com/600x400" alt="#"></a>
+            <a href="{{route('articles.show',['id'=> $article])}}" class="thumbnail"><img src="https://via.placeholder.com/600x400" alt="#"></a>
             <div class="author">
                 {{-- <div class="author-image">
                     <a href="javascript:void(0)"><img src="https://via.placeholder.com/100x100" alt="#">
@@ -14,9 +14,7 @@
         <div class="content">
             <div class="top-content">
                 {{-- <a href="javascript:void(0)" class="tag">Telefoni</a> --}}
-                <h3 class="title">
-                    <a href="item-details.html">{{ $article->title }}</a>
-                </h3>
+                <h3 class="title">{{ $article->title }}</h3>
                 <p class="update-time">{{ $article->created_at->locale('it_IT')->isoFormat('DD MMM YYYY') }}</p>
                 <ul class="rating">
                     <li><i class="lni lni-star-filled"></i></li>
