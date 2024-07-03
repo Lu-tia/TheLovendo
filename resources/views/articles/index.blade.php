@@ -74,8 +74,8 @@
                         <!-- Start Single Widget -->
                         <div class="single-widget range">
                             <h3>Price Range</h3>
-                            <input type="range" class="form-range" name="range" step="1" min="100"
-                                max="10000" value="10" onchange="rangePrimary.value=value">
+                            <input type="range" class="form-range" name="range" step="1" min="100" max="10000"
+                                value="10" onchange="rangePrimary.value=value">
                             <div class="range-inner">
                                 <label>$</label>
                                 <input type="text" id="rangePrimary" placeholder="100" />
@@ -123,13 +123,12 @@
                                     <div class="tab-pane fade show active" id="nav-grid" role="tabpanel"
                                         aria-labelledby="nav-grid-tab">
                                         <div class="row">
-                                            <div class="col-lg-4 col-md-6 col-12">
+                                            <div class="col-lg-4 col-md-6 col-12 ">
                                                 <!-- Start Single Item -->
                                                 <div class="single-item-grid">
                                                     <div class="image">
                                                         <a href="item-details.html"><img
-                                                                src="https://via.placeholder.com/600x400"
-                                                                alt="#"></a>
+                                                                src="https://via.placeholder.com/600x400" alt="#"></a>
                                                         <i class=" cross-badge lni lni-bolt"></i>
                                                         <span class="flat-badge sale">Sale</span>
                                                     </div>
