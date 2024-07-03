@@ -1,15 +1,4 @@
 <x-layouts.main>
-    <!--[if lte IE 9]>
-      <p class="browserupgrade">
-        You are using an <strong>outdated</strong> browser. Please
-        <a href="https://browsehappy.com/">upgrade your browser</a> to improve
-        your experience and security.
-      </p>
-    <![endif]-->
-
-   
-
-
     <!-- Start Hero Area -->
     <section class="hero-area overlay">
         <div class="container">
@@ -638,31 +627,4 @@
     </section>
     <!-- End Testimonial Area -->
 
-    <!-- Start Newsletter Area -->
-    <div class="newsletter section">
-        <div class="container">
-            <div class="inner-content">
-                <div class="row align-items-center">
-                    <div class="col-lg-6 col-md-6 col-12">
-                        <div class="title">
-                            <i class="lni lni-alarm"></i>
-                            <h2>Newsletter</h2>
-                            <p>Non invieremo Spam, non preoccuparti!</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-md-6 col-12">
-                        <div class="form">
-                            <form action="#" method="get" target="_blank" class="newsletter-form">
-                                <input name="EMAIL" placeholder="Your email address" type="email">
-                                <div class="button">
-                                    <button class="btn">Subscribe<span class="dir-part"></span></button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- End Newsletter Area -->
 </x-layouts.main>
