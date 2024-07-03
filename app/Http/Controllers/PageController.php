@@ -10,7 +10,8 @@ class PageController extends Controller
 {
     public function homepage()
     {
+        $categories = Category::all();
         $articles = Article::take(6)->orderBy('created_at', 'desc')->get();
-        return view('homepage', compact('articles'));
+        return view('homepage', compact('articles','categories'));
     }
 }

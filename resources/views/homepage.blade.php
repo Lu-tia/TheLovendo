@@ -25,17 +25,12 @@
                                     <div class="search-input">
                                         <label for="category"><i class="lni lni-grid-alt theme-color"></i></label>
                                         <select name="category" id="category">
-                                            <option value="none" selected disabled>Categorie</option>
-                                            <option value="none">Veicoli</option>
-                                            <option value="none">Elettronica</option>
-                                            <option value="none">Telefoni</option>
-                                            <option value="none">Forniture</option>
-                                            <option value="none">Moda</option>
-                                            <option value="none">Lavori</option>
-                                            <option value="none">Case Vacanze</option>
-                                            <option value="none">Animali</option>
-                                            <option value="none">Formazione</option>
-                                            <option value="none">Matrimoni</option>
+                                            <option value="" selected disabled>Categorie</option>
+                                            @forelse ($categories as $category)
+                                            <option value="{{$category->id}}">{{$category->name}}</option>
+                                            @empty
+                                                
+                                            @endforelse
                                         </select>
                                     </div>
                                 </div>
@@ -43,7 +38,7 @@
                                     <div class="search-input">
                                         <label for="location"><i class="lni lni-map-marker theme-color"></i></label>
                                         <select name="location" id="location">
-                                            <option value="none" selected disabled>Locazione</option>
+                                            <option value="" selected disabled>Locazione</option>
                                             <option value="none">New York</option>
                                             <option value="none">California</option>
                                             <option value="none">Washington</option>
