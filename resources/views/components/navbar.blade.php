@@ -17,7 +17,11 @@
                         <ul id="nav" class="navbar-nav ms-auto">
 
                             <li class="nav-item">
-                                <a class=" dd-menu collapsed" href="{{ route('homepage') }}" data-bs-toggle="collapse"
+                                <a class="dd-menu collapsed" href="javascript:void(0)" data-bs-toggle="collapse"
+                                    data-bs-target="#submenu-1-1" aria-controls="navbarSupportedContent"
+                                    aria-expanded="false" aria-label="Toggle navigation">Home</a>
+
+                                {{-- <a class=" dd-menu collapsed" href="{{ route('homepage') }}" data-bs-toggle="collapse"
                                     data-bs-target="#submenu-1-1" aria-controls="navbarSupportedContent"
                                     aria-expanded="false" aria-label="Toggle navigation">Home</a>
                                 <ul class="sub-menu collapse" id="submenu-1-1">
@@ -27,7 +31,7 @@
                                             Register</a>
                                     </li>
 
-                                </ul>
+                                </ul> --}}
                             </li>
                             <li class="nav-item">
                                 <a href="{{ route('articles.index') }}" aria-label="Toggle navigation">Articoli</a>
