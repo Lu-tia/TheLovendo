@@ -22,6 +22,9 @@ class DatabaseSeeder extends Seeder
         'Motori',
         'Salute e bellezza'
     ];
+
+
+
     public function run(): void
     {
         foreach ($this->categories as $category) {
@@ -29,12 +32,9 @@ class DatabaseSeeder extends Seeder
                 'name' => $category
             ]);
         }
+        
+        User::factory(1)->create();
+        Article::factory(20)->create();
 
-        Article::factory(3)->create();
-
-        /*  User::factory()->create([
-            'name' => 'Test User',
-            'email' => 'test@example.com',
-        ]); */
     }
 }

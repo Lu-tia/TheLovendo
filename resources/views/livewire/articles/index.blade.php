@@ -39,8 +39,6 @@
                                 
                             </ul>
                         </div>
-                        <a href="javascript:void(0)"><i class="lni lni-dinner"></i> Hotel &
-                            Travels<span>15</span></a>
                         <!-- End Single Widget -->
                         <!-- Start Single Widget -->
                         <div class="single-widget range">

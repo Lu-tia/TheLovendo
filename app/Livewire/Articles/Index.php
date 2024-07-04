@@ -13,7 +13,7 @@ class Index extends Component
 
     public function createFilter()
     {
-        return Article::orderBy('created_at', 'desc')->paginate(6);
+        return Article::orderBy('created_at', 'desc')->paginate(12);
     }
 
     public function categoryFilter()
