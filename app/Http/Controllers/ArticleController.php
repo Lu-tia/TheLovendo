@@ -12,9 +12,9 @@ class ArticleController extends Controller
     {
         return view('articles.create');
     }
-    public function index()
+    public function index($id = null)
     {
-        return view('articles.index');
+        return view('articles.index',compact('id'));
     }
 
     public function show()
