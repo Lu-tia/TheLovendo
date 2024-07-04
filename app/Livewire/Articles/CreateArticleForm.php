@@ -4,6 +4,7 @@ namespace App\Livewire\Articles;
 
 use App\Models\Article;
 use App\Models\Category;
+use Illuminate\Support\Facades\Http;
 use Livewire\Attributes\Validate;
 use Livewire\Component;
 
@@ -47,7 +48,8 @@ class CreateArticleForm extends Component
 
     public function render()
     {
+        $nations = Http::get('https://restcountries.com/v3.1/all')->json();
         $categories = Category::all();
-        return view('livewire.articles.create-article-form',compact('categories'));
+        return view('livewire.articles.create-article-form',compact('categories','nations'));
     }
 }

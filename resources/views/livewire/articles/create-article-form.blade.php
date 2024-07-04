@@ -66,11 +66,21 @@
                                     </div>
                                 </div>
                                 <div class="col-6">
-                                    <div class="form-group">
-                                        <label>Nazione</label>
-                                        <input wire:model='country' type="text"
-                                            placeholder="Inserisci una nazione">
-                                    </div>
+                                        <div class="form-group">
+                                            <label>Nazione</label>
+                                            <div class="selector-head">
+                                                <span class="arrow"><i
+                                                        class="lni lni-chevron-down"></i></span>
+                                                        <select class="user-chosen-select" wire:model='category'>
+                                                    <option value="">Seleziona una nazione</option>
+                                                    @forelse ($nations as $nation)
+                                                        <option value="{{$nation['name']['common']}}">{{$nation['flag']}} {{$nation['name']['common']}}</option>
+                                                    @empty
+                                                        <option value="none">Nessuna categoria disponibile</option>
+                                                    @endforelse
+                                                </select>
+                                            </div>
+                                        </div>
                                 </div>
                                 <div class="col-6">
                                     <div class="form-group">

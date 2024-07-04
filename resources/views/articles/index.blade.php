@@ -37,39 +37,26 @@
                         <!-- End Single Widget -->
                         <!-- Start Single Widget -->
                         <div class="single-widget">
-                            <h3>All Categories</h3>
+                            <h3>Categorie</h3>
                             <ul class="list">
+                                @forelse ($categories as $category)
                                 <li>
-                                    <a href="javascript:void(0)"><i class="lni lni-dinner"></i> Hotel &
-                                        Travels<span>15</span></a>
+                                    <input type="radio" id="{{$category->id}}" name="category" value="{{$category->id}}">
+                                    <label for='{{$category->id}}'>
+                                        <i class="lni lni-dinner"></i> {{$category->name}}
+                                        <span>{{$category->articles->count()}}</span>
+                                        
+                                    </label>
                                 </li>
-                                <li>
-                                    <a href="javascript:void(0)"><i class="lni lni-control-panel"></i> Services
-                                        <span>20</span></a>
-                                </li>
-                                <li>
-                                    <a href="javascript:void(0)"><i class="lni lni-bullhorn"></i> Marketing
-                                        <span>55</span></a>
-                                </li>
-                                <li>
-                                    <a href="javascript:void(0)"><i class="lni lni-home"></i> Real
-                                        Estate<span>35</span></a>
-                                </li>
-                                <li>
-                                    <a href="javascript:void(0)"><i class="lni lni-bolt"></i> Electronics
-                                        <span>60</span></a>
-                                </li>
-                                <li>
-                                    <a href="javascript:void(0)"><i class="lni lni-tshirt"></i> Dress & Clothing
-                                        <span>55</span></a>
-                                </li>
-                                <li>
-                                    <a href="javascript:void(0)"><i class="lni lni-diamond-alt"></i> Jewelry &
-                                        Accessories
-                                        <span>45</span></a>
-                                </li>
+                                    
+                                @empty
+                                    Nessuna categoria disponibile
+                                @endforelse
+                                
                             </ul>
                         </div>
+                        <a href="javascript:void(0)"><i class="lni lni-dinner"></i> Hotel &
+                            Travels<span>15</span></a>
                         <!-- End Single Widget -->
                         <!-- Start Single Widget -->
                         <div class="single-widget range">
