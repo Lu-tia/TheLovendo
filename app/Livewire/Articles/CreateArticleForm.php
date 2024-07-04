@@ -10,21 +10,21 @@ use Livewire\Component;
 
 class CreateArticleForm extends Component
 {
-    #[Validate('required', message:'Inserisci un titolo')]
+    #[Validate('required', message:'Inserisci un titolo valido')]
     #[Validate('min:5' , message: 'Il titolo deve essere almeno da 5 caratteri')]
     public $title;
     #[Validate('required', message:'Inserisci un prezzo')]
     #[Validate('numeric', message:'Il prezzo deve essere formato da numeri')]
     public $price;
-    #[Validate('required',message:'Inserisci una descrizione')]
+    #[Validate('required',message:'aggiungi una descrizione')]
     public $body;
-    #[Validate('required',message:'Inserisci una nazione')]
+    #[Validate('required',message:'seleziona la nazione di provenienza')]
     public $country;
-    #[Validate('required',message:'Inserisci una città')]
+    #[Validate('required',message:'Inserisci la città in cui ti trovi')]
     public $city;
-    #[Validate('required',message:"Inserisci lo stato dell'oggetto")]
+    #[Validate('required',message:"specifica lo stato dell'oggetto")]
     public $condition;
-    #[Validate('required',message:'Imposta una categoria')]
+    #[Validate('required',message:'Scegli una categoria')]
     public $category;
     public $article;
 
