@@ -63,5 +63,4 @@
     </section>
     <!-- End Dashboard Section -->
 
-
 </x-layouts.main>

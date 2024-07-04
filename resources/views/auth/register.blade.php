@@ -1,6 +1,5 @@
 <x-layouts.main>
 
-
     <!-- Start Breadcrumbs -->
     <div class="breadcrumbs">
         <div class="container">
@@ -41,30 +40,30 @@
                             </div>
                             <div class="form-group">
                                 <label>Nome</label>
-                                <input name="name" type="text">
+                                <input name="name" type="text" value="{{ old('name') }}">
                                 @error('name')
-                                    {{ $message }}
+                                    <span class="small text-danger">{{ $message }}</span>
                                 @enderror
                             </div>
                             <div class="form-group">
                                 <label>Email</label>
-                                <input name="email" type="email">
+                                <input name="email" type="email" value="{{ old('email') }}">
                                 @error('email')
-                                    {{ $message }}
+                                    <span class="small text-danger">{{ $message }}</span>
                                 @enderror
                             </div>
                             <div class="form-group">
                                 <label>Password</label>
                                 <input name="password" type="password" id="password">
                                 @error('password')
-                                    {{ $message }}
+                                    <span class="small text-danger">{{ $message }}</span>
                                 @enderror
                             </div>
                             <div class="form-group">
                                 <label>Conferma Password</label>
                                 <input name="password_confirmation" type="password" id="password_confirmation">
                                 @error('password_confirmation')
-                                    {{ $message }}
+                                    <span class="small text-danger">{{ $message }}</span>
                                 @enderror
                             </div>
                             <div class="button">

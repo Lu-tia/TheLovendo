@@ -2,7 +2,7 @@
     <!-- Start Single Grid -->
     <div class="single-grid wow fadeInUp" data-wow-delay=".2s">
         <div class="image">
-            <a href="{{route('articles.show',['id'=> $article])}}" class="thumbnail"><img src="{{asset('/assets/images/placeholder/600x400.png')}}" alt="#"></a>
+            <a href="{{route('articles.show',compact('article'))}}" class="thumbnail"><img src="{{asset('/assets/images/placeholder/600x400.png')}}" alt="#"></a>
             <div class="author">
                 {{-- <div class="author-image">
                     <a href="javascript:void(0)"><img src="https://via.placeholder.com/100x100" alt="#">
@@ -14,16 +14,10 @@
         <div class="content">
             <div class="top-content">
                 {{-- <a href="javascript:void(0)" class="tag">Telefoni</a> --}}
+                <p>{{ $article->category->name }}</p>
                 <h3 class="title">{{ $article->title }}</h3>
                 <p class="update-time">{{ $article->created_at->locale('it_IT')->isoFormat('DD MMM YYYY') }}</p>
-                <ul class="rating">
-                    <li><i class="lni lni-star-filled"></i></li>
-                    <li><i class="lni lni-star-filled"></i></li>
-                    <li><i class="lni lni-star-filled"></i></li>
-                    <li><i class="lni lni-star-filled"></i></li>
-                    <li><i class="lni lni-star-filled"></i></li>
-                    <li><a href="javascript:void(0)">(35)</a></li>
-                </ul>
+                <p class="user-name">Pubblicato da: {{ $article->user->name }}</p>
                 <ul class="info-list">
                     <li><a href="javascript:void(0)"><i class="lni lni-map-marker"></i> {{ $article->city }}</a></li>
                     {{-- <li><a href="javascript:void(0)"><i class="lni lni-timer"></i> Feb 18,
@@ -31,7 +25,7 @@
                 </ul>
             </div>
             <div class="bottom-content">
-                <p class="price">A partire da: <span>{{ $article->price }}€</span></p>
+                <p class="price">Prezzo: <span>{{ $article->price }}€</span></p>
             </div>
         </div>
     </div>

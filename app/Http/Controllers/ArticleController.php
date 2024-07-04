@@ -17,8 +17,12 @@ class ArticleController extends Controller
         return view('articles.index',compact('id'));
     }
 
-    public function show()
+    public function show(Article $article)
     {
-        return view('articles.show');
+        return view('articles.show',compact('article'));
+    }
+    public function flashpage()
+    {
+        return view('articles.flashpage');
     }
 }

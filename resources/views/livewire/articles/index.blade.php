@@ -6,9 +6,9 @@
                     <div class="category-sidebar">
                         <!-- Start Single Widget -->
                         <div class="single-widget search">
-                            <h3>Search Ads</h3>
+                            <h3>Cerca Annunci</h3>
                             <form action="#">
-                                <input type="search" wire:model.live='search' placeholder="Search Here...">
+                                <input type="search" wire:model.live='search' placeholder="Cerca qui...">
                                 <button type="submit"><i class="lni lni-search-alt"></i></button>
                             </form>
                         </div>
@@ -43,7 +43,7 @@
                         <!-- End Single Widget -->
                         <!-- Start Single Widget -->
                         <div class="single-widget range">
-                            <h3>Price Range</h3>
+                            <h3>Prezzo</h3>
                             <input type="range" class="form-range" name="range" step="1" min="100" max="10000"
                                 value="10" onchange="rangePrimary.value=value">
                             <div class="range-inner">

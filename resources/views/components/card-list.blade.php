@@ -3,7 +3,7 @@
                     <!-- Start Single Item -->
                     <div class="single-item-grid">
                         <div class="image">
-                            <a href="{{route('articles.show',['id'=> $article])}}"><img src="{{asset('assets/images/placeholder/600x400.png')}}" alt="#"></a>
+                            <a href="{{route('articles.show',compact('article'))}}"><img src="{{asset('assets/images/placeholder/600x400.png')}}" alt="#"></a>
                         </div>
                         <div class="content">
                             <a href="{{route('articles.show',['id'=> $article])}}" class="tag">{{$article->category->name}}</a>
