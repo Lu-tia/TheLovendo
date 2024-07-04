@@ -7,15 +7,15 @@
                     <div class="title">
                         <i class="lni lni-alarm"></i>
                         <h2>Newsletter</h2>
-                        <p>We don't send spam so don't worry.</p>
+                        <p>Non inviamo spam,tranquillo.</p>
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-6 col-12">
                     <div class="form">
                         <form action="#" method="get" target="_blank" class="newsletter-form">
-                            <input name="EMAIL" placeholder="Your email address" type="email">
+                            <input name="EMAIL" placeholder="Indirizzo email" type="email">
                             <div class="button">
-                                <button class="btn">Subscribe<span class="dir-part"></span></button>
+                                <button class="btn">Iscriviti<span class="dir-part"></span></button>
                             </div>
                         </form>
                     </div>

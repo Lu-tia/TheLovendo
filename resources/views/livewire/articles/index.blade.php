@@ -45,18 +45,18 @@
                             <input type="range" class="form-range" name="range" step="1" min="100" max="10000"
                                 value="10" onchange="rangePrimary.value=value">
                             <div class="range-inner">
-                                <label>$</label>
+                                <label>€</label>
                                 <input type="text" id="rangePrimary" placeholder="100" />
                             </div>
                         </div>
                         <!-- End Single Widget -->
                         <!-- Start Single Widget -->
                         <div class="single-widget condition">
-                            <h3>Condition</h3>
+                            <h3>Condizione</h3>
                             <div class="form-check">
                                 <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault1">
                                 <label class="form-check-label" for="flexCheckDefault1">
-                                    All
+                                    Tutte
                                 </label>
                             </div>
                             <div class="form-check">

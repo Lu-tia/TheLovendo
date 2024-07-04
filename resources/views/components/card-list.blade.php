@@ -6,11 +6,11 @@
                             <a href="{{route('articles.show',compact('article'))}}"><img src="{{asset('assets/images/placeholder/600x400.png')}}" alt="#"></a>
                         </div>
                         <div class="content">
-                            <a href="{{route('articles.show',['id'=> $article])}}" class="tag">{{$article->category->name}}</a>
+                            <a href="{{route('articles.show',compact('article'))}}" class="tag">{{$article->category->name}}</a>
                             <h3 class="title">
-                                <a href="{{route('articles.show',['id'=> $article])}}">{{ $article->title }}</a>
+                                <a href="{{route('articles.show',compact('article'))}}">{{ $article->title }}</a>
                             </h3>
-                            <p class="location"><a href="{{route('articles.show',['id'=> $article])}}"><i class="lni lni-map-marker">
+                            <p class="location"><a href="{{route('articles.show',compact('article'))}}"><i class="lni lni-map-marker">
                                     </i>{{ $article->city }}</a></p>
                             <ul class="info d-flex">
                                 <li class="price">{{ $article->price }}€</li>

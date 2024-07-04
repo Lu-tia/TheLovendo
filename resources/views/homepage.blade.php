@@ -24,7 +24,7 @@
                                     <div class="search-input">
                                         <label for="keyword"><i class="lni lni-search-alt theme-color"></i></label>
                                         <input type="text" name="keyword" id="keyword"
-                                            placeholder="Product keyword">
+                                            placeholder="Cerca prodotto">
                                     </div>
                                 </div>
                                 <div class="col-lg-3 col-md-3 col-12 p-0">
