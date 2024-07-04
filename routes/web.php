@@ -11,6 +11,9 @@ Route::get('/', [PageController::class, 'homepage'])->name('homepage');
 Route::get('/articoli', [ArticleController::class, 'index'])->name('articles.index');
 Route::get('/articoli/{id}', [ArticleController::class, 'index'])->name('articles.category');
 Route::get('/articoli/dettagli-articolo/{id}', [ArticleController::class, 'show'])->name('articles.show');
+Route::get('/dettagliuser', function () {
+    return view('auth.detail-user');
+});
 
 Route::middleware(['auth'])->group(function () {
     Route::get('/articoli/profilo/crea-articolo', [ArticleController::class, 'create'])->name('articles.create');
