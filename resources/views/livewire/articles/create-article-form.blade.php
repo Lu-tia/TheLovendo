@@ -98,7 +98,7 @@
                                 </div>
                                 <div class="col-12">
                                     <div class="form-group button mb-0">
-                                        <button type="submit" class="btn ">Inserisci annuncio</button>
+                                        <button type="submit" class="btn" data-bs-toggle="modal">Inserisci annuncio</button>
                                     </div>
                                 </div>
                             </div>

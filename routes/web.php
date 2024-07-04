@@ -13,6 +13,5 @@ Route::get('/articoli/{id}', [ArticleController::class, 'index'])->name('article
 Route::get('/articoli/dettagli-articolo/{id}', [ArticleController::class, 'show'])->name('articles.show');
 
 Route::middleware(['auth'])->group(function () {
-
-    Route::get('/articoli/crea', [ArticleController::class, 'create'])->name('articles.create');
+    Route::get('/articoli/profilo/crea-articolo', [ArticleController::class, 'create'])->name('articles.create');
 });
