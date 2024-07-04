@@ -20,7 +20,7 @@ class Index extends Component
     {
         return Article::where('category_id', $this->filteredByCategory)->get();
     }
-    public function render()
+    public function render($id = null)
     {
        if(!$this->filteredByCategory || $this->filteredByCategory == 'AllCategories'){
                 $articles = $this->createFilter();
@@ -28,6 +28,6 @@ class Index extends Component
         $articles = $this->categoryFilter();
        }
         $categories = Category::all();
-        return view('livewire.articles.index', compact('articles','categories'));
+        return view('livewire.articles.index', compact('articles','categories','id'));
     }
 }

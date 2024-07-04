@@ -19,5 +19,5 @@
         </div>
     </div>
     <!-- End Breadcrumbs -->
-    @livewire('articles.index')
+    @livewire('articles.index',['filteredByCategory'=>$id])
 </x-layouts.main>

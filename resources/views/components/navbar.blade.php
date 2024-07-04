@@ -41,7 +41,7 @@
                                     aria-expanded="false" aria-label="Toggle navigation">Categorie</a>
                                 <ul class="sub-menu collapse" id="submenu-1-5">
                                     @forelse ($categories as $category)
-                                        <li class="nav-item"><a href="{{route('articles.index',['category'=> $category->id])}}">{{$category->name}}</a></li>
+                                        <li class="nav-item"><a href="{{route('articles.category',['id'=> $category->id])}}">{{$category->name}}</a></li>
                                     @empty
                                         
                                     @endforelse
