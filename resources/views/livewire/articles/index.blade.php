@@ -18,16 +18,16 @@
                             <h3>Categorie</h3>
                             <ul class="list">
                                 <li>
-                                    <input type="radio" id="AllCategories"wire:model.live="filteredByCategory" name="category" value="AllCategories" >
-                                    <label for='AllCategories'>
-                                        <i class="lni lni-dinner"></i>Tutte le categorie
+                                    <input class="catList" type="radio" id="AllCategories"wire:model.live="filteredByCategory" name="category" value="AllCategories" >
+                                    <label for='AllCategories' class="radio-label">
+                                        <i class="lni lni-dinner"></i> Tutte le categorie
                                     </label>
                                 </li>
                                 @forelse ($categories as $category)
                                 <li>
-                                    <input type="radio" id="{{$category->id}}" wire:model.live="filteredByCategory" name="category" value="{{$category->id}}">
-                                    <label for='{{$category->id}}'>
-                                        <i class="lni lni-dinner"></i> {{$category->name}}
+                                    <input class="catList" type="radio" id="{{$category->id}}" wire:model.live="filteredByCategory" name="category" value="{{$category->id}}">
+                                    <label for='{{$category->id}}' class="radio-label">
+                                        <i class="lni lni-dinner "></i> {{$category->name}}
                                         <span>{{$category->articles->count()}}</span>
                                     </label>
                                 </li>
