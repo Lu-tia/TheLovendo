@@ -35,6 +35,8 @@
                                 @empty
                                     Nessuna categoria disponibile
                                 @endforelse
+
+                                
                                 
                             </ul>
                         </div>
@@ -95,6 +97,9 @@
                             @endforeach
 
                         </div>
+                    </div>
+                    <div class="d-flex mt-3 align-item-center justify-content-center">
+                        {{ $articles->links() }}
                     </div>
                 </div>
             </div>

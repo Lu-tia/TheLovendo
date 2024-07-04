@@ -5,9 +5,11 @@ namespace App\Livewire\Articles;
 use App\Models\Article;
 use App\Models\Category;
 use Livewire\Component;
+use Livewire\WithPagination;
 
 class Index extends Component
 {
+    use WithPagination;
     public $filteredByCategory;
     public $search = "";
 
@@ -28,6 +30,6 @@ class Index extends Component
         $articles = $this->categoryFilter();
        }
         $categories = Category::all();
-        return view('livewire.articles.index', compact('articles','categories','id'));
+        return view('livewire.articles.index',['articles'=>Article::paginate(10), 'categories'=>$categories, 'id'=>$id]);
     }
 }
