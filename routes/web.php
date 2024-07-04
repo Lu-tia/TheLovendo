@@ -10,11 +10,9 @@ Route::get('/', [PageController::class, 'homepage'])->name('homepage');
 
 Route::get('/articoli', [ArticleController::class, 'index'])->name('articles.index');
 Route::get('/articoli/{id}', [ArticleController::class, 'index'])->name('articles.category');
-Route::get('/articoli/dettagli-articolo/{id}', [ArticleController::class, 'show'])->name('articles.show');
+Route::get('/articoli/dettagli-articolo/{article}', [ArticleController::class, 'show'])->name('articles.show');
 
 Route::middleware(['auth'])->group(function () {
     Route::get('/articoli/profilo/crea-articolo', [ArticleController::class, 'create'])->name('articles.create');
     Route::get('/articoli/profilo/crea-articolo/flashpage',[ArticleController::class,'flashpage']);
-
-    
 });
