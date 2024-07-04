@@ -37,7 +37,6 @@
 
     {{ $slot }}
 
-
     <x-newsletter />
     <x-footer />
 
