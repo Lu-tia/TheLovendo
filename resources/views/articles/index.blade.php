@@ -20,8 +20,4 @@
     </div>
     <!-- End Breadcrumbs -->
     @livewire('articles.index')
-
-    <x-newsletter />
-    <x-footer />
-
 </x-layouts.main>

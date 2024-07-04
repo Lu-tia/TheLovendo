@@ -29,7 +29,6 @@
                                     <label for='{{$category->id}}'>
                                         <i class="lni lni-dinner"></i> {{$category->name}}
                                         <span>{{$category->articles->count()}}</span>
-                                        
                                     </label>
                                 </li>
                                     
