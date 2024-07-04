@@ -26,11 +26,12 @@ class CreateArticleForm extends Component
     public $condition;
     #[Validate('required',message:'Imposta una categoria')]
     public $category;
+    public $article;
 
     public function store()
     {
         $this->validate();
-        Article::create([
+        $this->article=Article::create([
             'title' => $this->title,
             'price' => $this->price,
             'body' => $this->body,
@@ -40,9 +41,8 @@ class CreateArticleForm extends Component
             'user_id' => auth()->user()->id,
             'category_id' => $this->category,
         ]);
-
         session()->flash('success','Articolo creato con successo');
-        return $this->redirect('/');
+        return $this->redirect('/articoli/profilo/crea-articolo/flashpage');
 
     }
 

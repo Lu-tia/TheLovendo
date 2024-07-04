@@ -21,4 +21,8 @@ class ArticleController extends Controller
     {
         return view('articles.show');
     }
+    public function flashpage()
+    {
+        return view('articles.flashpage');
+    }
 }

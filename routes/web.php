@@ -14,4 +14,7 @@ Route::get('/articoli/dettagli-articolo/{id}', [ArticleController::class, 'show'
 
 Route::middleware(['auth'])->group(function () {
     Route::get('/articoli/profilo/crea-articolo', [ArticleController::class, 'create'])->name('articles.create');
+    Route::get('/articoli/profilo/crea-articolo/flashpage',[ArticleController::class,'flashpage']);
+
+    
 });
