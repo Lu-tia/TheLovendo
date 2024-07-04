@@ -40,15 +40,11 @@
                                     data-bs-target="#submenu-1-5" aria-controls="navbarSupportedContent"
                                     aria-expanded="false" aria-label="Toggle navigation">Categorie</a>
                                 <ul class="sub-menu collapse" id="submenu-1-5">
-                                    <li class="nav-item"><a href="#">Elettronica</a></li>
-                                    <li class="nav-item"><a href="#">Abbigliamento</a></li>
-                                    <li class="nav-item"><a href="#">Salute e Bellezza</a></li>
-                                    <li class="nav-item"><a href="#">Giocattoli</a></li>
-                                    <li class="nav-item"><a href="#">Sport</a></li>
-                                    <li class="nav-item"><a href="#">Animali Domestici</a></li>
-                                    <li class="nav-item"><a href="#">Libri e Riviste</a></li>
-                                    <li class="nav-item"><a href="#">Accessori</a></li>
-                                    <li class="nav-item"><a href="#">Motori</a></li>
+                                    @forelse ($categories as $category)
+                                        <li class="nav-item"><a href="{{route('articles.index',['category'=> $category->id])}}">{{$category->name}}</a></li>
+                                    @empty
+                                        
+                                    @endforelse
                                 </ul>
                             </li>
                         </ul>

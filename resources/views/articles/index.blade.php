@@ -19,7 +19,6 @@
         </div>
     </div>
     <!-- End Breadcrumbs -->
-
     @livewire('articles.index')
 
     <x-newsletter />
