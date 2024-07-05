@@ -88,15 +88,6 @@
                                 </label>
                             </div>
                         </div>
-                        <!-- End Single Widget -->
-                        <!-- Start Single Widget -->
-                        <div class="single-widget banner">
-                            <h3>Advertisement</h3>
-                            <a href="javascript:void(0)">
-                                <img src="https://via.placeholder.com/780x1300" alt="#">
-                            </a>
-                        </div>
-                        <!-- End Single Widget -->
                     </div>
                 </div>
                 <div class="col-lg-9 col-md-8 col-12">
