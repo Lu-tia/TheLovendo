@@ -18,18 +18,32 @@
                             <h3>Categorie</h3>
                             <ul class="list">
                                 <li>
-                                    <input class="catList" type="radio" id="AllCategories"wire:model.live="filteredByCategory" name="category" value="AllCategories" >
-                                    <label for='AllCategories' class="radio-label">
-                                        <i class="lni lni-text-align-right"></i> Tutte le categorie
-                                    </label>
+                                    <input class="catList" type="radio" id="0"wire:model.live="filteredByCategory" name="category" value="0" >
+                                    @if($filteredByCategory == null || $filteredByCategory == '0')
+                                        <label for='AllCategories' class="radio-label-active">
+                                            <i class="lni lni-text-align-right"></i> Tutte le categorie
+                                        </label>
+                                    @else
+                                        <label for='0' class="radio-label">
+                                            <i class="lni lni-text-align-right"></i> Tutte le categorie
+                                        </label>
+                                    @endif
                                 </li>
                                 @forelse ($categories as $category)
                                 <li>
                                     <input class="catList" type="radio" id="{{$category->id}}" wire:model.live="filteredByCategory" name="category" value="{{$category->id}}">
-                                    <label for='{{$category->id}}' class="radio-label">
-                                        <i class="{{ $iconClasses[$category->name] ?? 'lni lni-layers' }}"></i> {{$category->name}}
-                                        <span>{{$category->articles->count()}}</span>
-                                    </label>
+                                        @if($filteredByCategory == $category->id)
+                                            <label for='{{$category->id}}' class="radio-label-active">
+                                                <i class="{{ $iconClasses[$category->name] ?? 'lni lni-layers' }}"></i> {{$category->name}}
+                                                <span>{{$category->articles->count()}}</span>
+                                            </label>
+                                        @else
+                                            <label for='{{$category->id}}' class="radio-label">
+                                                <i class="{{ $iconClasses[$category->name] ?? 'lni lni-layers' }}"></i> {{$category->name}}
+                                                <span>{{$category->articles->count()}}</span>
+                                            </label>
+                                        @endif
+                                    
                                 </li>
                                     
                                 @empty

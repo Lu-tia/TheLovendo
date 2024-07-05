@@ -4,9 +4,11 @@ namespace App\Livewire\Articles;
 
 use App\Models\Article;
 use App\Models\Category;
+use Illuminate\Database\Eloquent\Builder;
 use Livewire\Component;
 use Illuminate\Pagination\Paginator;
 use Livewire\WithPagination;
+
 
 class Index extends Component
 {
@@ -25,18 +27,13 @@ class Index extends Component
     }
 
   
-    public function createFilter()
-    {
-        return Article::orderBy('created_at', 'desc')->paginate(6);
-    }
-
-    public function categoryFilter()
-    {
-        return Article::where('category_id', $this->filteredByCategory)->paginate(6);
-        $this->setPage(1);
-    }
     public function render($id = null)
     {
+        $articles =  Article::orderBy('created_at', 'desc')
+        ->when($this->filteredByCategory > 0, fn(Builder $query) => $query->where('category_id', $this->filteredByCategory))
+        ->when($this->search !== '', fn(Builder $query) => $query->where('title','LIKE', '%'. $this->search . '%'))
+        ->paginate(6);
+        
         $iconClasses = [
             'Sport' => 'lni lni-basketball',
             'Motori' => 'lni lni-car-alt',
@@ -48,12 +45,7 @@ class Index extends Component
             'Libri e riviste' => 'lni lni-book',
             'Accessori' => 'lni lni-hammer',
         ];
-
-       if(!$this->filteredByCategory || $this->filteredByCategory == 'AllCategories'){
-                $articles = $this->createFilter();
-       } else {
-                $articles = $this->categoryFilter();
-       }
+       
         $categories = Category::all();
         return view('livewire.articles.index',compact('articles','categories','id','iconClasses'));
     }
