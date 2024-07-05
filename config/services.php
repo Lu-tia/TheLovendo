@@ -14,9 +14,9 @@ return [
     |
     */
     'google' => [
-            'client_id' => env('GOOGLE_CLIENT_ID'),
-            'client_secret' => env('GOOGLE_CLIENT_SECRET'),
-            'redirect' => env('GOOGLE_REDIRECT_URL'),
+            'client_id' => '322410025307-uq4l9tn31s80dnr9vtpjdldpen34s04g.apps.googleusercontent.com',
+            'client_secret' => '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',
+            'redirect' => '/auth/google/callback',
     ],
 
     'postmark' => [
