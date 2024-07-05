@@ -49,6 +49,9 @@ class CreateArticleForm extends Component
     public function render()
     {
         $nations = Http::get('https://restcountries.com/v3.1/all')->json();
+        usort($nations, function($a, $b) {
+            return strcmp($a['name']['common'], $b['name']['common']);
+        });
         $categories = Category::all();
         return view('livewire.articles.create-article-form',compact('categories','nations'));
     }
