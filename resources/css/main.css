@@ -1955,7 +1955,7 @@ ol {
     Hero Area CSS
 ========================================*/
 .hero-area {
-  background-image: url("C:\Users\Nicola\Desktop\progettofinale\BUGBUSTERS-Presto.it\public\assets\images\herotest_resized.jpg");
+  background-image: url('/public/assets/images/herotest_resized.jpg');
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;

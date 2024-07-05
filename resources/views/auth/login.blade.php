@@ -63,7 +63,7 @@
                             <div class="socila-login">
                                 <ul>
                                     <li><a href="javascript:void(0)" class="facebook"><i class="lni lni-facebook-original"></i>Accedi con Facebook</a></li>
-                                    <li><a href="javascript:void(0)" class="google"><i class="lni lni-google"></i>Accedi con Google</a></li>
+                                    <li><a href="{{route('social.redirect',['social'=> 'google'])}}" class="google"><i class="lni lni-google"></i>Accedi con Google</a></li>
                                 </ul>
                             </div>
                             <p class="outer-link">Non hai un account? <a href="{{ route('register') }}">Registrati

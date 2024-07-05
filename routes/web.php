@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\Auth\ProviderController;
 use App\Http\Controllers\PageController;
 use App\Models\Article;
 use Illuminate\Support\Facades\Route;
@@ -16,3 +17,7 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/articoli/profilo/crea-articolo', [ArticleController::class, 'create'])->name('articles.create');
     Route::get('/articoli/profilo/crea-articolo/flashpage',[ArticleController::class,'flashpage']);
 });
+
+/* SOCALITE */
+Route::get('/auth/{social}/redirect',[ProviderController::class, 'redirect'])->name('social.redirect');
+Route::get('/auth/{social}/callback',[ProviderController::class, 'callback'])->name('social.callback');
