@@ -18,6 +18,7 @@ return [
             'client_secret' => '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',
             'redirect' => '/auth/google/callback',
     ],
+    
 
     'postmark' => [
         'token' => env('POSTMARK_TOKEN'),
