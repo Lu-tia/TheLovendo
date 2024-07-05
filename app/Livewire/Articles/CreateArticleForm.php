@@ -12,11 +12,14 @@ class CreateArticleForm extends Component
 {
     #[Validate('required', message:'Inserisci un titolo valido')]
     #[Validate('min:5' , message: 'Il titolo deve essere almeno da 5 caratteri')]
+    #[Validate('max:50', message: 'Il titolo può avere al massimo 50 caratteri')]
     public $title;
     #[Validate('required', message:'Inserisci un prezzo')]
     #[Validate('numeric', message:'Il prezzo deve essere formato da numeri')]
+    #[Validate('max:999999', message: 'Il prezzo può essere al massimo 999999')]
     public $price;
     #[Validate('required',message:'aggiungi una descrizione')]
+    #[Validate('max:500', message: 'La descrizione può avere al massimo 500 caratteri')]
     public $body;
     #[Validate('required',message:'seleziona la nazione di provenienza')]
     public $country;
