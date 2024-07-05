@@ -194,53 +194,55 @@
     </section>
     <!-- /End Categories Area -->
 
+    @guest
+        <!-- Start How Works Area -->
+        <section class="items-grid section custom-padding how-works section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="section-title">
+                            <h2 class="wow fadeInUp" data-wow-delay=".4s">Come funziona</h2>
+                            <p class="wow fadeInUp" data-wow-delay=".6s">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure recusandae, natus odit
+                                asperiores, nihil quibusdam laudantium aliquid fuga provident unde quidem consequatur
+                                consequuntur. Ullam, voluptatem tenetur cum repudiandae totam ratione?</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4 col-md-4 col-12">
+                        <!-- Start Single Work -->
+                        <div class="single-work wow fadeInUp" data-wow-delay=".2s">
+                            <span class="serial">01</span>
+                            <h3>Crea Account</h3>
+                            <p>Lorem ipsum dolor sit amet constur adipisicing sed do eiusmod tempor incididunt labore.</p>
+                        </div>
+                        <!-- End Single Work -->
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-12">
+                        <!-- Start Single Work -->
+                        <div class="single-work wow fadeInUp" data-wow-delay=".4s">
+                            <span class="serial">02</span>
+                            <h3>Posta il tuo annuncio!</h3>
+                            <p>Lorem ipsum dolor sit amet constur adipisicing sed do eiusmod tempor incididunt labore.</p>
+                        </div>
+                        <!-- End Single Work -->
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-12">
+                        <!-- Start Single Work -->
+                        <div class="single-work wow fadeInUp" data-wow-delay=".6s">
+                            <span class="serial">03</span>
+                            <h3>Vendi i tuoi oggetti</h3>
+                            <p>Lorem ipsum dolor sit amet constur adipisicing sed do eiusmod tempor incididunt labore.</p>
+                        </div>
+                        <!-- End Single Work -->
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End How Works Area -->
+    @endguest
 
-    <!-- Start How Works Area -->
-    <section class="items-grid section custom-padding how-works section">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="section-title">
-                        <h2 class="wow fadeInUp" data-wow-delay=".4s">Come funziona</h2>
-                        <p class="wow fadeInUp" data-wow-delay=".6s">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure recusandae, natus odit
-                            asperiores, nihil quibusdam laudantium aliquid fuga provident unde quidem consequatur
-                            consequuntur. Ullam, voluptatem tenetur cum repudiandae totam ratione?</p>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-4 col-md-4 col-12">
-                    <!-- Start Single Work -->
-                    <div class="single-work wow fadeInUp" data-wow-delay=".2s">
-                        <span class="serial">01</span>
-                        <h3>Crea Account</h3>
-                        <p>Lorem ipsum dolor sit amet constur adipisicing sed do eiusmod tempor incididunt labore.</p>
-                    </div>
-                    <!-- End Single Work -->
-                </div>
-                <div class="col-lg-4 col-md-4 col-12">
-                    <!-- Start Single Work -->
-                    <div class="single-work wow fadeInUp" data-wow-delay=".4s">
-                        <span class="serial">02</span>
-                        <h3>Posta il tuo annuncio!</h3>
-                        <p>Lorem ipsum dolor sit amet constur adipisicing sed do eiusmod tempor incididunt labore.</p>
-                    </div>
-                    <!-- End Single Work -->
-                </div>
-                <div class="col-lg-4 col-md-4 col-12">
-                    <!-- Start Single Work -->
-                    <div class="single-work wow fadeInUp" data-wow-delay=".6s">
-                        <span class="serial">03</span>
-                        <h3>Vendi i tuoi oggetti</h3>
-                        <p>Lorem ipsum dolor sit amet constur adipisicing sed do eiusmod tempor incididunt labore.</p>
-                    </div>
-                    <!-- End Single Work -->
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- End How Works Area -->
 
     <!-- Start Items Grid Area -->
     <section class="items-grid section">
