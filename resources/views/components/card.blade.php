@@ -2,7 +2,8 @@
     <!-- Start Single Grid -->
     <div class="single-grid wow fadeInUp" data-wow-delay=".2s">
         <div class="image">
-            <a href="{{route('articles.show',compact('article'))}}" class="thumbnail"><img src="{{asset('/assets/images/placeholder/600x400.png')}}" alt="#"></a>
+            <a href="{{ route('articles.show', compact('article')) }}" class="thumbnail"><img
+                    src="{{ asset('/assets/images/placeholder/600x400.png') }}" alt="#"></a>
             <div class="author">
                 {{-- <div class="author-image">
                     <a href="javascript:void(0)"><img src="https://via.placeholder.com/100x100" alt="#">
@@ -19,7 +20,7 @@
                 <p class="update-time">{{ $article->created_at->locale('it_IT')->isoFormat('DD MMM YYYY') }}</p>
                 <p class="user-name">Pubblicato da: {{ $article->user->name }}</p>
                 <ul class="info-list">
-                    <li><a href="javascript:void(0)"><i class="lni lni-map-marker"></i> {{ $article->city }}</a></li>
+                    <li><a href=""><i class="lni lni-map-marker"></i> {{ $article->city }}</a></li>
                     {{-- <li><a href="javascript:void(0)"><i class="lni lni-timer"></i> Feb 18,
                             2023</a></li> --}}
                 </ul>

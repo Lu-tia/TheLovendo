@@ -116,7 +116,7 @@
                                 <div class="icon">
                                     <img src="assets/images/categories/jobs.svg" alt="#">
                                 </div>
-                                <h3>Jobs</h3>
+                                <h3>Lavori</h3>
                                 <h5 class="total">44</h5>
                             </a>
                             <!-- End Single Category -->
@@ -130,13 +130,7 @@
                             </a>
                             <!-- End Single Category -->
                             <!-- Start Single Category -->
-                            <a href="category.html" class="single-cat">
-                                <div class="icon">
-                                    <img src="assets/images/categories/laptop.svg" alt="#">
-                                </div>
-                                <h3>Formazione</h3>
-                                <h5 class="total">35</h5>
-                            </a>
+
                             <!-- End Single Category -->
                             <!-- Start Single Category -->
                             <a href="category.html" class="single-cat">
