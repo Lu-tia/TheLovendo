@@ -20,16 +20,16 @@
                             </li>
 
                             {{-- <a class=" dd-menu collapsed" href="{{ route('homepage') }}" data-bs-toggle="collapse"
-                                    data-bs-target="#submenu-1-1" aria-controls="navbarSupportedContent"
-                                    aria-expanded="false" aria-label="Toggle navigation">Home</a>
-                                <ul class="sub-menu collapse" id="submenu-1-1">
-                                    <li class="nav-item active"><a href="{{ route('login') }}"><i
-                                                class="lni lni-enter"></i> Login</a></li>
-                                    <li class="nav-item"><a href="{{ route('register') }}"><i class="lni lni-user"></i>
-                                            Register</a>
-                                    </li>
+                                data-bs-target="#submenu-1-1" aria-controls="navbarSupportedContent"
+                                aria-expanded="false" aria-label="Toggle navigation">Home</a>
+                            <ul class="sub-menu collapse" id="submenu-1-1">
+                                <li class="nav-item active"><a href="{{ route('login') }}"><i class="lni lni-enter"></i>
+                                        Login</a></li>
+                                <li class="nav-item"><a href="{{ route('register') }}"><i class="lni lni-user"></i>
+                                        Register</a>
+                                </li>
 
-                                </ul> --}}
+                            </ul> --}}
                             </li>
                             <li class="nav-item">
                                 <a class="dd-menu collapsed" href="{{ route('articles.index') }}"
@@ -41,40 +41,66 @@
                                     aria-expanded="false" aria-label="Toggle navigation">Categorie</a>
                                 <ul class="sub-menu collapse" id="submenu-1-5">
                                     @forelse ($categories as $category)
-                                        <li class="nav-item"><a
-                                                href="{{ route('articles.category', ['id' => $category->id]) }}">{{ $category->name }}</a>
-                                        </li>
+                                    <li class="nav-item"><a
+                                            href="{{ route('articles.category', ['id' => $category->id]) }}">{{
+                                            $category->name }}</a>
+                                    </li>
                                     @empty
                                     @endforelse
                                 </ul>
                             </li>
                         </ul>
-                    </div>
-                    @guest
-                        <div class="login-button">
-                            <ul>
-                                <li>
-                                    <a href="{{ route('login') }}"><i class="lni lni-enter"></i> Accedi</a>
-                                </li>
-                                <li>
-                                    <a href="{{ route('register') }}"><i class="lni lni-user"></i> Registrati</a>
+                        @guest
+                        <li class="nav-item me-lg-5 list-unstyled mt-lg-2 ms-3 ">
+                            <a class="dd-menu collapsed text-black fw-medium" href="{{ route('login') }}"
+                                aria-label="Toggle navigation">Login</a>
+                        </li>
+                        <li class="nav-item me-lg-5 list-unstyled mt-3 mt-lg-2  ms-3">
+                            <a class="dd-menu collapsed text-black fw-medium" href="{{ route('register') }}"
+                                aria-label="Toggle navigation">Registrati</a>
+                        </li>
+                        @endguest
+                        @auth
+                        <li class="nav-item">
+                            <a class="dd-menu collapsed" href="" data-bs-toggle="collapse" data-bs-target="#submenu-1-6"
+                                aria-controls="navbarSupportedContent" aria-expanded="false"
+                                aria-label="Toggle navigation">{{
+                                auth()->user()->name }}</a>
+                            <ul class="sub-menu collapse" id="submenu-1-6">
+                                <li class="nav-item">
+                                    <form method="POST" action="{{ route('logout') }}">
+                                        @csrf
+                                        <button class="btn" type="submit">Esci</button>
+                                    </form>
+                                    </a>
                                 </li>
                             </ul>
+                        </li>
+                        @endauth
+                        <div class="button mt-3 mt-lg-0">
+                            <a href="{{ route('articles.create') }}" class="btn">Crea un annuncio</a>
                         </div>
-                    @endguest
 
-                    @auth
-                        <span>Benvenuto, {{ auth()->user()->name }}</span>
-                        {{-- <a class="btn btn-sm btn-outline-secondary mx-2" href="{{ route('homepage') }}">Dashboard</a> --}}
-
-                        <form method="POST" action="{{ route('logout') }}">
-                            @csrf
-                            <button class="btn btn-sm btn-outline-secondary mx-2" type="submit">Esci</button>
-                        </form>
-                    @endauth
-                    <div class="button header-button">
-                        <a href="{{ route('articles.create') }}" class="btn">Crea un annuncio</a>
                     </div>
+
+                    {{-- <div class="login-button">
+                        <ul>
+                            <li>
+                                <a href="">Accedi</a>
+                            </li>
+                            <li>
+                                <a href="{{ route('register') }}">Registrati</a>
+                            </li>
+                        </ul>
+                    </div> --}}
+
+
+
+                    {{-- <a class="btn btn-sm btn-outline-secondary mx-2" href="{{ route('homepage') }}">Dashboard</a>
+                    --}}
+
+
+
                 </nav> <!-- navbar -->
             </div>
         </div>
