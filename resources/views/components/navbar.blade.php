@@ -38,7 +38,7 @@
                             <li class="nav-item">
                                 <a class="dd-menu collapsed" href="javascript:void(0)" data-bs-toggle="collapse"
                                     data-bs-target="#submenu-1-5" aria-controls="navbarSupportedContent"
-                                    aria-expanded="false" aria-label="Toggle navigation">Categorie</a>
+                                    aria-expanded="false" aria-label="Toggle navigation">CAZZI ENORMI</a>
                                 <ul class="sub-menu collapse" id="submenu-1-5">
                                     @forelse ($categories as $category)
                                     <li class="nav-item"><a
