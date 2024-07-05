@@ -15,12 +15,11 @@
                     </button>
                     <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
                         <ul id="nav" class="navbar-nav ms-auto">
-
                             <li class="nav-item">
                                 <a href="{{ route('homepage') }}" aria-label="Toggle navigation">Home</a>
                             </li>
 
-                                {{-- <a class=" dd-menu collapsed" href="{{ route('homepage') }}" data-bs-toggle="collapse"
+                            {{-- <a class=" dd-menu collapsed" href="{{ route('homepage') }}" data-bs-toggle="collapse"
                                     data-bs-target="#submenu-1-1" aria-controls="navbarSupportedContent"
                                     aria-expanded="false" aria-label="Toggle navigation">Home</a>
                                 <ul class="sub-menu collapse" id="submenu-1-1">
@@ -33,7 +32,8 @@
                                 </ul> --}}
                             </li>
                             <li class="nav-item">
-                                <a href="{{ route('articles.index') }}" aria-label="Toggle navigation">Articoli</a>
+                                <a class="dd-menu collapsed" href="{{ route('articles.index') }}"
+                                    aria-label="Toggle navigation">Articoli</a>
                             </li>
                             <li class="nav-item">
                                 <a class="dd-menu collapsed" href="javascript:void(0)" data-bs-toggle="collapse"
@@ -41,9 +41,10 @@
                                     aria-expanded="false" aria-label="Toggle navigation">Categorie</a>
                                 <ul class="sub-menu collapse" id="submenu-1-5">
                                     @forelse ($categories as $category)
-                                        <li class="nav-item"><a href="{{route('articles.category',['id'=> $category->id])}}">{{$category->name}}</a></li>
+                                        <li class="nav-item"><a
+                                                href="{{ route('articles.category', ['id' => $category->id]) }}">{{ $category->name }}</a>
+                                        </li>
                                     @empty
-                                        
                                     @endforelse
                                 </ul>
                             </li>

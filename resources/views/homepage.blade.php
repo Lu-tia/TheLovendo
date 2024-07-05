@@ -203,8 +203,9 @@
                     <div class="section-title">
                         <h2 class="wow fadeInUp" data-wow-delay=".4s">Come funziona</h2>
                         <p class="wow fadeInUp" data-wow-delay=".6s">
-                            There are many variations of passages of TheLovendo available, but the majority have
-                            suffered alteration in some form.</p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure recusandae, natus odit
+                            asperiores, nihil quibusdam laudantium aliquid fuga provident unde quidem consequatur
+                            consequuntur. Ullam, voluptatem tenetur cum repudiandae totam ratione?</p>
                     </div>
                 </div>
             </div>
@@ -248,9 +249,9 @@
                 <div class="col-12">
                     <div class="section-title">
                         <h2 class="wow fadeInUp" data-wow-delay=".4s">Ultimi Prodotti</h2>
-                        <p class="wow fadeInUp" data-wow-delay=".6s">There are many variations of passages of
-                            TheLovendo available, but the majority have
-                            suffered alteration in some form.</p>
+                        <p class="wow fadeInUp" data-wow-delay=".6s">Lorem ipsum dolor sit amet consectetur
+                            adipisicing elit. Necessitatibus nam laborum amet impedit quod ducimus fugiat esse ullam
+                            eaque adipisci, voluptate ratione enim repellendus facere dolore aut ipsa. Nisi, iste.</p>
                     </div>
                 </div>
             </div>
