@@ -12,7 +12,7 @@
                     <div class="hero-text text-center">
                         <!-- Start Hero Text -->
                         <div class="section-heading">
-                            <h2 class="wow fadeInUp" data-wow-delay=".3s">Benvenuti su TheLovendo!</h2>
+                            <h2 class="wow fadeInUp" data-wow-delay=".3s">Amore a prima vista, acquisto a seconda!</h2>
                             <p class="wow fadeInUp" data-wow-delay=".5s">Compra e Vendi da macchine usate
                                 a telefoni e computer, <br> oppure cerca proprietà, lavori e altro.</p>
                         </div>

@@ -37,12 +37,24 @@ class Index extends Component
     }
     public function render($id = null)
     {
+        $iconClasses = [
+            'Sport' => 'lni lni-basketball',
+            'Motori' => 'lni lni-car-alt',
+            'Elettronica' => 'lni lni-laptop-phone',
+            'Abbigliamento' => 'lni lni-tag',
+            'Salute e bellezza' => 'lni lni-spray',
+            'Giocattoli' => 'lni lni-bus',
+            'Animali domestici' => 'lni lni-bug',
+            'Libri e riviste' => 'lni lni-book',
+            'Accessori' => 'lni lni-hammer',
+        ];
+
        if(!$this->filteredByCategory || $this->filteredByCategory == 'AllCategories'){
                 $articles = $this->createFilter();
        } else {
                 $articles = $this->categoryFilter();
        }
         $categories = Category::all();
-        return view('livewire.articles.index',compact('articles','categories','id'));
+        return view('livewire.articles.index',compact('articles','categories','id','iconClasses'));
     }
 }

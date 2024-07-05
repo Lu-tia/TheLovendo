@@ -20,14 +20,14 @@
                                 <li>
                                     <input class="catList" type="radio" id="AllCategories"wire:model.live="filteredByCategory" name="category" value="AllCategories" >
                                     <label for='AllCategories' class="radio-label">
-                                        <i class="lni lni-dinner"></i> Tutte le categorie
+                                        <i class="lni lni-text-align-right"></i> Tutte le categorie
                                     </label>
                                 </li>
                                 @forelse ($categories as $category)
                                 <li>
                                     <input class="catList" type="radio" id="{{$category->id}}" wire:model.live="filteredByCategory" name="category" value="{{$category->id}}">
                                     <label for='{{$category->id}}' class="radio-label">
-                                        <i class="lni lni-dinner "></i> {{$category->name}}
+                                        <i class="{{ $iconClasses[$category->name] ?? 'lni lni-layers' }}"></i> {{$category->name}}
                                         <span>{{$category->articles->count()}}</span>
                                     </label>
                                 </li>

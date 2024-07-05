@@ -1955,7 +1955,7 @@ ol {
     Hero Area CSS
 ========================================*/
 .hero-area {
-  background-image: url("https://via.placeholder.com/2100x1280");
+  background-image: url("C:\Users\Nicola\Desktop\progettofinale\BUGBUSTERS-Presto.it\public\assets\images\herotest_resized.jpg");
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -1966,8 +1966,8 @@ ol {
 
 .hero-area.overlay::before {
   z-index: -1;
-  background: #081828;
-  opacity: 0.9;
+
+  opacity: 0.5;
 }
 
 .hero-area.style2 {
