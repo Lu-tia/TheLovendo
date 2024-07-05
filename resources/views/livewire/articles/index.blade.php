@@ -98,9 +98,9 @@
 
                         </div>
                     </div>
-                    <div class="d-flex mt-3 align-item-center justify-content-center">
-                        {{ $articles->links() }}
-                    </div>
+                  
+                    {{ $articles->links('livewire.custom-paginator') }} 
+                   
                 </div>
             </div>
         </div>
