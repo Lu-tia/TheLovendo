@@ -14,9 +14,14 @@ class Index extends Component
 {
     use WithPagination;
     
+    public $categories;
     public $filteredByCategory;
     public $search = "";
     public $currentPage = 1;
+
+    public function mount(){
+        $this->categories = Category::all();
+    }
 
     public function setPage($url)
     {
@@ -46,7 +51,7 @@ class Index extends Component
             'Accessori' => 'lni lni-hammer',
         ];
        
-        $categories = Category::all();
+        $categories = $this->categories;
         return view('livewire.articles.index',compact('articles','categories','id','iconClasses'));
     }
 }
