@@ -3,6 +3,7 @@
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\Auth\ProviderController;
 use App\Http\Controllers\PageController;
+use App\Http\Controllers\RevisorController;
 use App\Models\Article;
 use Illuminate\Support\Facades\Route;
 
@@ -21,3 +22,11 @@ Route::middleware(['auth'])->group(function () {
 /* SOCALITE */
 Route::get('/auth/{social}/redirect',[ProviderController::class, 'redirect'])->name('social.redirect');
 Route::get('/auth/{social}/callback',[ProviderController::class, 'callback'])->name('social.callback');
+
+/* RevisorZone */
+Route::get('/zona-revisore/articoli',[RevisorController::class, 'index'])->name('revisor.index');
+
+Route::patch('accept/{article}',[RevisorController::class, 'accept'])->name('accept');
+Route::patch('reject/{article}',[RevisorController::class, 'reject'])->name('reject');
+Route::patch('rollback/{article}',[RevisorController::class, 'rollback'])->name('rollback');
+
