@@ -60,3 +60,15 @@ tns({
         }
     }
 });
+
+let globalSearch = document.querySelector('#globalSearch');
+let globalInput = document.querySelector('#globalInput');
+
+if (!globalInput.value){
+    globalSearch.classList.add('d-none');
+} else if (globalInput.value){
+    globalSearch.classList.remove('d-none');
+}
+
+
+

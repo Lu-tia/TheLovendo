@@ -26,12 +26,5 @@ class ArticleController extends Controller
         return view('articles.flashpage');
     }
 
-    public function searchArticles(Request $request)
-    {
-        $query = $request->input('query');
-
-        $articles=  Article::search($query)->paginate(6);
-
-        dd($articles);
-    }
+    
 }

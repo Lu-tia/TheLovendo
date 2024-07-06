@@ -17,53 +17,7 @@
                                 a telefoni e computer, <br> oppure cerca proprietà, lavori e altro.</p>
                         </div>
                         <!-- End Search Form -->
-                        <!-- Start Search Form -->
-                        <div class="search-form wow fadeInUp" data-wow-delay=".7s">
-                            <div class="row">
-                                <div class="col-lg-4 col-md-4 col-12 p-0">
-                                    <div class="search-input">
-                                        <form role="search" action="{{route('articles.search')}}" method="get">
-                                            <label for="keyword"><i class="lni lni-search-alt theme-color"></i></label>
-                                            <input type="search" name="querySearch" id="keyword"
-                                                placeholder="Cerca prodotto">
-                                              
-                                    </div>
-                                </div>
-                                <div class="col-lg-3 col-md-3 col-12 p-0">
-                                    <div class="search-input">
-                                        <label for="category"><i class="lni lni-grid-alt theme-color"></i></label>
-                                        <select name="queryCategory" id="category">
-                                            <option value="" selected>Categorie</option>
-                                            @forelse ($categories as $category)
-                                                <option value="{{ $category->id }}">{{ $category->name }}</option>
-                                            @empty
-                                            @endforelse
-                                           
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="col-lg-3 col-md-3 col-12 p-0">
-                                    <div class="search-input">
-                                        <label for="location"><i class="lni lni-map-marker theme-color"></i></label>
-                                        <select name="queryNation">
-                                            <option value="">Seleziona una nazione</option>
-                                            @forelse ($nations as $nation)
-                                                <option value="{{ $nation['name']['common'] }}">{{ $nation['name']['common'] }}</option>
-                                            @empty
-                                                <option value="none">Nessuna categoria disponibile</option>
-                                            @endforelse
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="col-lg-2 col-md-2 col-12 p-0">
-                                    <div class="search-btn button">
-                                        <button class="btn"><i class="lni lni-search-alt"></i> Cerca</button>
-                                    </div>
-                                </form>  
-                                </div>
-                            </div>
-                        </div>
-                        <!-- End Search Form -->
+                       @livewire('global-search')
                     </div>
                 </div>
             </div>

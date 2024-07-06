@@ -34,8 +34,8 @@ class Article extends Model
         return [
             'id' => $this->id,
             'title' => $this->title,
-            'nations' => $this->nations,
-            'category' => $this->category,
+            'country' => $this->country,
+            'category' => $this->category->name,
         ];
     }
 }
