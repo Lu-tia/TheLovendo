@@ -30,54 +30,57 @@
                                 </li>
 
                             </ul> --}}
-                            </li>
+
                             <li class="nav-item">
-                                <a class="dd-menu collapsed" href="{{ route('articles.index') }}"
-                                    aria-label="Toggle navigation">Articoli</a>
+                                <a href="{{ route('articles.index') }}" aria-label="Toggle navigation">Articoli</a>
                             </li>
                             <li class="nav-item">
                                 <a class="dd-menu collapsed" href="javascript:void(0)" data-bs-toggle="collapse"
                                     data-bs-target="#submenu-1-5" aria-controls="navbarSupportedContent"
-                                    aria-expanded="false" aria-label="Toggle navigation">CAZZI ENORMI</a>
+                                    aria-expanded="false" aria-label="Toggle navigation">Categorie</a>
                                 <ul class="sub-menu collapse" id="submenu-1-5">
                                     @forelse ($categories as $category)
-                                    <li class="nav-item"><a
-                                            href="{{ route('articles.category', ['id' => $category->id]) }}">{{
-                                            $category->name }}</a>
-                                    </li>
+                                        <li class="nav-item"><a
+                                                href="{{ route('articles.category', ['id' => $category->id]) }}">{{ $category->name }}</a>
+                                        </li>
                                     @empty
                                     @endforelse
                                 </ul>
                             </li>
                         </ul>
                         @guest
-                        <li class="nav-item me-lg-5 list-unstyled mt-lg-2 ms-3 ">
-                            <a class="dd-menu collapsed text-black fw-medium" href="{{ route('login') }}"
-                                aria-label="Toggle navigation">Login</a>
-                        </li>
-                        <li class="nav-item me-lg-5 list-unstyled mt-3 mt-lg-2  ms-3">
-                            <a class="dd-menu collapsed text-black fw-medium" href="{{ route('register') }}"
-                                aria-label="Toggle navigation">Registrati</a>
-                        </li>
-                        @endguest
-                        @auth
-                        <li class="nav-item">
-                            <a class="dd-menu collapsed" href="" data-bs-toggle="collapse" data-bs-target="#submenu-1-6"
-                                aria-controls="navbarSupportedContent" aria-expanded="false"
-                                aria-label="Toggle navigation">{{
-                                auth()->user()->name }}</a>
-                            <ul class="sub-menu collapse" id="submenu-1-6">
-                                <li class="nav-item">
-                                    <form method="POST" action="{{ route('logout') }}">
-                                        @csrf
-                                        <button class="btn" type="submit">Esci</button>
-                                    </form>
-                                    </a>
+                            <ul id="nav" class="d-flex d-inline justify-content-center p-2">
+                                <li class="nav-item me-3">
+                                    <i class="lni lni-enter"></i>
+                                    <a class="dd-menu collapsed text-black fw-medium" href="{{ route('login') }}"
+                                        aria-label="Toggle navigation">Login</a>
                                 </li>
-                            </ul>
-                        </li>
-                        @endauth
-                        <div class="button mt-3 mt-lg-0">
+                                <li class="nav-item me-3">
+                                    <i class="lni lni-user"></i>
+                                    <a class="dd-menu collapsed text-black fw-medium" href="{{ route('register') }}"
+                                        aria-label="Toggle navigation">Registrati</a>
+                                </li>
+                            @endguest
+                            @auth
+                                <li class="nav-item">
+                                    <a class="dd-menu collapsed" href="" data-bs-toggle="collapse"
+                                        data-bs-target="#submenu-1-6" aria-controls="navbarSupportedContent"
+                                        aria-expanded="false" aria-label="Toggle navigation">{{ auth()->user()->name }}</a>
+                                    <ul class="sub-menu collapse" id="submenu-1-6">
+                                        <li class="nav-item">
+                                            <form method="POST" action="{{ route('logout') }}">
+                                                @csrf
+                                                <button class="btn" type="submit">Esci</button>
+                                            </form>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            @endauth
+                        </ul>
+
+
+                        <div class="button d-flex justify-content-center p-3">
                             <a href="{{ route('articles.create') }}" class="btn">Crea un annuncio</a>
                         </div>
 
