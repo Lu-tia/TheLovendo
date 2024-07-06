@@ -9,7 +9,7 @@ class RevisorController extends Controller
 {
     public function index()
     {
-        $article_to_check = Article::where('status', null)->first();
+        $article_to_check = Article::orderBy('created_at','asc')->where('status', null)->first();
         return view('revisor.index',compact('article_to_check'));
     }
 

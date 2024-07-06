@@ -7,6 +7,7 @@ use App\Models\Category;
 use Illuminate\Database\Eloquent\Builder;
 use Livewire\Component;
 use Illuminate\Pagination\Paginator;
+use Illuminate\Support\Facades\Http;
 use Livewire\WithPagination;
 
 
@@ -15,13 +16,21 @@ class Index extends Component
     use WithPagination;
     
     public $categories;
+    public $nations;
     public $filteredByCategory;
+    public $filteredByNation;
     public $search = "";
     public $currentPage = 1;
 
     public function mount(){
         $this->categories = Category::all();
+        $this->nations = Http::get('https://restcountries.com/v3.1/all')->json();
+        usort($this->nations, function($a, $b) {
+            return strcmp($a['name']['common'], $b['name']['common']);
+        });
+        
     }
+
 
     public function setPage($url)
     {
@@ -37,6 +46,7 @@ class Index extends Component
         $articles =  Article::orderBy('created_at', 'desc')
         ->when($this->filteredByCategory > 0, fn(Builder $query) => $query->where('category_id', $this->filteredByCategory))
         ->when($this->search !== '', fn(Builder $query) => $query->where('title','LIKE', '%'. $this->search . '%'))
+        ->when($this->filteredByNation !== null && $this->filteredByNation !== 'all', fn(Builder $query) => $query->where('country', $this->filteredByNation))
         ->paginate(6);
         
         $iconClasses = [
@@ -50,8 +60,8 @@ class Index extends Component
             'Libri e riviste' => 'lni lni-book',
             'Accessori' => 'lni lni-hammer',
         ];
-       
+        $nations = $this->nations;
         $categories = $this->categories;
-        return view('livewire.articles.index',compact('articles','categories','id','iconClasses'));
+        return view('livewire.articles.index',compact('articles','categories','id','iconClasses','nations'));
     }
 }

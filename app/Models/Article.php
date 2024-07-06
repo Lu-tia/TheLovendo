@@ -5,9 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Laravel\Scout\Searchable;
 
 class Article extends Model
 {
+    use Searchable;
     use HasFactory;
 
     protected $fillable = ['title','price','body','user_id','category_id','condition','status','image','country','city'];
@@ -27,5 +29,13 @@ class Article extends Model
         $this->save();
         return true;
     }
-    
+    public function toSearchableArray()
+    {
+        return [
+            'id' => $this->id,
+            'title' => $this->title,
+            'nations' => $this->nations,
+            'category' => $this->category,
+        ];
+    }
 }

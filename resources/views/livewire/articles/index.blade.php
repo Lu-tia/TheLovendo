@@ -55,6 +55,26 @@
                             </ul>
                         </div>
                         <!-- End Single Widget -->
+                         <!-- Start Single Widget -->
+                         <div class="single-widget">
+                            <div class="form-group">
+                                <h3>Nazione</h3>
+                                <div class="selector-head">
+                                    <select class="user-chosen-select form-control" wire:model.live='filteredByNation'>
+                                        <option value="all">Seleziona una nazione</option>
+                                        @forelse ($nations as $nation)
+                                            <option value="{{ $nation['name']['common'] }}">{{ $nation['name']['common'] }}</option>
+                                        @empty
+                                            <option value="none">Nessuna categoria disponibile</option>
+                                        @endforelse
+                                    </select>
+                                </div>
+                                @error('country')
+                                    <div class="alert alert-danger mt-2"> {{ $message }} </div>
+                                @enderror
+                            </div>
+                        </div>
+                        <!-- End Single Widget -->
                         <!-- Start Single Widget -->
                         <div class="single-widget range">
                             <h3>Prezzo</h3>
