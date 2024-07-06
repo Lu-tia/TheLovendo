@@ -1,5 +1,5 @@
 <x-layouts.main>
-    @if (session()->has('success'))
+    @if (session()->has('success','errorMessage'))
         <div class="alert alert-warning">
             {{ session('success') }}
         </div>
