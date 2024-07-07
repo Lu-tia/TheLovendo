@@ -1,7 +1,7 @@
 <x-layouts.main>
     @if (session()->has('success','errorMessage'))
         <div class="alert alert-warning">
-            {{ session('success') }}
+            {{ session('success','errorMessage') }}
         </div>
     @endif
     <!-- Start Hero Area -->
