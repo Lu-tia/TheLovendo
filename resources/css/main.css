@@ -8913,3 +8913,8 @@ blockquote .shape {
 .radio-label-active {
   color: var(--primary-color);;
 }
+
+.cstmSearch{
+  z-index:1000;
+  height: 100vh;
+}
