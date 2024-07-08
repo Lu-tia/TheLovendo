@@ -77,7 +77,7 @@
                                                 </a>
                                             </li>    
                                             @empty
-                                            
+                                                Nessun articolo aggiunto di recente
                                             @endforelse
                                             
                                             
