@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\Auth\ProviderController;
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\RevisorController;
 use App\Http\Controllers\UserController;
@@ -32,3 +33,5 @@ Route::patch('accept/{article}',[RevisorController::class, 'accept'])->name('acc
 Route::patch('reject/{article}',[RevisorController::class, 'reject'])->name('reject');
 Route::patch('rollback/article',[RevisorController::class, 'rollback'])->name('rollback');
 
+Route::get('/lavora-con-noi', [ContactController::class, 'workWithUs'])->name('workWithUs');
+Route::post('/lavora-con-noi', [ContactController::class, 'sendApplication'])->name('applicationMail');

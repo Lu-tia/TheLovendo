@@ -14,6 +14,11 @@ class PageController extends Controller
         $articles = Article::take(6)->orderBy('created_at', 'desc')->where('status',true)->get();
         return view('homepage', compact('articles','categories'));
     }
-
+    
+    public function workWithUs()
+    {
+        return view('workWithUs');
+    }
+    
     
 }
