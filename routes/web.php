@@ -4,6 +4,7 @@ use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\Auth\ProviderController;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\RevisorController;
+use App\Http\Controllers\UserController;
 use App\Models\Article;
 use Illuminate\Support\Facades\Route;
 
@@ -17,6 +18,7 @@ Route::get('/articoli/dettagli-articolo/{article}', [ArticleController::class, '
 Route::middleware(['auth'])->group(function () {
     Route::get('/articoli/profilo/crea-articolo', [ArticleController::class, 'create'])->name('articles.create');
     Route::get('/articoli/profilo/crea-articolo/flashpage',[ArticleController::class,'flashpage']);
+    Route::get('/profilo-utente/dashboard/{user}',[UserController::class,'dashboard'])->name('users.dashboard');
 });
 
 /* SOCALITE */
@@ -28,5 +30,5 @@ Route::get('/zona-revisore/articoli',[RevisorController::class, 'index'])->middl
 
 Route::patch('accept/{article}',[RevisorController::class, 'accept'])->name('accept');
 Route::patch('reject/{article}',[RevisorController::class, 'reject'])->name('reject');
-Route::patch('rollback/{article}',[RevisorController::class, 'rollback'])->name('rollback');
+Route::patch('rollback/article',[RevisorController::class, 'rollback'])->name('rollback');
 

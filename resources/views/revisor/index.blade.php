@@ -4,7 +4,7 @@
             @if (session()->has('message'))
                 <div class="alert alert-warning d-flex justify-content-between">
                     <p>{{ session('message') }}</p>
-                    <form action="{{route('rollback',['article' => $article_to_check])}}" method="post">
+                    <form action="{{route('rollback')}}" method="post">
                         @csrf
                         @method('PATCH')
                         <button class="btn btn-danger me-3" type="submit">Annulla ultima modifica</button>
