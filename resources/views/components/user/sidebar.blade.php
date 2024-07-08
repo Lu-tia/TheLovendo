@@ -1,26 +1,22 @@
 <div class="dashboard-sidebar">
     <div class="user-image">
-        <img src="https://via.placeholder.com/300x300" alt="#">
-        <h3>Steve Aldridge
+        <img src="{{auth()->user()->providers[0]->social_avatar ?? ""}}" alt="#">
+        <h3>{{auth()->user()->name}}
             <span><a href="javascript:void(0)">@username</a></span>
         </h3>
     </div>
     <div class="dashboard-menu">
         <ul>
-            <li><a class="{{ (request()->routeis('users.dashboard')) ? 'active' : '' }}" href="dashboard.html"><i class="lni lni-dashboard"></i> Dashboard</a></li>
-            <li><a  href="profile-settings.html"><i class="lni lni-pencil-alt"></i>
+            <li><a class="{{ (request()->routeis('users.dashboard')) ? 'active' : '' }}" href="{{route('users.dashboard',['user' => auth()->user()])}}"><i class="lni lni-dashboard"></i> Dashboard</a></li>
+            <li><a class="{{ (request()->routeis('users.profile_settings')) ? 'active' : '' }}" href="{{route('users.profile_settings',['user' => auth()->user()])}}"><i class="lni lni-pencil-alt"></i>
                 Modifica Profilo</a></li>
-                <li><a href="my-items.html"><i class="lni lni-bolt-alt"></i> My Ads</a></li>
-                <li><a href="favourite-items.html"><i class="lni lni-heart"></i> Favourite ads</a></li>
-                <li><a href="post-item.html"><i class="lni lni-circle-plus"></i> Post An Ad</a></li>
-                <li><a href="bookmarked-items.html"><i class="lni lni-bookmark"></i> Bookmarked</a></li>
-                <li><a href="messages.html"><i class="lni lni-envelope"></i> Messages</a></li>
-                <li><a href="delete-account.html"><i class="lni lni-trash"></i> Close account</a></li>
-                <li><a href="invoice.html"><i class="lni lni-printer"></i> Invoice</a></li>
+                <li><a href="my-items.html"><i class="lni lni-checkmark-circle"></i> I miei annunci</a></li>
+                <li><a href="favourite-items.html"><i class="lni lni-heart"></i> Whishlist</a></li>
+                <li><a class="{{ (request()->routeis('articles.create')) ? 'active' : '' }}" href="{{route('articles.create',['user' => auth()->user()])}}"><i class="lni lni-circle-plus"></i> Crea un annuncio</a></li>
+                @if (auth()->user()->where('is_Revisor', true))
+                <li><a class="{{ (request()->routeis('revisor.index')) ? 'active' : '' }}" href="{{route('revisor.index',['user' => auth()->user()])}}"><i class="lni lni-circle-plus"></i> Annunci da revisionare {{$articles_to_check_count ?? ''}}</a></li>
+                @endif
             </ul>
-            <div class="button">
-                <a class="btn" href="javascript:void(0)">Logout</a>
-            </div>
         </div>
     </div>
     <!-- Start Dashboard Sidebar -->

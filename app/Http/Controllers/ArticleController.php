@@ -4,13 +4,18 @@ namespace App\Http\Controllers;
 
 
 use App\Models\Article;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class ArticleController extends Controller
 {
-    public function create()
+    public function create(User $user)
     {
-        return view('articles.create');
+        if($user->id == auth()->user()->id){
+            return view('articles.create',compact('user'));
+        } else {
+            return redirect()->route('homepage');
+        }
     }
     public function index($id = null)
     {

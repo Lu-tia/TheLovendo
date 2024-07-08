@@ -17,10 +17,10 @@ Route::get('/articoli/{id}', [ArticleController::class, 'index'])->name('article
 Route::get('/articoli/dettagli-articolo/{article}', [ArticleController::class, 'show'])->name('articles.show');
 
 Route::middleware(['auth'])->group(function () {
-    Route::get('/articoli/profilo/crea-articolo', [ArticleController::class, 'create'])->name('articles.create');
-    Route::get('/articoli/profilo/crea-articolo/flashpage',[ArticleController::class,'flashpage']);
-    Route::get('/profilo-utente/dashboard/{user}',[UserController::class,'dashboard'])->name('users.dashboard');
-    Route::get('/profilo/modifica-profilo/{user}',[UserController::class,'profile_settings'])->name('users.profile_settings');
+    Route::get('/profilo/{user}/crea-articolo', [ArticleController::class, 'create'])->name('articles.create');
+    Route::get('/flashpage',[ArticleController::class,'flashpage']);
+    Route::get('/profilo/{user}/dashboard/',[UserController::class,'dashboard'])->name('users.dashboard');
+    Route::get('/profilo/{user}/modifica-profilo/',[UserController::class,'profile_settings'])->name('users.profile_settings');
 });
 
 /* SOCALITE */

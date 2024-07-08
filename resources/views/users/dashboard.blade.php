@@ -39,7 +39,7 @@
                                             </div>
                                             <h3>
                                                 {{$user->articles()->where('status', true)->count()}}
-                                                <span>Articoli aggiunti</span>
+                                                <span>Annunci aggiunti</span>
                                             </h3>
                                         </div>
                                         <!-- End Single List -->
@@ -52,7 +52,7 @@
                                             </div>
                                             <h3>
                                                 {{$user->articles()->where('status', null)->count()}}
-                                                <span>Articoli in revisione </span>
+                                                <span>Annunci in revisione </span>
                                             </h3>
                                         </div>
                                         <!-- End Single List -->
@@ -64,11 +64,11 @@
                                 <div class="col-lg-6 col-md-12 col-12">
                                     <!-- Start Recent Items -->
                                     <div class="recent-items dashboard-block">
-                                        <h3 class="block-title">Articoli aggiunti di recente</h3>
+                                        <h3 class="block-title">Annunci aggiunti di recente</h3>
                                         <ul>
                                             <li>
                                                 @forelse ($user->articles()->where('status', null)->get()->take(3) as $article)
-                                                <a href="{{route('articles.show',compact('article'))}}">
+                                                <a class="d-flex" href="{{route('articles.show',compact('article'))}}">
                                                     <div class="image">
                                                         <a href="javascript:void(0)"><img src="https://via.placeholder.com/100x100" alt="#"></a>
                                                     </div>

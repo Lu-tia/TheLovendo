@@ -81,7 +81,7 @@
 
 
                         <div class="button d-flex justify-content-center p-3">
-                            <a href="{{ route('articles.create') }}" class="btn">Crea un annuncio</a>
+                            <a href="{{ route('articles.create',['user' => auth()->user()]) }}" class="btn">Crea un annuncio</a>
                         </div>
 
                     </div>
