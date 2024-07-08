@@ -18,7 +18,9 @@ class GlobalSearch extends Component
 
         if($this->query) {
             $this->articles = Article::search($this->query)->where('status',true)->get()->take(6);
-        } 
+        } else{
+            $this->articles= null;
+        }
  
  
         return view('livewire.global-search');
