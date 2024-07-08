@@ -20,6 +20,7 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/articoli/profilo/crea-articolo', [ArticleController::class, 'create'])->name('articles.create');
     Route::get('/articoli/profilo/crea-articolo/flashpage',[ArticleController::class,'flashpage']);
     Route::get('/profilo-utente/dashboard/{user}',[UserController::class,'dashboard'])->name('users.dashboard');
+    Route::get('/profilo/modifica-profilo/{user}',[UserController::class,'profile_settings'])->name('users.profile_settings');
 });
 
 /* SOCALITE */
