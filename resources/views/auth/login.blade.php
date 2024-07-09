@@ -1,23 +1,6 @@
 <x-layouts.main>
 
-    <div class="breadcrumbs">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6 col-md-6 col-12">
-                    <div class="breadcrumbs-content">
-                        <h1 class="page-title">Login</h1>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-md-6 col-12">
-                    <ul class="breadcrumb-nav">
-                        <li><a href="index.html">Home</a></li>
-                        <li>Login</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- End Breadcrumbs -->
+
 
     <!-- start login section -->
 
@@ -46,11 +29,12 @@
                             <div class="check-and-pass">
                                 <div class="row align-items-center">
                                     <div class="col-lg-6 col-md-6 col-12">
-                                        <div class="form-check">  
+                                        <div class="form-check">
                                         </div>
                                     </div>
                                     <div class="col-lg-6 col-md-6 col-12">
-                                        <a href="{{ route('password.request') }}" class="lost-pass">Password dimenticata?</a>
+                                        <a href="{{ route('password.request') }}" class="lost-pass">Password
+                                            dimenticata?</a>
                                     </div>
                                 </div>
                             </div>
@@ -62,7 +46,8 @@
                             </div>
                             <div class="socila-login">
                                 <ul>
-                                    <li><a href="{{route('social.redirect',['social'=> 'google'])}}" class="google"><i class="lni lni-google"></i>Accedi con Google</a></li>
+                                    <li><a href="{{ route('social.redirect', ['social' => 'google']) }}" class="google"><i
+                                                class="lni lni-google"></i>Accedi con Google</a></li>
                                 </ul>
                             </div>
                             <p class="outer-link">Non hai un account? <a href="{{ route('register') }}">Registrati

@@ -1,5 +1,5 @@
 <x-layouts.main>
-    
+
     <!-- Start Hero Area -->
     <section class="hero-area overlay">
         <div class="container">
@@ -15,13 +15,13 @@
             </div>
         </div>
     </section>
-    
+
     @if (session()->has('success'))
-    <div class="alert alert-success">
-        {{ session('success') }}
-    </div>
+        <div class="alert alert-success">
+            {{ session('success') }}
+        </div>
     @endif
-    
+
     <!-- Start Contact Section -->
     <section class="contact section">
         <div class="container">
@@ -29,52 +29,59 @@
                 <h3 class="block-title">Invia la tua candidatura</h3>
                 <div class="inner-block">
                     @if ($errors->any())
-                    <div class="alert alert-danger">
-                        <ul>
-                            @foreach ($errors->all() as $error)
-                            <li>{{ $error }}</li>
-                            @endforeach
-                        </ul>
-                    </div>
+                        <div class="alert alert-danger">
+                            <ul>
+                                @foreach ($errors->all() as $error)
+                                    <li>{{ $error }}</li>
+                                @endforeach
+                            </ul>
+                        </div>
                     @endif
-                    <form class="default-form-style" method="POST" action="{{ route('applicationMail') }}" enctype="multipart/form-data">
+                    <form class="default-form-style" method="POST" action="{{ route('applicationMail') }}"
+                        enctype="multipart/form-data">
                         @csrf
                         <div class="row">
                             <div class="col-12">
                                 <div class="form-group mx-4">
                                     <label>Nome<span>*</span></label>
-                                    <input name="nome" type="text" class="form-control" placeholder="Inserisci il tuo nome">
+                                    <input name="nome" type="text" class="form-control"
+                                        placeholder="Inserisci il tuo nome">
                                 </div>
                             </div>
                             <div class="col-12">
                                 <div class="form-group mx-4">
                                     <label>Cognome<span>*</span></label>
-                                    <input name="cognome" type="text" class="form-control" placeholder="Inserisci il tuo cognome">
+                                    <input name="cognome" type="text" class="form-control"
+                                        placeholder="Inserisci il tuo cognome">
                                 </div>
                             </div>
                             <div class="col-12">
                                 <div class="form-group mx-4">
                                     <label for="email">Email</label>
-                                    <input type="email" class="form-control" id="email" name="email" placeholder="Inserisci la tua mail">
+                                    <input type="email" class="form-control" id="email" name="email"
+                                        placeholder="Inserisci la tua mail">
                                 </div>
                             </div>
                             <div class="col-5">
                                 <div class="form-group ms-4">
                                     <label>Età<span>*</span></label>
-                                    <input name="eta" type="number" class="form-control" placeholder="Inserisci la tua età">
+                                    <input name="eta" type="number" class="form-control"
+                                        placeholder="Inserisci la tua età">
                                 </div>
                             </div>
                             <div class="col-5 me-4">
                                 <div class="form-group">
                                     <label>Città<span>*</span></label>
-                                    <input name="citta" type="text" class="form-control" placeholder="Inserisci la tua città">
+                                    <input name="citta" type="text" class="form-control"
+                                        placeholder="Inserisci la tua città">
                                 </div>
                             </div>
                             <div class="col-12">
                                 <div class="form-group mx-4">
                                     <label>Curriculum<span>*</span></label>
                                     <div class="custom-file">
-                                        <input name="curriculum" type="file" class="custom-file-input" id="customFile">
+                                        <input name="curriculum" type="file" class="custom-file-input"
+                                            id="customFile">
                                         <label class="custom-file-label" for="customFile">Scegli file</label>
                                     </div>
                                 </div>
