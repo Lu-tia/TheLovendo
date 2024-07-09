@@ -58,7 +58,6 @@
 
                             <!-- Parte auth -->
                             @auth
-<<<<<<< HEAD
                             <div class="nav-item dropdown">
                                 <a href="#" class="nav-link dropdown-toggle dd-menu collapsed" id="navbarDropdown"
                                     role="button" data-bs-toggle="collapse" data-bs-target="#submenu-1-6"
@@ -78,44 +77,15 @@
                                     </li>
                                 </ul>
                             </div>
-=======
-                                <li class="nav-item">
-                                    <a class="dd-menu collapsed" href="" data-bs-toggle="collapse"
-                                        data-bs-target="#submenu-1-6" aria-controls="navbarSupportedContent"
-                                        aria-expanded="false" aria-label="Toggle navigation">{{ auth()->user()->name }}</a>
-                                    <ul class="sub-menu collapse" id="submenu-1-6">
-                                        <li class="nav-item">
-                                            <a href="{{ route('users.dashboard', ['user' => auth()->user()]) }}">
-                                                Profilo
-                                            </a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <form method="POST" action="{{ route('logout') }}">
-                                                @csrf
-                                                <button class="btn" type="submit">Esci</button>
-                                            </form>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </li>
->>>>>>> 4a250f9b5506aeb88ad560cf95572db3e463eb85
                             @endauth
                         </div>
                         <!-- Bottone "Crea annuncio" -->
                         <div class="ms-3 mt-3">
                             @auth
-<<<<<<< HEAD
                             <a href="{{ route('articles.create',['user' => auth()->user()]) }}"
                                 class="btn btn-primary">Crea un annuncio</a>
                             @else
                             <a href="{{ route('login') }}" class="btn btn-primary">Crea un annuncio</a>
-=======
-                                <a href="{{ route('articles.create', ['user' => auth()->user()]) }}" class="btn">
-                                    Crea un annuncio</a>
-                            @else
-                                <a href="{{ route('login') }}" class="btn">
-                                    Crea un annuncio</a>
->>>>>>> 4a250f9b5506aeb88ad560cf95572db3e463eb85
                             @endauth
                         </div>
 

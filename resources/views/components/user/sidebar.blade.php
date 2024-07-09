@@ -14,7 +14,7 @@
                 <li><a href="favourite-items.html"><i class="lni lni-heart"></i> Whishlist</a></li>
                 <li><a class="{{ (request()->routeis('articles.create')) ? 'active' : '' }}" href="{{route('articles.create',['user' => auth()->user()])}}"><i class="lni lni-circle-plus"></i> Crea un annuncio</a></li>
                 @if (auth()->user()->where('is_Revisor', true))
-                <li><a class="{{ (request()->routeis('revisor.index')) ? 'active' : '' }}" href="{{route('revisor.index',['user' => auth()->user()])}}"><i class="lni lni-circle-plus"></i> Annunci da revisionare {{$articles_to_check_count ?? ''}}</a></li>
+                <li><a class="{{ (request()->routeis('revisor.index')) ? 'active' : '' }}" href="{{route('revisor.index',['user' => auth()->user()])}}"><i class="lni lni-write"></i> Annunci da revisionare {{$articles_to_check_count ?? ''}}</a></li>
                 @endif
             </ul>
         </div>
