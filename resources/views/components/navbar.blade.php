@@ -14,54 +14,71 @@
                         <span class="toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
-                        <ul id="nav" class="navbar-nav ms-auto">
+                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                             <li class="nav-item">
-                                <a href="{{ route('homepage') }}" aria-label="Toggle navigation">Home</a>
-                            </li>
-
-                            {{-- <a class=" dd-menu collapsed" href="{{ route('homepage') }}" data-bs-toggle="collapse"
-                                data-bs-target="#submenu-1-1" aria-controls="navbarSupportedContent"
-                                aria-expanded="false" aria-label="Toggle navigation">Home</a>
-                            <ul class="sub-menu collapse" id="submenu-1-1">
-                                <li class="nav-item active"><a href="{{ route('login') }}"><i class="lni lni-enter"></i>
-                                        Login</a></li>
-                                <li class="nav-item"><a href="{{ route('register') }}"><i class="lni lni-user"></i>
-                                        Register</a>
-                                </li>
-
-                            </ul> --}}
-
-                            <li class="nav-item">
-                                <a href="{{ route('articles.index') }}" aria-label="Toggle navigation">Articoli</a>
+                                <a class="nav-link" href="{{ route('homepage') }}">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a class="dd-menu collapsed" href="javascript:void(0)" data-bs-toggle="collapse"
-                                    data-bs-target="#submenu-1-5" aria-controls="navbarSupportedContent"
-                                    aria-expanded="false" aria-label="Toggle navigation">Categorie</a>
+                                <a class="nav-link" href="{{ route('articles.index') }}">Articoli</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link dd-menu collapsed" href="javascript:void(0)"
+                                    data-bs-toggle="collapse" data-bs-target="#submenu-1-5"
+                                    aria-controls="navbarSupportedContent" aria-expanded="false"
+                                    aria-label="Toggle navigation">Categorie</a>
                                 <ul class="sub-menu collapse" id="submenu-1-5">
                                     @forelse ($categories as $category)
-                                        <li class="nav-item"><a
-                                                href="{{ route('articles.category', ['id' => $category->id]) }}">{{ $category->name }}</a>
-                                        </li>
+                                    <li class="nav-item"><a
+                                            href="{{ route('articles.category', ['id' => $category->id]) }}">{{
+                                            $category->name }}</a>
+                                    </li>
                                     @empty
                                     @endforelse
                                 </ul>
                             </li>
                         </ul>
-                        @guest
-                            <ul id="nav" class="d-flex d-inline justify-content-center p-2">
-                                <li class="nav-item me-3">
-                                    <i class="lni lni-enter"></i>
-                                    <a class="dd-menu collapsed text-black fw-medium" href="{{ route('login') }}"
-                                        aria-label="Toggle navigation">Login</a>
-                                </li>
-                                <li class="nav-item me-3">
-                                    <i class="lni lni-user"></i>
-                                    <a class="dd-menu collapsed text-black fw-medium" href="{{ route('register') }}"
-                                        aria-label="Toggle navigation">Registrati</a>
-                                </li>
+
+                        <!-- Wrapper per auth/guest e bottone "Crea annuncio" -->
+                        <div class="d-flex flex-column ms-3">
+                            <!-- Parte guest -->
+                            @guest
+                            <div class="nav-item me-3">
+                                <i class="lni lni-enter"></i>
+                                <a class="dd-menu collapsed text-black fw-medium" href="{{ route('login') }}"
+                                    aria-label="Toggle navigation">Login</a>
+                            </div>
+                            <div class="nav-item me-3 mt-3">
+                                <i class="lni lni-user"></i>
+                                <a class="dd-menu collapsed text-black fw-medium" href="{{ route('register') }}"
+                                    aria-label="Toggle navigation">Registrati</a>
+                            </div>
                             @endguest
+
+
+
+                            <!-- Parte auth -->
                             @auth
+<<<<<<< HEAD
+                            <div class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle dd-menu collapsed" id="navbarDropdown"
+                                    role="button" data-bs-toggle="collapse" data-bs-target="#submenu-1-6"
+                                    aria-expanded="false" aria-haspopup="true">
+                                    {{ auth()->user()->name }}
+                                </a>
+                                <ul class="sub-menu collapse" id="submenu-1-6">
+                                    <li class="nav-item">
+                                        <a class="nav-link dropdown-item"
+                                            href="{{ route('users.dashboard', ['user' => auth()->user()]) }}">Profilo</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <form method="POST" action="{{ route('logout') }}">
+                                            @csrf
+                                            <button class="btn dropdown-item text-start" type="submit">Esci</button>
+                                        </form>
+                                    </li>
+                                </ul>
+                            </div>
+=======
                                 <li class="nav-item">
                                     <a class="dd-menu collapsed" href="" data-bs-toggle="collapse"
                                         data-bs-target="#submenu-1-6" aria-controls="navbarSupportedContent"
@@ -81,40 +98,28 @@
                                         </li>
                                     </ul>
                                 </li>
+>>>>>>> 4a250f9b5506aeb88ad560cf95572db3e463eb85
                             @endauth
-                        </ul>
-
-
-                        <div class="button d-flex justify-content-center p-3">
+                        </div>
+                        <!-- Bottone "Crea annuncio" -->
+                        <div class="ms-3 mt-3">
                             @auth
+<<<<<<< HEAD
+                            <a href="{{ route('articles.create',['user' => auth()->user()]) }}"
+                                class="btn btn-primary">Crea un annuncio</a>
+                            @else
+                            <a href="{{ route('login') }}" class="btn btn-primary">Crea un annuncio</a>
+=======
                                 <a href="{{ route('articles.create', ['user' => auth()->user()]) }}" class="btn">
                                     Crea un annuncio</a>
                             @else
                                 <a href="{{ route('login') }}" class="btn">
                                     Crea un annuncio</a>
+>>>>>>> 4a250f9b5506aeb88ad560cf95572db3e463eb85
                             @endauth
                         </div>
 
                     </div>
-
-                    {{-- <div class="login-button">
-                        <ul>
-                            <li>
-                                <a href="">Accedi</a>
-                            </li>
-                            <li>
-                                <a href="{{ route('register') }}">Registrati</a>
-                            </li>
-                        </ul>
-                    </div> --}}
-
-
-
-                    {{-- <a class="btn btn-sm btn-outline-secondary mx-2" href="{{ route('homepage') }}">Dashboard</a>
-                    --}}
-
-
-
                 </nav> <!-- navbar -->
             </div>
         </div>
