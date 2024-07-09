@@ -68,6 +68,11 @@
                                         aria-expanded="false" aria-label="Toggle navigation">{{ auth()->user()->name }}</a>
                                     <ul class="sub-menu collapse" id="submenu-1-6">
                                         <li class="nav-item">
+                                            <a href="{{route('users.dashboard',['user'=> auth()->user()])}}">
+                                                Profilo
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
                                             <form method="POST" action="{{ route('logout') }}">
                                                 @csrf
                                                 <button class="btn" type="submit">Esci</button>
@@ -81,7 +86,13 @@
 
 
                         <div class="button d-flex justify-content-center p-3">
-                            <a href="{{ route('articles.create',['user' => auth()->user()]) }}" class="btn">Crea un annuncio</a>
+                            @auth
+                            <a href="{{ route('articles.create',['user' => auth()->user()]) }}" class="btn">
+                                Crea un annuncio</a>
+                            @else    
+                            <a href="{{ route('login')}}" class="btn">
+                                Crea un annuncio</a>
+                            @endauth
                         </div>
 
                     </div>

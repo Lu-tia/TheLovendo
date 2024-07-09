@@ -28,7 +28,7 @@ Route::get('/auth/{social}/redirect',[ProviderController::class, 'redirect'])->n
 Route::get('/auth/{social}/callback',[ProviderController::class, 'callback'])->name('social.callback');
 
 /* RevisorZone */
-Route::get('/zona-revisore/articoli',[RevisorController::class, 'index'])->middleware('isRevisor')->name('revisor.index');
+Route::get('/profilo/{user}/zona-revisore/articoli',[RevisorController::class, 'index'])->middleware('isRevisor')->name('revisor.index');
 
 Route::patch('accept/{article}',[RevisorController::class, 'accept'])->name('accept');
 Route::patch('reject/{article}',[RevisorController::class, 'reject'])->name('reject');

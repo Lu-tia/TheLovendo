@@ -55,7 +55,7 @@
                                 </div>
                             </div>
                             <div class="button">
-                                <button type="submit" class="btn">Login Now</button>
+                                <button type="submit" class="btn">Accedi</button>
                             </div>
                             <div class="alt-option">
                                 <span>Oppure</span>
