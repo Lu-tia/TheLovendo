@@ -1,13 +1,13 @@
 <x-layouts.main>
 
     <!-- Start Dashboard Section -->
-    <section class="dashboard section">
+    <section class="dashboard section ">
         <div class="container">
             <div class="row">
                 <div class="col-lg-3 col-md-4 col-12">
                     <!-- Start Dashboard Sidebar -->
                     <x-user.sidebar />
-                    <div class="col-lg-9 col-md-8 col-12">
+                    <div class="col-lg-9 col-md-8 col-12 revisor-container">
                         <div class="row">
                             @if (session()->has('message'))
                                 <div class="custom-alert d-flex justify-content-between align-items-center">
