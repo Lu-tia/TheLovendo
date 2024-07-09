@@ -39,10 +39,10 @@ Index Of css
 ========================================*/
 @import url("https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
-:root{
-  --primary-color : #5830E0;
-  --secondary-color :#081828;
-  --complementary-color : #b29cfb;
+:root {
+  --primary-color: #335c67;
+  --secondary-color: #081828;
+  --complementary-color: #89a9b2;
 }
 
 html {
@@ -1968,12 +1968,13 @@ ol {
   z-index: 0;
   padding-top: 250px;
   padding-bottom: 300px;
+
 }
 
 .hero-area.overlay::before {
   z-index: -1;
-
   opacity: 0.5;
+
 }
 
 .hero-area.style2 {
@@ -6674,7 +6675,7 @@ blockquote .shape {
 
 /* How It Works */
 .how-works {
-  background-color: #f9f9f9;
+  background-color: #fff;
 }
 
 .how-works .single-work {
@@ -8898,7 +8899,7 @@ blockquote .shape {
   display: none;
 }
 
-.customCati{
+.customCati {
   cursor: pointer;
 }
 
@@ -8908,20 +8909,28 @@ blockquote .shape {
 }
 
 .radio-label:hover {
-  color: var(--primary-color);;
-}
-.radio-label-active {
-  color: var(--primary-color);;
+  color: var(--primary-color);
+  ;
 }
 
-.cstmSearch{
-  z-index:1000;
+.radio-label-active {
+  color: var(--primary-color);
+  ;
+}
+
+.cstmSearch {
+  z-index: 1000;
   height: 100vh;
 }
 
 @keyframes fadeIn {
-  0% {opacity: 0;}
-  100% {opacity: 1;}
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 
 .cardcst {
