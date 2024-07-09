@@ -1,5 +1,5 @@
- <div>
-     <div class="search-form wow fadeInUp" data-wow-delay=".7s">
+<div>
+    <div class="search-form wow fadeInUp" data-wow-delay=".7s">
         <div class="row">
             <div class="col-10 p-0">
                 <div class="search-input">
@@ -12,7 +12,38 @@
                     <button class="btn"><i class="lni lni-search-alt"></i> Cerca</button>
                 </div>
             </div>
-            <div class="row">
+                <div class="container">
+                        <div class="row justify-content-center">
+                           
+                                            @if ($articles) 
+                                            @forelse ($articles as $article)
+                                    <!-- Start Single Card -->
+                                        <div class="col-2 p-0 mt-3 mx-1">
+                                                <div class="card rounded shadow-sm border-0">
+                                                    <div class="card-body p-4"><img src="https://bootstrapious.com/i/snippets/sn-cards/shoes-1_gthops.jpg" alt="" class="img-fluid d-block mx-auto mb-3">
+                                                        <h5> <a href="#" class="text-dark">{{$article->title}}</a></h5>
+                                                        <p class="small text-muted font-italic">{{$article->category->name}}</p>
+                                                    </div>
+                                                </div>
+                                    {{-- <a href="{{route('articles.show',compact('article'))}}" class="single-cat">
+                                        <div class="icon">
+                                            <img src="assets/images/categories/car.svg" alt="#">
+                                        </div>
+                                        <h4>{{$article->title}}</h4>
+                                        <h5 class="total">{{$article->price}}</h5>
+                                    </a> --}}
+                                        </div>
+                                    @empty
+
+                                     @endforelse
+                                     @endif    
+                                    <!-- End Single Card -->
+                        </div>
+                </div>
+        </div>
+    </div>
+</div>
+            {{-- <div class="row">
                 <div class="mt-3 bg-white" id="globalSearch">
                     <div class="container">
                         <div class="row">
@@ -28,11 +59,11 @@
                             <p class="card-text"><small class="text-muted">{{$article->price}}</small></p>
                         </div>
                     </div>
-                    {{-- <div class="col-lg-12 col-md-4 col-12">
+                    <div class="col-lg-12 col-md-4 col-12">
                            <h4>{{$article->title}}</h4>
                            <h5>{{$article->category->name}}</h5>
                            <h5>{{$article->price}}</h5>
-                   </div> --}}
+                   </div>
                 </a>
             </div>
                 @empty
@@ -40,12 +71,12 @@
                 @endforelse
                 @endif    
                 
-                        </div>
+                </div>
             </div>
         </div>
-    </div>            
-            </div>
+    </div>             --}}
+            {{-- </div>
         </div>
     </div>
- </div>
+ </div> --}}
 <!-- End Search Form -->
