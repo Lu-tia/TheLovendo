@@ -8918,3 +8918,16 @@ blockquote .shape {
   z-index:1000;
   height: 100vh;
 }
+
+@keyframes fadeIn {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+.cardcst {
+  animation: fadeIn 1s ease-in-out;
+}
+
+.cstsearch {
+  width: 65%;
+}

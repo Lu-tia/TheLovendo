@@ -1,31 +1,13 @@
 <x-layouts.main>
-    <!-- Start Breadcrumbs -->
-    <div class="breadcrumbs">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6 col-md-6 col-12">
-                    <div class="breadcrumbs-content">
-                        <h1 class="page-title">Profile Settings</h1>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-md-6 col-12">
-                    <ul class="breadcrumb-nav">
-                        <li><a href="index.html">Home</a></li>
-                        <li>Profile Settings</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- End Breadcrumbs -->
-    
+
+
     <!-- Start Dashboard Section -->
     <section class="dashboard section">
         <div class="container">
             <div class="row">
                 <div class="col-lg-3 col-md-4 col-12">
                     <!-- Start Dashboard Sidebar -->
-                    <x-user.sidebar/>
+                    <x-user.sidebar />
                     <div class="col-lg-9 col-md-8 col-12">
                         <div class="main-content">
                             <!-- Start Details Lists -->
@@ -38,7 +20,7 @@
                                                 <i class="lni lni-checkmark-circle"></i>
                                             </div>
                                             <h3>
-                                                {{$user->articles()->where('status', true)->count()}}
+                                                {{ $user->articles()->where('status', true)->count() }}
                                                 <span>Annunci aggiunti</span>
                                             </h3>
                                         </div>
@@ -51,7 +33,7 @@
                                                 <i class="lni lni-timer"></i>
                                             </div>
                                             <h3>
-                                                {{$user->articles()->where('status', null)->count()}}
+                                                {{ $user->articles()->where('status', null)->count() }}
                                                 <span>Annunci in revisione </span>
                                             </h3>
                                         </div>
@@ -67,22 +49,28 @@
                                         <h3 class="block-title">Annunci aggiunti di recente</h3>
                                         <ul>
                                             @forelse ($user->articles()->where('status', null)->get()->take(3) as $article)
-                                            <li class="ps-3">
-                                                <a class="d-flex" href="{{route('articles.show',compact('article'))}}">
-                                                    <div class="image">
-                                                        <img src="https://via.placeholder.com/100x100" alt="#">
-                                                    </div>
-                                                    <div class="ms-3">
-                                                        <span class="text-black">{{$article->title}}</span>
-                                                        <span class="time mt-3">{{$user->created_at->locale('it')->diffForHumans()}}</span>
-                                                    </div>
-                                                </a>
-                                            </li>    
+                                                <li class="ps-3">
+                                                    <a class="d-flex"
+                                                        href="{{ route('articles.show', compact('article')) }}">
+                                                        <div class="image">
+                                                            <img src="https://via.placeholder.com/100x100"
+                                                                alt="#">
+                                                        </div>
+                                                        <div class="ms-3">
+                                                            <span class="text-black">{{ $article->title }}</span>
+                                                            <span
+                                                                class="time mt-3">{{ $user->created_at->locale('it')->diffForHumans() }}</span>
+                                                        </div>
+                                                    </a>
+                                                </li>
                                             @empty
-                                                Nessun articolo aggiunto di recente
+                                                <div class="ps-4">
+                                                    <p>Nessun articolo aggiunto di recente
+                                                    </p>
+                                                </div>
                                             @endforelse
-                                            
-                                            
+
+
                                         </ul>
                                     </div>
                                     <!-- End Recent Items -->
@@ -92,6 +80,6 @@
                     </div>
                 </div>
             </div>
-        </section>
-        <!-- End Dashboard Section -->
-    </x-layouts.main>
+    </section>
+    <!-- End Dashboard Section -->
+</x-layouts.main>
