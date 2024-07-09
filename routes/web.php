@@ -14,13 +14,14 @@ Route::get('/', [PageController::class, 'homepage'])->name('homepage');
 Route::get('/articoli/search', [ArticleController::class, 'searchArticles'])->name('articles.search');
 Route::get('/articoli', [ArticleController::class, 'index'])->name('articles.index');
 Route::get('/articoli/{id}', [ArticleController::class, 'index'])->name('articles.category');
-Route::get('/articoli/dettagli-articolo/{article}', [ArticleController::class, 'show'])->name('articles.show');
+Route::get('/articoli/dettagli-annuncio/{article}', [ArticleController::class, 'show'])->name('articles.show');
 
 Route::middleware(['auth'])->group(function () {
-    Route::get('/profilo/{user}/crea-articolo', [ArticleController::class, 'create'])->name('articles.create');
+    Route::get('/profilo/{user}/crea-annuncio', [ArticleController::class, 'create'])->name('articles.create');
     Route::get('/flashpage',[ArticleController::class,'flashpage']);
     Route::get('/profilo/{user}/dashboard/',[UserController::class,'dashboard'])->name('users.dashboard');
     Route::get('/profilo/{user}/modifica-profilo/',[UserController::class,'profile_settings'])->name('users.profile_settings');
+    Route::get('/profilo/{user}/i-miei-annunci/',[UserController::class,'my_items'])->name('users.my_items');
 });
 
 /* SOCALITE */

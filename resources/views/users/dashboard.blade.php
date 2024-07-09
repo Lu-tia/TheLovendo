@@ -48,7 +48,7 @@
                                     <div class="recent-items dashboard-block">
                                         <h3 class="block-title">Annunci aggiunti di recente</h3>
                                         <ul>
-                                            @forelse ($user->articles()->where('status', null)->get()->take(3) as $article)
+                                            @forelse ($user->articles()->where('status', true)->get()->take(3) as $article)
                                                 <li class="ps-3">
                                                     <a class="d-flex"
                                                         href="{{ route('articles.show', compact('article')) }}">

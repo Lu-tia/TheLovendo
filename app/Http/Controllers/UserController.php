@@ -23,4 +23,12 @@ class UserController extends Controller
             return redirect()->route('homepage');
         }
     }
+    public function my_items(User $user)
+    {   
+        if($user->id == auth()->user()->id){
+            return view('users.my-items',compact('user'));
+        } else {
+            return redirect()->route('homepage');
+        }
+    }
 }

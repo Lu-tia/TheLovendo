@@ -80,12 +80,12 @@
                             @endauth
                         </div>
                         <!-- Bottone "Crea annuncio" -->
-                        <div class="ms-3 mt-3">
+                        <div class="button ms-3 mt-3">
                             @auth
                             <a href="{{ route('articles.create',['user' => auth()->user()]) }}"
-                                class="btn btn-primary">Crea un annuncio</a>
+                                class="btn">Crea un annuncio</a>
                             @else
-                            <a href="{{ route('login') }}" class="btn btn-primary">Crea un annuncio</a>
+                            <a href="{{ route('login') }}" class="btn">Crea un annuncio</a>
                             @endauth
                         </div>
 
