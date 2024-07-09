@@ -48,7 +48,7 @@
                                         <!-- Start Single List -->
                                         <div class="single-list two">
                                             <div class="list-icon">
-                                                <i class="lni lni-bolt"></i>
+                                                <i class="lni lni-timer"></i>
                                             </div>
                                             <h3>
                                                 {{$user->articles()->where('status', null)->count()}}
@@ -66,14 +66,16 @@
                                     <div class="recent-items dashboard-block">
                                         <h3 class="block-title">Annunci aggiunti di recente</h3>
                                         <ul>
-                                            <li>
-                                                @forelse ($user->articles()->where('status', null)->get()->take(3) as $article)
+                                            @forelse ($user->articles()->where('status', null)->get()->take(3) as $article)
+                                            <li class="ps-3">
                                                 <a class="d-flex" href="{{route('articles.show',compact('article'))}}">
                                                     <div class="image">
-                                                        <a href="javascript:void(0)"><img src="https://via.placeholder.com/100x100" alt="#"></a>
+                                                        <img src="https://via.placeholder.com/100x100" alt="#">
                                                     </div>
-                                                    <a href="javascript:void(0)" class="title">{{$article->title}}</a>
-                                                        <span class="time">{{$user->created_at->locale('it')->diffForHumans()}}</span>
+                                                    <div class="ms-3">
+                                                        <span class="text-black">{{$article->title}}</span>
+                                                        <span class="time mt-3">{{$user->created_at->locale('it')->diffForHumans()}}</span>
+                                                    </div>
                                                 </a>
                                             </li>    
                                             @empty

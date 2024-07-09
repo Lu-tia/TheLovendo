@@ -50,18 +50,16 @@
                             <h2 class="title">{{ $article->title }}</h2>
                             <p class="location"><i class="lni lni-map-marker"></i><a
                                     href="javascript:void(0)">{{ $article->city }}</a></p>
-                            <h3 class="price">{{ $article->price }}</h3>
+                            <h3 class="price">{{ $article->price }} €</h3>
                             <div class="list-info">
-                                <h4>Informations</h4>
+                                <h4>Informazioni</h4>
                                 <ul>
-                                    <li><span>Condition:</span> {{ $article->condition }}</li>
-                                    <li><span>Status:</span> {{ $article->status }}</li>
-
+                                    <li><span>Condizione:</span> {{ $article->condition }}</li>
                                 </ul>
                             </div>
                             <div class="list-info">
                                 <div class="social-share">
-                                    <h4>Share Ad</h4>
+                                    <h4>Condividi su</h4>
                                     <ul>
                                         <li><a href="javascript:void(0)" class="facebook"><i
                                                     class="lni lni-facebook-filled"></i></a></li>
@@ -87,7 +85,7 @@
                     <div class="col-lg-8 col-md-7 col-12">
                         <!-- Start Single Block -->
                         <div class="single-block description">
-                            <h3>Description</h3>
+                            <h3>Descrizione prodotto</h3>
                             <p>
                                 {{ $article->body }}
                             </p>
@@ -102,7 +100,7 @@
                             <div class="single-block author">
                                 <h3>Autore</h3>
                                 <div class="content">
-                                    <img src="https://via.placeholder.com/200x200" alt="#">
+                                    <img src="{{$article->user->providers[0]->social_avatar ?? "https://via.placeholder.com/200x200"}}" alt="#">
                                     <h4>{{ $article->user->name }}</h4>
                                     <a href="javascript:void(0)" class="see-all"></a>
                                 </div>
