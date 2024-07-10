@@ -1,9 +1,7 @@
 <div class="dashboard-sidebar">
     <div class="user-image">
         <img src="{{auth()->user()->providers[0]->social_avatar ?? ""}}" alt="#">
-        <h3>{{auth()->user()->name}}
-            <span><a href="javascript:void(0)">@username</a></span>
-        </h3>
+        <h3 class="mt-3">{{auth()->user()->firstName}} {{auth()->user()->lastName}}</h3>
     </div>
     <div class="dashboard-menu">
         <ul>

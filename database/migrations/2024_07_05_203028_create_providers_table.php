@@ -15,7 +15,8 @@ return new class extends Migration
             $table->id();
             $table->string('social_id')->nullable();
             $table->string('email')->nullable();
-            $table->string('social_name')->nullable();
+            $table->string('social_firstName')->nullable();
+            $table->string('social_lastName')->nullable();
             $table->string('social_avatar')->nullable();
             $table->foreignId('user_id')->constrained();
             $table->timestamps();

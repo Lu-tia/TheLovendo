@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Provider extends Model
 {
     use HasFactory;
-    protected $fillable=['social_id','social_name','social_avatar','email','user_id'];
+    protected $fillable=['social_id','social_firstName','social_lastName','social_avatar','email','user_id'];
 
     public function user()
     {

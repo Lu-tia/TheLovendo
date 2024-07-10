@@ -69,7 +69,7 @@
                                         <div class="sub-menu">
                                             <div class="user-info">
                                                 <img src="{{ asset('/assets/profile/user.png') }}" class="user-pic"alt="">
-                                                <h3>Nome Cognome</h3>
+                                                <h3>{{auth()->user()->firstName}} {{auth()->user()->lastName}}</h3>
                                             </div>
                                             <hr>
 
@@ -83,11 +83,14 @@
                                                 <p>Zona Revisione</p>
                                                 <span>></span>
                                             </a>
-                                            <a href="" class="sub-menu-link">
-                                                <img src="{{ asset('/assets/profile/logout.png') }}" alt="">
-                                                <p>Logout</p>
-                                                <span>></span>
-                                            </a>
+                                            <form action="{{route('logout')}}" method="post">
+                                                @csrf
+                                                <a href="" class="sub-menu-link">
+                                                    <img src="{{ asset('/assets/profile/logout.png') }}" alt="">
+                                                    <button>Logout</button>
+                                                    <span>></span>
+                                                </a>
+                                            </form>
                                         </div>
                                     </div>
 
