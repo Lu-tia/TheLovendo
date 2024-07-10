@@ -23,8 +23,15 @@
                             </div>
                             <div class="form-group">
                                 <label>Nome</label>
-                                <input name="name" type="text" value="{{ old('name') }}">
-                                @error('name')
+                                <input name="firstName" type="text" value="{{ old('firstName') }}">
+                                @error('firstName')
+                                    <span class="small text-danger">{{ $message }}</span>
+                                @enderror
+                            </div>
+                            <div class="form-group">
+                                <label>Cognome</label>
+                                <input name="lastName" type="text" value="{{ old('lastName') }}">
+                                @error('lastName')
                                     <span class="small text-danger">{{ $message }}</span>
                                 @enderror
                             </div>

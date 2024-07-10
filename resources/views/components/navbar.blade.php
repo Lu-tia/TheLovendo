@@ -63,12 +63,12 @@
                             @endguest
                             @auth
                                 <li class="nav-item">
-                                    <img src="{{ asset('/assets/profile/user.png') }}" class="user-pic"alt=""
+                                    <img src="{{ auth()->user()->providers[0]->social_avatar ?? Storage::url(auth()->user()->avatar)}}" class="user-pic"alt=""
                                         onclick="toggleMenu()">
                                     <div class="sub-menu-wrap" id="subMenu">
                                         <div class="sub-menu">
                                             <div class="user-info">
-                                                <img src="{{ asset('/assets/profile/user.png') }}" class="user-pic"alt="">
+                                                <img src="{{auth()->user()->providers[0]->social_avatar ?? Storage::url(auth()->user()->avatar)}}" class="user-pic"alt="">
                                                 <h3>{{auth()->user()->firstName}} {{auth()->user()->lastName}}</h3>
                                             </div>
                                             <hr>

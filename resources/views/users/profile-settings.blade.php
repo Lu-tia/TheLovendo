@@ -15,7 +15,7 @@
                                 <h3 class="block-title">Impostazioni profilo</h3>
                                 <div class="inner-block">
                                     <div class="image">
-                                        <img src="{{ $user->providers[0]->social_avatar }}" alt="#">
+                                        <img src="{{ auth()->user()->providers[0]->social_avatar ?? Storage::url(auth()->user()->avatar) }}" alt="#">
                                     </div>
                                     <form class="profile-setting-form" method="post" action="#">
                                         <div class="row">
