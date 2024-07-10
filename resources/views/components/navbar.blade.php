@@ -65,7 +65,7 @@
                                 <li class="nav-item">
                                     <img src="{{ asset('/assets/profile/user.png') }}" class="user-pic"alt=""
                                         onclick="toggleMenu()">
-                                    <div class="sub-menu-wrap open-menu" id="subMenu">
+                                    <div class="sub-menu-wrap" id="subMenu">
                                         <div class="sub-menu">
                                             <div class="user-info">
                                                 <img src="{{ asset('/assets/profile/user.png') }}" class="user-pic"alt="">
