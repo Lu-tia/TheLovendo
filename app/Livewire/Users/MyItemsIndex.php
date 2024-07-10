@@ -6,45 +6,39 @@ use App\Models\Article;
 use Illuminate\Support\Facades\Auth;
 use Livewire\Component;
 use Livewire\WithPagination;
+use Illuminate\Pagination\Paginator;
 
 class MyItemsIndex extends Component
 {
     use WithPagination;
-    public $articles;
-    public $btn = true;
-    public $btnAccept = false;
-    public $btnToAccept = false;
+    private $articles;
+    public $query = 0;
+    public $currentPage = 1;
 
     public function mount()
     {
-        $this->articles = Auth::user()->articles()->orderBy('created_at','desc')->get();
+        $this->articles = Auth::user()->articles()->orderBy('created_at', 'desc')->paginate(5);
         
     }
-    public function allArticles()
+   
+    public function setPage($url)
     {
-        $this->btn = true;
-        $this->btnToAccept = false;
-        $this->btnAccept = false;
-    }
-    public function accepted()
-    {
-        $articles = Auth::user()->articles()->orderBy('created_at','desc')->where('status',true)->get();
-        $this->btn = false;
-        $this->btnToAccept = false;
-        $this->btnAccept = true;
-        return $this->articles = $articles;
-    }
-    public function to_accepted()
-    {
-        $articles = Auth::user()->articles()->orderBy('created_at','desc')->where('status',null)->get();
-        $this->btn = false;
-        $this->btnToAccept = true;
-        $this->btnAccept = false;
-        return $this->articles = $articles;
+        $this->currentPage = explode('page=', $url)[1];
+        Paginator::currentPageResolver(function(){
+            return $this->currentPage;
+        });
     }
 
     public function render()
     {   
-        return view('livewire.users.my-items-index');
+        if($this->query == 0){
+            $this->articles = Auth::user()->articles()->orderBy('created_at', 'desc')->paginate(5);
+        } else if($this->query == 1){
+            $this->articles = Auth::user()->articles()->orderBy('created_at', 'desc')->where('status',true)->paginate(5);
+        } else if ($this->query == 2){
+            $this->articles = Auth::user()->articles()->orderBy('created_at', 'desc')->where('status',null)->paginate(5);
+        }
+        $articles = $this->articles;
+        return view('livewire.users.my-items-index',compact('articles'));
     }
 }

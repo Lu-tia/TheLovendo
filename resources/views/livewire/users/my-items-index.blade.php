@@ -2,9 +2,18 @@
     <h3 class="block-title">I miei Annunci</h3>
     <nav class="list-nav">
         <ul>
-            <li class="{{$btn == true ? 'active' : ''}}"><a wire:click='allArticles' href="javascript:void(0)">Tutti gli annunci <span>{{$articles->count()}}</span></a></li>
-            <li class="{{$btnAccept == true ? 'active' : ''}}"><a wire:click='accepted' href="javascript:void(0)">Pubblicati <span>{{$articles->where('status', true)->count()}}</span></a></li>
-            <li class="{{$btnToAccept == true ? 'active' : ''}}"><a wire:click='to_accepted' href="javascript:void(0)">In attesa di revisione <span>{{$articles->where('status', null)->count()}}</span></a></li>
+            <li class="{{$query == 0 ? 'active' : ''}}">
+                <input type="radio" wire:model.live="query" value="0" name="filtered" id="allArticles">
+                <label for="allArticles">Tutti gli annunci</label>
+            </li>
+            <li class="{{$query == 1 ? 'active' : ''}}">
+                <input type="radio" wire:model.live="query" value="1" name="filtered" id="Accepted">
+                <label for="Accepted">Pubblicati</label>
+            </li>
+            <li class="{{$query == 2 ? 'active' : ''}}">
+                <input type="radio" wire:model.live="query" value="2" name="filtered" id="toAccept">
+                <label for="toAccept">In attesa di revisione</label>
+            </li>
         </ul>
     </nav>
     <!-- Start Items Area -->
@@ -32,10 +41,10 @@
             <div class="row align-items-center">
                 <div class="col-lg-5 col-md-5 col-12">
                     <div class="item-image">
-                        <img src="https://via.placeholder.com/100x100" alt="#">
+                        <img src="" alt="#">
                         <div class="content">
-                            <h3 class="title"><a href="javascript:void(0)">{{$article->title}}</a></h3>
-                            <span class="price">{{$article->price}}€</span>
+                            <h3 class="title"><a href="javascript:void(0)">{{$article['title']}}</a></h3>
+                            <span class="price">{{$article['price']}}€</span>
                         </div>
                     </div>
                 </div>
@@ -60,7 +69,7 @@
 
 
         <!-- Pagination -->
-        {{-- {{ $articles->links('livewire.custom-paginator') }} --}}
+        {{ $articles->links('livewire.custom-paginator') }}
         <!--/ End Pagination -->
     </div>
     <!-- End Items Area -->
