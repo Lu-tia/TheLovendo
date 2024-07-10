@@ -65,7 +65,7 @@
                                 <li class="nav-item">
                                     <img src="{{ asset('/assets/profile/user.png') }}" class="user-pic"alt=""
                                         onclick="toggleMenu()">
-                                    <div class="sub-menu-wrap" id="subMenu">
+                                    <div class="sub-menu-wrap open-menu" id="subMenu">
                                         <div class="sub-menu">
                                             <div class="user-info">
                                                 <img src="{{ asset('/assets/profile/user.png') }}" class="user-pic"alt="">
@@ -151,6 +151,10 @@
 
 
 </div> <!-- container -->
-@push('scripts')
-    <script src="app.js"></script>
-@endpush
+<script>
+    let subMenu = document.querySelector("#subMenu");
+
+function toggleMenu() {
+     subMenu.classList.toggle("open-menu");
+}
+</script>
