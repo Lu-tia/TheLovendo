@@ -31,7 +31,8 @@
                         <h4>{{$article->title}}</h4>
                         <h5 class="total">{{$article->price}}</h5>
                     </a> --}}
-        </div>
+                </div>
+                {{$articles->links()}}
                      @endforeach
 
                      @endif    

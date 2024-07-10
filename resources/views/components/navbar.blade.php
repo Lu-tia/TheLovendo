@@ -73,14 +73,14 @@
                                             </div>
                                             <hr>
 
-                                            <a href="" class="sub-menu-link">
+                                            <a href="{{route('users.dashboard',['user' => auth()->user()])}}" class="sub-menu-link">
                                                 <img src="{{ asset('/assets/profile/profile.png') }}" alt="">
-                                                <p>Edit profile</p>
+                                                <p>Profilo</p>
                                                 <span>></span>
                                             </a>
-                                            <a href="" class="sub-menu-link">
+                                            <a href="{{route('revisor.index',['user' => auth()->user()])}}" class="sub-menu-link">
                                                 <img src="{{ asset('/assets/profile/profile.png') }}" alt="">
-                                                <p>Revisione</p>
+                                                <p>Zona Revisione</p>
                                                 <span>></span>
                                             </a>
                                             <a href="" class="sub-menu-link">

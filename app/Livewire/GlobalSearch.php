@@ -4,11 +4,14 @@ namespace App\Livewire;
 
 use App\Models\Article;
 use Livewire\Component;
+use Livewire\WithPagination;
 
 class GlobalSearch extends Component
 {
+    use WithPagination;
+
     public $query = "";
-    public $articles;
+
 
    
     
@@ -17,12 +20,12 @@ class GlobalSearch extends Component
        
 
         if($this->query) {
-            $this->articles = Article::search($this->query)->where('status',true)->get()->take(5);
+            $articles = Article::search($this->query)->where('status',true)->paginate(4);
         } else{
-            $this->articles= null;
+            $articles= null;
         }
  
  
-        return view('livewire.global-search');
+        return view('livewire.global-search',compact('articles'));
     }
 }

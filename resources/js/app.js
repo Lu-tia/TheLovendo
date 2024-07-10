@@ -71,12 +71,6 @@ if (!globalInput.value) {
 }
 
 
-let subMenu = document.getElementById("subMenu");
-
-function toggleMenu() {
-    console.log('cazzi');
-    subMenu.classiList.toggle("open-menu");
-}
 
 
 

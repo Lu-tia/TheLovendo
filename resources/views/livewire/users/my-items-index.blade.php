@@ -28,10 +28,7 @@
                     <p>Categoria</p>
                 </div>
                 <div class="col-lg-2 col-md-2 col-12">
-                    <p>Prezzo</p>
-                </div>
-                <div class="col-lg-3 col-md-3 col-12 align-right">
-                    <p>Action</p>
+                    <p>Consizioni</p>
                 </div>
             </div>
         </div>
@@ -43,16 +40,17 @@
                     <div class="item-image">
                         <img src="" alt="#">
                         <div class="content">
-                            <h3 class="title"><a href="javascript:void(0)">{{$article['title']}}</a></h3>
-                            <span class="price">{{$article['price']}}€</span>
+                            <h3 class="title"><a href="javascript:void(0)">{{$article->title}}</a></h3>
+                            <span class="price">{{$article->price}}€</span>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-2 col-md-2 col-12">
-                    <p>Electronic</p>
+                    <p>{{$article->category->name}}</p>
                 </div>
                 <div class="col-lg-2 col-md-2 col-12">
-                    <p>New</p>
+                    <p>{{$article->condition}}</p>
+                    
                 </div>
                 <div class="col-lg-3 col-md-3 col-12 align-right">
                     <ul class="action-btn">
