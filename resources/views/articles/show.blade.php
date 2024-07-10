@@ -1,6 +1,4 @@
 <x-layouts.main>
-
-
     <!-- Start Item Details -->
     <section class="item-details section">
         <div class="container">
@@ -10,35 +8,26 @@
                         <div class="product-images">
                             <div id="carouselExampleIndicators" class="carousel slide">
                                 <div class="carousel-indicators">
-                                    <button type="button" data-bs-target="#carouselExampleIndicators"
-                                        data-bs-slide-to="0" class="active" aria-current="true"
-                                        aria-label="Slide 1"></button>
-                                    <button type="button" data-bs-target="#carouselExampleIndicators"
-                                        data-bs-slide-to="1" aria-label="Slide 2"></button>
-                                    <button type="button" data-bs-target="#carouselExampleIndicators"
-                                        data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
                                 </div>
                                 <div class="carousel-inner">
                                     <div class="carousel-item active">
-                                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Example_image.svg/900px-Example_image.svg.png"
-                                            class="d-block w-100" alt="...">
+                                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Example_image.svg/900px-Example_image.svg.png" class="d-block w-100" alt="...">
                                     </div>
                                     <div class="carousel-item">
-                                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Example_image.svg/900px-Example_image.svg.png"
-                                            class="d-block w-100" alt="...">
+                                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Example_image.svg/900px-Example_image.svg.png" class="d-block w-100" alt="...">
                                     </div>
                                     <div class="carousel-item">
-                                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Example_image.svg/900px-Example_image.svg.png"
-                                            class="d-block w-100" alt="...">
+                                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Example_image.svg/900px-Example_image.svg.png" class="d-block w-100" alt="...">
                                     </div>
                                 </div>
-                                <button class="carousel-control-prev" type="button"
-                                    data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
                                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                                     <span class="visually-hidden">Previous</span>
                                 </button>
-                                <button class="carousel-control-next" type="button"
-                                    data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
                                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                                     <span class="visually-hidden">Next</span>
                                 </button>
@@ -48,8 +37,12 @@
                     <div class="col-lg-6 col-md-12 col-12">
                         <div class="product-info">
                             <h2 class="title">{{ $article->title }}</h2>
-                            <p class="location"><i class="lni lni-map-marker"></i><a
-                                    href="javascript:void(0)">{{ $article->city }}</a></p>
+                            <form action="{{ route('wishlist.store') }}" method="POST" class="d-inline-block ms-3">
+                                @csrf
+                                <input type="hidden" name="article_id" value="{{ $article->id }}">
+                                <button type="submit" class="btn btn-outline-primary"><i class="lni lni-heart"></i> Aggiungi ai preferiti</button>
+                            </form>
+                            <p class="location mt-3"><i class="lni lni-map-marker"></i><a href="javascript:void(0)">{{ $article->city }}</a></p>
                             <h3 class="price">{{ $article->price }} €</h3>
                             <div class="list-info">
                                 <h4>Informazioni</h4>
@@ -60,22 +53,16 @@
                             <div class="list-info">
                                 <div class="social-share">
                                     <h4>Condividi su</h4>
-                                    <ul>
-                                        <li><a href="javascript:void(0)" class="facebook"><i
-                                                    class="lni lni-facebook-filled"></i></a></li>
-                                        <li><a href="javascript:void(0)" class="twitter"><i
-                                                    class="lni lni-twitter-original"></i></a></li>
-                                        <li><a href="javascript:void(0)" class="google"><i
-                                                    class="lni lni-google"></i></a>
-                                        </li>
-                                        <li><a href="javascript:void(0)" class="linkedin"><i
-                                                    class="lni lni-linkedin-original"></i></a></li>
-                                        <li><a href="javascript:void(0)" class="pinterest"><i
-                                                    class="lni lni-pinterest"></i></a></li>
+                                    <ul class="d-flex">
+                                        <li><a href="javascript:void(0)" class="facebook me-2"><i class="lni lni-facebook-filled"></i></a></li>
+                                        <li><a href="javascript:void(0)" class="twitter me-2"><i class="lni lni-twitter-original"></i></a></li>
+                                        <li><a href="javascript:void(0)" class="google me-2"><i class="lni lni-google"></i></a></li>
+                                        <li><a href="javascript:void(0)" class="linkedin me-2"><i class="lni lni-linkedin-original"></i></a></li>
+                                        <li><a href="javascript:void(0)" class="pinterest"><i class="lni lni-pinterest"></i></a></li>
                                     </ul>
                                 </div>
                             </div>
-
+                            
                         </div>
                     </div>
                 </div>
@@ -91,8 +78,6 @@
                             </p>
                         </div>
                         <!-- End Single Block -->
-
-
                     </div>
                     <div class="col-lg-4 col-md-5 col-12">
                         <div class="item-details-sidebar">
@@ -100,15 +85,17 @@
                             <div class="single-block author">
                                 <h3>Autore</h3>
                                 <div class="content">
-                                    <img src="{{$article->user->providers[0]->social_avatar ?? "https://via.placeholder.com/200x200"}}" alt="#">
+                                    <img src="{{ $article->user->providers[0]->social_avatar ?? 'https://via.placeholder.com/200x200' }}" alt="#">
                                     <h4>{{ $article->user->name }}</h4>
                                     <a href="javascript:void(0)" class="see-all"></a>
                                 </div>
                             </div>
+                            <!-- End Single Block -->
                         </div>
                     </div>
                 </div>
             </div>
-    </section>
-    <!-- End Item Details -->
-</x-layouts.main>
+        </section>
+        <!-- End Item Details -->
+    </x-layouts.main>
+    

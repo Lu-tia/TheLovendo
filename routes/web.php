@@ -6,6 +6,7 @@ use App\Http\Controllers\ContactController;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\RevisorController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\WishlistController;
 use App\Models\Article;
 use Illuminate\Support\Facades\Route;
 
@@ -22,6 +23,10 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/profilo/{user}/dashboard/',[UserController::class,'dashboard'])->name('users.dashboard');
     Route::get('/profilo/{user}/modifica-profilo/',[UserController::class,'profile_settings'])->name('users.profile_settings');
     Route::get('/profilo/{user}/i-miei-annunci/',[UserController::class,'my_items'])->name('users.my_items');
+    Route::get('/wishlist', [WishlistController::class, 'index'])->name('wishlist.index');
+    Route::post('/wishlist', [WishlistController::class, 'store'])->name('wishlist.store');
+    Route::patch('/wishlist/{wishlist}', [WishlistController::class, 'update'])->name('wishlist.update');
+    Route::delete('/wishlist/{wishlist}', [WishlistController::class, 'destroy'])->name('wishlist.destroy');
 });
 
 /* SOCALITE */

@@ -11,9 +11,9 @@ class Article extends Model
 {
     use Searchable;
     use HasFactory;
-
+    
     protected $fillable = ['title','price','body','user_id','category_id','condition','status','image','country','city'];
-
+    
     public function user()
     {
         return $this->belongsTo(User::class);
@@ -22,7 +22,7 @@ class Article extends Model
     {
         return $this->belongsTo(Category::class);
     }
-
+    
     public function setAccepted($value)
     {
         $this->status = $value;
@@ -39,4 +39,9 @@ class Article extends Model
             'category' => $this->category->name,
         ];
     }
+    public function wishlists()
+{
+    return $this->hasMany(WishlistUser::class);
+}
+
 }
