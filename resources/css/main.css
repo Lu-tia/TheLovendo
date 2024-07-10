@@ -1965,10 +1965,16 @@ ol {
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
+  max-height: 873px;
   z-index: 0;
   padding-top: 250px;
   padding-bottom: 300px;
 
+}
+@media only screen and (max-width: 600px) {
+  .hero-area {
+    max-height: 100%;
+  }
 }
 
 .hero-area.overlay::before {
