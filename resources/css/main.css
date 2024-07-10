@@ -5453,53 +5453,6 @@ blockquote .shape {
   background: #fff;
   border-color: transparent;
 }
-/* My-items list-nav */
-
-.list-nav ul li label {
-  border: 1px solid #eee;
-  border-radius: 4px;
-  padding: 8px 12px 8px 15px;
-  font-size: 14px;
-  font-weight: 500;
-  color: #888;
-}
-.list-nav ul li input{
-  display: none;
-}
-
-.list-nav ul li label span {
-  display: inline-block;
-  border: 1px solid #eee;
-  font-size: 11px;
-  margin-left: 3px;
-  padding: 1px 6px;
-  border-radius: 4px;
-  font-weight: 600;
-}
-
-.list-nav ul li label:hover {
-  color: #fff;
-  background: var(--primary-color);
-  border-color: transparent;
-}
-
-.list-nav ul li label:hover span {
-  color: var(--primary-color);
-  background: #fff;
-  border-color: transparent;
-}
-
-.list-nav ul li.active label {
-  color: #fff;
-  background: var(--primary-color);
-  border-color: transparent;
-}
-
-.list-nav ul li.active label span {
-  color: var(--primary-color);
-  background: #fff;
-  border-color: transparent;
-}
 
 /* My Items */
 .my-items {
@@ -8986,4 +8939,88 @@ blockquote .shape {
 
 .cstsearch {
   width: 65%;
+}
+
+.user-pic {
+  width: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  margin-left: 30px;
+}
+
+.sub-menu-wrap {
+  position: absolute;
+  top: 100%;
+  right: 10%;
+  width: 320px;
+  max-height: 0px;
+  overflow: hidden;
+  transition: max-height 0.5s;
+}
+
+.sub-menu-wrap .open-menu {
+  max-height: 400px;
+}
+
+
+.sub .sub-menu {
+  background: white;
+  padding: 20px;
+  margin: 10px;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+}
+
+.user-info h3 {
+  font-weight: 400;
+}
+
+.user-info img {
+  width: 60px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.sub-menu hr {
+  border: 0;
+  height: 1px;
+  width: 100%;
+  background: #ccc;
+  margin: 15px 0 10px;
+}
+
+.sub-menu-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #525253;
+  margin: 12px 0;
+}
+
+.sub-menu-link p {
+  width: 100%;
+}
+
+.sub-menu-link img {
+  width: 40px;
+  background-color: #e5e5e5;
+  border-radius: 50%;
+  padding: 8px;
+  margin-right: 15px;
+}
+
+.sub-menu-link span {
+  font-size: 22px;
+  transition: transform 0.5s;
+}
+
+.sub-menu-link:hover span {
+  transform: translateX(5px);
+}
+
+.sub-menu-link:hover p {
+  font-weight: 600;
 }

@@ -64,10 +64,17 @@ tns({
 let globalSearch = document.querySelector('#globalSearch');
 let globalInput = document.querySelector('#globalInput');
 
-if (!globalInput.value){
+if (!globalInput.value) {
     globalSearch.classList.add('d-none');
-} else if (globalInput.value){
+} else if (globalInput.value) {
     globalSearch.classList.remove('d-none');
+}
+
+
+let subMenu = document.getElementById("subMenu");
+
+function toggleMenu() {
+    subMenu.classiList.toggle("open-menu");
 }
 
 
