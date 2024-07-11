@@ -11,6 +11,7 @@ class GlobalSearch extends Component
     use WithPagination;
 
     public $query = "";
+    public $articles ="";
 
 
    
@@ -20,12 +21,12 @@ class GlobalSearch extends Component
        
 
         if($this->query) {
-            $articles = Article::search($this->query)->where('status',true)->paginate(4);
+            $this->articles = Article::search($this->query)->where('status',true)->get()->take(5);
         } else{
-            $articles= null;
+            $this->articles= null;
         }
  
  
-        return view('livewire.global-search',compact('articles'));
+        return view('livewire.global-search');
     }
 }
