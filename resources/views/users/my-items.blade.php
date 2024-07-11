@@ -8,11 +8,12 @@
                 <div class="col-lg-3 col-md-4 col-12">
                     <!-- Start Dashboard Sidebar -->
                     <x-user.sidebar />
-                    <div class="col-lg-9 col-md-8 col-12">
-                        <div class="main-content">
-                           @livewire('users.my-items-index')
-                        </div>
+                </div>
+                <div class="col-lg-9 col-md-8 col-12">
+                    <div class="main-content">
+                        @livewire('users.my-items-index')
                     </div>
+
                 </div>
             </div>
     </section>
