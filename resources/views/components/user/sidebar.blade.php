@@ -14,7 +14,7 @@
             <li><a class="{{ request()->routeIs('users.my_items') ? 'active' : '' }}"
                     href="{{ route('users.my_items') }}"><i class="lni lni-checkmark-circle"></i> I miei annunci</a>
             </li>
-            <li><a href="{{ route('wishlist.index') }}"><i class="lni lni-heart"></i> Whishlist</a></li>
+            <li><a href="{{ route('wishlist.index') }}"><i class="lni lni-heart"></i> Wishlist</a></li>
             <li><a class="{{ request()->routeIs('articles.create') ? 'active' : '' }}"
                     href="{{ route('articles.create') }}"><i class="lni lni-circle-plus"></i> Crea un annuncio</a>
             </li>

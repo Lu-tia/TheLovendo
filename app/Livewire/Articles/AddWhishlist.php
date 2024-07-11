@@ -3,6 +3,7 @@
 namespace App\Livewire\Articles;
 
 use App\Models\Article;
+use App\Models\User;
 use App\Models\WishlistUser;
 use Livewire\Component;
 
@@ -10,7 +11,7 @@ class AddWhishlist extends Component
 {
 
     public $article;
-
+    public $query;
 
     public function store()
     {
@@ -28,6 +29,7 @@ class AddWhishlist extends Component
 
     public function render()
     {
-        return view('livewire.articles.add-whishlist');
+        $wishlist = auth()->user()->wishlists->pluck('article_id')->toArray();
+        return view('livewire.articles.add-whishlist',compact('wishlist'));
     }
 }
