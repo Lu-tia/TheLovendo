@@ -37,11 +37,7 @@
                     <div class="col-lg-6 col-md-12 col-12">
                         <div class="product-info">
                             <h2 class="title">{{ $article->title }}</h2>
-                            <form action="{{ route('wishlist.store') }}" method="POST" class="d-inline-block ms-3">
-                                @csrf
-                                <input type="hidden" name="article_id" value="{{ $article->id }}">
-                                <button type="submit" class="btn btn-outline-primary"><i class="lni lni-heart"></i> Aggiungi ai preferiti</button>
-                            </form>
+                            
                             <p class="location mt-3"><i class="lni lni-map-marker"></i><a href="javascript:void(0)">{{ $article->city }}</a></p>
                             <h3 class="price">{{ $article->price }} €</h3>
                             <div class="list-info">
@@ -61,6 +57,7 @@
                                         <li><a href="javascript:void(0)" class="pinterest"><i class="lni lni-pinterest"></i></a></li>
                                     </ul>
                                 </div>
+                                @livewire('articles.add-whishlist',['article' => $article->id])
                             </div>
                             
                         </div>

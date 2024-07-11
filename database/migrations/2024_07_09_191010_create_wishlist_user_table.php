@@ -13,9 +13,8 @@ return new class extends Migration
     {
         Schema::create('wishlistusers', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('user_id')->constrained()->onDelete('cascade');
-            $table->foreignId('article_id')->constrained()->onDelete('cascade');
-            $table->integer('quantity')->default(1);
+            $table->foreignId('user_id')->constrained();
+            $table->foreignId('article_id')->constrained();
             $table->timestamps();
         });
     }

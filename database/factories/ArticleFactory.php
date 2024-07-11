@@ -25,6 +25,7 @@ class ArticleFactory extends Factory
             'country' => fake('it_IT')->word(1),
             'city' => fake('it_IT')->word(1),
             'condition' => fake('it_IT')->word(1),
+            'status' => true,
         ];
     }
 }

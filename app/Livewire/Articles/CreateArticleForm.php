@@ -45,7 +45,7 @@ class CreateArticleForm extends Component
             'category_id' => $this->category,
         ]);
         session()->flash('success','Articolo creato con successo');
-        return $this->redirect('/articoli/profilo/crea-articolo/flashpage');
+        return $this->redirect('/flashpage');
 
     }
 
