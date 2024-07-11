@@ -47,6 +47,9 @@
                                     @endforelse
                                 </ul>
                             </li>
+                            <li class="nav-item">
+                                <a href="{{ route('workWithUs') }}" aria-label="Toggle navigation">Lavora con Noi</a>
+                            </li>
                         </ul>
                         @guest
                             <ul id="nav" class="d-flex d-inline justify-content-center p-2">
@@ -62,7 +65,7 @@
                                 </li>
                             @endguest
                             @auth
-                                <li class="nav-item">
+                                <li class="sub-menu-profile">
                                     <img src="{{ auth()->user()->providers[0]->social_avatar ?? Storage::url(auth()->user()->avatar)}}" class="user-pic"alt=""
                                         onclick="toggleMenu()">
                                     <div class="sub-menu-wrap" id="subMenu">
@@ -73,23 +76,24 @@
                                             </div>
                                             <hr>
 
-                                            <a href="{{route('users.dashboard',['user' => auth()->user()])}}" class="sub-menu-link">
+                                            <a href="{{route('users.dashboard')}}" class="sub-menu-link">
                                                 <img src="{{ asset('/assets/profile/profile.png') }}" alt="">
                                                 <p>Profilo</p>
                                                 <span>></span>
                                             </a>
-                                            <a href="{{route('revisor.index',['user' => auth()->user()])}}" class="sub-menu-link">
+                                            @if (auth()->user()->is_revisor == true)
+                                            <a href="{{route('revisor.index')}}" class="sub-menu-link">
                                                 <img src="{{ asset('/assets/profile/profile.png') }}" alt="">
-                                                <p>Zona Revisione</p>
+                                                <p>Zona Revisione   {{$articles_to_accept_count}}</p>
                                                 <span>></span>
                                             </a>
+                                            @endif
                                             <form action="{{route('logout')}}" method="post">
                                                 @csrf
-                                                <a href="" class="sub-menu-link">
+                                                <button type="submit" href="javascript:void(0)" class="sub-menu-link btn px-0">
                                                     <img src="{{ asset('/assets/profile/logout.png') }}" alt="">
-                                                    <button>Logout</button>
-                                                    <span>></span>
-                                                </a>
+                                                    <p>Logout</p>
+                                                </button>
                                             </form>
                                         </div>
                                     </div>
@@ -99,7 +103,7 @@
                                         aria-expanded="false" aria-label="Toggle navigation">{{ auth()->user()->name }}</a>
                                     <ul class="sub-menu collapse" id="submenu-1-6">
                                         <li class="nav-item">
-                                            <a href="{{ route('users.dashboard', ['user' => auth()->user()]) }}">
+                                            <a href="{{ route('users.dashboard',) }}">
                                                 Profilo
                                             </a>
                                         </li>
@@ -118,7 +122,7 @@
 
                         <div class="button d-flex justify-content-center p-3">
                             @auth
-                                <a href="{{ route('articles.create', ['user' => auth()->user()]) }}" class="btn">
+                                <a href="{{ route('articles.create',) }}" class="btn">
                                     Crea un annuncio</a>
                             @else
                                 <a href="{{ route('login') }}" class="btn">

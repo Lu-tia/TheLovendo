@@ -1,7 +1,7 @@
 <x-layouts.main>
 
     <!-- Start Dashboard Section -->
-    <section class="dashboard section">
+    <section class="dashboard section mt-5">
         <div class="container">
             <div class="row">
                 <div class="col-lg-3 col-md-4 col-12">
@@ -22,28 +22,28 @@
                                             <div class="col-lg-6 col-12">
                                                 <div class="form-group">
                                                     <label>Nome</label>
-                                                    <input name="first-name" type="text" value="{{ $user->name }}">
+                                                    <input name="first-name" type="text" value="{{auth()->user()->firstName }}">
                                                 </div>
                                             </div>
                                             <div class="col-lg-6 col-12">
                                                 <div class="form-group">
                                                     <label>Cognome</label>
-                                                    <input name="last-name" type="text" value="{{ $user->name }}">
+                                                    <input name="last-name" type="text" value="{{ auth()->user()->lastName }}">
                                                 </div>
                                             </div>
                             
                                             
                                             <div class="col-12">
                                                 <div class="form-group upload-image">
-                                                    <label>Profile Image*</label>
-                                                    <input name="profile-image" type="file"
+                                                    <label for="profile-image">Immagine Profilo</label>
+                                                    <input name="profile-image" id="profile-image" type="file"
                                                         placeholder="Upload Image">
                                                 </div>
                                             </div>
                                            
                                             <div class="col-12">
                                                 <div class="form-group button mb-0">
-                                                    <button type="submit" class="btn ">Update Profile</button>
+                                                    <button type="submit" class="btn ">Aggiorna Profilo</button>
                                                 </div>
                                             </div>
                                         </div>

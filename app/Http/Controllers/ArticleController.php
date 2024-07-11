@@ -9,13 +9,9 @@ use Illuminate\Http\Request;
 
 class ArticleController extends Controller
 {
-    public function create(User $user)
+    public function create()
     {
-        if($user->id == auth()->user()->id){
-            return view('articles.create',compact('user'));
-        } else {
-            return redirect()->route('homepage');
-        }
+        return view('articles.create');
     }
     public function index($id = null)
     {

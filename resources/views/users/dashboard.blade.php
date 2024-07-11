@@ -2,7 +2,7 @@
 
 
     <!-- Start Dashboard Section -->
-    <section class="dashboard section">
+    <section class="dashboard section mt-5">
         <div class="container">
             <div class="row">
                 <div class="col-lg-3 col-md-4 col-12">
@@ -20,7 +20,7 @@
                                                 <i class="lni lni-checkmark-circle"></i>
                                             </div>
                                             <h3>
-                                                {{ $user->articles()->where('status', true)->count() }}
+                                                {{ auth()->user()->articles()->where('status', true)->count() }}
                                                 <span>Annunci aggiunti</span>
                                             </h3>
                                         </div>
@@ -33,7 +33,7 @@
                                                 <i class="lni lni-timer"></i>
                                             </div>
                                             <h3>
-                                                {{ $user->articles()->where('status', null)->count() }}
+                                                {{ auth()->user()->articles()->where('status', null)->count() }}
                                                 <span>Annunci in revisione </span>
                                             </h3>
                                         </div>
@@ -48,7 +48,7 @@
                                     <div class="recent-items dashboard-block">
                                         <h3 class="block-title">Annunci aggiunti di recente</h3>
                                         <ul>
-                                            @forelse ($user->articles()->where('status', true)->get()->take(3) as $article)
+                                            @forelse (auth()->user()->articles()->where('status', true)->get()->take(3) as $article)
                                                 <li class="ps-3">
                                                     <a class="d-flex"
                                                         href="{{ route('articles.show', compact('article')) }}">
@@ -59,7 +59,7 @@
                                                         <div class="ms-3">
                                                             <span class="text-black">{{ $article->title }}</span>
                                                             <span
-                                                                class="time mt-3">{{ $user->created_at->locale('it')->diffForHumans() }}</span>
+                                                                class="time mt-3">{{ $article->created_at->locale('it')->diffForHumans() }}</span>
                                                         </div>
                                                     </a>
                                                 </li>

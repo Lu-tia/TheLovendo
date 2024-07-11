@@ -25,7 +25,7 @@
                         </div>     
                     </div>
                 </div>
-                {{articles->links()}}
+                {{$articles->links()}}
             @endforeach
             @endif    
             <!-- End Single Card -->

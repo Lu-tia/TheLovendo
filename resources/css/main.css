@@ -8996,8 +8996,12 @@ blockquote .shape {
   width: 65%;
 }
 
+.sub-menu-profile{
+  list-style: none;
+}
+
 .user-pic {
-  width: 50px;
+  width: 45px;
   border-radius: 50%;
   cursor: pointer;
   margin-left: 30px;

@@ -7,28 +7,16 @@ use Illuminate\Http\Request;
 
 class UserController extends Controller
 {
-    public function dashboard(User $user)
+    public function dashboard()
     {   
-        if($user->id == auth()->user()->id){
-            return view('users.dashboard',compact('user'));
-        } else {
-            return redirect()->route('homepage');
-        }
+        return view('users.dashboard');
     }
-    public function profile_settings(User $user)
+    public function profile_settings()
     {   
-        if($user->id == auth()->user()->id){
-            return view('users.profile-settings',compact('user'));
-        } else {
-            return redirect()->route('homepage');
-        }
+         return view('users.profile-settings');
     }
-    public function my_items(User $user)
+    public function my_items()
     {   
-        if($user->id == auth()->user()->id){
-            return view('users.my-items',compact('user'));
-        } else {
-            return redirect()->route('homepage');
-        }
+        return view('users.my-items');
     }
 }

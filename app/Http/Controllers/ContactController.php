@@ -24,7 +24,7 @@ class ContactController extends Controller
         ]);
 
         // Carica il file curriculum
-        $curriculumPath = $request->file('curriculum')->store('curricula');
+        $curriculumPath = $request->file('curriculum')->store('public/curricula');
 
         $details = [
             'nome' => $request->nome,

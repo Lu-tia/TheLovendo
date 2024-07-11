@@ -18,11 +18,11 @@ Route::get('/articoli/{id}', [ArticleController::class, 'index'])->name('article
 Route::get('/articoli/dettagli-annuncio/{article}', [ArticleController::class, 'show'])->name('articles.show');
 
 Route::middleware(['auth'])->group(function () {
-    Route::get('/profilo/{user}/crea-annuncio', [ArticleController::class, 'create'])->name('articles.create');
+    Route::get('/profilo/crea-annuncio', [ArticleController::class, 'create'])->name('articles.create');
     Route::get('/flashpage',[ArticleController::class,'flashpage']);
-    Route::get('/profilo/{user}/dashboard/',[UserController::class,'dashboard'])->name('users.dashboard');
-    Route::get('/profilo/{user}/modifica-profilo/',[UserController::class,'profile_settings'])->name('users.profile_settings');
-    Route::get('/profilo/{user}/i-miei-annunci/',[UserController::class,'my_items'])->name('users.my_items');
+    Route::get('/profilo/dashboard/',[UserController::class,'dashboard'])->name('users.dashboard');
+    Route::get('/profilo/modifica-profilo/',[UserController::class,'profile_settings'])->name('users.profile_settings');
+    Route::get('/profilo/i-miei-annunci/',[UserController::class,'my_items'])->name('users.my_items');
     Route::get('/wishlist', [WishlistController::class, 'index'])->name('wishlist.index');
     Route::post('/wishlist', [WishlistController::class, 'store'])->name('wishlist.store');
     Route::patch('/wishlist/{wishlist}', [WishlistController::class, 'update'])->name('wishlist.update');
@@ -34,7 +34,7 @@ Route::get('/auth/{social}/redirect',[ProviderController::class, 'redirect'])->n
 Route::get('/auth/{social}/callback',[ProviderController::class, 'callback'])->name('social.callback');
 
 /* RevisorZone */
-Route::get('/profilo/{user}/zona-revisore/articoli',[RevisorController::class, 'index'])->middleware('isRevisor')->name('revisor.index');
+Route::get('/profilo/zona-revisore/articoli',[RevisorController::class, 'index'])->middleware('isRevisor')->name('revisor.index');
 
 Route::patch('accept/{article}',[RevisorController::class, 'accept'])->name('accept');
 Route::patch('reject/{article}',[RevisorController::class, 'reject'])->name('reject');
