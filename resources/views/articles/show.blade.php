@@ -14,13 +14,13 @@
                                 </div>
                                 <div class="carousel-inner">
                                     <div class="carousel-item active">
-                                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Example_image.svg/900px-Example_image.svg.png" class="d-block w-100" alt="...">
+                                        <img src="{{asset('assets/images/placeholder/carousel-1.png')}}" class="d-block w-100" alt="...">
                                     </div>
                                     <div class="carousel-item">
-                                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Example_image.svg/900px-Example_image.svg.png" class="d-block w-100" alt="...">
+                                        <img src="{{asset('assets/images/placeholder/carousel-2.png')}}" class="d-block w-100" alt="...">
                                     </div>
                                     <div class="carousel-item">
-                                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Example_image.svg/900px-Example_image.svg.png" class="d-block w-100" alt="...">
+                                        <img src="{{asset('assets/images/placeholder/carousel-3.png')}}" class="d-block w-100" alt="...">
                                     </div>
                                 </div>
                                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">

@@ -54,7 +54,7 @@
                                                 <a class="d-flex"
                                                     href="{{ route('articles.show', compact('article')) }}">
                                                     <div class="image">
-                                                        <img src="https://via.placeholder.com/100x100" alt="#">
+                                                        <img src="{{asset('assets/images/placeholder/aggiunti-di-recente.jpg')}}" alt="#">
                                                     </div>
                                                     <div class="ms-3">
                                                         <span class="text-black">{{ $article->title }}</span>
