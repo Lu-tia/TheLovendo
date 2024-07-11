@@ -27,6 +27,9 @@ Route::middleware(['auth'])->group(function () {
     Route::post('/wishlist', [WishlistController::class, 'store'])->name('wishlist.store');
     Route::patch('/wishlist/{wishlist}', [WishlistController::class, 'update'])->name('wishlist.update');
     Route::delete('/wishlist/{wishlist}', [WishlistController::class, 'destroy'])->name('wishlist.destroy');
+    Route::get('/users/{article}/edit-article', [UserController::class, 'editArticle'])->name('users.edit_article');
+    Route::put('/users/{article}/update-article', [UserController::class, 'updateArticle'])->name('users.update_article');
+    Route::delete('/users/{article}/destroy-article', [UserController::class, 'destroyArticle'])->name('users.destroy_article');
 });
 
 /* SOCALITE */
@@ -34,11 +37,14 @@ Route::get('/auth/{social}/redirect',[ProviderController::class, 'redirect'])->n
 Route::get('/auth/{social}/callback',[ProviderController::class, 'callback'])->name('social.callback');
 
 /* RevisorZone */
-Route::get('/profilo/zona-revisore/articoli',[RevisorController::class, 'index'])->middleware('isRevisor')->name('revisor.index');
 
-Route::patch('accept/{article}',[RevisorController::class, 'accept'])->name('accept');
-Route::patch('reject/{article}',[RevisorController::class, 'reject'])->name('reject');
-Route::patch('rollback/article',[RevisorController::class, 'rollback'])->name('rollback');
+Route::middleware(['auth', 'isRevisor'])->group(function () {
+    Route::get('/profilo/zona-revisore/articoli', [RevisorController::class, 'index'])->name('revisor.index');
+    Route::patch('accept/{article}', [RevisorController::class, 'accept'])->name('accept');
+    Route::patch('reject/{article}', [RevisorController::class, 'reject'])->name('reject');
+    Route::patch('rollback/article', [RevisorController::class, 'rollback'])->name('rollback');
+});
 
+//lavora con noi
 Route::get('/lavora-con-noi', [ContactController::class, 'workWithUs'])->name('workWithUs');
 Route::post('/lavora-con-noi', [ContactController::class, 'sendApplication'])->name('applicationMail');
