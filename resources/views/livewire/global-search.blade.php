@@ -25,7 +25,6 @@
                         </div>     
                     </div>
                 </div>
-                {{$articles->links()}}
             @endforeach
             @endif    
             <!-- End Single Card -->
