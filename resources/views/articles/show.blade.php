@@ -57,7 +57,7 @@
                                         <li><a href="javascript:void(0)" class="pinterest"><i class="lni lni-pinterest"></i></a></li>
                                     </ul>
                                 </div>
-                                @livewire('articles.add-whishlist',['article' => $article->id])
+                                @livewire('articles.add-whishlist',['article' => $article])
                             </div>
                             
                         </div>
@@ -82,8 +82,8 @@
                             <div class="single-block author">
                                 <h3>Autore</h3>
                                 <div class="content">
-                                    <img src="{{ $article->user->providers[0]->social_avatar ?? 'https://via.placeholder.com/200x200' }}" alt="#">
-                                    <h4>{{ $article->user->name }}</h4>
+                                    <img src="{{ $article->user->providers[0]->social_avatar ?? auth()->user()->avatar }}" alt="#">
+                                    <h4>{{ $article->user->fistName }} {{ $article->user->lastName }}</h4>
                                     <a href="javascript:void(0)" class="see-all"></a>
                                 </div>
                             </div>

@@ -1,20 +1,19 @@
 <div>
-    @if (auth()->user()->whishlists)
-    @foreach (auth()->user()->whishlists as $query)
-        @if ($query->article_id == $article)
-        <button type="submit" wire:model='article_id' value="{{$article}}" class="btn btn-outline-primary" >Rimuovi dai preferiti</button>
+    @forelse (auth()->user()->whishlists as $query)
+        @if ($query->article_id == $article->id)
+        <form wire:submit="destroy({{$article->id}})">
+        <button type="submit" class="btn btn-outline-primary" >Rimuovi dai preferiti</button>
+        </form>
         @else
         <form wire:submit="store">
-            <button type="submit" wire:model='article_id' value="{{$article}}" class="btn btn-outline-primary" >Aggiungi ai preferiti</button>
+            <button type="submit" wire:model='article_id' value="{{$article->id}}" class="btn btn-outline-primary" >Aggiungi ai preferiti</button>
         </form>
         @endif
-    @endforeach
-    @else
+    @empty
     <form wire:submit="store">
-        <button type="submit" wire:model='article_id' value="{{$article}}" class="btn btn-outline-primary" >Prova</button>
+        <button type="submit" wire:model='article_id' value="{{$article->id}}" class="btn btn-outline-primary" >Aggiungi ai preferiti</button>
     </form>
-
-@endif
+    @endforelse    
 </div>
 
 
