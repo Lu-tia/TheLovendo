@@ -40,9 +40,10 @@
                                     aria-expanded="false" aria-label="Toggle navigation">Categorie</a>
                                 <ul class="sub-menu collapse" id="submenu-1-5">
                                     @forelse ($categories as $category)
-                                        <li class="nav-item"><a
-                                                href="{{ route('articles.category', ['id' => $category->id]) }}">{{ $category->name }}</a>
-                                        </li>
+                                    <li class="nav-item"><a
+                                            href="{{ route('articles.category', ['id' => $category->id]) }}">{{
+                                            $category->name }}</a>
+                                    </li>
                                     @empty
                                     @endforelse
                                 </ul>
@@ -52,81 +53,84 @@
                             </li>
                         </ul>
                         @guest
-                            <ul id="nav" class="d-flex d-inline justify-content-center p-2">
-                                <li class="nav-item me-3">
-                                    <i class="lni lni-enter"></i>
-                                    <a class="dd-menu collapsed text-black fw-medium" href="{{ route('login') }}"
-                                        aria-label="Toggle navigation">Login</a>
-                                </li>
-                                <li class="nav-item me-3">
-                                    <i class="lni lni-user"></i>
-                                    <a class="dd-menu collapsed text-black fw-medium" href="{{ route('register') }}"
-                                        aria-label="Toggle navigation">Registrati</a>
-                                </li>
+                        <ul id="nav" class="d-flex d-inline justify-content-center p-2">
+                            <li class="nav-item me-3">
+                                <i class="lni lni-enter"></i>
+                                <a class="dd-menu collapsed text-black fw-medium" href="{{ route('login') }}"
+                                    aria-label="Toggle navigation">Login</a>
+                            </li>
+                            <li class="nav-item me-3">
+                                <i class="lni lni-user"></i>
+                                <a class="dd-menu collapsed text-black fw-medium" href="{{ route('register') }}"
+                                    aria-label="Toggle navigation">Registrati</a>
+                            </li>
                             @endguest
                             @auth
-                                <li class="sub-menu-profile">
-                                    <img src="{{ auth()->user()->providers[0]->social_avatar ?? Storage::url(auth()->user()->avatar)}}" class="user-pic"alt=""
-                                        onclick="toggleMenu()">
-                                    <div class="sub-menu-wrap" id="subMenu">
-                                        <div class="sub-menu">
-                                            <div class="user-info">
-                                                <img src="{{auth()->user()->providers[0]->social_avatar ?? Storage::url(auth()->user()->avatar)}}" class="user-pic"alt="">
-                                                <h3>{{auth()->user()->firstName}} {{auth()->user()->lastName}}</h3>
-                                            </div>
-                                            <hr>
-
-                                            <a href="{{route('users.dashboard')}}" class="sub-menu-link">
-                                                <img src="{{ asset('/assets/profile/profile.png') }}" alt="">
-                                                <p>Profilo</p>
-                                                <span>></span>
-                                            </a>
-                                            @if (auth()->user()->is_revisor == true)
-                                            <a href="{{route('revisor.index')}}" class="sub-menu-link">
-                                                <img src="{{ asset('/assets/profile/profile.png') }}" alt="">
-                                                <p>Zona Revisione   {{$articles_to_accept_count}}</p>
-                                                <span>></span>
-                                            </a>
-                                            @endif
-                                            <form action="{{route('logout')}}" method="post">
-                                                @csrf
-                                                <button type="submit" href="javascript:void(0)" class="sub-menu-link btn px-0">
-                                                    <img src="{{ asset('/assets/profile/logout.png') }}" alt="">
-                                                    <p>Logout</p>
-                                                </button>
-                                            </form>
+                            <li class="sub-menu-profile position-relative">
+                                <img src="{{ auth()->user()->providers[0]->social_avatar ?? Storage::url(auth()->user()->avatar)}}"
+                                    class="user-pic" alt="" onclick="toggleMenu()">
+                                <div class="sub-menu-wrap" id="subMenu">
+                                    <div class="sub-menu">
+                                        <div class="user-info">
+                                            {{-- <img
+                                                src="{{auth()->user()->providers[0]->social_avatar ?? Storage::url(auth()->user()->avatar)}}"
+                                                class="user-pic" alt=""> --}}
+                                            <h3>{{auth()->user()->firstName}} {{auth()->user()->lastName}}</h3>
                                         </div>
-                                    </div>
+                                        <hr>
 
-                                    {{-- <a class="dd-menu collapsed" href="" data-bs-toggle="collapse"
-                                        data-bs-target="#submenu-1-6" aria-controls="navbarSupportedContent"
-                                        aria-expanded="false" aria-label="Toggle navigation">{{ auth()->user()->name }}</a>
-                                    <ul class="sub-menu collapse" id="submenu-1-6">
-                                        <li class="nav-item">
-                                            <a href="{{ route('users.dashboard',) }}">
-                                                Profilo
-                                            </a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <form method="POST" action="{{ route('logout') }}">
-                                                @csrf
-                                                <button class="btn" type="submit">Esci</button>
-                                            </form>
-                                            </a>
-                                        </li>
-                                    </ul> --}}
-                                </li>
+                                        <a href="{{route('users.dashboard')}}" class="sub-menu-link">
+                                            <img src="{{ asset('/assets/profile/profile.png') }}" alt="">
+                                            <p>Profilo</p>
+                                            <span>></span>
+                                        </a>
+                                        @if (auth()->user()->is_revisor == true)
+                                        <a href="{{route('revisor.index')}}" class="sub-menu-link">
+                                            <img src="{{ asset('/assets/profile/profile.png') }}" alt="">
+                                            <p>Zona Revisione {{$articles_to_accept_count}}</p>
+                                            <span>></span>
+                                        </a>
+                                        @endif
+                                        <form action="{{route('logout')}}" method="post">
+                                            @csrf
+                                            <button type="submit" href="javascript:void(0)"
+                                                class="sub-menu-link btn px-0">
+                                                <img src="{{ asset('/assets/profile/logout.png') }}" alt="">
+                                                <p>Logout</p>
+                                            </button>
+                                        </form>
+                                    </div>
+                                </div>
+
+                                {{-- <a class="dd-menu collapsed" href="" data-bs-toggle="collapse"
+                                    data-bs-target="#submenu-1-6" aria-controls="navbarSupportedContent"
+                                    aria-expanded="false" aria-label="Toggle navigation">{{ auth()->user()->name }}</a>
+                                <ul class="sub-menu collapse" id="submenu-1-6">
+                                    <li class="nav-item">
+                                        <a href="{{ route('users.dashboard',) }}">
+                                            Profilo
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <form method="POST" action="{{ route('logout') }}">
+                                            @csrf
+                                            <button class="btn" type="submit">Esci</button>
+                                        </form>
+                                        </a>
+                                    </li>
+                                </ul> --}}
+                            </li>
                             @endauth
                         </ul>
 
 
                         <div class="button d-flex justify-content-center p-3">
                             @auth
-                                <a href="{{ route('articles.create',) }}" class="btn">
-                                    Crea un annuncio</a>
+                            <a href="{{ route('articles.create',) }}" class="btn">
+                                Crea un annuncio</a>
                             @else
-                                <a href="{{ route('login') }}" class="btn">
-                                    Crea un annuncio</a>
+                            <a href="{{ route('login') }}" class="btn">
+                                Crea un annuncio</a>
                             @endauth
                         </div>
 
