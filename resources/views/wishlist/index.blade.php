@@ -11,38 +11,44 @@
                                         <div class="col-lg-6 col-md-6 col-12">
                                             <h5>I miei articoli preferiti</h5>
                                         </div>
-                                        </div>
+                                    </div>
                                 </div>
                                 <div class="tab-content" id="nav-tabContent">
                                     <div class="tab-pane fade show active" id="nav-grid" role="tabpanel"
                                         aria-labelledby="nav-grid-tab">
                                         <div class="row">
-                                            @if($wishlists->isEmpty())
+                                            @if ($wishlists->isEmpty())
                                                 <p>Non hai ancora aggiunto articoli ai tuoi preferiti</p>
                                             @else
-                                            @foreach($wishlists as $wishlist)
-                                            <div class="col-lg-4 col-md-6 col-12">
-                                                <!-- Start Single Item -->
-                                                <div class="single-item-grid">
-                                                    <div class="image">
-                                                        <a href="item-details.html"><img src="{{ $wishlist->article->image ?? 'https://via.placeholder.com/150' }}" alt="{{ $wishlist->article->title }}"></a>
+                                                @foreach ($wishlists as $wishlist)
+                                                    <div class="col-lg-4 col-md-6 col-12">
+                                                        <!-- Start Single Item -->
+                                                        <div class="single-item-grid">
+                                                            <div class="image">
+                                                                <a href="item-details.html"><img
+                                                                        src="{{ $wishlist->article->image ?? 'https://via.placeholder.com/150' }}"
+                                                                        alt="{{ $wishlist->article->title }}"></a>
+                                                            </div>
+                                                            <div class="content">
+                                                                <a href="javascript:void(0)"
+                                                                    class="tag">{{ $wishlist->article->category->name }}</a>
+                                                                <h3 class="title">
+                                                                    <a
+                                                                        href="item-details.html">{{ $wishlist->article->title }}</a>
+                                                                </h3>
+                                                                <p class="location"><a href="javascript:void(0)"><i
+                                                                            class="lni lni-map-marker">
+                                                                        </i>{{ $wishlist->article->country }}</a></p>
+                                                                <ul class="info">
+                                                                    <li class="price">{{ $wishlist->article->price }}€
+                                                                    </li>
+                                                                    {{-- <li class="ms-auto mt-2"><p class="update-time">{{ $wishlist->$article->created_at->locale('it_IT')->isoFormat('DD MMM YYYY') }}</p></li> --}}
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                        <!-- End Single Item -->
                                                     </div>
-                                                    <div class="content">
-                                                        <a href="javascript:void(0)" class="tag">{{ $wishlist->article->category->name }}</a>
-                                                        <h3 class="title">
-                                                            <a href="item-details.html">{{ $wishlist->article->title }}</a>
-                                                        </h3>
-                                                        <p class="location"><a href="javascript:void(0)"><i class="lni lni-map-marker">
-                                                                </i>{{ $wishlist->article->country }}</a></p>
-                                                        <ul class="info">
-                                                            <li class="price">{{ $wishlist->article->price }}€</li>
-                                                            {{-- <li class="ms-auto mt-2"><p class="update-time">{{ $wishlist->$article->created_at->locale('it_IT')->isoFormat('DD MMM YYYY') }}</p></li> --}}
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                                <!-- End Single Item -->
-                                            </div>
-                                            @endforeach
+                                                @endforeach
                                             @endif
                                         </div>
                                         <div class="row">
@@ -54,7 +60,8 @@
                                                         <li class="active"><a href="javascript:void(0)">2</a></li>
                                                         <li><a href="javascript:void(0)">3</a></li>
                                                         <li><a href="javascript:void(0)">4</a></li>
-                                                        <li><a href="javascript:void(0)"><i class="lni lni-chevron-right"></i></a></li>
+                                                        <li><a href="javascript:void(0)"><i
+                                                                    class="lni lni-chevron-right"></i></a></li>
                                                     </ul>
                                                 </div>
                                                 <!--/ End Pagination -->
@@ -73,11 +80,11 @@
     {{-- <section class="wishlist section py-5 mt-5 pt-5 vh-100">
         <div class="container mt-5">
             <h2 class="mb-4">I miei preferiti</h2>
-            @if($wishlists->isEmpty())
+            @if ($wishlists->isEmpty())
             <p>Non hai ancora aggiunto articoli ai tuoi preferiti</p>
             @else
             <div class="row">
-                @foreach($wishlists as $wishlist)
+                @foreach ($wishlists as $wishlist)
                 <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
                     <div class="card">
                         <img src="{{ $wishlist->article->image ?? 'https://via.placeholder.com/150' }}" class="card-img-top" alt="{{ $wishlist->article->title }}">
