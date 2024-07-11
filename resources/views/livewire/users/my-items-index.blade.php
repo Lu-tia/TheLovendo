@@ -54,9 +54,17 @@
                 </div>
                 <div class="col-lg-3 col-md-3 col-12 align-right">
                     <ul class="action-btn">
-                        <li><a href="javascript:void(0)"><i class="lni lni-pencil"></i></a></li>
-                        <li><a href="javascript:void(0)"><i class="lni lni-eye"></i></a></li>
-                        <li><a href="javascript:void(0)"><i class="lni lni-trash"></i></a></li>
+                        <li><a href="{{ route('users.edit_article', $article->id) }}"><i class="lni lni-pencil"></i></a></li>
+                        <li><a href="{{ route('articles.show', $article->id) }}"><i class="lni lni-eye"></i></a></li>
+                        <li>
+                            <a href="javascript:void(0);" onclick="event.preventDefault(); if(confirm('Sei sicuro di voler eliminare questo annuncio?')){document.getElementById('delete-form-{{$article->id}}').submit();}">
+                                <i class="lni lni-trash"></i>
+                            </a>
+                            <form id="delete-form-{{$article->id}}" action="{{ route('users.destroy_article', $article->id) }}" method="POST" style="display: none;">
+                                @csrf
+                                @method('DELETE')
+                            </form>
+                        </li>
                     </ul>
                 </div>
             </div>
