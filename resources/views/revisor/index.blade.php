@@ -75,7 +75,7 @@
                                     <h3>{{ $article_to_check->title }}</h3>
                                     <p>{{ $article_to_check->body }}</p>
                                     <p>Prezzo: {{ $article_to_check->price }}€</p>
-                                    <p class="author">Autore: {{ $article_to_check->user->name }}</p>
+                                    <p class="author">Autore: {{ $article_to_check->user->firstName }} {{ $article_to_check->user->lastName }}</p>
                                 </div>
                                 <div class="article-actions d-flex justify-content-evenly">
                                     <form action="{{ route('accept', ['article' => $article_to_check]) }}"

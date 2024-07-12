@@ -14,9 +14,10 @@ input[type="file"] {
     background-color: #335c67;
     color: #ffffff;
     font-weight: bold;
-    border: 1px solid #f5c6cb;
+    border: 1px solid #26444d;
     padding: 15px;
     margin-bottom: 20px;
+    margin-top:20px;
     border-radius: 4px;
     animation: slideInDown 0.5s ease;
 }

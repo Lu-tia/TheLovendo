@@ -18,6 +18,7 @@ class ContactController extends Controller
         $request->validate([
             'nome' => 'required|string|max:255',
             'cognome' => 'required|string|max:255',
+            'email' => 'required|string|max:255',
             'eta' => 'required|integer|min:18|max:100',
             'citta' => 'required|string|max:255',
             'curriculum' => 'required|file|mimes:pdf,doc,docx|max:10240', // 10MB massimo
