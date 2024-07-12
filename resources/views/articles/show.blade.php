@@ -1,6 +1,6 @@
 <x-layouts.main>
     <!-- Start Item Details -->
-    <section class="item-details section">
+    <section class="item-details section mt-3">
         <div class="container">
             <div class="top-area">
                 <div class="row">
