@@ -16,7 +16,7 @@
             @if ($articles) 
             @foreach ($articles as $article)
             <!-- Start Single Card -->
-            <a href="#"> 
+            <a href="{{ route('articles.show', compact('article')) }}"> 
                 <div class="col-lg-2 col-md-3 col-sm-4 col-6 p-0 mt-3 mx-1">
                     <div class="card rounded shadow-sm border-0 cardcst">
                         <div class="card-body p-4">
