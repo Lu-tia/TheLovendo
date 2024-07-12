@@ -60,8 +60,8 @@
                                     <div class="col-12">
                                         <div class="form-group mx-4">
                                             <label for="email">Email*</label>
-                                            <input type="email" class="form-control" id="email" name="email"
-                                                placeholder="Inserisci la tua mail" value="{{old('email')}}">
+                                            <input disabled type="email" class="form-control" id="email" name="email"
+                                                placeholder="Inserisci la tua mail" value="{{auth()->user()->email}}">
                                         </div>
                                     </div>
                                     <div class="col-5">

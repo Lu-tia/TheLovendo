@@ -1,7 +1,5 @@
 <div>
     @isset($wishlist)
-        
-
     @if (in_array($article->id, $wishlist))
     <form wire:submit.prevent="destroy({{ $article->id }})">
         <button type="submit" class="btn btn-outline-primary">Rimuovi dai preferiti</button>
