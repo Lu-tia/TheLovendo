@@ -2,15 +2,15 @@
     <h3 class="block-title">I miei Annunci</h3>
     <nav class="list-nav">
         <ul>
-            <li class="{{$query == 0 ? 'active' : ''}}">
+            <li class="{{ $query == 0 ? 'active' : '' }}">
                 <input type="radio" wire:model.live="query" value="0" name="filtered" id="allArticles">
                 <label for="allArticles">Tutti gli annunci</label>
             </li>
-            <li class="{{$query == 1 ? 'active' : ''}}">
+            <li class="{{ $query == 1 ? 'active' : '' }}">
                 <input type="radio" wire:model.live="query" value="1" name="filtered" id="Accepted">
                 <label for="Accepted">Pubblicati</label>
             </li>
-            <li class="{{$query == 2 ? 'active' : ''}}">
+            <li class="{{ $query == 2 ? 'active' : '' }}">
                 <input type="radio" wire:model.live="query" value="2" name="filtered" id="toAccept">
                 <label for="toAccept">In attesa di revisione</label>
             </li>
@@ -28,7 +28,7 @@
                     <p>Categoria</p>
                 </div>
                 <div class="col-lg-2 col-md-2 col-12">
-                    <p>Consizioni</p>
+                    <p>Condizione</p>
                 </div>
             </div>
         </div>
