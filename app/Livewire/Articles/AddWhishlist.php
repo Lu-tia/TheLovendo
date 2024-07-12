@@ -29,7 +29,10 @@ class AddWhishlist extends Component
 
     public function render()
     {
-        $wishlist = auth()->user()->wishlists->pluck('article_id')->toArray();
-        return view('livewire.articles.add-whishlist',compact('wishlist'));
+        if(auth()->user()){
+            $wishlist = auth()->user()->wishlists->pluck('article_id')->toArray();
+            return view('livewire.articles.add-whishlist',compact('wishlist'));
+        }
+         return view('livewire.articles.add-whishlist');
     }
 }

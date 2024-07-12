@@ -82,7 +82,7 @@
                             <div class="single-block author">
                                 <h3>Autore</h3>
                                 <div class="content">
-                                    <img src="{{ $article->user->providers[0]->social_avatar ?? auth()->user()->avatar }}" alt="#">
+                                    <img src="{{ $article->user->providers[0]->social_avatar ??  $article->user->avatar }}" alt="#">
                                     <h4>{{ $article->user->fistName }} {{ $article->user->lastName }}</h4>
                                     <a href="javascript:void(0)" class="see-all"></a>
                                 </div>
