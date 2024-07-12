@@ -16,7 +16,7 @@
             @if ($articles) 
             @foreach ($articles as $article)
             <!-- Start Single Card -->
-                <div class="col-lg-2 col-md-3 col-sm-4 col-6 p-0 mt-3 mx-1">
+                <div class="col-lg-2 col-md-3 col-sm-4 col-6 p-0 mx-1">
                     <a href="{{ route('articles.show', compact('article')) }}"> 
                     <div class="card rounded shadow-sm border-0 cardcst">
                         <div class="card-body p-4">
@@ -28,6 +28,16 @@
                     </a>
                 </div>
             @endforeach
+            <a href="{{ route('articles.show', compact('article')) }}"> 
+            <div class="col-lg-2 col-md-3 col-sm-4 col-6 p-0 mx-1 mt-3 d-flex align-items-center">
+                <div class="card rounded shadow-sm border-0 cardcst2">
+                    <div class="card-body p-4 d-flex align-items-center" >
+                        <i class="text-white lni lni-eye"></i>
+                        <h7 class="text-white">Mostra altri</a></h7>
+                    </div>     
+                </div>
+            </div>
+            </a>
             @endif    
             <!-- End Single Card -->
         </div>
