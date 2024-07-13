@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Models\Article;
 use App\Models\Category;
-use App\Models\User;
 use Illuminate\Http\Request;
 
 class UserController extends Controller
@@ -13,10 +12,12 @@ class UserController extends Controller
     {   
         return view('users.dashboard');
     }
+    
     public function profile_settings()
     {   
         return view('users.profile-settings');
     }
+    
     public function my_items()
     {   
         return view('users.my-items');
@@ -26,15 +27,19 @@ class UserController extends Controller
     public function editArticle(Article $article)
     {
         if ($article->user_id == auth()->user()->id) {
-            $categories = Category::all();
-            $nations = \Illuminate\Support\Facades\Http::get('https://restcountries.com/v3.1/all')->json();
-            usort($nations, function($a, $b) {
-                return strcmp($a['name']['common'], $b['name']['common']);
-            });
-            
-            return view('users.edit-article', compact('article', 'categories', 'nations'));
+            if (auth()->user()->is_revisor || $article->status !== null) {
+                $categories = Category::all();
+                $nations = \Illuminate\Support\Facades\Http::get('https://restcountries.com/v3.1/all')->json();
+                usort($nations, function($a, $b) {
+                    return strcmp($a['name']['common'], $b['name']['common']);
+                });
+                
+                return view('users.edit-article', compact('article', 'categories', 'nations'));
+            } else {
+                return redirect()->route('users.my_items')->with('error', 'Il tuo articolo è in fase di revisione');
+            }
         } else {
-            return redirect()->route('homepage');
+            return redirect()->route('homepage')->with('error', 'Non hai i permessi per modificare questo annuncio');
         }
     }
     
@@ -42,7 +47,7 @@ class UserController extends Controller
     public function updateArticle(Request $request, Article $article)
     {
         if ($article->user_id != auth()->user()->id) {
-            return redirect()->route('homepage');
+            return redirect()->route('homepage')->with('error', 'Non puoi modificare questo articolo');
         }
         
         $request->validate([
@@ -56,21 +61,21 @@ class UserController extends Controller
         ]);
         
         $article->update($request->all());
+        $article->status = null;
+        $article->save();
         
-        return redirect()->route('users.my_items', ['user' => auth()->user()])
-        ->with('success', 'Annuncio aggiornato con successo');
+        return redirect()->route('users.my_items')->with('success', 'Annuncio aggiornato con successo e in attesa di revisione');
     }
     
     // Metodo per eliminare l'annuncio
     public function destroyArticle(Article $article)
     {
         if ($article->user_id != auth()->user()->id) {
-            return redirect()->route('homepage');
+            return redirect()->route('homepage')->with('error', 'Non puoi eliminare questo articolo');
         }
         
         $article->delete();
         
-        return redirect()->route('users.my_items', ['user' => auth()->user()])
-        ->with('success', 'Annuncio eliminato con successo');
+        return redirect()->route('users.my_items')->with('success', 'Annuncio eliminato con successo');
     }
 }
