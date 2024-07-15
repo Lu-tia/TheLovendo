@@ -101,6 +101,29 @@
                                         @enderror
                                     </div>
                                 </div>
+                                <div class="mb-3">
+                                    <input type="file" wire:model.live="temporary_images" multiple class="form-control shadow @error('temporary_images.*') is-invalid @enderror" placeholder="Img/">
+                                    @error('temporary_images.*')
+                                            <div class="alert alert-danger mt-2"> {{ $message }} </div>
+                                    @enderror
+                                    @error('temporary_images')
+                                            <div class="alert alert-danger mt-2"> {{ $message }} </div>
+                                        @enderror
+                                </div>
+                                @if(!empty($images))
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <p>Anteprima immagini:</p>
+                                            <div class="row border border-4 border-success rounded shadow py-4">
+                                                @foreach ($images as $image )
+                                                    <div class="col d-flex flexcolumn align-item-center my-3">
+                                                        <div class="img-preview mx-auto shadow rounded" style="background-image: url({{$image->temporaryUrl()}});"></div>
+                                                    </div>
+                                                @endforeach
+                                            </div>
+                                        </div>
+                                    </div>
+                                @endif
                                 <div class="col-12">
                                     <div class="form-group button mb-0">
                                         <button type="submit" class="btn btn-primary">Inserisci annuncio</button>

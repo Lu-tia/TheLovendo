@@ -9,9 +9,12 @@ use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Http;
 use Livewire\Attributes\Validate;
 use Livewire\Component;
+use Livewire\WithFileUploads;
 
 class CreateArticleForm extends Component
 {
+    use WithFileUploads;
+
     #[Validate('required', message:'Inserisci un titolo valido')]
     #[Validate('min:5' , message: 'Il titolo deve essere almeno da 5 caratteri')]
     #[Validate('max:50', message: 'Il titolo può avere al massimo 50 caratteri')]
@@ -32,6 +35,8 @@ class CreateArticleForm extends Component
     #[Validate('required',message:'Scegli una categoria')]
     public $category;
     public $article;
+    public $images =[];
+    public $temporary_images;
 
     public function store()
     {
@@ -58,6 +63,27 @@ class CreateArticleForm extends Component
         session()->flash('success','Articolo creato con successo');
         return $this->redirect('/flashpage');
 
+    }
+
+    public function updatedTemporaryImages()
+    {
+        if($this->validate(
+            [
+            'temporary_images.*' => 'image|max:1024',
+            'temporary_images' => 'max:6',
+            ]
+            )) {
+                foreach($this->temporary_images as $image){
+                    $this->images[] = $image;
+                }
+            }
+    }
+
+    public function removeImage($key)
+    {
+        if(in_array($key, array_keys($this->images))){
+            unset($this->images[$key]);
+        }
     }
 
     public function render()
