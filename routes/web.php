@@ -22,6 +22,7 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/flashpage',[ArticleController::class,'flashpage']);
     Route::get('/profilo/dashboard/',[UserController::class,'dashboard'])->name('users.dashboard');
     Route::get('/profilo/modifica-profilo/',[UserController::class,'profile_settings'])->name('users.profile_settings');
+    Route::post('/updateProfile',[UserController::class,'updateProfile'])->name('users.updateProfile');
     Route::get('/profilo/i-miei-annunci/',[UserController::class,'my_items'])->name('users.my_items');
     Route::get('/wishlist', [WishlistController::class, 'index'])->name('wishlist.index');
     Route::post('/wishlist', [WishlistController::class, 'store'])->name('wishlist.store');
@@ -48,6 +49,3 @@ Route::middleware(['auth', 'isRevisor'])->group(function () {
     Route::patch('rollback/article', [RevisorController::class, 'rollback'])->name('rollback');
 });
 
-/* //lavora con noi
-Route::get('/lavora-con-noi', [ContactController::class, 'workWithUs'])->name('workWithUs');
-Route::post('/lavora-con-noi', [ContactController::class, 'sendApplication'])->name('applicationMail'); */

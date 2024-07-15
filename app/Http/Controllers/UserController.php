@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\users\UpdateProfileRequest;
 use App\Models\Article;
 use App\Models\Category;
+use App\Models\Provider;
 use App\Models\User;
 use Illuminate\Http\Request;
 
@@ -72,5 +74,34 @@ class UserController extends Controller
         
         return redirect()->route('users.my_items', ['user' => auth()->user()])
         ->with('success', 'Annuncio eliminato con successo');
+    }
+
+    /* Aggiornare profilo utente*/
+    public function updateProfile(UpdateProfileRequest $request)
+    {
+        $path_image = '';
+        if ($request->hasFile('image')) {
+            $file_name = $request->file('image')->getClientOriginalName();
+            $path_image = $request->file('image')->storeAs('public/img/users', $file_name);
+        }
+
+        $query = User::find(auth()->user()->id);
+        $query->firstName = $request->firstName;
+        $query->lastName = $request->lastName;
+        $query->save();
+
+        if($path_image){
+            if(auth()->user()->providers['0']->social_avatar){
+                $providers = auth()->user()->providers['0'];
+                $providers->social_avatar = $path_image;
+                $providers->save();
+            } else {
+                $query = User::find(auth()->user()->id);
+                $query->avatar = $path_image;
+                $query->save();
+            }
+        }
+        session()->flash('success','Profilo aggioranto con successo');
+        return redirect()->route('users.profile_settings');
     }
 }

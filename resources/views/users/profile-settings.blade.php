@@ -19,19 +19,20 @@
                                     <img src="{{ auth()->user()->providers[0]->social_avatar ?? Storage::url(auth()->user()->avatar) }}"
                                         alt="#">
                                 </div>
-                                <form class="profile-setting-form" method="post" action="#">
+                                <form class="profile-setting-form" action="{{route('users.updateProfile')}}" method="post" enctype="multipart/form-data" >
+                                    @csrf
                                     <div class="row">
                                         <div class="col-lg-6 col-12">
                                             <div class="form-group">
                                                 <label>Nome</label>
-                                                <input name="first-name" type="text"
+                                                <input name="firstName" type="text"
                                                     value="{{ auth()->user()->firstName }}">
                                             </div>
                                         </div>
                                         <div class="col-lg-6 col-12">
                                             <div class="form-group">
                                                 <label>Cognome</label>
-                                                <input name="last-name" type="text"
+                                                <input name="lastName" type="text"
                                                     value="{{ auth()->user()->lastName }}">
                                             </div>
                                         </div>
@@ -39,8 +40,9 @@
 
                                         <div class="col-12">
                                             <div class="form-group upload-image">
-                                                <label for="profile-image">Immagine Profilo</label>
-                                                <input name="profile-image" id="profile-image" type="file"
+                                                <img width="200" src="" class="img-responsive">
+                                                <label for="image">Immagine Profilo</label>
+                                                <input name="image" id="image" type="file"
                                                     placeholder="Upload Image">
                                             </div>
                                         </div>
