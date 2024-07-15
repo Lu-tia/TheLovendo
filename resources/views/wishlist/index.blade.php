@@ -26,7 +26,7 @@
                                                         <div class="single-item-grid">
                                                             <div class="image">
                                                                 <a href="item-details.html"><img
-                                                                        src="{{ $wishlist->article->image ?? 'https://via.placeholder.com/150' }}"
+                                                                        src="{{ $wishlist->article->image ?? 'https://via.placeholder.com/150'}}"
                                                                         alt="{{ $wishlist->article->title }}"></a>
                                                             </div>
                                                             <div class="content">
