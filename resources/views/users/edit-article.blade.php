@@ -3,6 +3,9 @@
         <div class="dashboard-block mt-0">
             <h3 class="block-title">Modifica Articolo</h3>
             <div class="inner-block">
+                @if($article->status === null || $article->user_id != auth()->user()->id)
+                <p class="alert alert-danger">Non puoi modificare questo articolo</p>
+                @else
                 <form action="{{ route('users.update_article', ['article' => $article->id]) }}" method="POST">
                     @csrf
                     @method('PUT')
@@ -103,7 +106,9 @@
                             </div>
                         </div>
                     </div>
+                    <button type="submit" class="btn btn-primary">Salva Modifiche</button>
                 </form>
+                @endif
             </div>
         </div>
     </div>
