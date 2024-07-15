@@ -101,7 +101,8 @@
                                         @enderror
                                     </div>
                                 </div>
-                                <div class="mb-3">
+                                <div class="col-12">
+                                    <label>Img</label>
                                     <input type="file" wire:model.live="temporary_images" multiple class="form-control shadow @error('temporary_images.*') is-invalid @enderror" placeholder="Img/">
                                     @error('temporary_images.*')
                                             <div class="alert alert-danger mt-2"> {{ $message }} </div>
@@ -118,6 +119,7 @@
                                                 @foreach ($images as $image )
                                                     <div class="col d-flex flexcolumn align-item-center my-3">
                                                         <div class="img-preview mx-auto shadow rounded" style="background-image: url({{$image->temporaryUrl()}});"></div>
+                                                        <button type="button" class="btn mt-1 btn-danger" wire:click="removeImage({{$key}})">X</button>
                                                     </div>
                                                 @endforeach
                                             </div>

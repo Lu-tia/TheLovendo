@@ -1,6 +1,6 @@
-input[type="file"] {
+/* input[type="file"] {
     display: none;
-}
+} */
 
 .upload-image>label {
     border: 1px solid #ccc;
