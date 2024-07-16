@@ -32,8 +32,8 @@ Route::middleware(['auth'])->group(function () {
     Route::put('/users/{article}/update-article', [UserController::class, 'updateArticle'])->name('users.update_article');
     Route::delete('/users/{article}/destroy-article', [UserController::class, 'destroyArticle'])->name('users.destroy_article');
     //lavora con noi
-Route::get('/lavora-con-noi', [ContactController::class, 'workWithUs'])->name('workWithUs');
-Route::post('/lavora-con-noi', [ContactController::class, 'sendApplication'])->name('applicationMail');
+    Route::get('/lavora-con-noi', [ContactController::class, 'workWithUs'])->name('workWithUs');
+    Route::post('/lavora-con-noi', [ContactController::class, 'sendApplication'])->name('applicationMail');
 });
 
 /* SOCALITE */
@@ -49,3 +49,4 @@ Route::middleware(['auth', 'isRevisor'])->group(function () {
     Route::patch('rollback/article', [RevisorController::class, 'rollback'])->name('rollback');
 });
 
+Route::post('/lingua/{lang}', [UserController::class, 'setLanguage'])->name('setLocale');

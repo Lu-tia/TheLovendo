@@ -243,8 +243,7 @@
         </section>
         <!-- End How Works Area -->
     @endguest
-
-
+    
     <!-- Start Items Grid Area -->
     <section class="items-grid section">
         <div class="container">

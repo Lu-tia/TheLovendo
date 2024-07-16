@@ -110,4 +110,10 @@ class UserController extends Controller
         session()->flash('success','Profilo aggioranto con successo');
         return redirect()->route('users.profile_settings');
     }
+
+    public function setLanguage($lang)
+    {
+        session()->put('locale', $lang);
+        return redirect()->back();
+    }
 }

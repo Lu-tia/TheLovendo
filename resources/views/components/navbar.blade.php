@@ -6,6 +6,7 @@
                     <a class="navbar-brand" href="{{ route('homepage') }}">
                         <img src="{{ asset('/assets/images/logo/logo.svg') }}" alt="Logo">
                     </a>
+                    
                     <button class="navbar-toggler mobile-menu-btn" type="button" data-bs-toggle="collapse"
                         data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
@@ -16,7 +17,7 @@
                     <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
                         <ul id="nav" class="navbar-nav ms-auto">
                             <li class="nav-item">
-                                <a href="{{ route('homepage') }}" aria-label="Toggle navigation">Home</a>
+                                <a href="{{ route('homepage') }}" aria-label="Toggle navigation">{{ __('ui.home') }}</a>
                             </li>
 
                             {{-- <a class=" dd-menu collapsed" href="{{ route('homepage') }}" data-bs-toggle="collapse"
@@ -32,12 +33,12 @@
                             </ul> --}}
 
                             <li class="nav-item">
-                                <a href="{{ route('articles.index') }}" aria-label="Toggle navigation">Articoli</a>
+                                <a href="{{ route('articles.index') }}" aria-label="Toggle navigation">{{ __('ui.articoli') }}</a>
                             </li>
                             <li class="nav-item">
                                 <a class="dd-menu collapsed" href="javascript:void(0)" data-bs-toggle="collapse"
                                     data-bs-target="#submenu-1-5" aria-controls="navbarSupportedContent"
-                                    aria-expanded="false" aria-label="Toggle navigation">Categorie</a>
+                                    aria-expanded="false" aria-label="Toggle navigation">{{ __('ui.categorie') }}</a>
                                 <ul class="sub-menu collapse" id="submenu-1-5">
                                     @forelse ($categories as $category)
                                     <li class="nav-item"><a
@@ -49,7 +50,7 @@
                                 </ul>
                             </li>
                             <li class="nav-item">
-                                <a href="{{ route('workWithUs') }}" aria-label="Toggle navigation">Lavora con Noi</a>
+                                <a href="{{ route('workWithUs') }}" aria-label="Toggle navigation">{{ __('ui.Lavora_con_Noi') }}</a>
                             </li>
                         </ul>
                         @guest
@@ -57,12 +58,12 @@
                             <li class="nav-item me-3">
                                 <i class="lni lni-enter"></i>
                                 <a class="dd-menu collapsed text-black fw-medium" href="{{ route('login') }}"
-                                    aria-label="Toggle navigation">Login</a>
+                                    aria-label="Toggle navigation">{{ __('ui.Accedi') }}</a>
                             </li>
                             <li class="nav-item me-3">
                                 <i class="lni lni-user"></i>
                                 <a class="dd-menu collapsed text-black fw-medium" href="{{ route('register') }}"
-                                    aria-label="Toggle navigation">Registrati</a>
+                                    aria-label="Toggle navigation">{{ __('ui.Registrati') }}</a>
                             </li>
                             @endguest
                             @auth
@@ -127,10 +128,10 @@
                         <div class="button d-flex justify-content-center p-3">
                             @auth
                             <a href="{{ route('articles.create',) }}" class="btn">
-                                Crea un annuncio</a>
+                                {{ __('ui.Crea_un_Annuncio') }}</a>
                             @else
                             <a href="{{ route('login') }}" class="btn">
-                                Crea un annuncio</a>
+                                {{ __('ui.Crea_un_Annuncio') }}</a>
                             @endauth
                         </div>
 
@@ -152,9 +153,12 @@
                     {{-- <a class="btn btn-sm btn-outline-secondary mx-2" href="{{ route('homepage') }}">Dashboard</a>
                     --}}
 
-
-
+                    <x-_locale lang="it" />
+                    <x-_locale lang="en" />
+                    <x-_locale lang="fr" />
+                    
                 </nav> <!-- navbar -->
+                
             </div>
         </div>
     </div> <!-- row -->

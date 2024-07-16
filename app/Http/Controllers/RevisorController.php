@@ -24,7 +24,7 @@ class RevisorController extends Controller
             return redirect()->route('revisor.index')->with('error', 'Non puoi accettare un annuncio che hai creato tu stesso');
         }
         
-        $article->status = 'accepted';
+        $article->status = 1;
         $article->save();
         
         return redirect()->route('revisor.index')->with('success', 'Annuncio accettato con successo');
