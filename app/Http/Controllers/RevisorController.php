@@ -20,26 +20,20 @@ class RevisorController extends Controller
     
     public function accept(Article $article)
     {
-        if ($article->user_id == auth()->user()->id) {
-            return redirect()->route('revisor.index')->with('error', 'Non puoi accettare un annuncio che hai creato tu stesso');
-        }
-        
-        $article->status = 1;
+        $article->status = true;
         $article->save();
         
-        return redirect()->route('revisor.index')->with('success', 'Annuncio accettato con successo');
+        session()->flash('message', "Hai accettato l'articolo $article->title");
+        return redirect()->route('revisor.index');
     }
     
     public function reject(Article $article)
     {
-        if ($article->user_id == auth()->user()->id) {
-            return redirect()->route('revisor.index')->with('error', 'Non puoi rifiutare un annuncio che hai creato tu stesso');
-        }
-        
-        $article->status = 'rejected';
+        $article->status = false;
         $article->save();
         
-        return redirect()->back()->with('message', "Hai rifiutato l'articolo $article->title");
+        session()->flash('message', "Hai rifiutato l'articolo $article->title");
+        return redirect()->route('revisor.index');
     }
     
     public function rollback(Article $article)
@@ -47,14 +41,11 @@ class RevisorController extends Controller
         // Recupera l'ultimo articolo modificato (rollback dell'ultimo aggiornamento)
         $article = Article::orderBy('updated_at', 'desc')->first();
         
-        if ($article->user_id == auth()->user()->id) {
-            return redirect()->route('revisor.index')->with('error', 'Non puoi annullare la modifica di un annuncio che hai creato tu stesso');
-        }
-        
         $article->status = null;
         $article->save();
         
-        return redirect()->back()->with('rollback', "La modifica all'articolo $article->title è stata annullata");
+        session()->flash('rollback', "La modifica all'articolo $article->title è stata annullata");
+        return redirect()->route('revisor.index');
     }
 }
 
