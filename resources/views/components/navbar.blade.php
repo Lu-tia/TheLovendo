@@ -6,7 +6,7 @@
                     <a class="navbar-brand" href="{{ route('homepage') }}">
                         <img src="{{ asset('/assets/images/logo/logo.svg') }}" alt="Logo">
                     </a>
-                    
+
                     <button class="navbar-toggler mobile-menu-btn" type="button" data-bs-toggle="collapse"
                         data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
@@ -33,7 +33,8 @@
                             </ul> --}}
 
                             <li class="nav-item">
-                                <a href="{{ route('articles.index') }}" aria-label="Toggle navigation">{{ __('ui.articoli') }}</a>
+                                <a href="{{ route('articles.index') }}"
+                                    aria-label="Toggle navigation">{{ __('ui.articoli') }}</a>
                             </li>
                             <li class="nav-item">
                                 <a class="dd-menu collapsed" href="javascript:void(0)" data-bs-toggle="collapse"
@@ -41,69 +42,69 @@
                                     aria-expanded="false" aria-label="Toggle navigation">{{ __('ui.categorie') }}</a>
                                 <ul class="sub-menu collapse" id="submenu-1-5">
                                     @forelse ($categories as $category)
-                                    <li class="nav-item"><a
-                                            href="{{ route('articles.category', ['id' => $category->id]) }}">{{
-                                            $category->name }}</a>
-                                    </li>
+                                        <li class="nav-item"><a
+                                                href="{{ route('articles.category', ['id' => $category->id]) }}">{{ $category->name }}</a>
+                                        </li>
                                     @empty
                                     @endforelse
                                 </ul>
                             </li>
                             <li class="nav-item">
-                                <a href="{{ route('workWithUs') }}" aria-label="Toggle navigation">{{ __('ui.Lavora_con_Noi') }}</a>
+                                <a href="{{ route('workWithUs') }}"
+                                    aria-label="Toggle navigation">{{ __('ui.Lavora_con_Noi') }}</a>
                             </li>
                         </ul>
                         @guest
-                        <ul id="nav" class="d-flex d-inline justify-content-center p-2">
-                            <li class="nav-item me-3">
-                                <i class="lni lni-enter"></i>
-                                <a class="dd-menu collapsed text-black fw-medium" href="{{ route('login') }}"
-                                    aria-label="Toggle navigation">{{ __('ui.Accedi') }}</a>
-                            </li>
-                            <li class="nav-item me-3">
-                                <i class="lni lni-user"></i>
-                                <a class="dd-menu collapsed text-black fw-medium" href="{{ route('register') }}"
-                                    aria-label="Toggle navigation">{{ __('ui.Registrati') }}</a>
-                            </li>
+                            <ul id="nav" class="d-flex d-inline justify-content-center p-2">
+                                <li class="nav-item me-3">
+                                    <i class="lni lni-enter"></i>
+                                    <a class="dd-menu collapsed text-black fw-medium" href="{{ route('login') }}"
+                                        aria-label="Toggle navigation">{{ __('ui.Accedi') }}</a>
+                                </li>
+                                <li class="nav-item me-3">
+                                    <i class="lni lni-user"></i>
+                                    <a class="dd-menu collapsed text-black fw-medium" href="{{ route('register') }}"
+                                        aria-label="Toggle navigation">{{ __('ui.Registrati') }}</a>
+                                </li>
                             @endguest
                             @auth
-                            <li class="sub-menu-profile position-relative">
-                                <img src="{{ auth()->user()->providers[0]->social_avatar ?? Storage::url(auth()->user()->avatar)}}"
-                                    class="user-pic" alt="" onclick="toggleMenu()">
-                                <div class="sub-menu-wrap" id="subMenu">
-                                    <div class="sub-menu">
-                                        <div class="user-info">
-                                            {{-- <img
+                                <li class="sub-menu-profile position-relative">
+                                    <img src="{{ auth()->user()->providers[0]->social_avatar ?? Storage::url(auth()->user()->avatar) }}"
+                                        class="user-pic" alt="" onclick="toggleMenu()">
+                                    <div class="sub-menu-wrap" id="subMenu">
+                                        <div class="sub-menu">
+                                            <div class="user-info">
+                                                {{-- <img
                                                 src="{{auth()->user()->providers[0]->social_avatar ?? Storage::url(auth()->user()->avatar)}}"
                                                 class="user-pic" alt=""> --}}
-                                            <h3>{{auth()->user()->firstName}} {{auth()->user()->lastName}}</h3>
+                                                <h3>{{ auth()->user()->firstName }} {{ auth()->user()->lastName }}</h3>
+                                            </div>
+                                            <hr>
+
+                                            <a href="{{ route('users.dashboard') }}" class="sub-menu-link">
+                                                <img src="{{ asset('/assets/profile/profile.png') }}" alt="">
+                                                <p>Profilo</p>
+                                                <span>></span>
+                                            </a>
+                                            @if (auth()->user()->is_revisor == true)
+                                                <a href="{{ route('revisor.index') }}" class="sub-menu-link">
+                                                    <img src="{{ asset('/assets/profile/profile.png') }}" alt="">
+                                                    <p>Zona Revisione {{ $articles_to_accept_count }}</p>
+                                                    <span>></span>
+                                                </a>
+                                            @endif
+                                            <form action="{{ route('logout') }}" method="post">
+                                                @csrf
+                                                <button type="submit" href="javascript:void(0)"
+                                                    class="sub-menu-link btn px-0">
+                                                    <img src="{{ asset('/assets/profile/logout.png') }}" alt="">
+                                                    <p>Logout</p>
+                                                </button>
+                                            </form>
                                         </div>
-                                        <hr>
-
-                                        <a href="{{route('users.dashboard')}}" class="sub-menu-link">
-                                            <img src="{{ asset('/assets/profile/profile.png') }}" alt="">
-                                            <p>Profilo</p>
-                                            <span>></span>
-                                        </a>
-                                        @if (auth()->user()->is_revisor == true)
-                                        <a href="{{route('revisor.index')}}" class="sub-menu-link">
-                                            <img src="{{ asset('/assets/profile/profile.png') }}" alt="">
-                                            <p>Zona Revisione {{$articles_to_accept_count}}</p>
-                                            <span>></span>
-                                        </a>
-                                        @endif
-                                        <form action="{{route('logout')}}" method="post">
-                                            @csrf
-                                            <button type="submit" href="javascript:void(0)"
-                                                class="sub-menu-link btn px-0">
-                                                <img src="{{ asset('/assets/profile/logout.png') }}" alt="">
-                                                <p>Logout</p>
-                                            </button>
-                                        </form>
                                     </div>
-                                </div>
 
-                                {{-- <a class="dd-menu collapsed" href="" data-bs-toggle="collapse"
+                                    {{-- <a class="dd-menu collapsed" href="" data-bs-toggle="collapse"
                                     data-bs-target="#submenu-1-6" aria-controls="navbarSupportedContent"
                                     aria-expanded="false" aria-label="Toggle navigation">{{ auth()->user()->name }}</a>
                                 <ul class="sub-menu collapse" id="submenu-1-6">
@@ -120,18 +121,18 @@
                                         </a>
                                     </li>
                                 </ul> --}}
-                            </li>
+                                </li>
                             @endauth
                         </ul>
 
 
                         <div class="button d-flex justify-content-center p-3">
                             @auth
-                            <a href="{{ route('articles.create',) }}" class="btn">
-                                {{ __('ui.Crea_un_Annuncio') }}</a>
+                                <a href="{{ route('articles.create') }}" class="btn">
+                                    {{ __('ui.Crea_un_Annuncio') }}</a>
                             @else
-                            <a href="{{ route('login') }}" class="btn">
-                                {{ __('ui.Crea_un_Annuncio') }}</a>
+                                <a href="{{ route('login') }}" class="btn">
+                                    {{ __('ui.Crea_un_Annuncio') }}</a>
                             @endauth
                         </div>
 
@@ -153,12 +154,15 @@
                     {{-- <a class="btn btn-sm btn-outline-secondary mx-2" href="{{ route('homepage') }}">Dashboard</a>
                     --}}
 
+
+
+
                     <x-_locale lang="it" />
                     <x-_locale lang="en" />
                     <x-_locale lang="fr" />
-                    
+
                 </nav> <!-- navbar -->
-                
+
             </div>
         </div>
     </div> <!-- row -->
@@ -169,7 +173,7 @@
 <script>
     let subMenu = document.querySelector("#subMenu");
 
-function toggleMenu() {
-     subMenu.classList.toggle("open-menu");
-}
+    function toggleMenu() {
+        subMenu.classList.toggle("open-menu");
+    }
 </script>
