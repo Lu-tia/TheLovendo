@@ -12,17 +12,18 @@
                                     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
                                     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
                                 </div>
+                                @if($article->images->count()>0)
                                 <div class="carousel-inner">
                                     <div class="carousel-item active">
-                                        <img src="{{asset('assets/images/placeholder/carousel-1.png')}}" class="d-block w-100" alt="...">
+                                        <img src="{{Storage::url($article->images->first()->path)}}" class="d-block w-100" alt="...">
                                     </div>
+                                    @foreach($article->images->slice(1) as $key=>$image)
                                     <div class="carousel-item">
-                                        <img src="{{asset('assets/images/placeholder/carousel-2.png')}}" class="d-block w-100" alt="...">
+                                        <img src="{{Storage::url($image->path)}}" class="d-block w-100" alt="...">
                                     </div>
-                                    <div class="carousel-item">
-                                        <img src="{{asset('assets/images/placeholder/carousel-3.png')}}" class="d-block w-100" alt="...">
-                                    </div>
+                                    @endforeach
                                 </div>
+                                @if($article->images->count()>1)
                                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
                                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                                     <span class="visually-hidden">Precedente</span>
@@ -31,7 +32,9 @@
                                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                                     <span class="visually-hidden">Successivo</span>
                                 </button>
+                                @endif
                             </div>
+                            @endif
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-12 col-12">
