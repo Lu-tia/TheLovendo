@@ -136,9 +136,27 @@
                             @endauth
                         </div>
 
-                    </div>
+                        <div class="flag-container">
+                            <div class="dropdown">
+                                <a data-mdb-dropdown-init class="dropdown-toggle" href="#" id="Dropdown"
+                                    role="button" data-mdb-toggle="dropdown" aria-expanded="false">
+                                    <x-_locale lang="it" />
+                                </a>
 
-                    {{-- <div class="login-button">
+                                <ul class="dropdown-menu" aria-labelledby="Dropdown">
+                                    <li>
+                                        <a class="dropdown-item" href="#"><x-_locale lang="en" />English </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="#"><x-_locale lang="fr" />France
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </div>
+
+                        {{-- <div class="login-button">
                         <ul>
                             <li>
                                 <a href="">Accedi</a>
@@ -151,15 +169,13 @@
 
 
 
-                    {{-- <a class="btn btn-sm btn-outline-secondary mx-2" href="{{ route('homepage') }}">Dashboard</a>
+                        {{-- <a class="btn btn-sm btn-outline-secondary mx-2" href="{{ route('homepage') }}">Dashboard</a>
                     --}}
 
 
 
 
-                    <x-_locale lang="it" />
-                    <x-_locale lang="en" />
-                    <x-_locale lang="fr" />
+
 
                 </nav> <!-- navbar -->
 
