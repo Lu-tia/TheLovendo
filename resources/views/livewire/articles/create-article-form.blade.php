@@ -116,7 +116,7 @@
                                         <div class="col-12">
                                             <p>Anteprima immagini:</p>
                                             <div class="row border border-4 border-success rounded shadow py-4">
-                                                @foreach ($images as $image )
+                                                @foreach ($images as $key => $image )
                                                     <div class="col d-flex flexcolumn align-item-center my-3">
                                                         <div class="img-preview mx-auto shadow rounded" style="background-image: url({{$image->temporaryUrl()}});"></div>
                                                         <button type="button" class="btn mt-1 btn-danger" wire:click="removeImage({{$key}})">X</button>

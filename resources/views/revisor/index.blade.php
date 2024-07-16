@@ -30,6 +30,7 @@
 
                         @if ($article_to_check)
                             <div class="col-6">
+                                @if($article_to_check->images->count())
                                 <div class="article-image">
                                     <div id="carouselExampleIndicators" class="carousel slide carousel-2">
                                         <div class="carousel-indicators">
@@ -46,15 +47,21 @@
                                                 <img src="{{ asset('assets/images/placeholder/carousel-1.png') }}"
                                                     class="d-block w-100" alt="...">
                                             </div>
+                                            @foreach($article_to_check->images as $key=>$image)
                                             <div class="carousel-item">
-                                                <img src="{{ asset('assets/images/placeholder/carousel-2.png') }}"
+                                                <img src="{{ Storage::url($image->path) }}"
                                                     class="d-block w-100" alt="...">
                                             </div>
+                                            @endforeach
+                                        @else
+                                            @for($i=0;$i<6;$i++)
                                             <div class="carousel-item">
-                                                <img src="{{ asset('assets/images/placeholder/carousel-3.png') }}"
+                                                <img src="https://picsum.photos/300 }}"
                                                     class="d-block w-100" alt="...">
                                             </div>
                                         </div>
+                                            @endfor
+                                @endif
                                         <button class="carousel-control-prev" type="button"
                                             data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
                                             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
