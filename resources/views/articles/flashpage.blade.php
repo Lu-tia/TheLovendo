@@ -11,10 +11,10 @@
             <div class="col-12 pt-5">
                 <div class="form-group button mb-0">
                     <a href="{{ route('homepage') }}">
-                        <button type="submit" class="btn">Torna alla Home</button>
+                        <button type="submit" class="btn">{{ __('ui.Torna alla Home')}}</button>
                     </a>
                     <a href="{{ route('articles.create') }}">
-                        <button type="submit" class="btn">Inserisci un nuovo articolo</button>
+                        <button type="submit" class="btn">{{ __('ui.Inserisci un nuovo articolo')}}</button>
                     </a>
                 </div>
             </div>
