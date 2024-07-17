@@ -51,7 +51,7 @@ return [
     'Pubblicato da:' => 'Publié par :',
     'Prezzo' => 'Prix',
     'Non inviamo spam,tranquillo.' => 'Pas de spam, rassurez-vous.',
-    'iscriviti' => 'S\'inscrire',
+    'Iscriviti' => 'S\'inscrire',
     'Rimuovi dai preferiti' => 'Retirer des favoris',
     'Aggiungi ai preferiti' => 'Ajouter aux favoris',
     'Titolo' => 'Titre',

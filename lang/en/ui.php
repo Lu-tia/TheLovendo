@@ -51,7 +51,7 @@ return [
     'Pubblicato da:' => 'Published by:',
     'Prezzo' => 'Price',
     'Non inviamo spam,tranquillo.' => 'We do not spam, relax.',
-    'iscriviti' => 'Subscribe',
+    'Iscriviti' => 'Subscribe',
     'Rimuovi dai preferiti' => 'Remove from favorites',
     'Aggiungi ai preferiti' => 'Add to favorites',
     'Titolo' => 'Title',
