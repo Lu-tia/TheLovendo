@@ -7,59 +7,58 @@
             <div class="row">
                 <div class="col-lg-6 offset-lg-3 col-md-8 offset-md-2 col-12">
                     <div class="form-head">
-                        <h4 class="title">Registration</h4>
+                        <h4 class="title">Registrazione</h4>
                         <form action="{{ route('register') }}" method="POST">
                             @csrf
                             <div class="socila-login">
                                 <ul>
                                     <li><a href="javascript:void(0)" class="facebook"><i
-                                                class="lni lni-facebook-original"></i>Accedi con Facebook</a></li>
-                                    <li><a href="javascript:void(0)" class="google"><i class="lni lni-google"></i>Accedi
-                                            con Google</a></li>
+                                                class="lni lni-facebook-original"></i>{{ __('ui.Accedi con facebook')}}</a></li>
+                                    <li><a href="javascript:void(0)" class="google"><i class="lni lni-google"></i>{{ __('ui.Accedi con Google')}}</a></li>
                                 </ul>
                             </div>
                             <div class="alt-option">
-                                <span>Oppure</span>
+                                <span>{{ __('ui.Oppure')}}</span>
                             </div>
                             <div class="form-group">
-                                <label>Nome</label>
+                                <label>{{ __('ui.Nome')}}</label>
                                 <input name="firstName" type="text" value="{{ old('firstName') }}">
                                 @error('firstName')
                                     <span class="small text-danger">{{ $message }}</span>
                                 @enderror
                             </div>
                             <div class="form-group">
-                                <label>Cognome</label>
+                                <label>{{ __('ui.Cognome')}}</label>
                                 <input name="lastName" type="text" value="{{ old('lastName') }}">
                                 @error('lastName')
                                     <span class="small text-danger">{{ $message }}</span>
                                 @enderror
                             </div>
                             <div class="form-group">
-                                <label>Email</label>
+                                <label>{{ __('ui.Email')}}</label>
                                 <input name="email" type="email" value="{{ old('email') }}">
                                 @error('email')
                                     <span class="small text-danger">{{ $message }}</span>
                                 @enderror
                             </div>
                             <div class="form-group">
-                                <label>Password</label>
+                                <label>{{ __('ui.Password')}}</label>
                                 <input name="password" type="password" id="password">
                                 @error('password')
                                     <span class="small text-danger">{{ $message }}</span>
                                 @enderror
                             </div>
                             <div class="form-group">
-                                <label>Conferma Password</label>
+                                <label>{{ __('ui.Conferma Password')}}</label>
                                 <input name="password_confirmation" type="password" id="password_confirmation">
                                 @error('password_confirmation')
                                     <span class="small text-danger">{{ $message }}</span>
                                 @enderror
                             </div>
                             <div class="button">
-                                <button type="submit" class="btn">Registrati</button>
+                                <button type="submit" class="btn">{{ __('ui.Registrati')}}</button>
                             </div>
-                            <p class="outer-link">Sei già registrato? <a href="{{ route('login') }}"> Accedi ora</a>
+                            <p class="outer-link">{{ __('ui.Sei già registrato?')}}<a href="{{ route('login') }}"> {{ __('ui.Accedi ora')}}</a>
                             </p>
                         </form>
                     </div>

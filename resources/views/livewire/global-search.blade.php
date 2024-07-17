@@ -5,7 +5,7 @@
                 <div class="col-12 p-0">
                     <div class="search-input">
                         <label for="keyword"><i class="lni lni-search-alt theme-color"></i></label>
-                        <input type="search" wire:model.live.debounce.300ms="query" id="globalInput" placeholder="Cerca prodotto">   
+                        <input type="search" wire:model.live.debounce.300ms="query" id="globalInput" placeholder="{{ __('ui.Cerca prodotto')}}">
                     </div>
                 </div>
             </div>
@@ -33,7 +33,7 @@
                 <div class="card rounded shadow-sm border-0 cardcst2">
                     <div class="card-body p-4 d-flex align-items-center" >
                         <i class="text-white lni lni-eye"></i>
-                        <h7 class="text-white">Mostra altri</a></h7>
+                        <h7 class="text-white">{{ __('ui.Mostra altri')}}</a></h7>
                     </div>     
                 </div>
             </div>

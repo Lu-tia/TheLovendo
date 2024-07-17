@@ -1,18 +1,18 @@
 <div class="dashboard-block mt-0">
-    <h3 class="block-title">I miei Annunci</h3>
+    <h3 class="block-title">{{ __('ui.I miei annunci')}}</h3>
     <nav class="list-nav">
         <ul>
             <li class="{{ $query == 0 ? 'active' : '' }}">
                 <input type="radio" wire:model.live="query" value="0" name="filtered" id="allArticles">
-                <label for="allArticles">Tutti gli annunci</label>
+                <label for="allArticles">{{ __('ui.Tutti gli annunci')}}</label>
             </li>
             <li class="{{ $query == 1 ? 'active' : '' }}">
                 <input type="radio" wire:model.live="query" value="1" name="filtered" id="Accepted">
-                <label for="Accepted">Pubblicati</label>
+                <label for="Accepted">{{ __('ui.Pubblicati')}}</label>
             </li>
             <li class="{{ $query == 2 ? 'active' : '' }}">
                 <input type="radio" wire:model.live="query" value="2" name="filtered" id="toAccept">
-                <label for="toAccept">In attesa di revisione</label>
+                <label for="toAccept">{{ __('ui.In attesa di revisione')}}</label>
             </li>
         </ul>
     </nav>
@@ -22,13 +22,13 @@
         <div class="item-list-title">
             <div class="row align-items-center">
                 <div class="col-lg-5 col-md-5 col-12">
-                    <p>Titolo</p>
+                    <p>{{ __('ui.Titolo')}}</p>
                 </div>
                 <div class="col-lg-2 col-md-2 col-12">
-                    <p>Categoria</p>
+                    <p>{{ __('ui.categoria')}}</p>
                 </div>
                 <div class="col-lg-2 col-md-2 col-12">
-                    <p>Condizione</p>
+                    <p>{{ __('ui.Condizione')}}</p>
                 </div>
             </div>
         </div>
@@ -68,7 +68,7 @@
  
   
         @empty
-            Nessun annuncio trovato
+        {{ __('ui.Nessun annuncio trovato')}}
         @endforelse
         <!-- Modal -->
         @isset($article)
@@ -80,14 +80,14 @@
                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                  <p>Vuoi eliminare l'annuncio {{$article->title}}?</p>
+                  <p>{{ __('ui.Vuoi eliminare l\'annuncio')}} {{$article->title}}?</p>
                 </div>
                 <div class="modal-footer button">
-                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annulla</button>
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">{{ __('ui.Annulla')}}</button>
                   <form action="{{route('users.destroy_article',compact('article'))}}" method="post">
                     @csrf
                     @method('DELETE')
-                      <button type="submit" class="btn">Elimina</button>
+                      <button type="submit" class="btn">{{ __('ui.Elimina')}}</button>
                   </form>
                 </div>
               </div>

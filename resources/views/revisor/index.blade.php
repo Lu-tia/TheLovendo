@@ -14,8 +14,7 @@
                                     <form action="{{ route('rollback') }}" method="post" class="mt-2">
                                         @csrf
                                         @method('PATCH')
-                                        <button class="btn btn-danger-custom" type="submit">Annulla ultima
-                                            modifica</button>
+                                        <button class="btn btn-danger-custom" type="submit">{{ __('ui.Annulla ultima modifica'')}}</button>
                                     </form>
                                 </div>
                             @endif
@@ -82,7 +81,7 @@
                                         @csrf
                                         @method('PATCH')
                                         <button class="btn btn-success-custom me-3" type="submit">
-                                            <span>ACCETTA</span>
+                                            <span>{{ __('ui.ACCETTA')}}</span>
                                         </button>
                                     </form>
                                     <form action="{{ route('reject', ['article' => $article_to_check]) }}"
@@ -90,7 +89,7 @@
                                         @csrf
                                         @method('PATCH')
                                         <button class="btn btn-danger-custom" type="submit">
-                                            <span>RIFIUTA</span>
+                                            <span>{{ __('ui.RIFIUTA')}}</span>
                                         </button>
                                     </form>
                                 </div>

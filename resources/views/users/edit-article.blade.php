@@ -1,10 +1,10 @@
 <x-layouts.main>
     <div class="container">
         <div class="dashboard-block mt-0">
-            <h3 class="block-title">Modifica Articolo</h3>
+            <h3 class="block-title">{{ __('ui.Modifica articolo')}}</h3>
             <div class="inner-block">
                 @if($article->status === null || $article->user_id != auth()->user()->id)
-                <p class="alert alert-danger">Non puoi modificare questo articolo</p>
+                <p class="alert alert-danger">{{ __('ui.Non puoi modificare questo articolo')}}</p>
                 @else
                 <form action="{{ route('users.update_article', ['article' => $article->id]) }}" method="POST">
                     @csrf
@@ -16,7 +16,7 @@
                                     <div class="row">
                                         <div class="col-12">
                                             <div class="form-group">
-                                                <label>Titolo</label>
+                                                <label>{{ __('ui.Titolo')}}</label>
                                                 <input type="text" name="title" class="form-control" value="{{ old('title', $article->title) }}">
                                                 @error('title')
                                                 <div class="alert alert-danger mt-2">{{ $message }}</div>
@@ -25,7 +25,7 @@
                                         </div>
                                         <div class="col-12">
                                             <div class="form-group">
-                                                <label>Categoria</label>
+                                                <label>{{ __('ui.Categoria')}}</label>
                                                 <div class="selector-head">
                                                     <span class="arrow"><i class="lni lni-chevron-down"></i></span>
                                                     <select name="category_id" class="user-chosen-select form-control">
@@ -43,12 +43,12 @@
                                         </div>
                                         <div class="col-lg-6 col-6">
                                             <div class="form-group">
-                                                <label>Condizione</label>
+                                                <label>{{ __('ui.Condizione')}}</label>
                                                 <div class="selector-head">
                                                     <span class="arrow"><i class="lni lni-chevron-down"></i></span>
                                                     <select name="condition" class="user-chosen-select form-control">
-                                                        <option value="Usato" {{ $article->condition == 'Usato' ? 'selected' : '' }}>Usato</option>
-                                                        <option value="Nuovo" {{ $article->condition == 'Nuovo' ? 'selected' : '' }}>Nuovo</option>
+                                                        <option value="Usato" {{ $article->condition == 'Usato' ? 'selected' : '' }}>{{ __('ui.Usato')}}</option>
+                                                        <option value="Nuovo" {{ $article->condition == 'Nuovo' ? 'selected' : '' }}>{{ __('ui.Nuovo')}}</option>
                                                     </select>
                                                 </div>
                                                 @error('condition')
@@ -58,7 +58,7 @@
                                         </div>
                                         <div class="col-6">
                                             <div class="form-group">
-                                                <label>Prezzo</label>
+                                                <label>{{ __('ui.Prezzo')}}</label>
                                                 <input type="number" name="price" class="form-control" value="{{ old('price', $article->price) }}">
                                                 @error('price')
                                                 <div class="alert alert-danger mt-2">{{ $message }}</div>
@@ -67,7 +67,7 @@
                                         </div>
                                         <div class="col-6">
                                             <div class="form-group">
-                                                <label>Nazione</label>
+                                                <label>{{ __('ui.Nazione')}}</label>
                                                 <div class="selector-head">
                                                     <span class="arrow"><i class="lni lni-chevron-down"></i></span>
                                                     <select name="country" class="user-chosen-select form-control">
@@ -85,7 +85,7 @@
                                         </div>
                                         <div class="col-6">
                                             <div class="form-group">
-                                                <label>Città</label>
+                                                <label>{{ __('ui.Città')}}</label>
                                                 <input type="text" name="city" class="form-control" value="{{ old('city', $article->city) }}">
                                                 @error('city')
                                                 <div class="alert alert-danger mt-2">{{ $message }}</div>
@@ -94,7 +94,7 @@
                                         </div>
                                         <div class="col-12">
                                             <div class="form-group">
-                                                <label>Annuncio</label>
+                                                <label>{{ __('ui.Annuncio')}}</label>
                                                 <textarea name="body" rows="4" class="form-control">{{ old('body', $article->body) }}</textarea>
                                                 @error('body')
                                                 <div class="alert alert-danger mt-2">{{ $message }}</div>
@@ -106,7 +106,7 @@
                             </div>
                         </div>
                     </div>
-                    <button type="submit" class="btn btn-primary">Salva Modifiche</button>
+                    <button type="submit" class="btn btn-primary">{{ __('ui.Salva modifiche')}}</button>
                 </form>
                 @endif
             </div>
