@@ -47,6 +47,10 @@ class ProviderController extends Controller
             'email' => $socialUser->email,
             'user_id' => $user->id
         ]);
+
+        $user = User::find(auth()->user()->id);
+        $user->avatar = auth()->user()->providers['0']->social_avatar;
+        $user->save();
         
         
         return redirect('/');

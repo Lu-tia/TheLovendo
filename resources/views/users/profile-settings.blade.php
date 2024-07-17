@@ -16,7 +16,7 @@
                             <h3 class="block-title">{{ __('ui.Impostazioni profilo')}}</h3>
                             <div class="inner-block">
                                 <div class="image">
-                                    <img src="{{ auth()->user()->providers[0]->social_avatar ?? Storage::url(auth()->user()->avatar) }}"
+                                    <img src="{{Storage::url(auth()->user()->avatar) }}"
                                         alt="#">
                                 </div>
                                 <form class="profile-setting-form" action="{{route('users.updateProfile')}}" method="post" enctype="multipart/form-data" >

@@ -1,6 +1,6 @@
 <div class="dashboard-sidebar">
     <div class="user-image">
-        <img src="{{ auth()->user()->providers[0]->social_avatar ?? Storage::url(auth()->user()->avatar) }}" alt="#">
+        <img src="{{ Storage::url(auth()->user()->avatar) }}" alt="#">
         <h3 class="mt-3">{{ auth()->user()->firstName }} {{ auth()->user()->lastName }}</h3>
     </div>
     <div class="dashboard-menu">

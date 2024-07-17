@@ -94,19 +94,12 @@ class UserController extends Controller
         $query = User::find(auth()->user()->id);
         $query->firstName = $request->firstName;
         $query->lastName = $request->lastName;
+        if($path_image){
+            $query->avatar = $path_image;
+        }
         $query->save();
 
-        if($path_image){
-            if(auth()->user()->providers['0']->social_avatar){
-                $providers = auth()->user()->providers['0'];
-                $providers->social_avatar = $path_image;
-                $providers->save();
-            } else {
-                $query = User::find(auth()->user()->id);
-                $query->avatar = $path_image;
-                $query->save();
-            }
-        }
+       
         session()->flash('success','Profilo aggioranto con successo');
         return redirect()->route('users.profile_settings');
     }
