@@ -20,6 +20,7 @@
                                 <a href="{{ route('homepage') }}" aria-label="Toggle navigation">{{ __('ui.home') }}</a>
                             </li>
 
+
                             {{-- <a class=" dd-menu collapsed" href="{{ route('homepage') }}" data-bs-toggle="collapse"
                                 data-bs-target="#submenu-1-1" aria-controls="navbarSupportedContent"
                                 aria-expanded="false" aria-label="Toggle navigation">Home</a>
@@ -37,9 +38,9 @@
                                     aria-label="Toggle navigation">{{ __('ui.articoli') }}</a>
                             </li>
                             <li class="nav-item">
-                                <a class="dd-menu collapsed" href="javascript:void(0)" data-bs-toggle="collapse"
-                                    data-bs-target="#submenu-1-5" aria-controls="navbarSupportedContent"
-                                    aria-expanded="false" aria-label="Toggle navigation">{{ __('ui.categorie') }}</a>
+                                <a class="dd-menu collapsed" data-bs-toggle="collapse" data-bs-target="#submenu-1-5"
+                                    aria-controls="navbarSupportedContent" aria-expanded="false"
+                                    aria-label="Toggle navigation">{{ __('ui.categorie') }}</a>
                                 <ul class="sub-menu collapse" id="submenu-1-5">
                                     @forelse ($categories as $category)
                                         <li class="nav-item"><a
