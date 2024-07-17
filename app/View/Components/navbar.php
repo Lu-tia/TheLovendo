@@ -18,7 +18,9 @@ class Navbar extends Component
     public function __construct()
     {
         $this->categories = Category::all();
-        $this->articles_to_accept_count = Article::where('status' ,null)->where('user_id', '!=', auth()->user()->id)->count();
+        if(auth()->user()){
+            $this->articles_to_accept_count = Article::where('status' ,null)->where('user_id', '!=', auth()->user()->id)->count();
+        }
         $this->currentLocale = App::getLocale();
     }
     
