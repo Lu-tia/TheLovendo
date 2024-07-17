@@ -22,9 +22,9 @@ class ArticleFactory extends Factory
             'body' => fake('it_IT')->text(30),
             'user_id' => 1,
             'category_id' => fake()->randomDigitNotNull(0),
-            'country' => fake('it_IT')->word(1),
+            'country' => 'Italy',
             'city' => fake('it_IT')->word(1),
-            'condition' => fake('it_IT')->word(1),
+            'condition' => 'Nuovo',
             'status' => true,
         ];
     }

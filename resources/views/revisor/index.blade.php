@@ -44,7 +44,7 @@
                                             @if ($article_to_check->images->count())
                                                 @foreach ($article_to_check->images as $key => $image)
                                                 <div class="carousel-item">
-                                                    <img src="{{$image->getUrl(600,600)}}" class="d-block w-100" alt="...">
+                                                    <img src="{{$image->getUrl(300,300)}}" class="d-block w-100" alt="...">
                                                 </div>
                                                 @endforeach
                                             @else

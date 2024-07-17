@@ -3,7 +3,7 @@
     <div class="single-grid wow fadeInUp" data-wow-delay=".2s">
         <div class="image">
             <a href="{{ route('articles.show', compact('article')) }}" class="thumbnail"><img
-                    src="{{ $article->images->isNotEmpty() ? Storage::url($article-> images->first()->path) : 'https://picsum.photos/200' }}" alt="#"></a>
+                    src="{{ $article->images->isNotEmpty() ? $article->images->first()->getUrl(600, 600) : 'https://picsum.photos/600' }}" alt="#"></a>
             <div class="author">
                 {{-- <div class="author-image">
                     <a href="javascript:void(0)"><img src="https://via.placeholder.com/100x100" alt="#">
