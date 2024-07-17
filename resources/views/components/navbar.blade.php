@@ -143,7 +143,6 @@
                                 role="button" data-mdb-toggle="dropdown" aria-expanded="false">
                                 <x-_locale lang="it" />
                             </a>
-                            
                             <ul class="dropdown-menu" aria-labelledby="Dropdown">
                                 <li>
                                     <a class="dropdown-item" href="#"><x-_locale lang="en" />English </a>
