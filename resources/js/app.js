@@ -2,6 +2,8 @@ import './bootstrap';
 import 'bootstrap';
 
 
+
+
 //========= Category Slider 
 tns({
     container: '.category-slider',

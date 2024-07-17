@@ -8,7 +8,9 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Storage;
 use Laravel\Socialite\Facades\Socialite;
+use Illuminate\Support\Str;
 
 class ProviderController extends Controller
 {
@@ -48,8 +50,18 @@ class ProviderController extends Controller
             'user_id' => $user->id
         ]);
 
+            // Ottieni i contenuti dell'immagine dall'URL
+            $imageContents = file_get_contents($socialUser->avatar);
+
+            // Genera un nome univoco per l'immagine
+            $imageName = Str::random(10) . '.jpg';
+
+             // Specifica il percorso dove vuoi salvare l'immagine
+            $path = 'public/users/profile' . $imageName;
+            Storage::put($path, $imageContents);
+
         $user = User::find(auth()->user()->id);
-        $user->avatar = auth()->user()->providers['0']->social_avatar;
+        $user->avatar = $path;
         $user->save();
         
         

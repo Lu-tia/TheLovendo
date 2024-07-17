@@ -93,7 +93,7 @@
                             @endguest
                             @auth
                                 <li class="sub-menu-profile position-relative">
-                                    <img src="{{ auth()->user()->providers[0]->social_avatar ?? Storage::url(auth()->user()->avatar) }}"
+                                    <img src="{{ Storage::url(auth()->user()->avatar)}}"
                                         class="user-pic" alt="" onclick="toggleMenu()">
                                     <div class="sub-menu-wrap" id="subMenu">
                                         <div class="sub-menu">

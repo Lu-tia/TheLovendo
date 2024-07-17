@@ -1,5 +1,5 @@
 <x-layouts.main>
-    <div onclick="redirectToHomepage()" class="container flashpage vh-100 mt-5 pt-5">
+    <div id="flashpage" class="container flashpage vh-100 mt-5 pt-5">
         <div class="row text-center mt-5">
             <div class="col-12">
                 <h3>{{ __('ui.Annuncio creato con successo') }}</h3>
@@ -20,5 +20,5 @@
         </div>
     </div>
 
-
+    <script src="{{ asset('assets/js/flashpage.js') }}"></script>
 </x-layouts.main>
