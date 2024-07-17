@@ -22,7 +22,7 @@
                                         </div>
                                         <h3>
                                             {{ auth()->user()->articles()->where('status', true)->count() }}
-                                            <span>Annunci aggiunti</span>
+                                            <span>{{ __('ui.Annunci aggiunti')}}</span>
                                         </h3>
                                     </div>
                                     <!-- End Single List -->
@@ -35,7 +35,7 @@
                                         </div>
                                         <h3>
                                             {{ auth()->user()->articles()->where('status', null)->count() }}
-                                            <span>Annunci in revisione </span>
+                                            <span>{{ __('ui.Annunci in revisione')}}</span>
                                         </h3>
                                     </div>
                                     <!-- End Single List -->
@@ -47,7 +47,7 @@
                             <div class="col-lg-12 col-md-12 col-12">
                                 <!-- Start Recent Items -->
                                 <div class="recent-items dashboard-block">
-                                    <h3 class="block-title">Annunci aggiunti di recente</h3>
+                                    <h3 class="block-title">{{ __('ui.Annunci aggiunti di recente')}}</h3>
                                     <ul>
                                         @forelse (auth()->user()->articles()->where('status', true)->get()->take(3) as $article)
                                             <li class="ps-3">
@@ -65,7 +65,7 @@
                                             </li>
                                         @empty
                                             <div class="ps-4">
-                                                <p>Nessun articolo aggiunto di recente
+                                                <p>{{ __('ui.Nessun articolo aggiunto di recente')}}
                                                 </p>
                                             </div>
                                         @endforelse

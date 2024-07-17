@@ -8,20 +8,20 @@
                     <input type="hidden" name="email" value="{{ $request->email }}">
 
                     <div class="mb-3">
-                        <label for="password" class="form-label">Password</label>
+                        <label for="password" class="form-label">{{ __('ui.Password')}}</label>
                         <input type="password" name="password" class="form-control" id="password">
                     </div>
                     @error('password')
                     <span>{{ $message }}</span>
                     @enderror
                     <div class="mb-3">
-                        <label for="password_confirmation" class="form-label">Password di Conferma</label>
+                        <label for="password_confirmation" class="form-label">{{ __('ui.Password di conferma')}}</label>
                         <input type="password" name="password_confirmation" class="form-control"
                             id="password_confirmation">
                     </div>
 
 
-                    <button type="submit" class="btn btn-dark">Recupera Ora</button>
+                    <button type="submit" class="btn btn-dark">{{ __('ui.Recupera ora')}}</button>
 
                 </form>
             </div>

@@ -26,11 +26,11 @@
                                 @if($article->images->count()>1)
                                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
                                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                    <span class="visually-hidden">Precedente</span>
+                                    <span class="visually-hidden">{{ __('ui.Precedente')}}</span>
                                 </button>
                                 <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
                                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                    <span class="visually-hidden">Successivo</span>
+                                    <span class="visually-hidden">{{ __('ui.Successivo')}}</span>
                                 </button>
                                 @endif
                             </div>
@@ -44,14 +44,14 @@
                             <p class="location mt-3"><i class="lni lni-map-marker"></i><a href="javascript:void(0)">{{ $article->city }}</a></p>
                             <h3 class="price">{{ $article->price }} €</h3>
                             <div class="list-info">
-                                <h4>Informazioni</h4>
+                                <h4>{{ __('ui.Informazioni')}}</h4>
                                 <ul>
-                                    <li><span>Condizione:</span> {{ $article->condition }}</li>
+                                    <li><span>{{ __('ui.Condizione:')}}</span> {{ $article->condition }}</li>
                                 </ul>
                             </div>
                             <div class="list-info">
                                 <div class="social-share">
-                                    <h4>Condividi su</h4>
+                                    <h4>{{ __('ui.Condividi su')}}</h4>
                                     <ul class="d-flex">
                                         <li><a href="javascript:void(0)" class="facebook me-2"><i class="lni lni-facebook-filled"></i></a></li>
                                         <li><a href="javascript:void(0)" class="twitter me-2"><i class="lni lni-twitter-original"></i></a></li>
@@ -72,7 +72,7 @@
                     <div class="col-lg-8 col-md-7 col-12">
                         <!-- Start Single Block -->
                         <div class="single-block description">
-                            <h3>Descrizione prodotto</h3>
+                            <h3>{{ __('ui.Descrizione prodotto')}}</h3>
                             <p>
                                 {{ $article->body }}
                             </p>
@@ -83,7 +83,7 @@
                         <div class="item-details-sidebar">
                             <!-- Start Single Block -->
                             <div class="single-block author">
-                                <h3>Autore</h3>
+                                <h3>{{ __('ui.Autore')}}</h3>
                                 <div class="content">
                                     <img src="{{ $article->user->providers[0]->social_avatar ??  $article->user->avatar }}" alt="#">
                                     <h4>{{ $article->user->fistName }} {{ $article->user->lastName }}</h4>

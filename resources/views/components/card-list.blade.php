@@ -6,7 +6,9 @@
                             <a href="{{route('articles.show',compact('article'))}}"><img src="{{asset('/assets/images/placeholder/scarpe-600x400.jpg')}}" alt="#"></a>
                         </div>
                         <div class="content">
-                            <a href="{{route('articles.show',compact('article'))}}" class="tag">{{$article->category->name}}</a>
+                            <a href="{{ route('articles.show', compact('article')) }}" class="tag">
+                                {{ __('ui.'.$article->category->name) }}
+                            </a>
                             <h3 class="title">
                                 <a href="{{route('articles.show',compact('article'))}}">{{ $article->title }}</a>
                             </h3>

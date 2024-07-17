@@ -9,16 +9,16 @@
                     <a href="javascript:void(0)"><img src="https://via.placeholder.com/100x100" alt="#">
                         <span>Smith jeko</span></a>
                 </div> --}}
-                <p class="sale">In vendita</p>
+                <p class="sale">{{ __('ui.In vendita')}}</p>
             </div>
         </div>
         <div class="content">
             <div class="top-content">
                 {{-- <a href="javascript:void(0)" class="tag">Telefoni</a> --}}
-                <p>{{ $article->category->name }}</p>
+                <p>{{ trans_choice('ui.'.$article->category->name, 1) }}</p>
                 <h3 class="title">{{ $article->title }}</h3>
                 <p class="update-time">{{ $article->created_at->locale('it_IT')->isoFormat('DD MMM YYYY') }}</p>
-                <p class="user-name">Pubblicato da: {{ $article->user->name }}</p>
+                <p class="user-name">{{ __('ui.Pubblicato da:')}} {{ $article->user->name }}</p>
                 <ul class="info-list">
                     <li><a href=""><i class="lni lni-map-marker"></i> {{ $article->city }}</a></li>
                     {{-- <li><a href="javascript:void(0)"><i class="lni lni-timer"></i> Feb 18,
@@ -26,7 +26,7 @@
                 </ul>
             </div>
             <div class="bottom-content">
-                <p class="price">Prezzo: <span>{{ $article->price }}€</span></p>
+                <p class="price">{{ __('ui.Prezzo:')}} <span>{{ $article->price }}€</span></p>
             </div>
         </div>
     </div>
