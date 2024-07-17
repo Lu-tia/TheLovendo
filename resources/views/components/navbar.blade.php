@@ -150,15 +150,15 @@
 
                             <ul class="dropdown-menu rounded-2" aria-labelledby="Dropdown">
                                 <li>
-                                    <a class="dropdown-item" href="#"><x-_locale lang="it" />Italian
+                                    <a class="dropdown-item" href="#"><x-_locale lang="it" />
                                     </a>
                                 </li>
                                 <li>
-                                    <a class="dropdown-item" href="#"><x-_locale lang="en" />English
+                                    <a class="dropdown-item" href="#"><x-_locale lang="en" />
                                     </a>
                                 </li>
                                 <li>
-                                    <a class="dropdown-item" href="#"><x-_locale lang="fr" />France
+                                    <a class="dropdown-item" href="#"><x-_locale lang="fr" />
                                     </a>
                                 </li>
                             </ul>

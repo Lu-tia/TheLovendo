@@ -13,7 +13,9 @@ class sidebar extends Component
 
     public function __construct()
     {
-        $this->articles_to_check_count = Article::where('status', null)->count();
+        $this->articles_to_check_count = Article::where('status', null)
+        ->where('user_id', '!=', auth()->user()->id)
+        ->count();
     }
 
     /**
