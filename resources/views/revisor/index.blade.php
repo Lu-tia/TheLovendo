@@ -14,7 +14,7 @@
                                     <form action="{{ route('rollback') }}" method="post" class="mt-2">
                                         @csrf
                                         @method('PATCH')
-                                        <button class="btn btn-danger-custom" type="submit">{{ __('ui.Annulla ultima modifica'')}}</button>
+                                        <button class="btn btn-danger-custom" type="submit">{{ __('ui.Annulla ultima modifica')}}</button>
                                     </form>
                                 </div>
                             @endif
@@ -114,5 +114,5 @@
         </div>
 
     </section>
-
+    
 </x-layouts.main>

@@ -41,7 +41,7 @@
                         <ul class="action-btn">
                             <li><a href="{{ route('articles.show', $wishlist->article->id) }}"><i class="lni lni-eye"></i></a></li>
                             <li>
-                                <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                                <a href="javascript:void(0);" wire:click.prevent="destroy({{ $wishlist->article->id }})">
                                     <i class="lni lni-trash"></i>
                                 </a>
                             </li>
@@ -54,6 +54,7 @@
             @empty
                 Nessun annuncio trovato
             @endforelse
+       
           
-    
+            {{ $wishlists->links('livewire.custom-paginator') }}
 </div>

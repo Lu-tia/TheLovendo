@@ -66,6 +66,7 @@
             </div>
         </div>
  
+        
   
         @empty
         {{ __('ui.Nessun annuncio trovato')}}
@@ -97,3 +98,5 @@
         
         @endisset
 
+
+        {{ $articles->links('livewire.custom-paginator') }}
