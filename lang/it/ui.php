@@ -7,7 +7,7 @@ return [
     'contact' => 'Contatti',
     'Amore a prima vista, acquisto a seconda!' => 'Amore a prima vista, acquisto a seconda!',
     'articoli' => 'articoli',
-    'categorie' => 'categorie',
+    'Categorie' => 'categorie',
     'Lavora con Noi' => 'Lavora con Noi',
     'Accedi' => 'Accedi',
     'Registrati' => 'Registrati',
@@ -19,7 +19,7 @@ return [
     'Torna alla Home' => 'Torna alla Home',
     'Inserisci un nuovo articolo' => 'Inserisci un nuovo articolo',
     'Descrizione prodotto' => 'Descrizione prodotto',
-    'Condizione:' => 'Condizione:',
+    'Condizione' => 'Condizione',
     'Condividi su' => 'Condividi su',
     'Autore' => 'Autore',
     'Vedi tutto' => 'Vedi tutto',
@@ -127,5 +127,6 @@ return [
     'Libri e riviste' => 'Libri E Riviste',
     'Accessori' => 'Accessori',
     'Motori' => 'Motori',
+    'Informazioni' => 'Informazioni'
 
 ];

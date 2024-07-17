@@ -7,11 +7,11 @@ return [
     'contact' => 'Contact',
     'Amore a prima vista, acquisto a seconda!' => 'Love at first sight, buy later!',
     'articoli' => 'articles',
-    'categorie' => 'categories',
+    'Categorie' => 'categories',
     'Lavora con Noi' => 'Work with Us',
     'Accedi' => 'Login',
     'Registrati' => 'Register',
-    'profilo' => 'Profile',
+    'Profilo' => 'Profile',
     'Zona revisione' => 'Review Area',
     'Logout' => 'Logout',
     'Annuncio creato con successo' => 'Ad created successfully',
@@ -19,7 +19,7 @@ return [
     'Torna alla Home' => 'Back to Home',
     'Inserisci un nuovo articolo' => 'Add a new article',
     'Descrizione prodotto' => 'Product Description',
-    'Condizione:' => 'Condition:',
+    'Condizione' => 'Condition',
     'Condividi su' => 'Share on',
     'Autore' => 'Author',
     'Vedi tutto' => 'View all',
@@ -126,4 +126,5 @@ return [
     'Libri e riviste' => 'Books and Magazines',
     'Accessori' => 'Accessories',
     'Motori' => 'Motors',
+    'Informazioni' => 'Information'
 ];

@@ -11,7 +11,7 @@ return [
     'Lavora con Noi' => 'Travailler avec nous',
     'Accedi' => 'Se connecter',
     'Registrati' => 'S\'inscrire',
-    'profilo' => 'Profil',
+    'Profilo' => 'Profil',
     'Zona revisione' => 'Zone de révision',
     'Logout' => 'Se déconnecter',
     'Annuncio creato con successo' => 'Annonce créée avec succès',
@@ -19,7 +19,7 @@ return [
     'Torna alla Home' => 'Retour à l\'accueil',
     'Inserisci un nuovo articolo' => 'Ajouter un nouvel article',
     'Descrizione prodotto' => 'Description du produit',
-    'Condizione:' => 'Condition :',
+    'Condizione' => 'Condition',
     'Condividi su' => 'Partager sur',
     'Autore' => 'Auteur',
     'Vedi tutto' => 'Voir tout',
@@ -126,4 +126,5 @@ return [
     'Libri e riviste' => 'Livres et Magazines',
     'Accessori' => 'Accessoires',
     'Motori' => 'Moteurs',
+    'Informazioni' => 'Information'
 ];
