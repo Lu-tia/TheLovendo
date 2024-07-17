@@ -1,5 +1,5 @@
 <x-layouts.main>
-    <div class="container my-5">
+    <div class="container mt-5">
         <div class="row justify-content-center">
             <div class="col-12 col-md-8">
                 <form class="p-5 border rounded" action="{{ route('password.update') }}" method="POST">
@@ -8,20 +8,21 @@
                     <input type="hidden" name="email" value="{{ $request->email }}">
 
                     <div class="mb-3">
-                        <label for="password" class="form-label">{{ __('ui.Password')}}</label>
+                        <label for="password" class="form-label">{{ __('ui.Password') }}</label>
                         <input type="password" name="password" class="form-control" id="password">
                     </div>
                     @error('password')
-                    <span>{{ $message }}</span>
+                        <span>{{ $message }}</span>
                     @enderror
                     <div class="mb-3">
-                        <label for="password_confirmation" class="form-label">{{ __('ui.Password di conferma')}}</label>
+                        <label for="password_confirmation"
+                            class="form-label">{{ __('ui.Password di conferma') }}</label>
                         <input type="password" name="password_confirmation" class="form-control"
                             id="password_confirmation">
                     </div>
 
 
-                    <button type="submit" class="btn btn-dark">{{ __('ui.Recupera ora')}}</button>
+                    <button type="submit" class="btn btn-dark">{{ __('ui.Recupera ora') }}</button>
 
                 </form>
             </div>
