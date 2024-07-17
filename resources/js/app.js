@@ -1,5 +1,6 @@
 import './bootstrap';
 import 'bootstrap';
+import { NeatConfig, NeatGradient } from "@firecms/neat";
 
 //========= Category Slider 
 tns({

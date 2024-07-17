@@ -9490,13 +9490,12 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+
 }
 
-.sign svg {
-  width: 16px;
-  fill: #081828;
+.sign .lni-user {
+  font-size: 18px;
 }
-
 
 /* text */
 .text {
