@@ -6,9 +6,10 @@
     @endif
     <!-- Start Hero Area -->
     <section class="hero-area overlay">
+
         <div class="container">
             <div class="row">
-                <div class="col-lg-10 offset-lg-1 col-md-12 col-12 ">
+                <div class="col-lg-10 offset-lg-1 col-md-12 col-sm-12 ">
                     <div class="hero-text text-center">
                         <!-- Start Hero Text -->
                         <div class="section-heading">
@@ -17,7 +18,10 @@
                                 a telefoni e computer, <br> oppure cerca proprietà, lavori e altro.</p>
                         </div>
                         <!-- End Search Form -->
-                        @livewire('global-search')
+                        <div class="col-lg-12 col-md-12 col-sm-12">
+                            @livewire('global-search')
+                        </div>
+
                         <!-- Start Search Form -->
                         {{-- <div class="search-form wow fadeInUp" data-wow-delay=".7s">
                             <div class="row">
