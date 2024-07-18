@@ -99,7 +99,7 @@
                             <div class="single-block author">
                                 <h3>{{ __('ui.Autore') }}</h3>
                                 <div class="content">
-                                    <img src="{{Storage::url(auth()->user()->avatar)}}"
+                                    <img src="{{$article->user->avatar ?? asset('assets/images/placeholder/200x200.png')}}"
                                         alt="#">
                                     <h4>{{ $article->user->fistName }} {{ $article->user->lastName }}</h4>
                                     <a href="javascript:void(0)" class="see-all"></a>
