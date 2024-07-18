@@ -130,5 +130,9 @@ return [
     'Motori' => 'Motori',
     'Informazioni' => 'Informazioni',
     'Accedi con facebook' => 'Accedi con facebook',
+    'Inserisci il tuo nome' => 'inserisci il tuo nome',
+    'Inserisci il tuo cognome' => 'inserisci il tuo cognome',
+    'Inserisci la tua città' => 'Inserisci la tua città',
+    'Inserisci la tua età' => 'Inserisci la tua età',
 
 ];

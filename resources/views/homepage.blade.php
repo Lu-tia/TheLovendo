@@ -13,9 +13,8 @@
                     <div class="hero-text text-center">
                         <!-- Start Hero Text -->
                         <div class="section-heading">
-                            <h2 class="wow fadeInUp" data-wow-delay=".3s">Amore a prima vista, acquisto a seconda!</h2>
-                            <p class="wow fadeInUp" data-wow-delay=".5s">Compra e Vendi da macchine usate
-                                a telefoni e computer, <br> oppure cerca proprietà, lavori e altro.</p>
+                            <h2 class="wow fadeInUp" data-wow-delay=".3s">{{ __('ui.Amore a prima vista, acquisto a seconda!') }}</h2>
+                            <p class="wow fadeInUp" data-wow-delay=".5s">{{ __('ui.Compra e Vendi da macchine usate a telefoni e computer,') }} <br> {{ __('ui.oppure cerca proprietà, lavori e altro.') }}</p>
                         </div>
                         <!-- End Search Form -->
                         <div class="col-lg-12 col-md-12 col-sm-12">
@@ -81,7 +80,7 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="section-title">
-                            <h2 class="wow fadeInUp" data-wow-delay=".4s">Come funziona</h2>
+                            <h2 class="wow fadeInUp" data-wow-delay=".4s">{{ __('ui.Come funziona') }}</h2>
                             <p class="wow fadeInUp" data-wow-delay=".6s">
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure recusandae, natus odit
                                 asperiores, nihil quibusdam laudantium aliquid fuga provident unde quidem consequatur
@@ -94,7 +93,7 @@
                         <!-- Start Single Work -->
                         <div class="single-work wow fadeInUp" data-wow-delay=".2s">
                             <span class="serial">01</span>
-                            <h3>Crea Account</h3>
+                            <h3>{{ __('ui.Come funziona') }}</h3>
                             <p>Lorem ipsum dolor sit amet constur adipisicing sed do eiusmod tempor incididunt labore.</p>
                         </div>
                         <!-- End Single Work -->
@@ -103,7 +102,7 @@
                         <!-- Start Single Work -->
                         <div class="single-work wow fadeInUp" data-wow-delay=".4s">
                             <span class="serial">02</span>
-                            <h3>Posta il tuo annuncio!</h3>
+                            <h3>{{ __('ui.Posta il tuo annuncio!') }}</h3>
                             <p>Lorem ipsum dolor sit amet constur adipisicing sed do eiusmod tempor incididunt labore.</p>
                         </div>
                         <!-- End Single Work -->
@@ -112,7 +111,7 @@
                         <!-- Start Single Work -->
                         <div class="single-work wow fadeInUp" data-wow-delay=".6s">
                             <span class="serial">03</span>
-                            <h3>Vendi i tuoi oggetti</h3>
+                            <h3>{{ __('ui.Vendi i tuoi oggetti') }}</h3>
                             <p>Lorem ipsum dolor sit amet constur adipisicing sed do eiusmod tempor incididunt labore.</p>
                         </div>
                         <!-- End Single Work -->
@@ -128,7 +127,7 @@
             <div class="row">
                 <div class="col-12">
                     <div class="section-title">
-                        <h2 class="wow fadeInUp" data-wow-delay=".4s">Ultimi Prodotti</h2>
+                        <h2 class="wow fadeInUp" data-wow-delay=".4s">{{ __('ui.Ultimi prodotti') }}</h2>
                         <p class="wow fadeInUp" data-wow-delay=".6s">Lorem ipsum dolor sit amet consectetur
                             adipisicing elit. Necessitatibus nam laborum amet impedit quod ducimus fugiat esse ullam
                             eaque adipisci, voluptate ratione enim repellendus facere dolore aut ipsa. Nisi, iste.</p>
@@ -158,10 +157,9 @@
             <div class="row">
                 <div class="col-12">
                     <div class="section-title align-center gray-bg">
-                        <h2 class="wow fadeInUp" data-wow-delay=".4s">Cosa dicono di Noi!</h2>
-                        <p class="wow fadeInUp" data-wow-delay=".6s">
-                            Esistono molte varianti dei passaggi di TheLovendo disponibile, ma la maggior parte ha
-                            subito alterazioni in qualche forma.</p>
+                        <h2 class="wow fadeInUp" data-wow-delay=".4s">{{ __('ui.Cosa dicono di Noi!') }}</h2>
+                        <p class="wow fadeInUp" data-wow-delay=".6s">{{ __('ui.Esistono molte varianti dei passaggi di TheLovendo disponibile, ma la maggior parte ha subito alterazioni in qualche forma.') }}
+                            </p>
                     </div>
                 </div>
             </div>

@@ -129,4 +129,8 @@ return [
     'Motori' => 'Moteurs',
     'Informazioni' => 'Information',
     'Accedi con facebook' => 'Connectez-vous avec Facebook',
+    'Inserisci il tuo nome' => 'Entrez votre prénom',
+    'Inserisci il tuo cognome' => 'Entrez votre prénom',
+    'Inserisci la tua città' => 'Entrez votre ville',
+    'Inserisci la tua età' => 'Entrez votre âge',
 ];
