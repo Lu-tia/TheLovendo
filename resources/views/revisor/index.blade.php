@@ -5,8 +5,8 @@
                 <div class="col-lg-4">
                     <x-user.sidebar />
                 </div>
-                <div class="col-lg-8 d-flex justify-content-center revisor-container">
-                    <div class="row ms-5">
+                <div class="col-lg-8 revisor-container">
+                    <div class="row">
                         <div class="col-12 ">
                             @if (session()->has('message'))
                                 <div class="custom-alert d-flex justify-content-between align-items-center">
@@ -61,7 +61,7 @@
                             </div>
 
                             <div class="col-6 ">
-                                <div class="article-details">
+                                <div class="article-details .descriptionCard">
                                     <h3>{{ $article_to_check->title }}</h3>
                                     <p>{{ $article_to_check->body }}</p>
                                     <p>Prezzo: {{ $article_to_check->price }}€</p>
