@@ -7,6 +7,15 @@
                     <div class="col-lg-6 col-md-12 col-12">
                         <div class="product-images">
                             <div id="carouselExampleIndicators" class="carousel slide">
+                                <div class="carousel-indicators">
+                                    <button type="button" data-bs-target="#carouselExampleIndicators"
+                                        data-bs-slide-to="0" class="active" aria-current="true"
+                                        aria-label="Slide 1"></button>
+                                    <button type="button" data-bs-target="#carouselExampleIndicators"
+                                        data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                    <button type="button" data-bs-target="#carouselExampleIndicators"
+                                        data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                </div>
                                 @if ($article->images->count() > 0)
                                     <div class="carousel-inner">
                                         <div class="carousel-item active">
@@ -46,7 +55,7 @@
                             <div class="list-info">
                                 <h4>{{ __('ui.Informazioni') }}</h4>
                                 <ul>
-                                    <li><span>{{ __('ui.Condizione')}}</span> {{ $article->condition }}</li>
+                                    <li><span>{{ __('ui.Condizione:')}}</span> {{ $article->condition }}</li>
                                 </ul>
                             </div>
                             <div class="list-info">

@@ -31,7 +31,7 @@
         </a>
     </div>
     @endforeach
-    <a href="{{ route('articles.show', compact('article')) }}">
+    <a href="{{ route('articles.index') }}">
         <div class="col-lg-2 col-md-3 col-sm-4 col-6 p-0 mx-1 mt-3 d-flex align-items-center">
             <div class="card rounded shadow-sm border-0 cardcst2">
                 <div class="card-body p-4 d-flex align-items-center">
