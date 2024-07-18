@@ -2,10 +2,52 @@
     <div class="row align-items-center">
         <div class="col-lg-12">
             <div class="nav-inner">
+
                 <nav class="navbar navbar-expand-lg">
                     <a class="navbar-brand" href="{{ route('homepage') }}">
                         <img src="{{ asset('/assets/images/logo/logo.svg') }}" alt="Logo">
                     </a>
+
+
+                    <div class="move">
+                        @auth
+                            <div class="sub-menu-profile position-relative pic-position">
+                                <img src="{{ Storage::url(auth()->user()->avatar) }}" class="user-pic" alt=""
+                                    onclick="toggleMenu()">
+                                <div class="sub-menu-wrap mt-4" id="subMenu">
+                                    <div class="sub-menu">
+                                        <div class="user-info">
+                                            <h3>{{ auth()->user()->firstName }} {{ auth()->user()->lastName }}
+                                            </h3>
+                                        </div>
+                                        <hr>
+
+                                        <a href="{{ route('users.dashboard') }}" class="sub-menu-link">
+                                            <img src="{{ asset('/assets/profile/profile.png') }}" alt="">
+                                            <p>{{ __('ui.Profilo') }}</p>
+                                            <span>></span>
+                                        </a>
+                                        @if (auth()->user()->is_revisor == true)
+                                            <a href="{{ route('revisor.index') }}" class="sub-menu-link">
+                                                <img src="{{ asset('/assets/profile/profile.png') }}" alt="">
+                                                <p>{{ __('ui.Zona revisione') }} {{ $articles_to_accept_count }}
+                                                </p>
+                                                <span>></span>
+                                            </a>
+                                        @endif
+                                        <form action="{{ route('logout') }}" method="post">
+                                            @csrf
+                                            <button type="submit" href="javascript:void(0)" class="sub-menu-link btn px-0">
+                                                <img src="{{ asset('/assets/profile/logout.png') }}" alt="">
+                                                <p>{{ __('ui.Logout') }}</p>
+                                            </button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        @endauth
+                    </div>
+
 
                     <button class="navbar-toggler mobile-menu-btn" type="button" data-bs-toggle="collapse"
                         data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -14,10 +56,12 @@
                         <span class="toggler-icon"></span>
                         <span class="toggler-icon"></span>
                     </button>
+
                     <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
                         <ul id="nav" class="navbar-nav ms-auto">
                             <li class="nav-item">
-                                <a href="{{ route('homepage') }}" aria-label="Toggle navigation">{{ __('ui.home') }}</a>
+                                <a href="{{ route('homepage') }}"
+                                    aria-label="Toggle navigation">{{ __('ui.home') }}</a>
                             </li>
 
 
@@ -54,7 +98,9 @@
                                 <a href="{{ route('workWithUs') }}"
                                     aria-label="Toggle navigation">{{ __('ui.Lavora con Noi') }}</a>
                             </li>
+
                         </ul>
+
                         @guest
                             <ul id="nav" class="d-flex d-inline justify-content-center">
                                 <li class="nav-item">
@@ -91,43 +137,8 @@
                                         aria-label="Toggle navigation">{{ __('ui.Registrati') }}</a>
                                 </li> --}}
                             @endguest
-                            @auth
-                                <li class="sub-menu-profile position-relative">
-                                    <img src="{{ Storage::url(auth()->user()->avatar)}}"
-                                        class="user-pic" alt="" onclick="toggleMenu()">
-                                    <div class="sub-menu-wrap" id="subMenu">
-                                        <div class="sub-menu">
-                                            <div class="user-info">
-                                                <h3>{{ auth()->user()->firstName }} {{ auth()->user()->lastName }}</h3>
-                                            </div>
-                                            <hr>
 
-                                            <a href="{{ route('users.dashboard') }}" class="sub-menu-link">
-                                                <img src="{{ asset('/assets/profile/profile.png') }}" alt="">
-                                                <p>{{ __('ui.Profilo') }}</p>
-                                                <span>></span>
-                                            </a>
-                                            @if (auth()->user()->is_revisor == true)
-                                                <a href="{{ route('revisor.index') }}" class="sub-menu-link">
-                                                    <img src="{{ asset('/assets/profile/profile.png') }}" alt="">
-                                                    <p>{{ __('ui.Zona revisione') }} {{ $articles_to_accept_count }}</p>
-                                                    <span>></span>
-                                                </a>
-                                            @endif
-                                            <form action="{{ route('logout') }}" method="post">
-                                                @csrf
-                                                <button type="submit" href="javascript:void(0)"
-                                                    class="sub-menu-link btn px-0">
-                                                    <img src="{{ asset('/assets/profile/logout.png') }}" alt="">
-                                                    <p>{{ __('ui.Logout') }}</p>
-                                                </button>
-                                            </form>
-                                        </div>
-                                    </div>
-                                </li>
-                            @endauth
                         </ul>
-
 
                         <div class="button d-flex justify-content-center p-3">
                             @auth
@@ -151,26 +162,28 @@
 
                             <ul class="dropdown-menu rounded-2" aria-labelledby="Dropdown">
                                 <li>
-                                    <a class="dropdown-item" href="#"><x-_locale lang="it" />
+                                    <a class="dropdown-item" href="#"><x-_locale lang="it" /> Italiano
                                     </a>
                                 </li>
                                 <li>
-                                    <a class="dropdown-item" href="#"><x-_locale lang="en" />
+                                    <a class="dropdown-item" href="#"><x-_locale lang="en" /> English
                                     </a>
                                 </li>
                                 <li>
-                                    <a class="dropdown-item" href="#"><x-_locale lang="fr" />
+                                    <a class="dropdown-item" href="#"><x-_locale lang="fr" /> Français
                                     </a>
                                 </li>
                             </ul>
                         </div>
-
+                    </div>
 
                 </nav> <!-- navbar -->
-
             </div>
+
         </div>
     </div> <!-- row -->
+
+
 </div> <!-- container -->
 
 
