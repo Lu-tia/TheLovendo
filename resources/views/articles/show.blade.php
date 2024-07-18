@@ -36,7 +36,7 @@
                             @endif
                         </div>
                     </div>
-                    <div class="col-lg-6 col-md-12 col-12">
+                    <div class="col-lg-6 col-md-12 col-12 descriptionCard">
                         <div class="product-info">
                             <h2 class="title">{{ $article->title }}</h2>
 
