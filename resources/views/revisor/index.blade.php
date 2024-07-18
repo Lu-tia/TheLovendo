@@ -87,17 +87,15 @@
                                 </div>
                             </div>
                         @else
-                            <div class="col">
-                                <div class="no-article">
-                                    <h3>Nessun articolo da revisionare</h3>
-                                    <button class="btn btn-primary">
-                                        <a href="{{ route('homepage') }}" class="btn-link">Torna alla
-                                            homepage</a>
-                                    </button>
-                                </div>
+                        <div class="col">
+                            <div class="no-article">
+                                <h3>{{ __('ui.Nessun articolo da revisionare')}}</h3>
+                                <button class="btn btn-primary">
+                                    <a href="{{ route('homepage') }}" class="btn-link">{{ __('ui.Torna alla Homepage')}}</a>
+                                </button>
                             </div>
+                        </div>
                         @endif
-
 
                     </div>
 
