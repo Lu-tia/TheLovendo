@@ -85,7 +85,7 @@
                 <div class="row">
                     <div class="col-lg-8 col-md-7 col-12">
                         <!-- Start Single Block -->
-                        <div class="single-block description">
+                        <div class="single-block description descriptionCard">
                             <h3>{{ __('ui.Descrizione prodotto') }}</h3>
                             <p>
                                 {{ $article->body }}

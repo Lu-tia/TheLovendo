@@ -402,3 +402,7 @@
     }
   }
   
+  .descriptionCard {
+    overflow: auto;
+    word-wrap: break-word;
+}
