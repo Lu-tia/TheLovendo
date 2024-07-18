@@ -102,8 +102,8 @@
                                     </div>
                                 </div>
                                 <div class="col-12">
-                                    <label>Img</label>
-                                    <input type="file" wire:model.live="temporary_images" multiple class="form-control shadow @error('temporary_images.*') is-invalid @enderror" placeholder="Img/">
+                                    <label class="fw-bold text-black">Inserisci immagini</label>
+                                    <input type="file" wire:model.live="temporary_images" multiple class="form-control mt-3  @error('temporary_images.*') is-invalid @enderror" placeholder="Img/">
                                     @error('temporary_images.*')
                                             <div class="alert alert-danger mt-2"> {{ $message }} </div>
                                     @enderror
@@ -111,21 +111,22 @@
                                             <div class="alert alert-danger mt-2"> {{ $message }} </div>
                                         @enderror
                                 </div>
-                                @if(!empty($images))
+                              {{--   @if(!empty($images)) --}}
                                     <div class="row">
-                                        <div class="col-12">
+                                        <div class="col-12 mt-2">
                                             <p>{{ __('ui.Anteprima immagini:')}}</p>
-                                            <div class="row border border-4 border-success rounded shadow py-4">
+                                            <div class="row">
                                                 @foreach ($images as $key => $image )
-                                                    <div class="col d-flex flexcolumn align-item-center my-3">
-                                                        <div class="img-preview mx-auto shadow rounded" style="background-image: url({{$image->temporaryUrl()}});"></div>
-                                                        <button type="button" class="btn mt-1 btn-danger" wire:click="removeImage({{$key}})">X</button>
+                                                    <div class="col d-flex  py-5 flexcolumn align-item-center my-3">
+                                                        <div class="img-preview mx-auto shadow rounded" style="background-image: url({{$image->temporaryUrl()}});">
+                                                            <button type="button" class="btn btn-outline-danger p-0 px-2" wire:click="removeImage({{$key}})">X</button>
+                                                        </div>
                                                     </div>
                                                 @endforeach
                                             </div>
                                         </div>
                                     </div>
-                                @endif
+                                {{-- @endif --}}
                                 <div class="col-12">
                                     <div class="form-group button mb-0">
                                         <button type="submit" class="btn btn-primary mt-3">{{ __('ui.Inserisci annuncio')}}</button>
