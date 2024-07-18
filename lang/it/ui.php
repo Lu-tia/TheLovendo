@@ -127,6 +127,7 @@ return [
     'Libri e riviste' => 'Libri E Riviste',
     'Accessori' => 'Accessori',
     'Motori' => 'Motori',
-    'Informazioni' => 'Informazioni'
+    'Informazioni' => 'Informazioni',
+    'Accedi con facebook' => 'Accedi con facebook',
 
 ];

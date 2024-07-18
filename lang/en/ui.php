@@ -126,5 +126,6 @@ return [
     'Libri e riviste' => 'Books and Magazines',
     'Accessori' => 'Accessories',
     'Motori' => 'Motors',
-    'Informazioni' => 'Information'
+    'Informazioni' => 'Information',
+    'Accedi con facebook' => 'Log in with Facebook',
 ];

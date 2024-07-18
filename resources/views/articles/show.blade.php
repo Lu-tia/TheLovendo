@@ -55,7 +55,7 @@
                             <div class="list-info">
                                 <h4>{{ __('ui.Informazioni') }}</h4>
                                 <ul>
-                                    <li><span>{{ __('ui.Condizione:')}}</span> {{ $article->condition }}</li>
+                                    <li><span>{{ __('ui.Condizione')}}</span> {{ $article->condition }}</li>
                                 </ul>
                             </div>
                             <div class="list-info">
