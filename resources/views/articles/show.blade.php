@@ -32,16 +32,20 @@
                                             <span class="visually-hidden">{{ __('ui.Successivo') }}</span>
                                         </button>
                                     @endif
+                                    @else
                             </div>
                             @endif
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-12 col-12 descriptionCard">
                         <div class="product-info">
-                            <h2 class="title">{{ $article->title }}</h2>
+                            <div class="d-flex">
+                                <h2 class="title me-auto">{{ $article->title }}</h2>
+                                @livewire('articles.add-whishlist', ['article' => $article])
+                            </div>
 
                             <p class="location mt-3"><i class="lni lni-map-marker"></i><a
-                                    href="javascript:void(0)">{{ $article->city }}</a></p>
+                                    href="javascript:void(0)">{{ $article->country }}</a></p>
                             <h3 class="price">{{ $article->price }} €</h3>
                             <div class="list-info">
                                 <h4>{{ __('ui.Informazioni') }}</h4>
@@ -65,7 +69,6 @@
                                                     class="lni lni-pinterest"></i></a></li>
                                     </ul>
                                 </div>
-                                @livewire('articles.add-whishlist', ['article' => $article])
                             </div>
 
                         </div>
