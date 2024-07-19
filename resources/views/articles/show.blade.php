@@ -33,6 +33,7 @@
                                         </button>
                                     @endif
                                     @else
+                                    <img src="https://picsum.photos/300" alt="Nessuna foto inserita dall'utente">
                             </div>
                             @endif
                         </div>

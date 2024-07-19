@@ -1,32 +1,19 @@
 <x-layouts.main>
 
-    <!-- Start Hero Area -->
-    <section class="hero-area overlay">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 col-md-12 col-12 ">
-                    <div class="hero-text text-center ">
-                        <h2 class="wow fadeInUp" data-wow-delay=".3s">{{ __('ui.Lavora con Noi') }}</h2>
-                        <p class="wow fadeInUp" data-wow-delay=".5s">{{ __('ui.Unisciti al nostro team!') }}</p>
-                    </div>
 
-                </div>
 
-            </div>
-        </div>
-    </section>
 
-    @if (session()->has('success'))
-        <div class="alert alert-success">
-            {{ session('success') }}
-        </div>
-    @endif
 
     <!-- Start Contact Section -->
-    <section class="contact section">
+    <section class="contact section mt-5">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-12 mx-auto">
+                    @if (session()->has('success'))
+                    <div class="alert alert-success">
+                        {{ session('success') }}
+                    </div>
+                    @endif
                     <div class="dashboard-block mt-0">
                         <h3 class="block-title">{{ __('ui.Invia la tua candidatura') }}</h3>
                         <div class="inner-block">
@@ -79,19 +66,13 @@
                                                 placeholder="{{ __('ui.Inserisci la tua città') }}" value="{{ old('citta') }}">
                                         </div>
                                     </div>
-                                    <div class="col-12">
-                                        <div class="form-group mx-4">
-                                            <label>Curriculum<span>*</span></label>
-                                            <div class="custom-file">
-                                                <input name="curriculum" type="file" class="custom-file-input"
-                                                    id="customFile">
-                                                <label class="custom-file-label" for="customFile">{{ __('ui.Scegli file') }}</label>
-                                            </div>
-                                        </div>
+                                    <div class="col-10 mx-4 mb-3">
+                                        <label class="text-black" for="customFile">Curriculum*</label>
+                                        <input name="curriculum" type="file" class="form-control mt-3" id="customFile">
                                     </div>
-                                    <div class="col-12 mx-4">
-                                        <div class="form-group button mb-0">
-                                            <button type="submit" class="btn btn-primary">{{ __('ui.Invia') }}</button>
+                                    <div class="col-12 mx-4 mt-3">
+                                        <div class="form-group button mb-0 d-flex">
+                                            <button type="submit" class="btn btn-primary ms-auto me-5">{{ __('ui.Invia') }}</button>
                                         </div>
                                     </div>
                                 </div>
