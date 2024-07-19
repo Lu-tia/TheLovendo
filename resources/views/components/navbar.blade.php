@@ -30,7 +30,8 @@
                                         @if (auth()->user()->is_revisor == true)
                                             <a href="{{ route('revisor.index') }}" class="sub-menu-link">
                                                 <img src="{{ asset('/assets/profile/profile.png') }}" alt="">
-                                                <p>{{ __('ui.Zona revisione') }} {{ $articles_to_accept_count }}
+                                                <p>{{ __('ui.Zona revisione') }}
+                                                    <span class="loader-navbar">{{ $articles_to_accept_count}}</span>
                                                 </p>
                                                 <span>></span>
                                             </a>
