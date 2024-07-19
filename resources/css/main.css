@@ -6047,6 +6047,7 @@ blockquote .shape {
 ========================================*/
 .login {
   background-color: #f9f9f9;
+
 }
 
 .login .form-head {
@@ -6054,6 +6055,7 @@ blockquote .shape {
   border: 1px solid #eee;
   border-radius: 6px;
   background-color: #fff;
+  position: relative;
 }
 
 .login .form-head .title {
@@ -6062,6 +6064,8 @@ blockquote .shape {
   font-weight: 600;
   margin-bottom: 30px;
   text-align: center;
+
+
 }
 
 .login .form-head form .form-group {
@@ -9060,9 +9064,9 @@ blockquote .shape {
   transition: 200ms;
 }
 
-.user-pic:hover{
+.user-pic:hover {
   box-shadow: 0px 0px 11px 1px rgba(0, 0, 0, 0.274)
- }
+}
 
 
 

@@ -264,7 +264,7 @@
 /* LOADER REVISION */
 
 .spinner {
-  --clr: rgb(0, 113, 128);
+  --clr: #ffba00;
   --gap: 6px;
   /* gap between each circle */
   width: 100px;
