@@ -23,7 +23,6 @@ class ArticleFactory extends Factory
             'user_id' => 1,
             'category_id' => fake()->randomDigitNotNull(0),
             'country' => 'Italy',
-            'city' => fake('it_IT')->word(1),
             'condition' => 'Nuovo',
             'status' => true,
         ];

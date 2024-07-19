@@ -83,15 +83,6 @@
                                         @enderror
                                     </div>
                                 </div>
-                                <div class="col-6">
-                                    <div class="form-group">
-                                        <label>{{ __('ui.Città')}}</label>
-                                        <input wire:model='city' type="text" class="form-control" placeholder="{{ __('ui.Inserisci una città')}}">
-                                        @error('city')
-                                            <div class="alert alert-danger mt-2"> {{ $message }} </div>
-                                        @enderror
-                                    </div>
-                                </div>
                                 <div class="col-12">
                                     <div class="form-group">
                                         <label>{{ __('ui.Annuncio')}}</label>
@@ -111,7 +102,7 @@
                                             <div class="alert alert-danger mt-2"> {{ $message }} </div>
                                         @enderror
                                 </div>
-                              {{--   @if(!empty($images)) --}}
+                               @if(!empty($images)) 
                                     <div class="row">
                                         <div class="col-12 mt-2">
                                             <p>{{ __('ui.Anteprima immagini:')}}</p>
@@ -126,7 +117,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                {{-- @endif --}}
+                                @endif
                                 <div class="col-12">
                                     <div class="form-group button mb-0">
                                         <button type="submit" class="btn btn-primary mt-3">{{ __('ui.Inserisci annuncio')}}</button>

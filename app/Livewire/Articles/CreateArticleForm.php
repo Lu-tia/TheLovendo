@@ -30,8 +30,6 @@ class CreateArticleForm extends Component
     public $body;
     #[Validate('required',message:'seleziona la nazione di provenienza')]
     public $country;
-    #[Validate('required',message:'Inserisci la città in cui ti trovi')]
-    public $city;
     #[Validate('required',message:"specifica lo stato dell'oggetto")]
     public $condition;
     #[Validate('required',message:'Scegli una categoria')]
@@ -46,7 +44,6 @@ class CreateArticleForm extends Component
         $this->price='';
         $this->body='';
         $this->country='';
-        $this->city='';
         $this->condition='';
         $this->images=[];
     }
@@ -59,7 +56,6 @@ class CreateArticleForm extends Component
             'price' => $this->price,
             'body' => $this->body,
             'country' => $this->country,
-            'city' => $this->city,
             'condition' => $this->condition,
             'user_id' => auth()->user()->id,
             'category_id' => $this->category,
