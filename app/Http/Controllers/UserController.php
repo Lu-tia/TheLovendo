@@ -8,6 +8,7 @@ use App\Models\Category;
 use App\Models\Provider;
 use App\Models\User;
 use Illuminate\Http\Request;
+use App\Jobs\ResizeImage;
 
 class UserController extends Controller
 {
@@ -88,6 +89,7 @@ class UserController extends Controller
         if ($request->hasFile('image')) {
             $file_name = $request->file('image')->getClientOriginalName();
             $path_image = $request->file('image')->storeAs('public/img/users', $file_name);
+
         }
 
         $query = User::find(auth()->user()->id);

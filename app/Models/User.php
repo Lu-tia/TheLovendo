@@ -39,6 +39,7 @@ class User extends Authenticatable
     return $this->hasMany(WishlistUser::class);
 }
 
+
     
     /**
     * The attributes that should be hidden for serialization.

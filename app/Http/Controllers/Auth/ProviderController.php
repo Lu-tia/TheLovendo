@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use App\Jobs\ResizeImage;
 use App\Models\Provider;
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -11,6 +12,7 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Storage;
 use Laravel\Socialite\Facades\Socialite;
 use Illuminate\Support\Str;
+
 
 class ProviderController extends Controller
 {
@@ -57,13 +59,13 @@ class ProviderController extends Controller
             $imageName = Str::random(10) . '.jpg';
 
              // Specifica il percorso dove vuoi salvare l'immagine
-            $path = 'public/users/profile' . $imageName;
+            $path = 'public/users/profile/' . $imageName;
             Storage::put($path, $imageContents);
+            
 
         $user = User::find(auth()->user()->id);
         $user->avatar = $path;
         $user->save();
-        
         
         return redirect('/');
         

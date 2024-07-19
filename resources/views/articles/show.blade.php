@@ -11,11 +11,11 @@
                                     <div class="carousel-inner">
                                         <div class="carousel-item active">
                                             <img src="{{ Storage::url($article->images->first()->path) }}"
-                                                class="d-block w-100" alt="...">
+                                                class="d-block " alt="...">
                                         </div>
                                         @foreach ($article->images->slice(1) as $key => $image)
                                             <div class="carousel-item">
-                                                <img src="{{ Storage::url($image->path) }}" class="d-block w-100"
+                                                <img src="{{ Storage::url($image->path) }}" class="d-block"
                                                     alt="...">
                                             </div>
                                         @endforeach
@@ -32,10 +32,11 @@
                                             <span class="visually-hidden">{{ __('ui.Successivo') }}</span>
                                         </button>
                                     @endif
+
                                     @else
                                     <img src="https://picsum.photos/300" alt="Nessuna foto inserita dall'utente">
-                            </div>
-                            @endif
+                                    @endif
+                                </div>
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-12 col-12 descriptionCard">
