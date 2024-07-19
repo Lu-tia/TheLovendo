@@ -4575,7 +4575,7 @@ blockquote .shape {
 ========================================*/
 .newsletter {
   padding: 80px;
-  background-color: var(--primary-color);
+  background-color: white;
   background-image: url(../images/newsletter/newsletter-bg.png);
   background-size: cover;
   background-position: center;
@@ -4596,8 +4596,8 @@ blockquote .shape {
   line-height: 60px;
   text-align: center;
   display: inline-block;
-  background: #fff;
-  color: var(--primary-color);
+  background: var(--primary-color);
+  color: white;
   border-radius: 50%;
   font-size: 20px;
   position: absolute;
@@ -4611,12 +4611,12 @@ blockquote .shape {
   font-size: 32px;
   font-weight: 700;
   line-height: 50px;
-  color: #fff;
+  color: var(--primary-color);
   line-height: 40px;
 }
 
 .newsletter .title p {
-  color: #fff;
+  color: var(--primary-color);
   display: block;
   margin-top: 0px;
   font-size: 16px;
@@ -4635,51 +4635,51 @@ blockquote .shape {
   display: inline-block;
   background: transparent;
   border: none;
-  color: #fff;
-  border: 2px solid #fff;
+  color: var(--primary-color);
+  border: 2px solid var(--primary-color);
   border-radius: 6px;
   padding: 0 142px 0 20px;
-  color: #fff !important;
+  color: var(--primary-color) !important;
   font-size: 16px;
   border-radius: 6px;
 }
 
 .newsletter .newsletter-form ::-webkit-input-placeholder {
   /* Chrome, Firefox, Opera, Safari 10.1+ */
-  color: #fff;
+  color: var(--primary-color);
   opacity: 1;
   /* Firefox */
 }
 
 .newsletter .newsletter-form :-ms-input-placeholder {
   /* Chrome, Firefox, Opera, Safari 10.1+ */
-  color: #fff;
+  color: var(--primary-color);
   opacity: 1;
   /* Firefox */
 }
 
 .newsletter .newsletter-form ::-ms-input-placeholder {
   /* Chrome, Firefox, Opera, Safari 10.1+ */
-  color: #fff;
+  color: var(--primary-color);
   opacity: 1;
   /* Firefox */
 }
 
 .newsletter .newsletter-form ::placeholder {
   /* Chrome, Firefox, Opera, Safari 10.1+ */
-  color: #fff;
+  color: var(--primary-color);
   opacity: 1;
   /* Firefox */
 }
 
 .newsletter .newsletter-form :-ms-input-placeholder {
   /* Internet Explorer 10-11 */
-  color: #fff;
+  color: var(--primary-color);
 }
 
 .newsletter .newsletter-form ::-ms-input-placeholder {
   /* Microsoft Edge */
-  color: #fff;
+  color: var(--primary-color);
 }
 
 .newsletter .newsletter-form .button {
@@ -4690,8 +4690,8 @@ blockquote .shape {
 
 .newsletter .newsletter-form .button .btn {
   display: inline-block;
-  background: #fff;
-  color: var(--primary-color);
+  background: var(--primary-color);
+  color: white;
   height: 55px;
   border-radius: 0px 6px 6px 0;
 }
@@ -7334,6 +7334,7 @@ blockquote .shape {
     padding-top: 45px !important;
   }
 
+
   .footer .single-footer h3 {
     margin-bottom: 25px !important;
   }
@@ -8858,6 +8859,7 @@ blockquote .shape {
   font-size: 15px;
   font-weight: 400;
   color: #e1e1e1;
+  position: relative;
 }
 
 .footer .single-footer.f-link li a:hover {
@@ -8866,6 +8868,7 @@ blockquote .shape {
 
 .footer .single-footer.f-contact ul li {
   display: block;
+  position: relative;
   margin-bottom: 25px;
   line-height: 25px;
   color: #e1e1e1;
@@ -8879,6 +8882,7 @@ blockquote .shape {
   font-size: 18px;
   font-weight: 600;
   display: block;
+  position: relative;
   margin-bottom: 35px;
   color: #fff;
 }
