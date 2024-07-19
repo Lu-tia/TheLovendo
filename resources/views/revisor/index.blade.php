@@ -14,7 +14,8 @@
                                     <form action="{{ route('rollback') }}" method="post" class="mt-2">
                                         @csrf
                                         @method('PATCH')
-                                        <button class="btn btn-danger-custom" type="submit">{{ __('ui.Annulla ultima modifica')}}</button>
+                                        <button class="btn btn-danger-custom"
+                                            type="submit">{{ __('ui.Annulla ultima modifica') }}</button>
                                     </form>
                                 </div>
                             @endif
@@ -28,31 +29,36 @@
 
 
                         @if ($article_to_check)
+
                             <div class="col-6">
-                                <div class="article-image {{$article_to_check->images->count() == 0 ? 'h-100 d-flex align-items-center justify-content-center' : '' }} ">    
+                                <div
+                                    class="article-image {{ $article_to_check->images->count() == 0 ? 'h-100 d-flex align-items-center justify-content-center' : '' }} ">
                                     <div id="carouselExampleIndicators" class="carousel slide">
-                                        <div class="carousel-inner">
+                                        <div class="carousel-inner ">
                                             @if ($article_to_check->images->count())
                                                 @foreach ($article_to_check->images as $key => $image)
-                                                <div class="carousel-item {{$key == 0 ? 'active' : '' }}">
-                                                    <img src="{{$image->getUrl(300,300)}}" class="d-block w-100" alt="...">
-                                                </div>
+                                                    <div class="carousel-item {{ $key == 0 ? 'active' : '' }}">
+                                                        <img src="{{ $image->getUrl(300, 300) }}" class="d-block w-100"
+                                                            alt="...">
+                                                    </div>
                                                 @endforeach
                                             @else
-                                            <p class="h-100">Nessuna immagine caricata dall'utente</p>
+                                                <p class="h-100">Nessuna immagine caricata dall'utente</p>
                                             @endif
                                         </div>
-                                        @if ($article_to_check->images->count()>1)
-                                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                            <span class="visually-hidden">Previous</span>
-                                        </button>
-                                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                            <span class="visually-hidden">Next</span>
-                                        </button>
+                                        @if ($article_to_check->images->count() > 1)
+                                            <button class="carousel-control-prev" type="button"
+                                                data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                                <span class="visually-hidden">Previous</span>
+                                            </button>
+                                            <button class="carousel-control-next" type="button"
+                                                data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                                <span class="visually-hidden">Next</span>
+                                            </button>
                                         @endif
-                                    </div>  
+                                    </div>
                                 </div>
                             </div>
 
@@ -61,7 +67,8 @@
                                     <h3>{{ $article_to_check->title }}</h3>
                                     <p>{{ $article_to_check->body }}</p>
                                     <p>Prezzo: {{ $article_to_check->price }}€</p>
-                                    <p class="author">Autore: {{ $article_to_check->user->firstName }} {{ $article_to_check->user->lastName }}</p>
+                                    <p class="author">Autore: {{ $article_to_check->user->firstName }}
+                                        {{ $article_to_check->user->lastName }}</p>
                                 </div>
                                 <div class="article-actions d-flex justify-content-evenly">
                                     <form action="{{ route('accept', ['article' => $article_to_check]) }}"
@@ -69,7 +76,7 @@
                                         @csrf
                                         @method('PATCH')
                                         <button class="btn btn-success-custom me-3" type="submit">
-                                            <span>{{ __('ui.ACCETTA')}}</span>
+                                            <span>{{ __('ui.ACCETTA') }}</span>
                                         </button>
                                     </form>
                                     <form action="{{ route('reject', ['article' => $article_to_check]) }}"
@@ -77,20 +84,21 @@
                                         @csrf
                                         @method('PATCH')
                                         <button class="btn btn-danger-custom" type="submit">
-                                            <span>{{ __('ui.RIFIUTA')}}</span>
+                                            <span>{{ __('ui.RIFIUTA') }}</span>
                                         </button>
                                     </form>
                                 </div>
                             </div>
                         @else
-                        <div class="col">
-                            <div class="no-article">
-                                <h3>{{ __('ui.Nessun articolo da revisionare')}}</h3>
-                                <button class="btn btn-primary">
-                                    <a href="{{ route('homepage') }}" class="btn-link">{{ __('ui.Torna alla Homepage')}}</a>
-                                </button>
+                            <div class="col">
+                                <div class="no-article">
+                                    <h3>{{ __('ui.Nessun articolo da revisionare') }}</h3>
+                                    <div class="button">
+                                        <a href="{{ route('homepage') }}" class="btn">
+                                            {{ __('ui.Torna alla Homepage') }}</a>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
                         @endif
 
                     </div>
@@ -100,5 +108,5 @@
         </div>
 
     </section>
-    
+
 </x-layouts.main>
