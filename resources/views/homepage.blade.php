@@ -6,7 +6,7 @@
     @endif
     <!-- Start Hero Area -->
     <section class="hero-area overlay">
-        {{-- <ul class="background">
+        <ul class="background">
             <li></li>
             <li></li>
             <li></li>
@@ -17,7 +17,7 @@
             <li></li>
             <li></li>
             <li></li>
-         </ul> --}}
+         </ul>
         <div class="container">
             <div class="row">
                 <div class="col-lg-10 offset-lg-1 col-md-12 col-sm-12 ">
