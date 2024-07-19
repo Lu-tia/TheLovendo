@@ -141,7 +141,7 @@
 
                         </ul>
 
-                        <div class="button d-flex justify-content-center p-3">
+                        <div class="button-home d-flex justify-content-center p-3 me-3">
                             @auth
                                 <a href="{{ route('articles.create') }}" class="btn">
                                     {{ __('ui.Crea un Annuncio') }}</a>

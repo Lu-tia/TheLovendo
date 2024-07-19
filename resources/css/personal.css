@@ -355,11 +355,11 @@
   fill: var(--red);
 }
 
-.con-like .like:checked ~ .checkmark .filled {
+.con-like .like:checked~.checkmark .filled {
   display: block
 }
 
-.con-like .like:checked ~ .checkmark .celebrate {
+.con-like .like:checked~.checkmark .celebrate {
   display: block
 }
 
@@ -391,22 +391,24 @@
   }
 }
 
-.btn-wishlist> button{
-  background:none;
+.btn-wishlist>button {
+  background: none;
   border: none;
 }
+
 /* Background animato */
 
 @keyframes animate {
-  0%{
-      transform: translateY(0) rotate(0deg);
-      opacity: 1;
-      border-radius: 0;
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+    border-radius: 0;
   }
-  100%{
-      transform: translateY(-1000px) rotate(720deg);
-      opacity: 0;
-      border-radius: 50%;
+
+  100% {
+    transform: translateY(-1000px) rotate(720deg);
+    opacity: 0;
+    border-radius: 50%;
   }
 }
 
@@ -421,6 +423,7 @@
   background: #335c67;
   overflow: hidden;
 }
+
 .background li {
   position: absolute;
   display: block;
@@ -441,6 +444,7 @@
   bottom: -119px;
   animation-delay: 1s;
 }
+
 .background li:nth-child(1) {
   left: 53%;
   width: 118px;
@@ -448,6 +452,7 @@
   bottom: -118px;
   animation-delay: 3s;
 }
+
 .background li:nth-child(2) {
   left: 52%;
   width: 110px;
@@ -455,6 +460,7 @@
   bottom: -110px;
   animation-delay: 3s;
 }
+
 .background li:nth-child(3) {
   left: 63%;
   width: 172px;
@@ -462,6 +468,7 @@
   bottom: -172px;
   animation-delay: 5s;
 }
+
 .background li:nth-child(4) {
   left: 2%;
   width: 178px;
@@ -469,6 +476,7 @@
   bottom: -178px;
   animation-delay: 2s;
 }
+
 .background li:nth-child(5) {
   left: 13%;
   width: 125px;
@@ -476,6 +484,7 @@
   bottom: -125px;
   animation-delay: 14s;
 }
+
 .background li:nth-child(6) {
   left: 20%;
   width: 102px;
@@ -483,6 +492,7 @@
   bottom: -102px;
   animation-delay: 14s;
 }
+
 .background li:nth-child(7) {
   left: 2%;
   width: 104px;
@@ -490,6 +500,7 @@
   bottom: -104px;
   animation-delay: 29s;
 }
+
 .background li:nth-child(8) {
   left: 45%;
   width: 122px;
@@ -497,10 +508,77 @@
   bottom: -122px;
   animation-delay: 28s;
 }
+
 .background li:nth-child(9) {
   left: 59%;
   width: 164px;
   height: 164px;
   bottom: -164px;
   animation-delay: 29s;
+}
+
+/* Button Homepage */
+
+
+.button-home a {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  color: white;
+
+}
+
+.button-home {
+  background-color: #335c67;
+  --color: white;
+  text-transform: capitalize;
+  border-radius: .3em;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: .5s;
+  font-size: 17px;
+  border: 1px solid #335c67;
+  font-family: inherit;
+  color: #335c67;
+  z-index: 1;
+}
+
+.button-home::before,
+.button-home::after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 50px;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  border-radius: 50%;
+  z-index: -1;
+
+  transition: 1s ease;
+}
+
+.button-home::before {
+  top: -1em;
+  left: -1em;
+}
+
+.button-home::after {
+  left: calc(100% + 1em);
+  top: calc(100% + 1em);
+}
+
+.button-home:hover::before,
+.button-home:hover::after {
+  height: 410px;
+  width: 410px;
+  background-color: white;
+}
+
+.button-home:hover {
+  color: #081828;
+}
+
+.button-home:active {
+  filter: brightness(.8);
 }
