@@ -6,7 +6,7 @@
                     <x-user.sidebar />
                 </div>
                 <div class="col-lg-8 revisor-container">
-                    <div class="row">
+                    <div class="row h-100">
                         <div class="col-12 ">
                             @if (session()->has('message'))
                                 <div class="custom-alert d-flex justify-content-between align-items-center">
@@ -29,7 +29,7 @@
 
                         @if ($article_to_check)
                             <div class="col-6">
-                                <div class="article-image">    
+                                <div class="article-image {{$article_to_check->images->count() == 0 ? 'h-100 d-flex align-items-center justify-content-center' : '' }} ">    
                                     <div id="carouselExampleIndicators" class="carousel slide">
                                         <div class="carousel-inner">
                                             @if ($article_to_check->images->count())
@@ -39,13 +39,7 @@
                                                 </div>
                                                 @endforeach
                                             @else
-                                            @for($i=0;$i<6;$i++)
-                                            <div class="carousel-item">
-                                                <img src="{{asset('assets/images/placeholder/carousel-2.png')}}"
-                                                    class="d-block w-100" alt="...">
-                                            </div>
-                                            @endfor
-                                                
+                                            <p class="h-100">Nessuna immagine caricata dall'utente</p>
                                             @endif
                                         </div>
                                         @if ($article_to_check->images->count()>1)
