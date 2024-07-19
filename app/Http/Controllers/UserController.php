@@ -58,7 +58,6 @@ class UserController extends Controller
             'price' => 'required|numeric',
             'body' => 'required|string',
             'country' => 'required|string|max:255',
-            'city' => 'required|string|max:255',
             'condition' => 'required|string|max:255',
             'category_id' => 'required|integer|exists:categories,id',
         ]);

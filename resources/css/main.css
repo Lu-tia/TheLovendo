@@ -9060,12 +9060,14 @@ blockquote .shape {
   transition: 200ms;
 }
 
+.user-pic:hover{
+  box-shadow: 0px 0px 11px 1px rgba(0, 0, 0, 0.274)
+ }
 
 
 
 
 
-}
 
 .sub-menu-wrap {
   position: absolute;

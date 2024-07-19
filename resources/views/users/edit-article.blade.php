@@ -83,15 +83,6 @@
                                                 @enderror
                                             </div>
                                         </div>
-                                        <div class="col-6">
-                                            <div class="form-group">
-                                                <label>{{ __('ui.Città')}}</label>
-                                                <input type="text" name="city" class="form-control" value="{{ old('city', $article->city) }}">
-                                                @error('city')
-                                                <div class="alert alert-danger mt-2">{{ $message }}</div>
-                                                @enderror
-                                            </div>
-                                        </div>
                                         <div class="col-12">
                                             <div class="form-group">
                                                 <label>{{ __('ui.Annuncio')}}</label>

@@ -38,7 +38,7 @@
             <div class="row align-items-center">
                 <div class="col-lg-5 col-md-5 col-12">
                     <div class="item-image">
-                        <img src="" alt="#">
+                        <img src="{{$article->images->isNotEmpty() ? $article->images->first()->getUrl(300,300) : 'https://picsum.photos/200' }}" alt="#">
                         <div class="content">
                             <h3 class="title"><a href="javascript:void(0)">{{$article->title}}</a></h3>
                             <span class="price">{{$article->price}}€</span>
@@ -54,7 +54,7 @@
                 </div>
                 <div class="col-lg-3 col-md-3 col-12 align-right">
                     <ul class="action-btn">
-                        <li><a href="{{ route('users.edit_article', $article->id) }}"><i class="lni lni-pencil"></i></a></li>
+                        {{-- <li><a href="{{ route('users.edit_article', $article->id) }}"><i class="lni lni-pencil"></i></a></li> --}}
                         <li><a href="{{ route('articles.show', $article->id) }}"><i class="lni lni-eye"></i></a></li>
                         <li>
                             <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#staticBackdrop">

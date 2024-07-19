@@ -23,7 +23,7 @@
                 <div class="row align-items-center">
                     <div class="col-lg-5 col-md-5 col-12">
                         <div class="item-image">
-                            <img src="" alt="#">
+                            <img src="{{$wishlist->article->images->isNotEmpty() ? $wishlist->article->images->first()->getUrl(300,300) : 'https://picsum.photos/200' }}" alt="#">
                             <div class="content">
                                 <h3 class="title"><a href="javascript:void(0)">{{$wishlist->article->title}}</a></h3>
                                 <span class="price">{{$wishlist->article->price}}€</span>
