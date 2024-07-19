@@ -5,7 +5,7 @@
 
                 <nav class="navbar navbar-expand-lg">
                     <a class="navbar-brand" href="{{ route('homepage') }}">
-                        <img src="{{ asset('/assets/images/logo/logo.svg') }}" alt="Logo">
+                        <img src="{{ asset('/assets/images/logo/thelovendologo.svg') }}" alt="Logo">
                     </a>
 
 
@@ -31,7 +31,7 @@
                                             <a href="{{ route('revisor.index') }}" class="sub-menu-link">
                                                 <img src="{{ asset('/assets/profile/profile.png') }}" alt="">
                                                 <p>{{ __('ui.Zona revisione') }}
-                                                    <span class="loader-navbar">{{ $articles_to_accept_count}}</span>
+                                                    <span class="loader-navbar">{{ $articles_to_accept_count }}</span>
                                                 </p>
                                                 <span>></span>
                                             </a>

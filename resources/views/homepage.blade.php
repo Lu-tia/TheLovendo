@@ -4,6 +4,8 @@
             {{ session('success') }}
         </div>
     @endif
+
+
     <!-- Start Hero Area -->
     <section class="hero-area overlay">
         <ul class="background">
@@ -17,15 +19,21 @@
             <li></li>
             <li></li>
             <li></li>
-         </ul>
+        </ul>
         <div class="container">
             <div class="row">
+
                 <div class="col-lg-10 offset-lg-1 col-md-12 col-sm-12 ">
                     <div class="hero-text text-center">
                         <!-- Start Hero Text -->
                         <div class="section-heading">
-                            <h2 class="wow fadeInUp" data-wow-delay=".3s">{{ __('ui.Amore a prima vista, acquisto a seconda!') }}</h2>
-                            <p class="wow fadeInUp" data-wow-delay=".5s">{{ __('ui.Compra e Vendi da macchine usate a telefoni e computer,') }} <br> {{ __('ui.oppure cerca proprietà, lavori e altro.') }}</p>
+                            <h2 class="wow fadeInUp" data-wow-delay=".3s">
+                                {{ __('ui.Amore a prima vista, acquisto a seconda!') }}
+                            </h2>
+
+                            <p class="wow fadeInUp" data-wow-delay=".5s">
+                                {{ __('ui.Compra e Vendi da macchine usate a telefoni e computer,') }} <br>
+                                {{ __('ui.oppure cerca proprietà, lavori e altro.') }}</p>
                         </div>
                         <!-- End Search Form -->
                         <div class="col-lg-12 col-md-12 col-sm-12">
@@ -169,8 +177,9 @@
                 <div class="col-12">
                     <div class="section-title align-center gray-bg">
                         <h2 class="wow fadeInUp" data-wow-delay=".4s">{{ __('ui.Cosa dicono di Noi!') }}</h2>
-                        <p class="wow fadeInUp" data-wow-delay=".6s">{{ __('ui.Esistono molte varianti dei passaggi di TheLovendo disponibile, ma la maggior parte ha subito alterazioni in qualche forma.') }}
-                            </p>
+                        <p class="wow fadeInUp" data-wow-delay=".6s">
+                            {{ __('ui.Esistono molte varianti dei passaggi di TheLovendo disponibile, ma la maggior parte ha subito alterazioni in qualche forma.') }}
+                        </p>
                     </div>
                 </div>
             </div>

@@ -163,6 +163,8 @@ h6 a {
   color: inherit;
 }
 
+
+
 h1 {
   font-size: 50px;
 }
@@ -1029,6 +1031,7 @@ ol {
   padding-bottom: 20px;
 }
 
+
 .section-title h2:before {
   position: absolute;
   left: 50%;
@@ -1080,7 +1083,7 @@ ol {
   width: 45px;
   height: 45px;
   line-height: 45px;
-  background: var(--primary-color);
+  background: #ffb301;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2061,7 +2064,7 @@ ol {
   height: 4px;
   width: 60px;
   margin-left: -30px;
-  background: var(--primary-color);
+  background: #ffb403;
   border-radius: 10px;
 }
 
