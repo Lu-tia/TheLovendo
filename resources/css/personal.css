@@ -519,28 +519,29 @@
 
 /* Button Homepage */
 
-
-.button-home a {
+/* 
+.button-home .btn {
   padding: 0;
   margin: 0;
   border: 0;
-  color: white;
 
 }
 
 .button-home {
-  background-color: #335c67;
-  --color: white;
-  text-transform: capitalize;
+  --color: #00A97F;
+  padding: 0.8em 1.7em;
+  background-color: transparent;
   border-radius: .3em;
   position: relative;
   overflow: hidden;
   cursor: pointer;
   transition: .5s;
+  font-weight: 400;
   font-size: 17px;
-  border: 1px solid #335c67;
+  border: 1px solid;
   font-family: inherit;
-  color: #335c67;
+  text-transform: capitalize;
+  color: var(--color);
   z-index: 1;
 }
 
@@ -554,7 +555,7 @@
   position: absolute;
   border-radius: 50%;
   z-index: -1;
-
+  background-color: var(--color);
   transition: 1s ease;
 }
 
@@ -572,13 +573,12 @@
 .button-home:hover::after {
   height: 410px;
   width: 410px;
-  background-color: white;
 }
 
 .button-home:hover {
-  color: #081828;
+  color: rgb(10, 25, 30);
 }
 
 .button-home:active {
   filter: brightness(.8);
-}
+} */
