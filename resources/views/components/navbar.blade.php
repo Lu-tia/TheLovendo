@@ -5,7 +5,7 @@
 
                 <nav class="navbar navbar-expand-lg">
                     <a class="navbar-brand" href="{{ route('homepage') }}">
-                        <img src="{{ asset('/assets/images/logo/thelovendologo.svg') }}" alt="Logo">
+                        <img src="{{ asset('/assets/images/logo/thelovendo-transparent.svg') }}" alt="Logo">
                     </a>
 
 
@@ -32,7 +32,7 @@
                                                 <img src="{{ asset('/assets/profile/profile.png') }}" alt="">
                                                 <p>{{ __('ui.Zona revisione') }}
                                                     @if ($articles_to_accept_count > 0)
-                                                    <span class="loader-navbar">{{ $articles_to_accept_count }}</span>
+                                                        <span class="loader-navbar">{{ $articles_to_accept_count }}</span>
                                                     @endif
                                                 </p>
                                                 <span>></span>
