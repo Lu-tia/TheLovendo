@@ -16,7 +16,6 @@
         </div>
         @if ($articles)
             <div class="row justify-content-center pt-4">
-
                 @foreach ($articles as $article)
                     <!-- Start Single Card -->
                     <div class="col-lg-2 col-md-3 col-sm-4 col-6 p-0 mx-1">
