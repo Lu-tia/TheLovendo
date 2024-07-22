@@ -2,6 +2,8 @@
 
 namespace App\Livewire\Articles;
 
+use App\Jobs\GoogleVisionLabelImage;
+use App\Jobs\GoogleVisionSafeSearch;
 use App\Jobs\ResizeImage;
 use App\Models\Article;
 use App\Models\Category;
@@ -33,7 +35,7 @@ class CreateArticleForm extends Component
     #[Validate('required',message:"specifica lo stato dell'oggetto")]
     public $condition;
     #[Validate('required',message:'Scegli una categoria')]
-    #[Validate('exists:categories,id',message:'test')]
+    #[Validate('exists:categories,id',message:'Categoria inserita non valida')]
     public $category;
     public $article;
     public $images =[];
@@ -67,6 +69,8 @@ class CreateArticleForm extends Component
                 $newFileName = "articles/{$this->article->id}";
                 $newImage =  $this->article->images()->create(['path'=>$image->store($newFileName,'public')]);
                 dispatch(new ResizeImage($newImage->path, 300 , 300));
+                dispatch(new GoogleVisionSafeSearch($newImage->id));
+                dispatch(new GoogleVisionLabelImage($newImage->id));
             }
             File::deleteDirectories(storage_path('/app/livewire-tmp'));
         }
