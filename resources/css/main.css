@@ -8797,13 +8797,27 @@ blockquote .shape {
 	Footer CSS
 ========================================*/
 .footer {
-  background: var(--secondary-color);
+  background: transparent;
+  position: relative;
 }
+
+.aFooter {
+  text-decoration: none;
+}
+
+.footer-h {
+  color: #fff;
+  padding-bottom: 13px;
+}
+
+
+
+/* 
 
 .footer .footer-top {
   padding: 100px 0;
   padding-top: 70px;
-  border-bottom: 1px solid #ebebeb s;
+  border-bottom: 1px solid #ebebeb;
 }
 
 .footer .single-footer {
@@ -8984,7 +8998,7 @@ blockquote .shape {
   color: #fff;
   background: var(--primary-color);
   border-color: transparent;
-}
+} */
 
 .catList {
   display: none;

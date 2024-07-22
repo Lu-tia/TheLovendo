@@ -1,10 +1,53 @@
 <footer class="footer">
-    <!-- Start Footer Top -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-12 mt-4 pt-5">
+                <div>
+                    <h2 class="footer-h">{{ __('ui.Lavora con Noi') }}</h2>
+                    <p class="pb-3">
+                        Unisciti nella nostra community.
+                    </p>
+                    <div class="button "><a href="{{ route('workWithUs') }}" class="btn border border-secondary ">Lavora
+                            con
+                            noi</a></div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-12 mt-4 pt-5">
+                <h3 class="footer-h">Quick Links</h3>
+                <ul>
+                    <li><a href="{{ route('articles.index') }}" class="aFooter">Articoli</a></li>
+                    @guest
+                        <li><a href="#section-title" class="aFooter">Come funziona</a></li>
+                    @endguest
+                    @auth
+                        <li><a href="" class="aFooter">Login</a></li>
+                        <li><a href="" class="aFooter">Signup</a></li>
+                    @endauth
+
+                </ul>
+            </div>
+            <div class="col-lg-3 col-md-6 col-12 mt-4 pt-5">
+                <h3 class="footer-h">Contact</h3>
+                <ul>
+                    <li>Email: <p>#########</p>
+                    </li>
+                    <li>Address: <p>#########</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+
+{{-- <footer class="footer">
     <div class="footer-top">
         <div class="container">
             <div class="row">
                 <div class="col-lg-3 col-md-6 col-12">
-                    <!-- Single Widget -->
+
                     <div class="single-footer mobile-app">
                         <h3>Mobile Apps</h3>
                         <div class="app-button">
@@ -24,10 +67,10 @@
                             </a>
                         </div>
                     </div>
-                    <!-- End Single Widget -->
+
                 </div>
                 <div class="col-lg-3 col-md-6 col-12">
-                    <!-- Single Widget -->
+
                     <div class="single-footer f-link">
                         <h3>Locations</h3>
                         <div class="row">
@@ -50,10 +93,10 @@
                             </div>
                         </div>
                     </div>
-                    <!-- End Single Widget -->
+
                 </div>
                 <div class="col-lg-3 col-md-6 col-12">
-                    <!-- Single Widget -->
+
                     <div class="single-footer f-link">
                         <h3>Quick Links</h3>
                         <ul>
@@ -64,10 +107,10 @@
                             <li><a href="javascript:void(0)">Help & Support</a></li>
                         </ul>
                     </div>
-                    <!-- End Single Widget -->
+
                 </div>
                 <div class="col-lg-3 col-md-6 col-12">
-                    <!-- Single Widget -->
+
                     <div class="single-footer f-contact">
                         <h3>Contact</h3>
                         <ul>
@@ -75,10 +118,10 @@
                             <li>Tel. +(123) 1800-567-8990 <br> Mail. support@classigrids.com</li>
                         </ul>
                     </div>
-                    <!-- End Single Widget -->
+
                 </div>
             </div>
         </div>
     </div>
-    <!--/ End Footer Middle -->
-</footer>
+
+</footer> --}}

@@ -97,10 +97,10 @@
                                     @endforelse
                                 </ul>
                             </li>
-                            <li class="nav-item">
+                            {{-- <li class="nav-item">
                                 <a href="{{ route('workWithUs') }}"
                                     aria-label="Toggle navigation">{{ __('ui.Lavora con Noi') }}</a>
-                            </li>
+                            </li> --}}
 
                         </ul>
 
