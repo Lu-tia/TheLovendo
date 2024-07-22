@@ -40,7 +40,17 @@
                                                     <div class="carousel-item {{ $key == 0 ? 'active' : '' }}">
                                                         <img src="{{ $image->getUrl(300, 300) }}" class="d-block w-100"
                                                             alt="...">
-                                                    </div>
+                                                            <div class="d-flex align-items-center justify-content-center flex-column">
+                                                                <h5>Labels</h5>
+                                                                @if ($image->labels)
+                                                                    @foreach ($image->labels as $label )
+                                                                        #{{label}} 
+                                                                    @endforeach
+                                                                @else
+                                                                    <p>No labels</p>
+                                                                @endif
+                                                            </div>
+                                                    </div>   
                                                 @endforeach
                                             @else
                                                 <p class="h-100">Nessuna immagine caricata dall'utente</p>
@@ -87,6 +97,46 @@
                                             <span>{{ __('ui.RIFIUTA') }}</span>
                                         </button>
                                     </form>
+                                </div>
+                                <div>
+                                    <div>
+                                        <h5>Ratings</h5>
+                                        <div class="row justify-content-center">
+                                            <div class="col-2">
+                                                <div class="text-center mx-auto" {{$image->adult}}>
+                                                </div>
+                                            </div>
+                                            <div class="col-10">adult</div>
+                                        </div>
+                                        <div class="row justify-content-center">
+                                            <div class="col-2">
+                                                <div class="text-center mx-auto" {{$image->violence}}>
+                                                </div>
+                                            </div>
+                                            <div class="col-10">violence</div>
+                                        </div>
+                                        <div class="row justify-content-center">
+                                            <div class="col-2">
+                                                <div class="text-center mx-auto" {{$image->spoof}}>
+                                                </div>
+                                            </div>
+                                            <div class="col-10">spoof</div>
+                                        </div>
+                                        <div class="row justify-content-center">
+                                            <div class="col-2">
+                                                <div class="text-center mx-auto" {{$image->racy}}>
+                                                </div>
+                                            </div>
+                                            <div class="col-10">racy</div>
+                                        </div>
+                                        <div class="row justify-content-center">
+                                            <div class="col-2">
+                                                <div class="text-center mx-auto" {{$image->medical}}>
+                                                </div>
+                                            </div>
+                                            <div class="col-10">medical</div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         @else
