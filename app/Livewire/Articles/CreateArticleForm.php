@@ -33,7 +33,7 @@ class CreateArticleForm extends Component
     #[Validate('required',message:"specifica lo stato dell'oggetto")]
     public $condition;
     #[Validate('required',message:'Scegli una categoria')]
-    #[Validate('exists:categories,id',message:'cazzi')]
+    #[Validate('exists:categories,id',message:'test')]
     public $category;
     public $article;
     public $images =[];

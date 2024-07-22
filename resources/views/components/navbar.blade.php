@@ -31,7 +31,9 @@
                                             <a href="{{ route('revisor.index') }}" class="sub-menu-link">
                                                 <img src="{{ asset('/assets/profile/profile.png') }}" alt="">
                                                 <p>{{ __('ui.Zona revisione') }}
+                                                    @if ($articles_to_accept_count > 0)
                                                     <span class="loader-navbar">{{ $articles_to_accept_count }}</span>
+                                                    @endif
                                                 </p>
                                                 <span>></span>
                                             </a>
