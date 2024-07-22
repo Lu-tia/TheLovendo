@@ -15,7 +15,7 @@ use Spatie\Image\Image as SpatieImage;
 
 class RemoveFaces implements ShouldQueue
 {
-    use Queueable, Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
+    use Queueable, Dispatchable, InteractsWithQueue, SerializesModels;
 
     private $article_image_id;
 
@@ -34,7 +34,7 @@ class RemoveFaces implements ShouldQueue
             return;
         }
 
-        $srcPath = storage_path('app/public' . $i->path);
+        $srcPath = storage_path('app/public/' . $i->path);
         $image = file_get_contents($srcPath);
 
         putenv('GOOGLE_APPLICATION_CREDENTIALS=' . base_path('google_credential.json'));
