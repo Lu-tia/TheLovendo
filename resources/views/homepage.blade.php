@@ -98,7 +98,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <div class="section-title">
+                        <div class="section-title" id="how-it-work">
                             <h2 class="wow fadeInUp" data-wow-delay=".4s">{{ __('ui.Come funziona') }}</h2>
                             <p class="wow fadeInUp" data-wow-delay=".6s">
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure recusandae, natus odit

@@ -532,19 +532,10 @@
 
 
 
+/* Button footer */
 
-/* Button Homepage */
-
-/* 
-.button-home .btn {
-  padding: 0;
-  margin: 0;
-  border: 0;
-
-}
-
-.button-home {
-  --color: #00A97F;
+.button-yellow {
+  --color: #ffb300;
   padding: 0.8em 1.7em;
   background-color: transparent;
   border-radius: .3em;
@@ -556,8 +547,65 @@
   font-size: 17px;
   border: 1px solid;
   font-family: inherit;
-  text-transform: capitalize;
-  color: var(--color);
+  color: #ffb300;
+  z-index: 1;
+}
+
+.button-yellow::before,
+.button-yellow::after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 50px;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  border-radius: 50%;
+  z-index: -1;
+  background-color: #ffb300;
+  transition: 1s ease;
+}
+
+.button-yellow::before {
+  top: -1em;
+  left: -1em;
+}
+
+.button-yellow::after {
+  left: calc(100% + 1em);
+  top: calc(100% + 1em);
+}
+
+.button-yellow:hover::before,
+.button-yellow:hover::after {
+  height: 410px;
+  width: 410px;
+}
+
+.button-yellow:hover {
+  color: #ffb300;
+}
+
+.button-yellow:active {
+  filter: brightness(.8);
+}
+
+
+
+/* Button homepage */
+.button-home {
+  --color: #ffb300;
+  padding: 0.8em 1.7em;
+  background-color: #ffb300;
+  border-radius: .3em;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: .5s;
+  font-weight: 400;
+  font-size: 17px;
+  border: 1px solid;
+  font-family: inherit;
+  color: #ffb300;
   z-index: 1;
 }
 
@@ -571,7 +619,7 @@
   position: absolute;
   border-radius: 50%;
   z-index: -1;
-  background-color: var(--color);
+  background-color: white;
   transition: 1s ease;
 }
 
@@ -592,12 +640,18 @@
 }
 
 .button-home:hover {
-  color: rgb(10, 25, 30);
+  color: #ffb300;
 }
 
 .button-home:active {
   filter: brightness(.8);
-} */
+}
 
+.button-home>a {
+  color: white;
+}
 
-/* LAVORA CON NOI SECTION */
+.button-home>a:hover,
+.button-home:hover {
+  color: #335c67;
+}

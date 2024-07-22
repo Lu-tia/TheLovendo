@@ -143,14 +143,17 @@
 
                         </ul>
 
-                        <div class="button d-flex justify-content-center p-3 ">
-                            @auth
-                                <a href="{{ route('articles.create') }}" class="btn">
-                                    {{ __('ui.Crea un Annuncio') }}</a>
-                            @else
-                                <a href="{{ route('login') }}" class="btn">
-                                    {{ __('ui.Crea un Annuncio') }}</a>
-                            @endauth
+                        <div class="d-flex justify-content-center p-3 ">
+                            <div class="button-home ">
+                                @auth
+                                    <a href="{{ route('articles.create') }}" class="a-button">
+                                        {{ __('ui.Crea un Annuncio') }}</a>
+                                @else
+                                    <a href="{{ route('login') }}" class="a-button">
+                                        {{ __('ui.Crea un Annuncio') }}</a>
+                                @endauth
+                            </div>
+
                         </div>
 
 
