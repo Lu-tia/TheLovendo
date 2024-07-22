@@ -9082,11 +9082,6 @@ blockquote .shape {
   box-shadow: 0px 0px 11px 1px rgba(0, 0, 0, 0.274)
 }
 
-
-
-
-
-
 .sub-menu-wrap {
   position: absolute;
   top: 100%;
@@ -9633,4 +9628,12 @@ a {
     transform: translateY(-1rem);
     opacity: 0;
   }
+}
+
+.button-show-more {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffb403;
+
 }
