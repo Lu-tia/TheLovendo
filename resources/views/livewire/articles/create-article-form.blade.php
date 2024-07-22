@@ -13,7 +13,7 @@
                             <div class="row">
                                 <div class="col-12">
                                     <div class="form-group">
-                                        <label>{{ __('ui.Titolo')}}</label>
+                                        <label>{{ __('ui.Titolo*')}}</label>
                                         <input wire:model='title' type="text" class="form-control" placeholder="{{ __('ui.Inserisci un titolo')}}">
                                         @error('title')
                                             <div class="alert alert-danger mt-2"> {{ $message }} </div>
@@ -22,7 +22,7 @@
                                 </div>
                                 <div class="col-12">
                                     <div class="form-group">
-                                        <label>{{ __('ui.Categoria')}}</label>
+                                        <label>{{ __('ui.Categoria*')}}</label>
                                         <div class="selector-head">
                                             <span class="arrow"><i class="lni lni-chevron-down"></i></span>
                                             <select class="user-chosen-select form-control" wire:model='category'>
@@ -41,7 +41,7 @@
                                 </div>
                                 <div class="col-lg-6 col-6">
                                     <div class="form-group">
-                                        <label>{{ __('ui.Condizioni')}}</label>
+                                        <label>{{ __('ui.Condizioni*')}}</label>
                                         <div class="selector-head">
                                             <span class="arrow"><i class="lni lni-chevron-down"></i></span>
                                             <select class="user-chosen-select form-control" wire:model='condition'>
@@ -57,7 +57,7 @@
                                 </div>
                                 <div class="col-6">
                                     <div class="form-group">
-                                        <label>{{ __('ui.Prezzo')}}</label>
+                                        <label>{{ __('ui.Prezzo*')}}</label>
                                         <input wire:model='price' type="number" class="form-control" placeholder="0">
                                         @error('price')
                                             <div class="alert alert-danger mt-2"> {{ $message }} </div>
@@ -66,7 +66,7 @@
                                 </div>
                                 <div class="col-6">
                                     <div class="form-group">
-                                        <label>{{ __('ui.Nazione')}}</label>
+                                        <label>{{ __('ui.Nazione*')}}</label>
                                         <div class="selector-head">
                                             <span class="arrow"><i class="lni lni-chevron-down"></i></span>
                                             <select class="user-chosen-select form-control" wire:model='country'>
@@ -85,7 +85,7 @@
                                 </div>
                                 <div class="col-12">
                                     <div class="form-group">
-                                        <label>{{ __('ui.Annuncio')}}</label>
+                                        <label>{{ __('ui.Annuncio*')}}</label>
                                         <textarea wire:model='body' rows="4" class="form-control" placeholder="Scrivi il tuo annuncio..."></textarea>
                                         @error('body')
                                             <div class="alert alert-danger mt-2"> {{ $message }} </div>
