@@ -147,7 +147,8 @@
                             <div class="button-home ">
                                 @auth
                                     <a href="{{ route('articles.create') }}" class="a-button">
-                                        {{ __('ui.Crea un Annuncio') }}</a>
+                                        {{ __('ui.Crea un Annuncio') }}
+                                    </a>
                                 @else
                                     <a href="{{ route('login') }}" class="a-button">
                                         {{ __('ui.Crea un Annuncio') }}</a>
