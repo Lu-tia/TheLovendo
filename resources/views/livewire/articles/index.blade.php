@@ -18,28 +18,31 @@
                         <h3>{{ __('ui.Categorie') }}</h3>
                         <ul class="list">
                             <li>
-                                <input class="catList" type="radio" id="0" wire:model.live="filteredByCategory" name="category" value="0">
+                                <input class="catList" type="radio" id="0" wire:model.live="filteredByCategory"
+                                    name="category" value="0">
                                 @if($filteredByCategory == null || $filteredByCategory == '0')
-                                    <label for='AllCategories' class="radio-label-active">
-                                @else
+                                <label for='AllCategories' class="radio-label-active">
+                                    @else
                                     <label for='0' class="radio-label">
-                                @endif
-                                <i class="lni lni-text-align-right"></i> {{ __('ui.Tutte le categorie') }}
-                                </label>
+                                        @endif
+                                        <i class="lni lni-text-align-right"></i> {{ __('ui.Tutte le categorie') }}
+                                    </label>
                             </li>
                             @forelse ($categories as $category)
-                                <li>
-                                    <input class="catList" type="radio" id="{{$category->id}}" wire:model.live="filteredByCategory" name="category" value="{{$category->id}}">
-                                    @if($filteredByCategory == $category->id)
-                                        <label for='{{$category->id}}' class="radio-label-active">
+                            <li>
+                                <input class="catList" type="radio" id="{{$category->id}}"
+                                    wire:model.live="filteredByCategory" name="category" value="{{$category->id}}">
+                                @if($filteredByCategory == $category->id)
+                                <label for='{{$category->id}}' class="radio-label-active">
                                     @else
-                                        <label for='{{$category->id}}' class="radio-label">
-                                    @endif
-                                    <i class="{{ $iconClasses[$category->name] ?? 'lni lni-layers' }}"></i> {{ __('ui.'.$category->name) }}
+                                    <label for='{{$category->id}}' class="radio-label">
+                                        @endif
+                                        <i class="{{ $iconClasses[$category->name] ?? 'lni lni-layers' }}"></i> {{
+                                        __('ui.'.$category->name) }}
                                     </label>
-                                </li>
+                            </li>
                             @empty
-                                <li>{{ __('ui.Nessuna categoria disponibile') }}</li>
+                            <li>{{ __('ui.Nessuna categoria disponibile') }}</li>
                             @endforelse
                         </ul>
                     </div>
@@ -52,9 +55,10 @@
                                 <select class="user-chosen-select form-control" wire:model.live='filteredByNation'>
                                     <option value="all">{{ __('ui.Seleziona una nazione') }}</option>
                                     @forelse ($nations as $nation)
-                                        <option value="{{ $nation['name']['common'] }}">{{ $nation['name']['common'] }}</option>
+                                    <option value="{{ $nation['name']['common'] }}">{{ $nation['name']['common'] }}
+                                    </option>
                                     @empty
-                                        <option value="none">{{ __('ui.Nessuna categoria disponibile') }}</option>
+                                    <option value="none">{{ __('ui.Nessuna categoria disponibile') }}</option>
                                     @endforelse
                                 </select>
                             </div>
@@ -67,7 +71,8 @@
                     <!-- Start Single Widget -->
                     <div class="single-widget range">
                         <h3>{{ __('ui.Prezzo') }}</h3>
-                        <input type="range" class="form-range" name="range2" step="1" min="1" max="10000" wire:model.live='price' id="rangeInput2">
+                        <input type="range" class="form-range" name="range2" step="1" min="1" max="10000"
+                            wire:model.live='price' id="rangeInput2">
                         <div class="range-inner">
                             <label>€</label>
                             <input type="text" id="rangePrimary" wire:model.live='price' />
@@ -103,7 +108,7 @@
                 <div class="category-grid-list">
                     <div class="row">
                         @foreach ($articles as $article)
-                            <x-card-list :article=$article />
+                        <x-card-list :article=$article />
                         @endforeach
                     </div>
                 </div>

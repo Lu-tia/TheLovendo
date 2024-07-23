@@ -18,9 +18,9 @@
                 <ul>
                     <li><a href="{{ route('articles.index') }}" class="aFooter">Articoli</a></li>
                     @guest
-                        <li><a href="#how-it-work" class="aFooter">Come funziona</a></li>
-                        <li><a href="" class="aFooter">Login</a></li>
-                        <li><a href="" class="aFooter">Signup</a></li>
+                    <li><a href="#how-it-work" class="aFooter">Come funziona</a></li>
+                    <li><a href="" class="aFooter">Login</a></li>
+                    <li><a href="" class="aFooter">Signup</a></li>
                     @endguest
 
 

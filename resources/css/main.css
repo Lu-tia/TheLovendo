@@ -2298,7 +2298,7 @@ ol {
     Testimonial CSS
 ========================================*/
 .testimonials {
-  background-color: var(--secondary-color);
+  /* background-color: var(--secondary-color); */
   padding-bottom: 180px;
 }
 

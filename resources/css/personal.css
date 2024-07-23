@@ -655,3 +655,7 @@
 .button-home:hover {
   color: #335c67;
 }
+
+.bg-custom-all {
+  background-color: #335c67;
+}
