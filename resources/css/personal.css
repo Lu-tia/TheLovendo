@@ -647,10 +647,15 @@
   filter: brightness(.8);
 }
 
+.button-home>a:hover {
+  color: #335c67;
+}
+
 .button-home>a {
   color: white;
 }
 
-.button-home>a:hover{
+.button-home>a:hover,
+.button-home:hover {
   color: #335c67;
 }
