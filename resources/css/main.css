@@ -2298,7 +2298,7 @@ ol {
     Testimonial CSS
 ========================================*/
 .testimonials {
-  /* background-color: var(--secondary-color); */
+  background-color: var(--secondary-color);
   padding-bottom: 180px;
 }
 
@@ -9115,13 +9115,11 @@ blockquote .shape {
   background: white;
   padding: 20px;
   margin: 10px;
-  border: 1px solid rgba(137, 169, 178, 0.214)
 }
 
 .user-info {
   display: flex;
   align-items: center;
-  text-transform: capitalize;
 }
 
 .user-info h3 {
@@ -9425,8 +9423,6 @@ body {
   display: block;
 }
 
-
-
 .info-inner .p-name {
 
   font-size: 18px;
@@ -9650,9 +9646,4 @@ a {
   align-items: center;
   background-color: #ffb403;
 
-}
-
-.form-control-pers {
-  background-color: #f1f1f1;
-  max-width: 80px;
 }

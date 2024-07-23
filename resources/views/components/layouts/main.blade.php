@@ -36,24 +36,11 @@
 
     </header>
 
-    <section class="contact section mt-5">
-        <ul class="background">
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-        </ul>
-        <div class="position-relative">
-            {{ $slot }}
 
-        </div>
-    </section>
+    <div class="position-relative">
+        {{ $slot }}
+
+    </div>
 
     <x-newsletter />
     <x-footer />
