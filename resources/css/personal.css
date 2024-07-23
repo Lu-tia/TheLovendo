@@ -639,12 +639,16 @@
   width: 410px;
 }
 
-.button-home:hover {
-  color: #ffb300;
+.button-home:hover a {
+  color: #335c67;
 }
 
 .button-home:active {
   filter: brightness(.8);
+}
+
+.button-home>a:hover {
+  color: #335c67;
 }
 
 .button-home>a {

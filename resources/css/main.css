@@ -9120,6 +9120,7 @@ blockquote .shape {
 .user-info {
   display: flex;
   align-items: center;
+  text-transform: capitalize;
 }
 
 .user-info h3 {
@@ -9422,6 +9423,8 @@ body {
 .info-inner .p-company {
   display: block;
 }
+
+
 
 .info-inner .p-name {
 

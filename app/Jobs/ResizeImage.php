@@ -2,6 +2,7 @@
 
 namespace App\Jobs;
 
+use Spatie\Image\Enums\Unit;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
@@ -16,7 +17,7 @@ class ResizeImage implements ShouldQueue
 
     private $w, $h, $fileName, $path;
 
-    public function __construct($filePath, $w, $h)
+    public function __construct($filePath,$w,$h)
     {
         $this->path = dirname($filePath);
         $this->fileName = basename($filePath);
@@ -35,7 +36,16 @@ class ResizeImage implements ShouldQueue
         $destPath = storage_path() . '/app/public/' . $this->path . "/crop_{$w}x{$h}_" . $this->fileName;
 
         Image::load($srcPath)
-            ->crop($w, $h, CropPosition::Center)
+            ->crop($w,$h, CropPosition::Center)
+            ->watermark(
+                base_path('resources/images/watermark.svg'),
+                width: 50,
+                height:50,
+                paddingX: 5,
+                paddingY: 5,
+                paddingUnit: Unit::Percent,
+            )
+            ->watermark('watermark.png',alpha: 50)
             ->save($destPath);
     }
 }
