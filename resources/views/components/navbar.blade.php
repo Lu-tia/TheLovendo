@@ -138,9 +138,8 @@
                                     <a class="dd-menu collapsed text-black fw-medium" href="{{ route('register') }}"
                                         aria-label="Toggle navigation">{{ __('ui.Registrati') }}</a>
                                 </li> --}}
-                            @endguest
-
-                        </ul>
+                            </ul>
+                        @endguest
 
                         <div class="d-flex justify-content-center p-3 ">
                             <div class="button-home ">
