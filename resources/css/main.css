@@ -1568,7 +1568,7 @@ ol {
   top: -7px;
 }
 
-@media only screen and (min-width: 768px) and (max-width: 991px) {
+@media only screen and (min-width: 315px) and (max-width: 991px) {
   .navbar-collapse {
     position: absolute;
     top: 66px !important;
@@ -1588,13 +1588,15 @@ ol {
 @media (max-width: 767px) {
   .navbar-collapse {
     position: absolute;
+    border-radius: 5px;
+    border: 1px solid #89a9b233;
     top: 165% !important;
     left: 0;
     width: 100%;
     background-color: #fff;
     z-index: 9;
     -webkit-box-shadow: 0px 15px 20px 0px rgba(0, 0, 0, 0.1);
-    box-shadow: 0px 15px 20px 0px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 15px 20px 0px rgba(0, 0, 0, 0.156);
     padding: 10px 20px;
     max-height: 350px;
     overflow-y: scroll;
@@ -2309,6 +2311,10 @@ ol {
 
 .testimonials .section-title p {
   color: #fff;
+}
+
+.single-testimonial {
+  border-radius: 5px;
 }
 
 .testimonials .testimonial-slider {
@@ -9569,6 +9575,9 @@ body {
 .sign .lni-user {
   font-size: 18px;
 }
+
+
+
 
 /* text */
 .text {

@@ -184,7 +184,7 @@
                 </div>
             </div>
             <div class="row testimonial-slider">
-                <div class="col-lg-4 col-md-6 col-12">
+                <div class="col-lg-4 col-md-6 col-12 ">
                     <!-- Start Single Testimonial -->
                     <div class="single-testimonial">
                         <div class="quote-icon">
