@@ -62,7 +62,7 @@
 
                     <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
                         <ul id="nav" class="navbar-nav ms-auto">
-                            <li class="nav-item">
+                            <li class="nav-item position-static">
                                 <a href="{{ route('homepage') }}"
                                     aria-label="Toggle navigation">{{ __('ui.home') }}</a>
                             </li>
