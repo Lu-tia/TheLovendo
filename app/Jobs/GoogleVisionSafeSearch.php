@@ -57,7 +57,7 @@ class GoogleVisionSafeSearch implements ShouldQueue
 
         $i->adult = $likelihoodName[$adult];
         $i->spoof = $likelihoodName[$spoof];
-        $i->spoof = $likelihoodName[$racy];
+        $i->racy = $likelihoodName[$racy];
         $i->medical = $likelihoodName[$medical];
         $i->violence = $likelihoodName[$violence];
 
