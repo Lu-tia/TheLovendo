@@ -7,7 +7,7 @@
     <title>TheLovendo!</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="shortcut icon" type="image/x-icon" href="{{asset('assets/images/logo/tabsLogo.svg.png')}}" />
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('assets/images/logo/tabsLogo.svg.png') }}" />
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <!-- Web Font -->
@@ -18,7 +18,7 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
-<body>
+<body style="overflow-x: hidden">
     <!-- Preloader -->
     <div class="preloader">
         <div class="preloader-inner">
