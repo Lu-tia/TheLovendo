@@ -22,6 +22,8 @@ class Index extends Component
     public $search = "";
     public $currentPage = 1;
     public $price;
+    public $minPrice;
+    public $maxPrice;
 
     public function mount(){
         $this->categories = Category::all();
@@ -66,6 +68,8 @@ class Index extends Component
         ];
         $nations = $this->nations;
         $categories = $this->categories;
+        $this->minPrice = Article::min('price');
+        $this->maxPrice = Article::max('price');
         return view('livewire.articles.index',compact('articles','categories','id','iconClasses','nations'));
     }
 }
