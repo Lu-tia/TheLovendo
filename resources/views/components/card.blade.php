@@ -4,12 +4,13 @@
         <div class="el-wrapper single-grid wow fadeInUp" data-wow-delay=".2s">
             <div class="box-up">
                 <a href="{{ route('articles.show', compact('article')) }}" class="thumbnail"> <img class="img"
-                        src="{{ $article->images->isNotEmpty() ? $article->images->first()->getUrl(300,300) : 'https://picsum.photos/200' }}"
+                        src="{{ $article->images->isNotEmpty() ? $article->images->first()->getUrl(300, 300) : 'https://picsum.photos/200' }}"
                         alt=""></a>
                 <div class="img-info">
                     <div class="info-inner">
                         <span class="p-name">{{ $article->title }}</span>
-                        <span class="p-company">{{ __('ui.Pubblicato da:') }} {{ $article->user->firstName }}{{ $article->user->lastName }}</span>
+                        <span class="p-company publ">{{ __('ui.Pubblicato da:') }}
+                            {{ $article->user->firstName }}{{ $article->user->lastName }}</span>
                     </div>
                     <div class="a-size">{{ $article->created_at->locale('it_IT')->isoFormat('DD MMM YYYY') }}
                         <div class="info-list"><i class="lni lni-map-marker"></i>
