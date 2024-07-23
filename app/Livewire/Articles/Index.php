@@ -21,6 +21,7 @@ class Index extends Component
     public $filteredByNation;
     public $search = "";
     public $currentPage = 1;
+    public $price;
 
     public function mount(){
         $this->categories = Category::all();
@@ -43,10 +44,12 @@ class Index extends Component
   
     public function render($id = null)
     {
+
         $articles =  Article::orderBy('created_at', 'desc')
         ->when($this->filteredByCategory > 0, fn(Builder $query) => $query->where('category_id', $this->filteredByCategory))
         ->when($this->search !== '', fn(Builder $query) => $query->where('title','LIKE', '%'. $this->search . '%'))
         ->when($this->filteredByNation !== null && $this->filteredByNation !== 'all', fn(Builder $query) => $query->where('country', $this->filteredByNation))
+        ->when($this->price, fn(Builder $query) => $query->where('price', '<=', $this->price))
         ->where('status',true)
         ->paginate(6);
         
