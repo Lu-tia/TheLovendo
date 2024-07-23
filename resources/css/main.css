@@ -9115,6 +9115,7 @@ blockquote .shape {
   background: white;
   padding: 20px;
   margin: 10px;
+  border: 1px solid rgba(137, 169, 178, 0.214)
 }
 
 .user-info {
