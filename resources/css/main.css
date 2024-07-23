@@ -7336,6 +7336,7 @@ blockquote .shape {
     margin-top: 10px !important;
   }
 
+
   .footer .footer-top {
     padding: 50px 0 !important;
     padding-top: 45px !important;
@@ -8797,7 +8798,10 @@ blockquote .shape {
 	Footer CSS
 ========================================*/
 .footer {
-  background: transparent;
+  background: var(--secondary-color);
+  
+}
+.footer h2, p ,h3, a,li {
   position: relative;
 }
 
