@@ -47,6 +47,7 @@ Index Of css
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -54,7 +55,7 @@ body {
   font-weight: normal;
   font-style: normal;
   color: #888;
-  overflow-x: hidden;
+
   font-size: 15px;
 }
 
@@ -8799,10 +8800,16 @@ blockquote .shape {
 ========================================*/
 .footer {
   background: var(--secondary-color);
-  
+
 }
-.footer h2, p ,h3, a,li {
+
+.footer h2,
+p,
+h3,
+a,
+li {
   position: relative;
+
 }
 
 .aFooter {
@@ -9574,6 +9581,7 @@ body {
   font-weight: 500;
   transition-duration: .3s;
 }
+
 
 /* hover effect on button width */
 .Btn:hover {
