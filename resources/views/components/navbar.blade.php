@@ -52,7 +52,7 @@
                     </div>
 
 
-                    <button class="navbar-toggler mobile-menu-btn" type="button" data-bs-toggle="collapse"
+                    <button class="navbar-toggler border-0 mobile-menu-btn" type="button" data-bs-toggle="collapse"
                         data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                         <span class="toggler-icon"></span>
