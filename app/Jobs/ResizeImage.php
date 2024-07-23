@@ -38,14 +38,13 @@ class ResizeImage implements ShouldQueue
         Image::load($srcPath)
             ->crop($w,$h, CropPosition::Center)
             ->watermark(
-                base_path('resources/images/watermark.svg'),
+                base_path('resources/images/watermark.png'),
                 width: 50,
                 height:50,
                 paddingX: 5,
                 paddingY: 5,
-                paddingUnit: Unit::Percent,
+                paddingUnit: Unit::Percent
             )
-            ->watermark('watermark.png',alpha: 50)
             ->save($destPath);
     }
 }
