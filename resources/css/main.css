@@ -9650,3 +9650,8 @@ a {
   background-color: #ffb403;
 
 }
+
+.form-control-pers {
+  background-color: #f1f1f1;
+  max-width: 80px;
+}
