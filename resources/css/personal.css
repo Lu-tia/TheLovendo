@@ -2,6 +2,10 @@
     display: none;
 } */
 
+html {
+  overflow-x: hidden;
+}
+
 .upload-image>label {
   border: 1px solid #ccc;
   display: inline-block;
@@ -640,7 +644,7 @@
   font-size: 17px;
   border: 1px solid;
   font-family: inherit;
-  color: #ffb300;
+  color: white;
   z-index: 1;
 }
 
@@ -699,3 +703,6 @@
   background-color: #335c67;
 }
 
+.min-width-custom {
+  min-width: 20px;
+}

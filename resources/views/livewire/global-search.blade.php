@@ -18,23 +18,20 @@
             <div class="row justify-content-center pt-4">
                 @foreach ($articles as $article)
                     <!-- Start Single Card -->
-                    <div class="col-lg-2 col-md-3 col-sm-4 col-6 p-0 mx-1">
+                    <div class="col-lg-2 col-md-3 col-sm-4 col-6 p-0 mx-1 mb-2">
                         <a href="{{ route('articles.show', compact('article')) }}">
                             <div class="card rounded shadow-sm border-0 cardcst">
                                 <div class="card-body p-4">
-                                    <img src="https://bootstrapious.com/i/snippets/sn-cards/shoes-1_gthops.jpg"
-                                        alt="" class="img-fluid d-block mx-auto mb-3">
+                                    <img src="{{ $article->images->isNotEmpty() ? $article->images->first()->getUrl(300, 300) : 'https://picsum.photos/200' }}" alt="" class="img-fluid d-block mx-auto mb-3">
                                     <h7 class="text-dark">{{ $article->title }}</h7>
+                                    <p class="small text-muted font-italic">{{ $article->price }} €</p>
                                 </div>
                             </div>
                         </a>
-                        <p class="small text-muted font-italic">{{ $article->price }} €</p>
                     </div>
                 @endforeach
-
-
-
             </div>
+            @if($articlesCount > 4)
             <div class="row justify-content-center">
                 <div class="col-lg-2 col-md-3 col-sm-4 col-6 p-0 mx-1 mt-3 align-items-center">
                     <div class="card shadow-sm border-0">
@@ -46,8 +43,8 @@
                         </div>
                     </div>
                 </div>
-
             </div>
+            @endif
         @endif
 
 
