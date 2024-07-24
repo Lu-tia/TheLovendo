@@ -17,9 +17,6 @@ class ContactController extends Controller
     public function sendApplication(Request $request)
     {
         $request->validate([
-            'nome' => 'required|string|max:255',
-            'cognome' => 'required|string|max:255',
-            'email' => 'required|string|max:255',
             'eta' => 'required|integer|min:18|max:100',
             'curriculum' => 'required|file|mimes:pdf,doc,docx|max:10240', // 10MB massimo
         ]);
@@ -28,9 +25,9 @@ class ContactController extends Controller
         $curriculumPath = $request->file('curriculum')->store('public/curricula');
 
         $details = [
-            'nome' => $request->nome,
-            'cognome' => $request->cognome,
-            'email' => $request->email,
+            'nome' => auth()->user()->firstName,
+            'cognome' => auth()->user()->lastName,
+            'email' => auth()->user()->email,
             'eta' => $request->eta,
             'curriculum' => $curriculumPath,
         ];

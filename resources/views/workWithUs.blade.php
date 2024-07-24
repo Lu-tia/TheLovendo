@@ -45,21 +45,21 @@
                                     <div class="col-12">
                                         <div class="form-group mx-4">
                                             <label class="label-custom">{{ __('ui.Nome') }}<span>*</span></label>
-                                            <input name="nome" type="text" class="form-control border-none"
-                                                placeholder="{{ __('ui.Nome') }}" value="{{ old('nome') }}">
+                                            <input name="nome" disabled type="text" class="form-control border-none"
+                                                placeholder="{{ __('ui.Nome') }}" value="{{ auth()->user()->firstName }}">
                                         </div>
                                     </div>
                                     <div class="col-12">
                                         <div class="form-group mx-4">
                                             <label class="label-custom">{{ __('ui.Cognome') }}<span>*</span></label>
-                                            <input name="cognome" type="text" class="form-control work-with-us-custom"
-                                                placeholder="{{ __('ui.Cognome') }}" value="{{ old('cognome') }}">
+                                            <input name="cognome" disabled type="text" class="form-control work-with-us-custom"
+                                                placeholder="{{ __('ui.Cognome') }}" value="{{ auth()->user()->lastName }}">
                                         </div>
                                     </div>
                                     <div class="col-12">
                                         <div class="form-group mx-4">
                                             <label class="label-custom" for="email">{{ __('ui.Email') }}*</label>
-                                            <input  type="email" class="form-control" id="email" name="email"
+                                            <input  type="email" disabled class="form-control" id="email" name="email"
                                                 placeholder="{{ __('ui.Mail') }}" value="{{ auth()->user()->email }}">
                                         </div>
                                     </div>
