@@ -157,7 +157,8 @@ html {
   border-radius: 4px;
   justify-content: center;
 }
-.btn-danger-custom{
+
+.btn-danger-custom {
   background-color: #d32f2f !important;
   border-radius: 4px;
   padding: 10px 26px !important;
@@ -683,4 +684,33 @@ html {
 
 .min-width-custom {
   min-width: 20px;
+}
+
+/* MEDIAQURIES LANG */
+
+@media only screen and (min-width: 315px) and (max-width: 900px) {
+
+  .lang {
+    border: none !important;
+  }
+}
+
+@media only screen and (min-width: 315px) and (max-width: 900px) {
+
+  .lang>li {
+    left: 60px;
+    bottom: 53px;
+    display: inline;
+    border: none !important;
+    background-color: transparent !important;
+  }
+}
+
+.lang>li {
+  border: none !important;
+  background-color: transparent !important;
+}
+
+.dropdown>.btn {
+  border: none !important;
 }
