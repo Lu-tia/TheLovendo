@@ -1980,14 +1980,25 @@ ol {
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  
   z-index: 0;
   padding-top: 300px;
 
 
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 820px) {
+  .hero-area {
+    height: 90vh;
+  }
+}
+
+@media only screen and (min-width: 1080px) {
+  .hero-area {
+    height: 120vh;
+  }
+}
+
+@media only screen and (min-width: 1281px) {
   .hero-area {
     height: 100vh;
   }
