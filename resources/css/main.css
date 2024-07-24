@@ -55,7 +55,7 @@ body {
   font-weight: normal;
   font-style: normal;
   color: #888;
-overflow: hidden;
+  overflow: hidden;
   font-size: 15px;
 }
 
@@ -1982,27 +1982,9 @@ ol {
   background-repeat: no-repeat;
   z-index: 0;
   padding-top: 300px;
+  min-height: 100vh;
+  height: 100%;
 
-
-}
-
-@media only screen and (min-width: 820px) {
-  .hero-area {
-    height: 90vh;
-  }
-}
-
-@media only screen and (min-width: 1080px) {
-  .hero-area {
-    height: 120vh;
-  }
-}
-
-
-@media only screen and (max-width: 600px) {
-  .hero-area {
-    max-height: 100%;
-  }
 }
 
 .hero-area.overlay::before {
@@ -2101,7 +2083,7 @@ ol {
   margin-top: 60px;
   background: #fff3;
   border-radius: 6px;
-  padding:25px;
+  padding: 25px;
   position: relative;
 }
 
@@ -9339,7 +9321,8 @@ body {
     width: 290px;
     margin: 30px auto;
   }
-  .info-inner{
+
+  .info-inner {
     bottom: 12px;
   }
 }
@@ -9452,8 +9435,9 @@ body {
   width: 100%;
   bottom: 25px;
 }
+
 @media (max-width: 767px) {
-  .info-inner{
+  .info-inner {
     bottom: 12px;
   }
 }
