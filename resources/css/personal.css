@@ -52,7 +52,6 @@ html {
 .article-image {
   overflow: hidden;
   border-radius: 4px;
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
   animation: fadeInLeft 1s ease;
   /* Animazione aggiunta */
 }
@@ -158,34 +157,13 @@ html {
   border-radius: 4px;
   justify-content: center;
 }
-
-/* Stile per il bottone ACCETTA */
-.btn-success-custom {
-  background-color: #5830e0;
-  /* Nuovo colore verde */
-  border-color: #5830e0;
-  color: #ffffff;
+.btn-danger-custom{
+  background-color: #d32f2f !important;
   border-radius: 4px;
+  padding: 10px 26px !important;
 }
 
-.btn-success-custom:hover {
-  background-color: #081828;
-  border-color: #081828;
-}
 
-/* Stile per il bottone RIFIUTA */
-.btn-danger-custom {
-  background-color: #f44336;
-  /* Nuovo colore rosso */
-  border-color: #f44336;
-  color: #ffffff;
-  border-radius: 4px;
-}
-
-.btn-danger-custom:hover {
-  background-color: #d32f2f;
-  border-color: #d32f2f;
-}
 
 /* Stile per il bottone Torna alla homepage */
 .btn-primary {

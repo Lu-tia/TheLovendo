@@ -136,7 +136,7 @@
                                 <form action="{{ route('reject', ['article' => $article_to_check]) }}" method="post"  class="button mb-2">
                                     @csrf
                                     @method('PATCH')
-                                    <button class="btn btn-danger" type="submit">
+                                    <button class="btn btn-danger-custom" type="submit">
                                         <span>{{ __('ui.RIFIUTA') }}</span>
                                     </button>
                                 </form>
