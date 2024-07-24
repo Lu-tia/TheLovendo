@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Mail\ApplicationMail;
+use App\Mail\ContactSeller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 
@@ -40,5 +41,25 @@ class ContactController extends Controller
 
     session()->flash('success', 'Candidatura inviata con successo!');
     return redirect()->route('workWithUs');
+    }
+
+    public function contactSeller(Request $request,$article)
+    {
+        $request->validate([
+            'message' => 'required|string|max:255',
+        ]);
+
+        $details = [
+            'message' => $request->message,
+            'firstName' => auth()->user()->firstName,
+            'lastName' => auth()->user()->lastName,
+            'email' => auth()->user()->email,
+            'article' => $article
+        ];
+
+        Mail::to('application@thelovendo.com')->send(new ContactSeller($details));
+
+    session()->flash('success', 'Mesaggio inviato con successo!');
+    return redirect()->back();
     }
 }

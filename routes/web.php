@@ -34,6 +34,9 @@ Route::middleware(['auth'])->group(function () {
     //lavora con noi
     Route::get('/lavora-con-noi', [ContactController::class, 'workWithUs'])->name('workWithUs');
     Route::post('/lavora-con-noi', [ContactController::class, 'sendApplication'])->name('applicationMail');
+
+    /* Contatta venditore */
+    Route::post('/contatta-il-venditore/{article}',[ContactController::class, 'contactSeller'])->name('contactSeller');
 });
 
 /* SOCALITE */

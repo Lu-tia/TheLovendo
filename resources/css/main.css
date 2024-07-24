@@ -9326,6 +9326,9 @@ body {
     width: 290px;
     margin: 30px auto;
   }
+  .info-inner{
+    bottom: 12px;
+  }
 }
 
 .el-wrapper:hover .h-bg {
@@ -9382,6 +9385,8 @@ body {
 }
 
 .el-wrapper .img {
+  height: 240px;
+  width: 200px;
   padding: 20px 0;
   -webkit-transition: all 800ms cubic-bezier(0, 0, 0.18, 1);
   -moz-transition: all 800ms cubic-bezier(0, 0, 0.18, 1);
@@ -9433,6 +9438,11 @@ body {
   position: absolute;
   width: 100%;
   bottom: 25px;
+}
+@media (max-width: 767px) {
+  .info-inner{
+    bottom: 12px;
+  }
 }
 
 .info-inner .p-name,

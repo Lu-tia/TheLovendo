@@ -52,6 +52,16 @@
                                 </ul>
                             </div>
                             <div class="list-info">
+                                <div class="contact-info">
+                                    <ul>
+                                        <li>
+                                            <button type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop" class="btn call">                           
+                                                    <i class="lni lni-envelope"></i>
+                                                    Contatta il venditore
+                                            </button>
+                                        </li>
+                                    </ul>
+                                </div>
                                 <div class="social-share">
                                     <h4>{{ __('ui.Condividi su') }}</h4>
                                     <ul class="d-flex">
@@ -93,7 +103,7 @@
                                 <div class="content">
                                     <img src="{{$article->user->avatar ?? asset('assets/images/placeholder/200x200.png')}}"
                                         alt="#">
-                                    <h4>{{ $article->user->fistName }} {{ $article->user->lastName }}</h4>
+                                    <h4>{{ $article->user->firstName }} {{ $article->user->lastName }}</h4>
                                     <a href="javascript:void(0)" class="see-all"></a>
                                 </div>
                             </div>
@@ -104,4 +114,38 @@
             </div>
     </section>
     <!-- End Item Details -->
+
+      {{-- MODALE CONTATTAMI --}}
+      <div class="modal fade " id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="staticBackdropLabel">Contatta il venditore</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body px-5">
+              <form action="{{route('contactSeller',['article' => $article->title])}}" method="post">
+                @csrf
+                <div class="col-12">
+                   <div>
+                    <h5>Nome Completo</h5>
+                    <p class="form-control mt-2">{{auth()->user()->firstName}} {{auth()->user()->lastName}}</p>
+                   </div>
+                   <div class="mt-2">
+                    <h5>Email</h5>
+                    <p class="form-control mt-2">{{auth()->user()->email}}</p>
+                   </div>
+                </div>    
+            </div>
+            <div class="col-12 p-5">
+                <label for="message">Inserisci qui un messaggio per il venditore</label>
+                <textarea name="message" required class="form-control" id="message" cols="30" rows="10"></textarea>
+            </div>
+            <div class="modal-footer button">
+              <button type="submit" class="btn ">Invia</button>
+            </div>
+        </form>
+          </div>
+        </div>
+      </div>
 </x-layouts.main>
