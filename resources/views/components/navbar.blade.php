@@ -162,14 +162,3 @@
 
     </div>
 </div> <!-- row -->
-
-
-
-
-<script>
-    let subMenu = document.querySelector("#subMenu");
-
-    function toggleMenu() {
-        subMenu.classList.toggle("open-menu");
-    }
-</script>
