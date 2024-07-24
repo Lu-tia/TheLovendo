@@ -21,7 +21,6 @@ class ContactController extends Controller
             'cognome' => 'required|string|max:255',
             'email' => 'required|string|max:255',
             'eta' => 'required|integer|min:18|max:100',
-            'citta' => 'required|string|max:255',
             'curriculum' => 'required|file|mimes:pdf,doc,docx|max:10240', // 10MB massimo
         ]);
 
@@ -33,7 +32,6 @@ class ContactController extends Controller
             'cognome' => $request->cognome,
             'email' => $request->email,
             'eta' => $request->eta,
-            'citta' => $request->citta,
             'curriculum' => $curriculumPath,
         ];
 
