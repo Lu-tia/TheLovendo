@@ -18,7 +18,7 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
-<body style="overflow-x: hidden">
+<body class="overflow-y-hidden">
     <!-- Preloader -->
     <div class="preloader">
         <div class="preloader-inner">

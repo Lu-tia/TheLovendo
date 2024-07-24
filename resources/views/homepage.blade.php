@@ -1,13 +1,13 @@
 <x-layouts.main>
     @if (session()->has('success', 'errorMessage'))
-        <div class="alert alert-warning">
-            {{ session('success') }}
-        </div>
+    <div class="alert alert-warning">
+        {{ session('success') }}
+    </div>
     @endif
 
 
     <!-- Start Hero Area -->
-    <section class="hero-area overlay">
+    <section class="hero-area position-relative">
         <ul class="background">
             <li></li>
             <li></li>
@@ -46,8 +46,7 @@
                                 <div class="col-lg-4 col-md-4 col-12 p-0">
                                     <div class="search-input">
                                         <label for="keyword"><i class="lni lni-search-alt theme-color"></i></label>
-                                        <input type="text" name="keyword" id="keyword"
-                                            placeholder="Cerca prodotto">
+                                        <input type="text" name="keyword" id="keyword" placeholder="Cerca prodotto">
                                     </div>
                                 </div>
                                 <div class="col-lg-3 col-md-3 col-12 p-0">
@@ -56,7 +55,7 @@
                                         <select name="category" id="category">
                                             <option value="" selected disabled>Categorie</option>
                                             @forelse ($categories as $category)
-                                                <option value="{{ $category->id }}">{{ $category->name }}</option>
+                                            <option value="{{ $category->id }}">{{ $category->name }}</option>
                                             @empty
                                             @endforelse
                                         </select>
@@ -93,52 +92,52 @@
 
 
     @guest
-        <!-- Start How Works Area -->
-        <section class="items-grid section custom-padding how-works section">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <div class="section-title" id="how-it-work">
-                            <h2 class="wow fadeInUp" data-wow-delay=".4s">{{ __('ui.Come funziona') }}</h2>
-                            <p class="wow fadeInUp" data-wow-delay=".6s">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure recusandae, natus odit
-                                asperiores, nihil quibusdam laudantium aliquid fuga provident unde quidem consequatur
-                                consequuntur. Ullam, voluptatem tenetur cum repudiandae totam ratione?</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-4 col-md-4 col-12">
-                        <!-- Start Single Work -->
-                        <div class="single-work wow fadeInUp" data-wow-delay=".2s">
-                            <span class="serial">01</span>
-                            <h3>{{ __('ui.Come funziona') }}</h3>
-                            <p>Lorem ipsum dolor sit amet constur adipisicing sed do eiusmod tempor incididunt labore.</p>
-                        </div>
-                        <!-- End Single Work -->
-                    </div>
-                    <div class="col-lg-4 col-md-4 col-12">
-                        <!-- Start Single Work -->
-                        <div class="single-work wow fadeInUp" data-wow-delay=".4s">
-                            <span class="serial">02</span>
-                            <h3>{{ __('ui.Posta il tuo annuncio!') }}</h3>
-                            <p>Lorem ipsum dolor sit amet constur adipisicing sed do eiusmod tempor incididunt labore.</p>
-                        </div>
-                        <!-- End Single Work -->
-                    </div>
-                    <div class="col-lg-4 col-md-4 col-12">
-                        <!-- Start Single Work -->
-                        <div class="single-work wow fadeInUp" data-wow-delay=".6s">
-                            <span class="serial">03</span>
-                            <h3>{{ __('ui.Vendi i tuoi oggetti') }}</h3>
-                            <p>Lorem ipsum dolor sit amet constur adipisicing sed do eiusmod tempor incididunt labore.</p>
-                        </div>
-                        <!-- End Single Work -->
+    <!-- Start How Works Area -->
+    <section class="items-grid section custom-padding how-works section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="section-title" id="how-it-work">
+                        <h2 class="wow fadeInUp" data-wow-delay=".4s">{{ __('ui.Come funziona') }}</h2>
+                        <p class="wow fadeInUp" data-wow-delay=".6s">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure recusandae, natus odit
+                            asperiores, nihil quibusdam laudantium aliquid fuga provident unde quidem consequatur
+                            consequuntur. Ullam, voluptatem tenetur cum repudiandae totam ratione?</p>
                     </div>
                 </div>
             </div>
-        </section>
-        <!-- End How Works Area -->
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-12">
+                    <!-- Start Single Work -->
+                    <div class="single-work wow fadeInUp" data-wow-delay=".2s">
+                        <span class="serial">01</span>
+                        <h3>{{ __('ui.Come funziona') }}</h3>
+                        <p>Lorem ipsum dolor sit amet constur adipisicing sed do eiusmod tempor incididunt labore.</p>
+                    </div>
+                    <!-- End Single Work -->
+                </div>
+                <div class="col-lg-4 col-md-4 col-12">
+                    <!-- Start Single Work -->
+                    <div class="single-work wow fadeInUp" data-wow-delay=".4s">
+                        <span class="serial">02</span>
+                        <h3>{{ __('ui.Posta il tuo annuncio!') }}</h3>
+                        <p>Lorem ipsum dolor sit amet constur adipisicing sed do eiusmod tempor incididunt labore.</p>
+                    </div>
+                    <!-- End Single Work -->
+                </div>
+                <div class="col-lg-4 col-md-4 col-12">
+                    <!-- Start Single Work -->
+                    <div class="single-work wow fadeInUp" data-wow-delay=".6s">
+                        <span class="serial">03</span>
+                        <h3>{{ __('ui.Vendi i tuoi oggetti') }}</h3>
+                        <p>Lorem ipsum dolor sit amet constur adipisicing sed do eiusmod tempor incididunt labore.</p>
+                    </div>
+                    <!-- End Single Work -->
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End How Works Area -->
     @endguest
     <!-- Start Items Grid Area -->
     <section class="items-grid section items-products">
@@ -158,7 +157,7 @@
 
 
                     @foreach ($articles as $article)
-                        <x-card :article=$article />
+                    <x-card :article=$article />
                     @endforeach
 
 
@@ -178,7 +177,8 @@
                     <div class="section-title align-center gray-bg">
                         <h2 class="wow fadeInUp" data-wow-delay=".4s">{{ __('ui.Cosa dicono di Noi!') }}</h2>
                         <p class="wow fadeInUp" data-wow-delay=".6s">
-                            {{ __('ui.Esistono molte varianti dei passaggi di TheLovendo disponibile, ma la maggior parte ha subito alterazioni in qualche forma.') }}
+                            {{ __('ui.Esistono molte varianti dei passaggi di TheLovendo disponibile, ma la maggior
+                            parte ha subito alterazioni in qualche forma.') }}
                         </p>
                     </div>
                 </div>

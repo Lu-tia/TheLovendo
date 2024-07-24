@@ -2,6 +2,10 @@
     display: none;
 } */
 
+html {
+  overflow-x: hidden;
+}
+
 .upload-image>label {
   border: 1px solid #ccc;
   display: inline-block;
