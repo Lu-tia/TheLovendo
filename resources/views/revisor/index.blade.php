@@ -81,17 +81,17 @@
                                     {{ $article_to_check->user->lastName }}</p>
                             </div>
                             <div class="article-actions d-flex justify-content-evenly">
-                                <form action="{{ route('accept', ['article' => $article_to_check]) }}" method="post">
+                                <form action="{{ route('accept', ['article' => $article_to_check]) }}" method="post" class="button">
                                     @csrf
                                     @method('PATCH')
-                                    <button class="btn btn-success-custom me-3" type="submit">
+                                    <button class="btn me-3" type="submit">
                                         <span>{{ __('ui.ACCETTA') }}</span>
                                     </button>
                                 </form>
-                                <form action="{{ route('reject', ['article' => $article_to_check]) }}" method="post">
+                                <form action="{{ route('reject', ['article' => $article_to_check]) }}" method="post"  class="button">
                                     @csrf
                                     @method('PATCH')
-                                    <button class="btn btn-danger-custom" type="submit">
+                                    <button class="btn btn-danger" type="submit">
                                         <span>{{ __('ui.RIFIUTA') }}</span>
                                     </button>
                                 </form>
