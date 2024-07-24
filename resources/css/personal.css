@@ -147,6 +147,14 @@
   z-index: 2;
 }
 
+.tags {
+  background-color: #ffb303;
+  opacity: 0.9;
+  color: #081828;
+  border-radius: 4px;
+  justify-content: center;
+}
+
 /* Stile per il bottone ACCETTA */
 .btn-success-custom {
   background-color: #5830e0;
@@ -690,3 +698,4 @@
 .bg-custom-all {
   background-color: #335c67;
 }
+
