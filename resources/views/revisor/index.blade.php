@@ -49,6 +49,7 @@
                                                 <p>No labels</p>
                                                 @endif
                                             </div>
+                                            
                                         </div>
                                         @endforeach
                                         @else

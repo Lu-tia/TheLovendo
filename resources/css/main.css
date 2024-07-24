@@ -2027,8 +2027,6 @@ ol {
   margin-top: 100px;
   background: #fff;
   border-radius: 6px;
-  padding: 35px 40px;
-  padding-right: 55px;
   width: 100%;
   border: 1px solid #eee;
   position: relative;
@@ -2087,8 +2085,7 @@ ol {
   margin-top: 60px;
   background: #fff3;
   border-radius: 6px;
-  padding: 30px;
-  padding-right: 45px;
+  padding:25px;
   position: relative;
 }
 
@@ -7483,10 +7480,10 @@ blockquote .shape {
   }
 
   .hero-area .search-form {
-    margin-top: 30px;
+    margin-top: 45px;
     background: #fff3;
     border-radius: 6px;
-    padding: 40px;
+    padding-bottom: 12px;
   }
 
   .hero-area .search-form .search-input {
