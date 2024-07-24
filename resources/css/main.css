@@ -55,7 +55,7 @@ body {
   font-weight: normal;
   font-style: normal;
   color: #888;
-
+overflow: hidden;
   font-size: 15px;
 }
 
