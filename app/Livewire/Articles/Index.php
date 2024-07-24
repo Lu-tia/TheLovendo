@@ -24,6 +24,7 @@ class Index extends Component
     public $price;
     public $minPrice;
     public $maxPrice;
+    public $condition = 'Tutte';
 
     public function mount($query = null){
         $this->categories = Category::all();
@@ -61,6 +62,7 @@ class Index extends Component
         ->when($this->search !== '', fn(Builder $query) => $query->where('title','LIKE', '%'. $this->search . '%'))->orWhere('body','LIKE', '%'. $this->search . '%')
         ->when($this->filteredByNation !== null && $this->filteredByNation !== 'all', fn(Builder $query) => $query->where('country', $this->filteredByNation))
         ->when($this->price, fn(Builder $query) => $query->where('price', '<=', $this->price))
+        ->when($this->condition !== 'Tutte', fn(Builder $query) => $query->where('condition', $this->condition))
         ->where('status',true)
         ->paginate(6);
         

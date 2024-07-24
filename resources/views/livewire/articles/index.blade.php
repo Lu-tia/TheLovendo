@@ -52,7 +52,7 @@
                         <div class="form-group">
                             <h3>{{ __('ui.Nazione') }}</h3>
                             <div class="selector-head">
-                                <select class="user-chosen-select form-control" wire:model.live='filteredByNation'>
+                                <select class="user-chosen-select form-control form-group-nation" wire:model.live='filteredByNation'>
                                     <option value="all">{{ __('ui.Seleziona una nazione') }}</option>
                                     @forelse ($nations as $nation)
                                     <option value="{{ $nation['name']['common'] }}">{{ $nation['name']['common'] }}
@@ -72,9 +72,9 @@
                     <div class="single-widget range">
                         <h3>{{ __('ui.Prezzo') }}</h3>
                         <input type="range" class="form-range" name="range2" step="1" min="{{$minPrice}}" max="{{$maxPrice}}" wire:model.live='price' id="rangeInput2">
-                        <div class="range-inner">
-                            <label>€</label>
-                            <input class="form-control-pers" type="number" id="rangePrimary" wire:model.live='price' />
+                        <div class="range-inner form-control">
+                            <label class="ms-1">€</label>
+                            <input class="form-control-pers" type="number" id="rangePrimary" wire:model.live='price'/>
                         </div>
                     </div>
                     <!-- End Single Widget -->
@@ -82,20 +82,20 @@
                     <div class="single-widget condition">
                         <h3>{{ __('ui.Condizione') }}</h3>
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault1">
-                            <label class="form-check-label" for="flexCheckDefault1">
+                            <input class="catList" type="radio" value="Tutte" name="condition" wire:model.live="condition" id="flexCheckDefault">
+                            <label class="{{$condition == 'Tutte' ? 'radio-label-active' : 'radio-label'}}" for="flexCheckDefault">
                                 {{ __('ui.Tutte') }}
                             </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault2">
-                            <label class="form-check-label" for="flexCheckDefault2">
+                            <input class="catList" type="radio" value="Nuovo" name="condition" wire:model.live="condition" id="flexCheckDefault1">
+                            <label class="{{$condition == 'Nuovo' ? 'radio-label-active' : 'radio-label'}}" for="flexCheckDefault1">
                                 {{ __('ui.Nuovo') }}
                             </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault3">
-                            <label class="form-check-label" for="flexCheckDefault3">
+                            <input class="catList" type="radio" value="Usato" name="condition" wire:model.live="condition" id="flexCheckDefault2">
+                            <label class="{{$condition == 'Usato' ? 'radio-label-active' : 'radio-label'}}" for="flexCheckDefault2">
                                 {{ __('ui.Usato') }}
                             </label>
                         </div>

@@ -3859,10 +3859,26 @@ blockquote .shape {
   /* Microsoft Edge */
   color: var(--secondary-color);
 }
-
+.form-group-nation{
+  cursor: pointer !important;
+}
 .category-sidebar .single-widget.range .range-inner {
   position: relative;
   padding-left: 15px;
+}
+.range-inner input{
+  cursor: text !important;
+}
+/* Per WebKit (Chrome, Safari, Opera) */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Per Firefox */
+input[type="number"] {
+    -moz-appearance: textfield;
 }
 
 .category-sidebar .single-widget.range label {
