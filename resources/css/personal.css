@@ -655,6 +655,7 @@ html {
 .button-home:hover::after {
   height: 410px;
   width: 410px;
+
 }
 
 .button-home:hover a {
@@ -676,6 +677,7 @@ html {
 .button-home>a:hover,
 .button-home:hover {
   color: #335c67;
+  border: 1px solid #335c67;
 }
 
 .bg-custom-all {
