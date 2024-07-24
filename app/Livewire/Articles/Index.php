@@ -33,9 +33,9 @@ class Index extends Component
         });
     
         if ($query) {
-            if(Article::where('title','LIKE', '%'. $query . '%')){
+            if(Article::where('title','LIKE', '%'. $query . '%')->first() || Article::where('body','LIKE', '%'. $query . '%')->first()){
                 $this->search = $query;
-            } else if(Category::where('name','LIKE', '%'. $query . '%')){
+            } else if(Category::where('name','LIKE', '%'. $query . '%')->first()){
                 $category = Category::where('name','LIKE', '%'. $query . '%')->first();
                 $this->filteredByCategory = $category->id;
             }
@@ -58,7 +58,7 @@ class Index extends Component
 
         $articles =  Article::orderBy('created_at', 'desc')
         ->when($this->filteredByCategory > 0, fn(Builder $query) => $query->where('category_id', $this->filteredByCategory))
-        ->when($this->search !== '', fn(Builder $query) => $query->where('title','LIKE', '%'. $this->search . '%'))
+        ->when($this->search !== '', fn(Builder $query) => $query->where('title','LIKE', '%'. $this->search . '%'))->orWhere('body','LIKE', '%'. $this->search . '%')
         ->when($this->filteredByNation !== null && $this->filteredByNation !== 'all', fn(Builder $query) => $query->where('country', $this->filteredByNation))
         ->when($this->price, fn(Builder $query) => $query->where('price', '<=', $this->price))
         ->where('status',true)
