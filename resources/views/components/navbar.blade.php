@@ -161,47 +161,52 @@
                                     </ul>
 
                                     <div class="d-flex justify-content-center p-3 ">
-                                        <div class="button-home ">
-                                            @auth
-                                            <a href="{{ route('articles.create') }}" class="a-button">
-                                                {{ __('ui.Crea un Annuncio') }}</a>
-                                            @else
-                                            <a href="{{ route('login') }}" class="a-button">
-                                                {{ __('ui.Crea un Annuncio') }}</a>
-                                            @endauth
-                                        </div>
-
+                                        @auth
+                                        <a href="{{ route('articles.create') }}" class="a-button">
+                                            <div class="button-home ">
+                                                {{ __('ui.Crea un Annuncio') }}
+                                            </div>
+                                        </a>
+                                        @else
+                                        <a href="{{ route('login') }}" class="a-button">
+                                            <div class="button-home ">
+                                                {{ __('ui.Crea un Annuncio') }}
+                                            </div>
+                                        </a>
                                     </div>
+                                    @endauth
 
-
-                                    <div class="dropdown pt-2">
-                                        <button class="btn">
-                                            <span class="material-symbols-outlined">
-                                                language
-                                            </span>
-
-                                        </button>
-
-
-                                        <ul class="dropdown-menu rounded-2 min-width-custom" aria-labelledby="Dropdown">
-                                            <li class="dropdown-item">
-                                                <x-_locale lang="it" />
-                                            </li>
-                                            <li class="dropdown-item">
-                                                <x-_locale lang="en" />
-                                            </li>
-                                            <li class="dropdown-item">
-                                                <x-_locale lang="fr" />
-                                            </li>
-                                        </ul>
-                                    </div>
                     </div>
 
-                </nav> <!-- navbar -->
+
+                    <div class="dropdown pt-2">
+                        <button class="btn">
+                            <span class="material-symbols-outlined">
+                                language
+                            </span>
+
+                        </button>
+
+
+                        <ul class="dropdown-menu rounded-2 min-width-custom" aria-labelledby="Dropdown">
+                            <li class="dropdown-item">
+                                <x-_locale lang="it" />
+                            </li>
+                            <li class="dropdown-item">
+                                <x-_locale lang="en" />
+                            </li>
+                            <li class="dropdown-item">
+                                <x-_locale lang="fr" />
+                            </li>
+                        </ul>
+                    </div>
             </div>
 
+            </nav> <!-- navbar -->
         </div>
-    </div> <!-- row -->
+
+    </div>
+</div> <!-- row -->
 
 
 </div> <!-- container -->
