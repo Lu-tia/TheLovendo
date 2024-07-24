@@ -11,7 +11,7 @@
                             @if (session()->has('message'))
                             <div class="custom-alert d-flex justify-content-between align-items-center">
                                 <p>{{ session('message') }}</p>
-                                <form action="{{ route('rollback') }}" method="post" class="mt-2">
+                                <form action="{{ route('rollback') }}" method="post" class="mt-2 button">
                                     @csrf
                                     @method('PATCH')
                                     <button class="btn btn-danger-custom" type="submit">{{ __('ui.Annulla ultima modifica') }}</button>
@@ -46,35 +46,35 @@
                                                                     <h5>Valutazioni</h5>
                                                                     <div class="row justify-content-center mt-2">
                                                                         <div class="col-2">
-                                                                            <div class="text-center mx-auto {{$image->adult}}">
+                                                                            <div class="text-center mx-auto {{$image->adult ?? ''}}">
                                                                             </div>
                                                                         </div>
                                                                         <div class="col-10">Contenuto per adulti</div>
                                                                     </div>
                                                                     <div class="row justify-content-center">
                                                                         <div class="col-2">
-                                                                            <div class="text-center mx-auto {{$image->violence}}">
+                                                                            <div class="text-center mx-auto {{$image->violence ?? ''}}">
                                                                             </div>
                                                                         </div>
                                                                         <div class="col-10">Violenza</div>
                                                                     </div>
                                                                     <div class="row justify-content-center">
                                                                         <div class="col-2">
-                                                                            <div class="text-center mx-auto {{$image->spoof}}">
+                                                                            <div class="text-center mx-auto {{$image->spoof ?? ''}}">
                                                                             </div>
                                                                         </div>
                                                                         <div class="col-10">Contraffazione</div>
                                                                     </div>
                                                                     <div class="row justify-content-center">
                                                                         <div class="col-2">
-                                                                            <div class="text-center mx-auto {{$image->racy}}">
+                                                                            <div class="text-center mx-auto {{$image->racy ?? ''}}">
                                                                             </div>
                                                                         </div>
                                                                         <div class="col-10">Razzismo</div>
                                                                     </div>
                                                                     <div class="row justify-content-center">
                                                                         <div class="col-2">
-                                                                            <div class="text-center mx-auto {{$image->medical}}">
+                                                                            <div class="text-center mx-auto {{$image->medical ?? ''}}">
                                                                             </div>
                                                                         </div>
                                                                         <div class="col-10">Contenuti sensibili</div>
