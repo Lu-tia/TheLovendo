@@ -47,6 +47,7 @@ Index Of css
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -54,7 +55,7 @@ body {
   font-weight: normal;
   font-style: normal;
   color: #888;
-  overflow-x: hidden;
+
   font-size: 15px;
 }
 
@@ -1567,7 +1568,7 @@ ol {
   top: -7px;
 }
 
-@media only screen and (min-width: 768px) and (max-width: 991px) {
+@media only screen and (min-width: 315px) and (max-width: 991px) {
   .navbar-collapse {
     position: absolute;
     top: 66px !important;
@@ -1587,13 +1588,15 @@ ol {
 @media (max-width: 767px) {
   .navbar-collapse {
     position: absolute;
+    border-radius: 5px;
+    border: 1px solid #89a9b233;
     top: 165% !important;
     left: 0;
     width: 100%;
     background-color: #fff;
     z-index: 9;
     -webkit-box-shadow: 0px 15px 20px 0px rgba(0, 0, 0, 0.1);
-    box-shadow: 0px 15px 20px 0px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 15px 20px 0px rgba(0, 0, 0, 0.156);
     padding: 10px 20px;
     max-height: 350px;
     overflow-y: scroll;
@@ -2024,8 +2027,6 @@ ol {
   margin-top: 100px;
   background: #fff;
   border-radius: 6px;
-  padding: 35px 40px;
-  padding-right: 55px;
   width: 100%;
   border: 1px solid #eee;
   position: relative;
@@ -2084,8 +2085,7 @@ ol {
   margin-top: 60px;
   background: #fff3;
   border-radius: 6px;
-  padding: 30px;
-  padding-right: 45px;
+  padding:25px;
   position: relative;
 }
 
@@ -2308,6 +2308,10 @@ ol {
 
 .testimonials .section-title p {
   color: #fff;
+}
+
+.single-testimonial {
+  border-radius: 5px;
 }
 
 .testimonials .testimonial-slider {
@@ -7476,10 +7480,10 @@ blockquote .shape {
   }
 
   .hero-area .search-form {
-    margin-top: 30px;
+    margin-top: 45px;
     background: #fff3;
     border-radius: 6px;
-    padding: 40px;
+    padding-bottom: 12px;
   }
 
   .hero-area .search-form .search-input {
@@ -8799,10 +8803,16 @@ blockquote .shape {
 ========================================*/
 .footer {
   background: var(--secondary-color);
-  
+
 }
-.footer h2, p ,h3, a,li {
+
+.footer h2,
+p,
+h3,
+a,
+li {
   position: relative;
+
 }
 
 .aFooter {
@@ -9313,6 +9323,9 @@ body {
     width: 290px;
     margin: 30px auto;
   }
+  .info-inner{
+    bottom: 12px;
+  }
 }
 
 .el-wrapper:hover .h-bg {
@@ -9369,6 +9382,8 @@ body {
 }
 
 .el-wrapper .img {
+  height: 240px;
+  width: 200px;
   padding: 20px 0;
   -webkit-transition: all 800ms cubic-bezier(0, 0, 0.18, 1);
   -moz-transition: all 800ms cubic-bezier(0, 0, 0.18, 1);
@@ -9420,6 +9435,11 @@ body {
   position: absolute;
   width: 100%;
   bottom: 25px;
+}
+@media (max-width: 767px) {
+  .info-inner{
+    bottom: 12px;
+  }
 }
 
 .info-inner .p-name,
@@ -9563,6 +9583,9 @@ body {
   font-size: 18px;
 }
 
+
+
+
 /* text */
 .text {
   position: absolute;
@@ -9574,6 +9597,7 @@ body {
   font-weight: 500;
   transition-duration: .3s;
 }
+
 
 /* hover effect on button width */
 .Btn:hover {

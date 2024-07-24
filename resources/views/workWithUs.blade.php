@@ -45,21 +45,21 @@
                                     <div class="col-12">
                                         <div class="form-group mx-4">
                                             <label class="label-custom">{{ __('ui.Nome') }}<span>*</span></label>
-                                            <input name="nome" type="text" class="form-control border-none"
-                                                placeholder="{{ __('ui.Nome') }}" value="{{ old('nome') }}">
+                                            <input name="nome" disabled type="text" class="form-control border-none"
+                                                placeholder="{{ __('ui.Nome') }}" value="{{ auth()->user()->firstName }}">
                                         </div>
                                     </div>
                                     <div class="col-12">
                                         <div class="form-group mx-4">
                                             <label class="label-custom">{{ __('ui.Cognome') }}<span>*</span></label>
-                                            <input name="cognome" type="text" class="form-control work-with-us-custom"
-                                                placeholder="{{ __('ui.Cognome') }}" value="{{ old('cognome') }}">
+                                            <input name="cognome" disabled type="text" class="form-control work-with-us-custom"
+                                                placeholder="{{ __('ui.Cognome') }}" value="{{ auth()->user()->lastName }}">
                                         </div>
                                     </div>
                                     <div class="col-12">
                                         <div class="form-group mx-4">
                                             <label class="label-custom" for="email">{{ __('ui.Email') }}*</label>
-                                            <input disabled type="email" class="form-control" id="email" name="email"
+                                            <input  type="email" disabled class="form-control" id="email" name="email"
                                                 placeholder="{{ __('ui.Mail') }}" value="{{ auth()->user()->email }}">
                                         </div>
                                     </div>
@@ -68,13 +68,6 @@
                                             <label class="label-custom">{{ __('ui.Età') }}<span>*</span></label>
                                             <input name="eta" type="number" class="form-control"
                                                 placeholder="{{ __('ui.Età') }}" value="{{ old('eta') }}">
-                                        </div>
-                                    </div>
-                                    <div class="col-6 me-4">
-                                        <div class="form-group">
-                                            <label class="label-custom">{{ __('ui.Città') }}<span>*</span></label>
-                                            <input name="citta" type="text" class="form-control"
-                                                placeholder="{{ __('ui.Città') }}" value="{{ old('citta') }}">
                                         </div>
                                     </div>
                                     <div class="col-10 mx-4 mb-3">
@@ -95,4 +88,5 @@
             </div>
         </div>
     </section>
+      
 </x-layouts.main>

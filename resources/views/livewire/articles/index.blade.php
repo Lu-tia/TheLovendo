@@ -71,8 +71,7 @@
                     <!-- Start Single Widget -->
                     <div class="single-widget range">
                         <h3>{{ __('ui.Prezzo') }}</h3>
-                        <input type="range" class="form-range" name="range2" step="1" min="1" max="10000"
-                            wire:model.live='price' id="rangeInput2">
+                        <input type="range" class="form-range" name="range2" step="1" min="{{$minPrice}}" max="{{$maxPrice}}" wire:model.live='price' id="rangeInput2">
                         <div class="range-inner">
                             <label>€</label>
                             <input class="form-control-pers" type="number" id="rangePrimary" wire:model.live='price' />

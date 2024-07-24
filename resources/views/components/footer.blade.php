@@ -1,36 +1,30 @@
 <footer class="footer">
     <div class="container">
         <div class="row">
-            <div class="col-lg-6 col-md-6 col-12 mt-4 pt-5 footer-h">
-                <div>
-                    <h2 class="footer-h">{{ __('ui.Lavora con Noi') }}</h2>
-                    <p class="pb-3">
-                        Unisciti nella nostra community.
-                    </p>
-                    <button class="button-yellow"> <a href="{{ route('workWithUs') }}" class="a-foot">Lavora
-                            con
-                            noi</a>
-                    </button>
-                </div>
+            <div class="col-lg-6 col-md-4 col-sm-6 mt-4 pt-5 footer-h">
+                <h2 class="footer-h">{{ __('ui.Lavora con Noi') }}</h2>
+                <p class="pb-3">
+                    Unisciti nella nostra community.
+                </p>
+                <button class="button-yellow"> <a href="{{ route('workWithUs') }}" class="a-foot">Lavora
+                        con
+                        noi</a>
+                </button>
             </div>
-            <div class="col-lg-3 col-md-6 col-12 mt-4 pt-5">
+            <div class="col-lg-3 col-md-4 col-sm-3 mt-4 pt-5">
                 <h3 class="footer-h">Link veloci</h3>
                 <ul>
                     <li><a href="{{ route('articles.index') }}" class="aFooter">Articoli</a></li>
                     @guest
-                    <li><a href="#how-it-work" class="aFooter">Come funziona</a></li>
-                    <li><a href="" class="aFooter">Login</a></li>
-                    <li><a href="" class="aFooter">Signup</a></li>
+                        <li><a href="#how-it-work" class="aFooter">Come funziona</a></li>
+                        <li><a href="{{ route('login') }}" class="aFooter">Login</a></li>
+                        <li><a href="{{ route('register') }}" class="aFooter">Signup</a></li>
                     @endguest
-
-
-
-
                 </ul>
             </div>
-            <div class="col-lg-3 col-md-6 col-12 mt-4 pt-5">
+            <div class="col-lg-3 col-md-4 col-sm-3 mt-4 pt-5">
                 <h3 class="footer-h">Contatti</h3>
-                <ul class="footer-cont">
+                <ul class="aFooter">
                     <li>Email: <p>#########</p>
                     </li>
                     <li>Address: <p>#########</p>

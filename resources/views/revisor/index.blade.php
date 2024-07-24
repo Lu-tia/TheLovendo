@@ -7,15 +7,14 @@
                 </div>
                 <div class="col-lg-8 revisor-container">
                     <div class="row h-100">
-                        <div class="col-12 ">
+                        <div class="col-12">
                             @if (session()->has('message'))
                             <div class="custom-alert d-flex justify-content-between align-items-center">
                                 <p>{{ session('message') }}</p>
                                 <form action="{{ route('rollback') }}" method="post" class="mt-2">
                                     @csrf
                                     @method('PATCH')
-                                    <button class="btn btn-danger-custom" type="submit">{{ __('ui.Annulla ultima
-                                        modifica') }}</button>
+                                    <button class="btn btn-danger-custom" type="submit">{{ __('ui.Annulla ultima modifica') }}</button>
                                 </form>
                             </div>
                             @endif
@@ -30,7 +29,7 @@
 
                         @if ($article_to_check)
 
-                        <div class="col-6">
+                        <div class="col-6 my-5">
                             <div
                                 class="article-image {{ $article_to_check->images->count() == 0 ? 'h-100 d-flex align-items-center justify-content-center' : '' }} ">
                                 <div id="carouselExampleIndicators" class="carousel slide">
@@ -49,6 +48,7 @@
                                                 <p>No labels</p>
                                                 @endif
                                             </div>
+                                            
                                         </div>
                                         @endforeach
                                         @else
@@ -71,7 +71,7 @@
                             </div>
                         </div>
 
-                        <div class="col-6 ">
+                        <div class="col-6 my-5">
                             <div class="article-details .descriptionCard">
                                 <h3>{{ $article_to_check->title }}</h3>
                                 <p>{{ $article_to_check->body }}</p>
@@ -80,58 +80,59 @@
                                     {{ $article_to_check->user->lastName }}</p>
                             </div>
                             <div class="article-actions d-flex justify-content-evenly">
-                                <form action="{{ route('accept', ['article' => $article_to_check]) }}" method="post">
+                                <form action="{{ route('accept', ['article' => $article_to_check]) }}" method="post" class="button">
                                     @csrf
                                     @method('PATCH')
-                                    <button class="btn btn-success-custom me-3" type="submit">
+                                    <button class="btn me-3" type="submit">
                                         <span>{{ __('ui.ACCETTA') }}</span>
                                     </button>
                                 </form>
-                                <form action="{{ route('reject', ['article' => $article_to_check]) }}" method="post">
+                                <form action="{{ route('reject', ['article' => $article_to_check]) }}" method="post"  class="button">
                                     @csrf
                                     @method('PATCH')
-                                    <button class="btn btn-danger-custom" type="submit">
+                                    <button class="btn btn-danger" type="submit">
                                         <span>{{ __('ui.RIFIUTA') }}</span>
                                     </button>
                                 </form>
                             </div>
+                            <hr>
                             <div>
-                                <div>
-                                    <h5>Ratings</h5>
-                                    <div class="row justify-content-center">
+                                <div class="text-end pe-1">
+                                    <h5>Valutazioni</h5>
+                                    <div class="row justify-content-center mt-2">
                                         <div class="col-2">
-                                            <div class="text-center mx-auto" {{$image->adult}}>
+                                            <div class="text-center mx-auto {{$image->adult}}">
                                             </div>
                                         </div>
-                                        <div class="col-10">adult</div>
+                                        <div class="col-10">Contenuto per adulti</div>
                                     </div>
                                     <div class="row justify-content-center">
                                         <div class="col-2">
-                                            <div class="text-center mx-auto" {{$image->violence}}>
+                                            <div class="text-center mx-auto {{$image->violence}}">
                                             </div>
                                         </div>
-                                        <div class="col-10">violence</div>
+                                        <div class="col-10">Violenza</div>
                                     </div>
                                     <div class="row justify-content-center">
                                         <div class="col-2">
-                                            <div class="text-center mx-auto" {{$image->spoof}}>
+                                            <div class="text-center mx-auto {{$image->spoof}}">
                                             </div>
                                         </div>
-                                        <div class="col-10">spoof</div>
+                                        <div class="col-10">Contraffazione</div>
                                     </div>
                                     <div class="row justify-content-center">
                                         <div class="col-2">
-                                            <div class="text-center mx-auto" {{$image->racy}}>
+                                            <div class="text-center mx-auto {{$image->racy}}">
                                             </div>
                                         </div>
-                                        <div class="col-10">racy</div>
+                                        <div class="col-10">Razzismo</div>
                                     </div>
                                     <div class="row justify-content-center">
                                         <div class="col-2">
-                                            <div class="text-center mx-auto" {{$image->medical}}>
+                                            <div class="text-center mx-auto {{$image->medical}}">
                                             </div>
                                         </div>
-                                        <div class="col-10">medical</div>
+                                        <div class="col-10">Contenuti sensibili</div>
                                     </div>
                                 </div>
                             </div>

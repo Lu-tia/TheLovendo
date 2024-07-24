@@ -8,18 +8,13 @@
                         <div class="product-images">
                             <div id="carouselExampleIndicators" class="carousel slide">
                                 @if ($article->images->count() > 0)
-                                    <div class="carousel-inner">
-                                        <div class="carousel-item active">
-                                            <img src="{{ Storage::url($article->images->first()->path) }}"
-                                                class="d-block " alt="...">
-                                        </div>
-                                        @foreach ($article->images->slice(1) as $key => $image)
-                                            <div class="carousel-item">
-                                                <img src="{{ Storage::url($image->path) }}" class="d-block"
-                                                    alt="...">
-                                            </div>
-                                        @endforeach
+                                <div class="carousel-inner">
+                                    @foreach ($article->images as $key => $image)
+                                    <div class="carousel-item {{ $key == 0 ? 'active' : '' }}">
+                                        <img src="{{ $image->getUrl(300, 300) }}" class="d-block" alt="...">
                                     </div>
+                                    @endforeach
+                                </div>    
                                     @if ($article->images->count() > 1)
                                         <button class="carousel-control-prev" type="button"
                                             data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
@@ -32,6 +27,7 @@
                                             <span class="visually-hidden">{{ __('ui.Successivo') }}</span>
                                         </button>
                                     @endif
+                                    
 
                                     @else
                                     <img src="https://picsum.photos/300" alt="Nessuna foto inserita dall'utente">
@@ -56,6 +52,16 @@
                                 </ul>
                             </div>
                             <div class="list-info">
+                                <div class="contact-info">
+                                    <ul>
+                                        <li>
+                                            <button type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop" class="btn call">                           
+                                                    <i class="lni lni-envelope"></i>
+                                                    Contatta il venditore
+                                            </button>
+                                        </li>
+                                    </ul>
+                                </div>
                                 <div class="social-share">
                                     <h4>{{ __('ui.Condividi su') }}</h4>
                                     <ul class="d-flex">
@@ -95,9 +101,9 @@
                             <div class="single-block author">
                                 <h3>{{ __('ui.Autore') }}</h3>
                                 <div class="content">
-                                    <img src="{{$article->user->avatar ?? asset('assets/images/placeholder/200x200.png')}}"
+                                    <img src="{{Storage::url($article->user->avatar) ?? asset('assets/images/placeholder/200x200.png')}}"
                                         alt="#">
-                                    <h4>{{ $article->user->fistName }} {{ $article->user->lastName }}</h4>
+                                    <h4>{{ $article->user->firstName }} {{ $article->user->lastName }}</h4>
                                     <a href="javascript:void(0)" class="see-all"></a>
                                 </div>
                             </div>
@@ -108,4 +114,40 @@
             </div>
     </section>
     <!-- End Item Details -->
+
+      {{-- MODALE CONTATTAMI --}}
+      @auth
+      <div class="modal fade " id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="staticBackdropLabel">Contatta il venditore</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body px-5">
+              <form action="{{route('contactSeller',['article' => $article->title])}}" method="post">
+                @csrf
+                <div class="col-12">
+                   <div>
+                    <h5>Nome Completo</h5>
+                    <p class="form-control mt-2">{{auth()->user()->firstName}} {{auth()->user()->lastName}}</p>
+                   </div>
+                   <div class="mt-2">
+                    <h5>Email</h5>
+                    <p class="form-control mt-2">{{auth()->user()->email}}</p>
+                   </div>
+                </div>    
+            </div>
+            <div class="col-12 p-5">
+                <label for="message">Inserisci qui un messaggio per il venditore</label>
+                <textarea name="message" required class="form-control" id="message" cols="30" rows="10"></textarea>
+            </div>
+            <div class="modal-footer button">
+              <button type="submit" class="btn ">Invia</button>
+            </div>
+        </form>
+          </div>
+        </div>
+      </div>
+      @endauth
 </x-layouts.main>

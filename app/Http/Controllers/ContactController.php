@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Mail\ApplicationMail;
+use App\Mail\ContactSeller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 
@@ -16,11 +17,7 @@ class ContactController extends Controller
     public function sendApplication(Request $request)
     {
         $request->validate([
-            'nome' => 'required|string|max:255',
-            'cognome' => 'required|string|max:255',
-            'email' => 'required|string|max:255',
             'eta' => 'required|integer|min:18|max:100',
-            'citta' => 'required|string|max:255',
             'curriculum' => 'required|file|mimes:pdf,doc,docx|max:10240', // 10MB massimo
         ]);
 
@@ -28,11 +25,10 @@ class ContactController extends Controller
         $curriculumPath = $request->file('curriculum')->store('public/curricula');
 
         $details = [
-            'nome' => $request->nome,
-            'cognome' => $request->cognome,
-            'email' => $request->email,
+            'nome' => auth()->user()->firstName,
+            'cognome' => auth()->user()->lastName,
+            'email' => auth()->user()->email,
             'eta' => $request->eta,
-            'citta' => $request->citta,
             'curriculum' => $curriculumPath,
         ];
 
@@ -40,5 +36,25 @@ class ContactController extends Controller
 
     session()->flash('success', 'Candidatura inviata con successo!');
     return redirect()->route('workWithUs');
+    }
+
+    public function contactSeller(Request $request,$article)
+    {
+        $request->validate([
+            'message' => 'required|string|max:255',
+        ]);
+
+        $details = [
+            'message' => $request->message,
+            'firstName' => auth()->user()->firstName,
+            'lastName' => auth()->user()->lastName,
+            'email' => auth()->user()->email,
+            'article' => $article
+        ];
+
+        Mail::to('application@thelovendo.com')->send(new ContactSeller($details));
+
+    session()->flash('success', 'Mesaggio inviato con successo!');
+    return redirect()->back();
     }
 }
