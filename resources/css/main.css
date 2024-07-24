@@ -9136,6 +9136,7 @@ li {
 
 .user-info h3 {
   font-weight: 400;
+  text-transform: capitalize;
 }
 
 .user-info img {

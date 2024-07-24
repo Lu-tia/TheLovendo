@@ -25,7 +25,11 @@
                                         <a href="{{ route('users.dashboard') }}" class="sub-menu-link">
                                             <img src="{{ asset('/assets/profile/profile.png') }}" alt="">
                                             <p>{{ __('ui.Profilo') }}</p>
-                                            <span>></span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50"
+                                                fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                                                <path fill-rule="evenodd"
+                                                    d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8" />
+                                            </svg>
                                         </a>
                                         @if (auth()->user()->is_revisor == true)
                                             <a href="{{ route('revisor.index') }}" class="sub-menu-link">
@@ -35,7 +39,11 @@
                                                         <span class="loader-navbar">{{ $articles_to_accept_count }}</span>
                                                     @endif
                                                 </p>
-                                                <span>></span>
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50"
+                                                    fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                                                    <path fill-rule="evenodd"
+                                                        d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8" />
+                                                </svg>
                                             </a>
                                         @endif
                                         <form action="{{ route('logout') }}" method="post">
