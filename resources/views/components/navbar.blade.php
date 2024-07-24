@@ -105,8 +105,7 @@
                         </ul>
 
                         @guest
-<<<<<<< HEAD
-                        <ul id="nav" class="d-flex d-inline justify-content-center">
+                        <<<<<<< HEAD <ul id="nav" class="d-flex d-inline justify-content-center">
                             <li class="nav-item">
                                 <a href="{{ route('login') }}">
                                     <button class="Btn">
@@ -120,7 +119,7 @@
                                     </button>
                                 </a>
                             </li>
-=======
+                            =======
                             <ul id="nav" class="d-flex d-inline justify-content-center">
                                 <li class="nav-item">
                                     <a href="{{ route('login') }}">
@@ -134,96 +133,68 @@
                                         </button>
                                     </a>
                                 </li>
->>>>>>> 3faa4c7966e8fe15a424a6f9a38b20da5879aaf6
+                                >>>>>>> 3faa4c7966e8fe15a424a6f9a38b20da5879aaf6
 
-
-                            {{-- <ul id="nav" class="d-flex d-inline justify-content-center p-2">
-                                <li class="nav-item me-3">
-
-                                    <a class="dd-menu collapsed text-black fw-medium" href="{{ route('login') }}"
-                                        aria-label="Toggle navigation"> <i class="lni lni-user"></i></a>
-                                </li> --}}
 
                                 {{-- <ul id="nav" class="d-flex d-inline justify-content-center p-2">
                                     <li class="nav-item me-3">
-                                        <i class="lni lni-enter"></i>
+
                                         <a class="dd-menu collapsed text-black fw-medium" href="{{ route('login') }}"
-                                            aria-label="Toggle navigation">{{ __('ui.Accedi') }}</a>
-                                    </li>
-                                    <li class="nav-item me-3">
-                                        <i class="lni lni-user"></i>
-                                        <a class="dd-menu collapsed text-black fw-medium" href="{{ route('register') }}"
-                                            aria-label="Toggle navigation">{{ __('ui.Registrati') }}</a>
+                                            aria-label="Toggle navigation"> <i class="lni lni-user"></i></a>
                                     </li> --}}
-                                    @endguest
 
-<<<<<<< HEAD
-                                </ul>
+                                    {{-- <ul id="nav" class="d-flex d-inline justify-content-center p-2">
+                                        <li class="nav-item me-3">
+                                            <i class="lni lni-enter"></i>
+                                            <a class="dd-menu collapsed text-black fw-medium"
+                                                href="{{ route('login') }}" aria-label="Toggle navigation">{{
+                                                __('ui.Accedi') }}</a>
+                                        </li>
+                                        <li class="nav-item me-3">
+                                            <i class="lni lni-user"></i>
+                                            <a class="dd-menu collapsed text-black fw-medium"
+                                                href="{{ route('register') }}" aria-label="Toggle navigation">{{
+                                                __('ui.Registrati') }}</a>
+                                        </li> --}}
+                                        @endguest
 
-                                <div class="d-flex justify-content-center p-3 ">
-                                    <div class="button-home ">
-                                        @auth
-                                        <a href="{{ route('articles.create') }}" class="a-button">
-                                            {{ __('ui.Crea un Annuncio') }}</a>
-                                        @else
-                                        <a href="{{ route('login') }}" class="a-button">
-                                            {{ __('ui.Crea un Annuncio') }}</a>
-                                        @endauth
+                                    </ul>
+
+                                    <div class="d-flex justify-content-center p-3 ">
+                                        <div class="button-home ">
+                                            @auth
+                                            <a href="{{ route('articles.create') }}" class="a-button">
+                                                {{ __('ui.Crea un Annuncio') }}</a>
+                                            @else
+                                            <a href="{{ route('login') }}" class="a-button">
+                                                {{ __('ui.Crea un Annuncio') }}</a>
+                                            @endauth
+                                        </div>
+
                                     </div>
 
-                                </div>
-=======
-                                {{-- <ul id="nav" class="d-flex d-inline justify-content-center p-2">
-                                <li class="nav-item me-3">
-                                    <i class="lni lni-enter"></i>
-                                    <a class="dd-menu collapsed text-black fw-medium" href="{{ route('login') }}"
-                                        aria-label="Toggle navigation">{{ __('ui.Accedi') }}</a>
-                                </li>
-                                <li class="nav-item me-3">
-                                    <i class="lni lni-user"></i>
-                                    <a class="dd-menu collapsed text-black fw-medium" href="{{ route('register') }}"
-                                        aria-label="Toggle navigation">{{ __('ui.Registrati') }}</a>
-                                </li> --}}
-                            </ul>
-                        @endguest
 
-                        <div class="d-flex justify-content-center p-3 ">
-                            <div class="button-home ">
-                                @auth
-                                    <a href="{{ route('articles.create') }}" class="a-button">
-                                        {{ __('ui.Crea un Annuncio') }}
-                                    </a>
-                                @else
-                                    <a href="{{ route('login') }}" class="a-button">
-                                        {{ __('ui.Crea un Annuncio') }}</a>
-                                @endauth
-                            </div>
+                                    <div class="dropdown pt-2">
+                                        <button class="btn">
+                                            <span class="material-symbols-outlined">
+                                                language
+                                            </span>
 
-                        </div>
->>>>>>> 3faa4c7966e8fe15a424a6f9a38b20da5879aaf6
+                                        </button>
 
 
-                                <div class="dropdown pt-2">
-                                    <button class="btn">
-                                        <span class="material-symbols-outlined">
-                                            language
-                                        </span>
-
-                                    </button>
-
-
-                                    <ul class="dropdown-menu rounded-2 min-width-custom" aria-labelledby="Dropdown">
-                                        <li class="dropdown-item">
-                                            <x-_locale lang="it" />
-                                        </li>
-                                        <li class="dropdown-item">
-                                            <x-_locale lang="en" />
-                                        </li>
-                                        <li class="dropdown-item">
-                                            <x-_locale lang="fr" />
-                                        </li>
-                                    </ul>
-                                </div>
+                                        <ul class="dropdown-menu rounded-2 min-width-custom" aria-labelledby="Dropdown">
+                                            <li class="dropdown-item">
+                                                <x-_locale lang="it" />
+                                            </li>
+                                            <li class="dropdown-item">
+                                                <x-_locale lang="en" />
+                                            </li>
+                                            <li class="dropdown-item">
+                                                <x-_locale lang="fr" />
+                                            </li>
+                                        </ul>
+                                    </div>
                     </div>
 
                 </nav> <!-- navbar -->
