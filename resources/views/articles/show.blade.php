@@ -8,10 +8,13 @@
                         <div class="product-images">
                             <div id="carouselExampleIndicators" class="carousel slide">
                                 @if ($article->images->count() > 0)
-                                @foreach ($article->images as $key => $image)
-                                <div class="carousel-item {{ $key == 0 ? 'active' : '' }}">
-                                    <img src="{{ $image->getUrl(300, 300) }}" class="d-block w-100" alt="...">
-                                </div>
+                                <div class="carousel-inner">
+                                    @foreach ($article->images as $key => $image)
+                                    <div class="carousel-item {{ $key == 0 ? 'active' : '' }}">
+                                        <img src="{{ $image->getUrl(300, 300) }}" class="d-block" alt="...">
+                                    </div>
+                                    @endforeach
+                                </div>    
                                     @if ($article->images->count() > 1)
                                         <button class="carousel-control-prev" type="button"
                                             data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
@@ -24,7 +27,7 @@
                                             <span class="visually-hidden">{{ __('ui.Successivo') }}</span>
                                         </button>
                                     @endif
-                                    @endforeach
+                                    
 
                                     @else
                                     <img src="https://picsum.photos/300" alt="Nessuna foto inserita dall'utente">
