@@ -25,14 +25,18 @@ class Index extends Component
     public $minPrice;
     public $maxPrice;
 
-    public function mount(){
+    public function mount($query = null){
         $this->categories = Category::all();
         $this->nations = Http::get('https://restcountries.com/v3.1/all')->json();
         usort($this->nations, function($a, $b) {
             return strcmp($a['name']['common'], $b['name']['common']);
         });
-        
+    
+        if ($query) {
+            $this->search = $query;
+        }
     }
+    
 
 
     public function setPage($url)
