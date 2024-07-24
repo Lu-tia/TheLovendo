@@ -33,7 +33,12 @@ class Index extends Component
         });
     
         if ($query) {
-            $this->search = $query;
+            if(Article::where('title','LIKE', '%'. $query . '%')){
+                $this->search = $query;
+            } else if(Category::where('name','LIKE', '%'. $query . '%')){
+                $category = Category::where('name','LIKE', '%'. $query . '%')->first();
+                $this->filteredByCategory = $category->id;
+            }
         }
     }
     
