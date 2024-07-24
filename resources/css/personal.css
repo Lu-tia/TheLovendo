@@ -605,7 +605,7 @@
   font-size: 17px;
   border: 1px solid;
   font-family: inherit;
-  color: #ffb300;
+  color: white;
   z-index: 1;
 }
 
@@ -662,4 +662,8 @@
 
 .bg-custom-all {
   background-color: #335c67;
+}
+
+.min-width-custom {
+  min-width: 20px;
 }
