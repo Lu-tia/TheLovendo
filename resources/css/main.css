@@ -1998,11 +1998,8 @@ ol {
   }
 }
 
-@media only screen and (min-width: 1281px) {
-  .hero-area {
-    height: 100vh;
-  }
-}
+
+
 
 @media only screen and (max-width: 600px) {
   .hero-area {
