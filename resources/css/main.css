@@ -71,6 +71,10 @@ p {
   padding: 0;
 }
 
+.prova {
+  z-index: 99999;
+}
+
 .navbar-toggler:focus,
 a:focus,
 input:focus,
@@ -1976,11 +1980,17 @@ ol {
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  height: 100vh;
+  
   z-index: 0;
   padding-top: 300px;
 
 
+}
+
+@media only screen and (min-width: 600px) {
+  .hero-area {
+    height: 100vh;
+  }
 }
 
 @media only screen and (max-width: 600px) {
