@@ -28,11 +28,11 @@ class Index extends Component
 
     public function mount($query = null){
         $this->categories = Category::all();
-        $this->nations = Http::get('https://restcountries.com/v3.1/all')->json();
+        /* $this->nations = Http::get('https://restcountries.com/v3.1/all')->json();
         usort($this->nations, function($a, $b) {
             return strcmp($a['name']['common'], $b['name']['common']);
-        });
-    
+        }); */
+        $this->price = Article::max('price');
         if ($query) {
             if(Article::where('title','LIKE', '%'. $query . '%')->first() || Article::where('body','LIKE', '%'. $query . '%')->first()){
                 $this->search = $query;
@@ -86,6 +86,7 @@ class Index extends Component
         $categories = $this->categories;
         $this->minPrice = Article::min('price');
         $this->maxPrice = Article::max('price');
+        
         return view('livewire.articles.index',compact('articles','categories','id','iconClasses','nations'));
     }
 }

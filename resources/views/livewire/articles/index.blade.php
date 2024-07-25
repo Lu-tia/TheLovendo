@@ -48,7 +48,7 @@
                     </div>
                     <!-- End Single Widget -->
                     <!-- Start Single Widget -->
-                    <div class="single-widget">
+                   {{--  <div class="single-widget">
                         <div class="form-group">
                             <h3>{{ __('ui.Nazione') }}</h3>
                             <div class="selector-head">
@@ -66,7 +66,7 @@
                             <div class="alert alert-danger mt-2"> {{ $message }} </div>
                             @enderror
                         </div>
-                    </div>
+                    </div> --}}
                     <!-- End Single Widget -->
                     <!-- Start Single Widget -->
                     <div class="single-widget range">
