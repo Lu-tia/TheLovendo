@@ -91,6 +91,7 @@ return [
     'RIFIUTA' => 'REJECT',
     'Link Veloci' => 'Quick Links',
     'Lavora con Noi' => 'Work with Us',
+    'Come funziona' => 'How it works',
     'Registrati' => 'Register',
     'Indirizzo' => 'Address',
     'Articoli' => 'Articles',
