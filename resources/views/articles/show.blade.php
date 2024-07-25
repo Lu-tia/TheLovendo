@@ -55,10 +55,19 @@
                                 <div class="contact-info">
                                     <ul>
                                         <li>
-                                            <button type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop" class="btn call">                           
+                                            @auth
+                                                <button type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop" class="btn call">                           
+                                                        <i class="lni lni-envelope"></i>
+                                                        Contatta il venditore
+                                                </button>
+                                            @else
+                                            <a href="{{route('login')}}">
+                                                <button type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop" class="btn call">                           
                                                     <i class="lni lni-envelope"></i>
                                                     Contatta il venditore
-                                            </button>
+                                                </button>
+                                            </a>
+                                            @endauth
                                         </li>
                                     </ul>
                                 </div>
