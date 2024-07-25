@@ -113,7 +113,7 @@ return [
     'Non hai ancora aggiunto articoli ai tuoi preferiti' => 'You haven\'t added any articles to your favorites yet',
     'Compra e Vendi da macchine usate a telefoni e computer,' => 'Buy and Sell from used cars to phones and computers,',
     'oppure cerca proprietà, lavori e altro.' => 'or search for properties, jobs, and more.',
-    'Come funziona' => 'How it works',
+    'Registrati!' => 'Register!',
     'Crea Account' => 'Create Account',
     'Posta il tuo annuncio!' => 'Post your ad!',
     'Vendi i tuoi oggetti' => 'Sell your items',

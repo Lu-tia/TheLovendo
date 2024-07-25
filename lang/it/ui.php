@@ -106,7 +106,7 @@ return [
     'Non hai ancora aggiunto articoli ai tuoi preferiti' => 'Non hai ancora aggiunto articoli ai tuoi preferiti',
     'Compra e Vendi da macchine usate a telefoni e computer,' => 'Compra e Vendi da macchine usate a telefoni e computer,',
     'oppure cerca proprietà, lavori e altro.' => 'oppure cerca proprietà, lavori e altro.',
-    'Come funziona' => 'Come funziona',
+    'Registrati!' => 'Registrati!',
     'Crea Account' => 'Crea Account',
     'Posta il tuo annuncio!' => 'Posta il tuo annuncio!',
     'Vendi i tuoi oggetti' => 'Vendi i tuoi oggetti',

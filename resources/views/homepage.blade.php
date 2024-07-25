@@ -67,7 +67,7 @@
                         <!-- Start Single Work -->
                         <div class="single-work wow fadeInUp" data-wow-delay=".2s">
                             <span class="serial">01</span>
-                            <h3>{{ __('ui.Come funziona') }}</h3>
+                            <h3>{{ __('ui.Registrati!') }}</h3>
                             <p>Lorem ipsum dolor sit amet constur adipisicing sed do eiusmod tempor incididunt labore.</p>
                         </div>
                         <!-- End Single Work -->
