@@ -13,6 +13,7 @@ return [
     'Registrati' => 'Registrati',
     'profilo' => 'Profilo',
     'Zona revisione' => 'Zona revisione',
+    'Come Funziona' => 'Come Funziona',
     'Logout' => 'Logout',
     'Annuncio creato con successo' => 'Annuncio creato con successo',
     'Il tuo annuncio è in fase di controllo e riceverai una mail non appena verrà pubblicato' => 'Il tuo annuncio è in fase di controllo e riceverai una mail non appena verrà pubblicato',

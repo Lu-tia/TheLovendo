@@ -11,6 +11,7 @@ return [
     'Lavora con Noi' => 'Travailler avec nous',
     'Accedi' => 'Se connecter',
     'Registrati' => 'S\'inscrire',
+    'Registrati!' => 'S\'inscrire',
     'Profilo' => 'Profil',
     'Zona revisione' => 'Zone de révision',
     'Logout' => 'Se déconnecter',
