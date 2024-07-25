@@ -86,7 +86,7 @@ return [
     'Elimina' => 'Delete',
     'Nessun annuncio trovato' => 'No ads found',
     'Mostra altri' => 'Show more',
-    'Annulla ultima modifica' => 'Cancel last modification',
+    'Annulla ultima modifica' => 'Delete last modification',
     'ACCETTA' => 'ACCEPT',
     'RIFIUTA' => 'REJECT',
     'Link Veloci' => 'Quick Links',
