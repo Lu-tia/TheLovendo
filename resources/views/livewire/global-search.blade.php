@@ -19,7 +19,7 @@
                 @foreach ($articles as $article)
                     <!-- Start Single Card -->
                     <div class="col-lg-2 col-md-3 col-sm-4 col-6 p-0 mx-1 mb-2">
-                        <a href="{{ route('articles.show', compact('article')) }}">
+                        <a href="{{ route('articles.index', ['query' => $this->query]) }}">
                             <div class="card rounded shadow-sm border-0 cardcst">
                                 <div class="card-body p-4">
                                     <img src="{{ $article->images->isNotEmpty() ? $article->images->first()->getUrl(300, 300) : 'https://picsum.photos/200' }}" alt="" class="img-fluid d-block mx-auto mb-3">
@@ -33,17 +33,17 @@
             </div>
             @if($articlesCount > 4)
             <div class="row justify-content-center">
-                <div class="col-lg-2 col-md-3 col-sm-4 col-6 p-0 mx-1 mt-3 align-items-center">
-                    <div class="card shadow-sm border-0">
-                        <div class=" p-4 align-items-center rounded-1 button-show-more">
-                            <a href="{{ route('articles.index') }}">
+                <div class="col-lg-2 col-md-3 col-sm-4 col-6 p-0 mx-1 mt-3 align-items-center mb-3">
+                    <a href="{{ route('articles.index', ['query' => $this->query]) }}">
+                        <div class="card shadow-sm border-0">
+                            <div class=" p-4 align-items-center rounded-1 button-show-more">
                                 <i class="text-white lni lni-eye pe-2"></i>
                                 <h7 class="text-white">{{ __('ui.Mostra altri') }}</h7>
-                            </a>
+                             </div>
                         </div>
-                    </div>
+                     </a>
                 </div>
-            </div>
+             </div>
             @endif
         @endif
 

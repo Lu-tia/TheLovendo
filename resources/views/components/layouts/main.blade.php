@@ -42,7 +42,6 @@
 
     </div>
 
-    <x-newsletter />
     <x-footer />
 
 

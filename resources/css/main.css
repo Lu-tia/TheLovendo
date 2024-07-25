@@ -55,7 +55,7 @@ body {
   font-weight: normal;
   font-style: normal;
   color: #888;
-
+  overflow: hidden;
   font-size: 15px;
 }
 
@@ -1980,23 +1980,11 @@ ol {
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  
   z-index: 0;
   padding-top: 300px;
+  min-height: 100vh;
+  height: 100%;
 
-
-}
-
-@media only screen and (min-width: 600px) {
-  .hero-area {
-    height: 100vh;
-  }
-}
-
-@media only screen and (max-width: 600px) {
-  .hero-area {
-    max-height: 100%;
-  }
 }
 
 .hero-area.overlay::before {
@@ -2095,7 +2083,7 @@ ol {
   margin-top: 60px;
   background: #fff3;
   border-radius: 6px;
-  padding:25px;
+  padding: 25px;
   position: relative;
 }
 
@@ -3871,10 +3859,26 @@ blockquote .shape {
   /* Microsoft Edge */
   color: var(--secondary-color);
 }
-
+.form-group-nation{
+  cursor: pointer !important;
+}
 .category-sidebar .single-widget.range .range-inner {
   position: relative;
   padding-left: 15px;
+}
+.range-inner input{
+  cursor: text !important;
+}
+/* Per WebKit (Chrome, Safari, Opera) */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Per Firefox */
+input[type="number"] {
+    -moz-appearance: textfield;
 }
 
 .category-sidebar .single-widget.range label {
@@ -9148,6 +9152,7 @@ li {
 
 .user-info h3 {
   font-weight: 400;
+  text-transform: capitalize;
 }
 
 .user-info img {
@@ -9333,7 +9338,8 @@ body {
     width: 290px;
     margin: 30px auto;
   }
-  .info-inner{
+
+  .info-inner {
     bottom: 12px;
   }
 }
@@ -9446,8 +9452,9 @@ body {
   width: 100%;
   bottom: 25px;
 }
+
 @media (max-width: 767px) {
-  .info-inner{
+  .info-inner {
     bottom: 12px;
   }
 }
@@ -9683,5 +9690,4 @@ a {
   justify-content: center;
   align-items: center;
   background-color: #ffb403;
-
 }
