@@ -59,7 +59,12 @@ class Index extends Component
 
         $articles =  Article::orderBy('created_at', 'desc')
         ->when($this->filteredByCategory > 0, fn(Builder $query) => $query->where('category_id', $this->filteredByCategory))
-        ->when($this->search !== '', fn(Builder $query) => $query->where('title','LIKE', '%'. $this->search . '%'))->orWhere('body','LIKE', '%'. $this->search . '%')
+        ->when($this->search !== '', function (Builder $query) {
+            $query->where(function (Builder $query) {
+                $query->where('title', 'LIKE', '%' . $this->search . '%')
+                      ->orWhere('body', 'LIKE', '%' . $this->search . '%');
+            });
+        })
         ->when($this->filteredByNation !== null && $this->filteredByNation !== 'all', fn(Builder $query) => $query->where('country', $this->filteredByNation))
         ->when($this->price, fn(Builder $query) => $query->where('price', '<=', $this->price))
         ->when($this->condition !== 'Tutte', fn(Builder $query) => $query->where('condition', $this->condition))
