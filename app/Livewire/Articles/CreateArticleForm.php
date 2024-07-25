@@ -29,7 +29,7 @@ class CreateArticleForm extends Component
     #[Validate('max:999999', message: 'Il prezzo può essere al massimo 999999')]
     public $price;
     #[Validate('required',message:'aggiungi una descrizione')]
-    #[Validate('max:126', message: 'La descrizione può avere al massimo 126 caratteri')]
+    #[Validate('max:250', message: 'La descrizione può avere al massimo 250 caratteri')]
     public $body;
     #[Validate('required',message:'seleziona la nazione di provenienza')]
     public $country;

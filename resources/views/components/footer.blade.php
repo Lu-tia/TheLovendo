@@ -1,7 +1,7 @@
 <footer class="footer">
     <div class="container">
         <div class="row">
-            <div class="col-lg-6 col-md-4 col-sm-6 mt-4 pt-5 footer-h">
+            <div class="col-lg-6 col-md-4 col-sm-6 mt-4 py-5 footer-h">
                 <h2 class="footer-h">{{ __('ui.Lavora con Noi') }}</h2>
                 <p class="pb-3">
                     Unisciti nella nostra community.

@@ -8319,9 +8319,13 @@ input[type="number"] {
     margin-left: 0;
   }
 
-  .footer .footer-top {
-    padding: 30px 0 !important;
-    padding-top: 25px !important;
+  .footer .row>div{
+    text-align: center;
+  }
+
+  .footer .row {
+    padding-bottom: 48px !important;
+    margin-bottom: 24px !important;
   }
 
   .footer .footer-bottom .inner {
