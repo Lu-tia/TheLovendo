@@ -27,7 +27,7 @@
                 <ul class="aFooter">
                     <li>Email: <p>info@thelovendo.com</p>
                     </li>
-                    <li>Address: <p>Via delle Magnolie, 10, 00100 Roma, Italia</p>
+                    <li>Indirizzo: <p>Via delle Magnolie, 10, 00100 Roma, Italia</p>
                     </li>
                 </ul>
             </div>

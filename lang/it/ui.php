@@ -135,6 +135,7 @@ return [
     'Inserisci la tua città' => 'Inserisci la tua città',
     'Inserisci la tua età' => 'Inserisci la tua età',
     'Visualizza articolo' => 'Visualizza articolo',
+<<<<<<< HEAD
     'Nessuna immagine caricata dall\'utente' => 'Nessuna immagine caricata dall\'utente',
     'Prezzo:' => 'Prezzo:',
     'Autore:' => 'Autore:',
@@ -145,5 +146,8 @@ return [
     'Razzismo' => 'Razzismo',
     'Contenuti sensibili' => 'Contenuti sensibili',
 
+=======
+    "Esistono molte varianti dei passaggi di TheLovendo disponibile, ma la maggior parte ha subito alterazioni in qualche forma." => "Esistono molte varianti dei passaggi di TheLovendo disponibile, ma la maggior parte ha subito alterazioni in qualche forma.",
+>>>>>>> 0f6f025c6d8b67e8bb8b37231f9d9e818472400c
 
 ];
