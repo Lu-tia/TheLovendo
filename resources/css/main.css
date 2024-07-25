@@ -1207,7 +1207,6 @@ ol {
 
 .button .btn {
   display: inline-block;
-  text-transform: capitalize;
   font-size: 15px;
   font-weight: 500;
   padding: 15px 30px;
@@ -3859,26 +3858,30 @@ blockquote .shape {
   /* Microsoft Edge */
   color: var(--secondary-color);
 }
-.form-group-nation{
+
+.form-group-nation {
   cursor: pointer !important;
 }
+
 .category-sidebar .single-widget.range .range-inner {
   position: relative;
   padding-left: 15px;
 }
-.range-inner input{
+
+.range-inner input {
   cursor: text !important;
 }
+
 /* Per WebKit (Chrome, Safari, Opera) */
 input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 /* Per Firefox */
 input[type="number"] {
-    -moz-appearance: textfield;
+  -moz-appearance: textfield;
 }
 
 .category-sidebar .single-widget.range label {
@@ -8319,7 +8322,7 @@ input[type="number"] {
     margin-left: 0;
   }
 
-  .footer .row>div{
+  .footer .row>div {
     text-align: center;
   }
 
