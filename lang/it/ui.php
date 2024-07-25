@@ -151,6 +151,7 @@ return [
     'Contraffazione' => 'Contraffazione',
     'Razzismo' => 'Razzismo',
     'Contenuti sensibili' => 'Contenuti sensibili',
+
     "Esistono molte varianti dei passaggi di TheLovendo disponibile, ma la maggior parte ha subito alterazioni in qualche forma." => "Esistono molte varianti dei passaggi di TheLovendo disponibile, ma la maggior parte ha subito alterazioni in qualche forma.",
 
 ];

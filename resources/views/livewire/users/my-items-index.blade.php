@@ -33,7 +33,7 @@
             </div>
         </div>
         <!-- End List Title -->
-        @forelse ($articles as $article)
+        @forelse ($articles as $key => $article)
         <div class="single-item-list">
             <div class="row align-items-center">
                 <div class="col-lg-5 col-md-5 col-12">
@@ -59,7 +59,7 @@
                                     class="lni lni-pencil"></i></a></li> --}}
                         <li><a href="{{ route('articles.show', $article->id) }}"><i class="lni lni-eye"></i></a></li>
                         <li>
-                            <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                            <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#staticBackdrop-article-{{$key}}">
                                 <i class="lni lni-trash"></i>
                             </a>
                         </li>
@@ -75,7 +75,8 @@
         @endforelse
         <!-- Modal -->
         @isset($article)
-        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        @foreach ($articles as $key => $article)
+        <div class="modal fade" id="staticBackdrop-article-{{$key}}" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
             aria-labelledby="staticBackdropLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
@@ -97,7 +98,8 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div>    
+        @endforeach
 
 
         @endisset
