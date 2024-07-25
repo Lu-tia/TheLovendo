@@ -82,10 +82,10 @@
                                                                 </div>
                                                             </div>
                                                             <hr>
-                                                            <div class="row gap-2 ms-5">
+                                                            <div class="row gap-2 d-flex justify-content-center">
                                                                 @if ($image->labels)
                                                                 @foreach ($image->labels as $label )
-                                                                <div class="col-3 tags d-flex shadow-sm">#{{$label}}</div>
+                                                                <div class="col-4 tags d-flex shadow-sm">#{{$label}}</div>
                                                                 @endforeach
                                                                 @else
                                                                 <p>No labels</p>
