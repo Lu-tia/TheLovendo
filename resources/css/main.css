@@ -9082,6 +9082,7 @@ li {
 
 .cardcst {
   animation: fadeIn 1s ease-in-out;
+  height: 17rem;
 }
 
 .cardcst2 {
