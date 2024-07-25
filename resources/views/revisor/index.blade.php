@@ -97,7 +97,7 @@
                                                         <div class="row gap-2 d-flex justify-content-center">
                                                             @if ($image->labels)
                                                             @foreach ($image->labels as $label )
-                                                            <div class="col-4 tags d-flex shadow-sm">#{{$label}}</div>
+                                                            <p class="col-5 tags d-flex shadow-sm">#{{$label}}</p>
                                                             @endforeach
                                                             @else
                                                             <p>No labels</p>
