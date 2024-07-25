@@ -38,12 +38,12 @@
                                             @if ($article_to_check->images->count())
                                             @foreach ($article_to_check->images as $key => $image)
                                             <div class="carousel-item  {{ $key == 0 ? 'active' : '' }}">
-                                                <div class="col-12 d-flex p-5">
-                                                    <div class="col-6">
+                                                <div class="col-12 d-lg-flex p-5">
+                                                    <div class="col-lg-6 col-12">
                                                         <img src="{{ $image->getUrl(300, 300) }}" class="d-block w-100"
                                                             alt="...">
                                                     </div>
-                                                    <div class="col-6">
+                                                    <div class="col-lg-6 col-12">
                                                         <div>
                                                             <div class="text-end pe-1">
                                                                 <h5>{{ __('ui.Valutazioni') }}</h5>
@@ -94,10 +94,10 @@
                                                             </div>
                                                         </div>
                                                         <hr>
-                                                        <div class="row gap-2 ms-5">
+                                                        <div class="row gap-2 d-flex justify-content-center">
                                                             @if ($image->labels)
                                                             @foreach ($image->labels as $label )
-                                                            <div class="col-3 tags d-flex shadow-sm">#{{$label}}</div>
+                                                            <p class="col-5 tags d-flex shadow-sm">#{{$label}}</p>
                                                             @endforeach
                                                             @else
                                                             <p>No labels</p>
