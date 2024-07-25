@@ -134,5 +134,6 @@ return [
     'Inserisci il tuo cognome' => 'inserisci il tuo cognome',
     'Inserisci la tua città' => 'Inserisci la tua città',
     'Inserisci la tua età' => 'Inserisci la tua età',
+    'Visualizza articolo' => 'Visualizza articolo',
 
 ];

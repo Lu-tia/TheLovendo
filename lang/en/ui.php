@@ -133,4 +133,5 @@ return [
     'Inserisci il tuo cognome' => 'Entrez votre nom de famille',
     'Inserisci la tua città' => 'Enter your city',
     'Inserisci la tua età' => 'Enter your age',
+    'Visualizza articolo' => 'View article',
 ];

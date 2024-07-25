@@ -30,8 +30,7 @@
                 <a class="cart" href="{{ route('articles.show', compact('article')) }}">
                     <span class="price">{{ $article->price }}€</span>
                     <span class="add-to-cart">
-                        <span class="txt">Visualizza
-                            articolo</span>
+                        <span class="txt">{{ __('ui.Visualizza articolo') }}</span>
                     </span>
                 </a>
             </div>
@@ -54,20 +53,20 @@
                     src="{{ $article->images->isNotEmpty() ? $article->images->first()->getUrl(600, 600) : 'https://picsum.photos/600' }}"
                     alt="#"></a>
             <div class="author">
-                
+
                 <p class="sale">{{ __('ui.In vendita') }}</p>
             </div>
         </div>
         <div class="content">
             <div class="top-content">
-                
+
                 <p>{{ trans_choice('ui.' . $article->category->name, 1) }}</p>
                 <h3 class="title">{{ $article->title }}</h3>
                 <p class="update-time">{{ $article->created_at->locale('it_IT')->isoFormat('DD MMM YYYY') }}</p>
                 <p class="user-name">{{ __('ui.Pubblicato da:') }} {{ $article->user->name }}</p>
                 <ul class="info-list">
                     <li><a href=""><i class="lni lni-map-marker"></i> {{ $article->city }}</a></li>
-                    
+
                 </ul>
             </div>
             <div class="bottom-content">
@@ -75,5 +74,5 @@
             </div>
         </div>
     </div>
-   
+
 </div> --}}

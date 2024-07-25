@@ -25,7 +25,7 @@
                     <p>{{ __('ui.Titolo')}}</p>
                 </div>
                 <div class="col-lg-2 col-md-2 col-12">
-                    <p>{{ __('ui.categoria')}}</p>
+                    <p>{{ __('ui.Categoria')}}</p>
                 </div>
                 <div class="col-lg-2 col-md-2 col-12">
                     <p>{{ __('ui.Condizione')}}</p>
@@ -38,7 +38,8 @@
             <div class="row align-items-center">
                 <div class="col-lg-5 col-md-5 col-12">
                     <div class="item-image">
-                        <img src="{{$article->images->isNotEmpty() ? $article->images->first()->getUrl(300,300) : 'https://picsum.photos/200' }}" alt="#">
+                        <img src="{{$article->images->isNotEmpty() ? $article->images->first()->getUrl(300,300) : 'https://picsum.photos/200' }}"
+                            alt="#">
                         <div class="content">
                             <h3 class="title"><a href="javascript:void(0)">{{$article->title}}</a></h3>
                             <span class="price">{{$article->price}}€</span>
@@ -50,11 +51,12 @@
                 </div>
                 <div class="col-lg-2 col-md-2 col-12">
                     <p>{{$article->condition}}</p>
-                    
+
                 </div>
                 <div class="col-lg-3 col-md-3 col-12 align-right">
                     <ul class="action-btn">
-                        {{-- <li><a href="{{ route('users.edit_article', $article->id) }}"><i class="lni lni-pencil"></i></a></li> --}}
+                        {{-- <li><a href="{{ route('users.edit_article', $article->id) }}"><i
+                                    class="lni lni-pencil"></i></a></li> --}}
                         <li><a href="{{ route('articles.show', $article->id) }}"><i class="lni lni-eye"></i></a></li>
                         <li>
                             <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
@@ -65,37 +67,39 @@
                 </div>
             </div>
         </div>
- 
-        
-  
+
+
+
         @empty
         {{ __('ui.Nessun annuncio trovato')}}
         @endforelse
         <!-- Modal -->
         @isset($article)
-        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h1 class="modal-title fs-5" id="staticBackdropLabel">Conferma eliminazione</h1>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="staticBackdropLabel">Conferma eliminazione</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>{{ __('ui.Vuoi eliminare l\'annuncio')}} {{$article->title}}?</p>
+                    </div>
+                    <div class="modal-footer button">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">{{
+                            __('ui.Annulla')}}</button>
+                        <form action="{{route('users.destroy_article',compact('article'))}}" method="post">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit" class="btn">{{ __('ui.Elimina')}}</button>
+                        </form>
+                    </div>
                 </div>
-                <div class="modal-body">
-                  <p>{{ __('ui.Vuoi eliminare l\'annuncio')}} {{$article->title}}?</p>
-                </div>
-                <div class="modal-footer button">
-                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">{{ __('ui.Annulla')}}</button>
-                  <form action="{{route('users.destroy_article',compact('article'))}}" method="post">
-                    @csrf
-                    @method('DELETE')
-                      <button type="submit" class="btn">{{ __('ui.Elimina')}}</button>
-                  </form>
-                </div>
-              </div>
             </div>
-          </div>
-          
-        
+        </div>
+
+
         @endisset
 
 

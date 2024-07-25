@@ -133,4 +133,6 @@ return [
     'Inserisci il tuo cognome' => 'Entrez votre prénom',
     'Inserisci la tua città' => 'Entrez votre ville',
     'Inserisci la tua età' => 'Entrez votre âge',
+    'Visualizza articolo' => 'Voir l\'article',
+
 ];
