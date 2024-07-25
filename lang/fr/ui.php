@@ -142,5 +142,20 @@ return [
     'Inserisci la tua città' => 'Entrez votre ville',
     'Inserisci la tua età' => 'Entrez votre âge',
     'Visualizza articolo' => 'Voir l\'article',
+    'Nessuna immagine caricata dall\'utente' => 'Aucune image téléchargée par l\'utilisateur',
+    'Prezzo:' => 'Prix:',
+    'Autore:' => 'Auteur:',
+    'Valutazioni' => 'Notes',
+    'Contenuto per adulti' => 'Contenu Adulte',
+    'Violenza' => 'Violence',
+    'Contraffazione' => 'Contrefaçon',
+    'Razzismo' => 'Racisme',
+    'Contenuti sensibili' => 'Contenu sensible',
+
+
+
+
+
+
 
 ];

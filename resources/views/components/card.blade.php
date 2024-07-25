@@ -10,7 +10,7 @@
                     <div class="info-inner">
                         <span class="p-name">{{ $article->title }}</span>
                         <span class="p-company publ">{{ __('ui.Pubblicato da:') }}
-                            {{ $article->user->firstName }}{{ $article->user->lastName }}</span>
+                            {{ $article->user->firstName }} {{ $article->user->lastName }}</span>
                     </div>
                     <div class="a-size">{{ $article->created_at->locale('it_IT')->isoFormat('DD MMM YYYY') }}
                         <div class="info-list"><i class="lni lni-map-marker"></i>
