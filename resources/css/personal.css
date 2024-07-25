@@ -78,7 +78,7 @@ html {
     border-radius: 50%; */
 }
 
-.carousel-indicators {}
+/* .carousel-indicators {} */
 
 /* Animazione per l'immagine */
 @keyframes fadeInLeft {
@@ -157,7 +157,8 @@ html {
   border-radius: 4px;
   justify-content: center;
 }
-.btn-danger-custom{
+
+.btn-danger-custom {
   background-color: #d32f2f !important;
   border-radius: 4px;
   padding: 10px 26px !important;
@@ -557,6 +558,10 @@ html {
     border: 1px solid;
     font-family: inherit;
   }
+}
+
+.pointer-custom {
+  cursor: pointer;
 }
 
 

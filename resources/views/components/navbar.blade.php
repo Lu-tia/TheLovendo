@@ -83,7 +83,7 @@
                                 <a href="{{ route('articles.index') }}" aria-label="Toggle navigation">{{
                                     __('ui.articoli') }}</a>
                             </li>
-                            <li class="nav-item">
+                            <li class="nav-item pointer-custom">
                                 <a class="dd-menu collapsed" data-bs-toggle="collapse" data-bs-target="#submenu-1-5"
                                     aria-controls="navbarSupportedContent" aria-expanded="false"
                                     aria-label="Toggle navigation">{{ __('ui.Categorie') }}</a>
