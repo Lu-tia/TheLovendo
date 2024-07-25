@@ -25,9 +25,9 @@
             <div class="col-lg-3 col-md-4 col-sm-3 mt-4 pt-5">
                 <h3 class="footer-h">Contatti</h3>
                 <ul class="aFooter">
-                    <li>Email: <p>#########</p>
+                    <li>Email: <p>info@thelovendo.com</p>
                     </li>
-                    <li>Address: <p>#########</p>
+                    <li>Address: <p>Via delle Magnolie, 10, 00100 Roma, Italia</p>
                     </li>
                 </ul>
             </div>
