@@ -54,7 +54,7 @@
                                                 <a class="d-flex"
                                                     href="{{ route('articles.show', compact('article')) }}">
                                                     <div class="image">
-                                                        <img src="{{asset('assets/images/placeholder/aggiunti-di-recente.jpg')}}" alt="#">
+                                                        <img src="{{ $article->images->isNotEmpty() ? $article->images->first()->getUrl(300, 300) : 'https://picsum.photos/200' }}" alt="#">
                                                     </div>
                                                     <div class="ms-3">
                                                         <span class="text-black">{{ $article->title }}</span>
