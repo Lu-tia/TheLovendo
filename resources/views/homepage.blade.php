@@ -39,50 +39,6 @@
                         <div class="col-lg-12 col-md-12 col-sm-12">
                             @livewire('global-search')
                         </div>
-
-                        <!-- Start Search Form -->
-                        {{-- <div class="search-form wow fadeInUp" data-wow-delay=".7s">
-                            <div class="row">
-                                <div class="col-lg-4 col-md-4 col-12 p-0">
-                                    <div class="search-input">
-                                        <label for="keyword"><i class="lni lni-search-alt theme-color"></i></label>
-                                        <input type="text" name="keyword" id="keyword" placeholder="Cerca prodotto">
-                                    </div>
-                                </div>
-                                <div class="col-lg-3 col-md-3 col-12 p-0">
-                                    <div class="search-input">
-                                        <label for="category"><i class="lni lni-grid-alt theme-color"></i></label>
-                                        <select name="category" id="category">
-                                            <option value="" selected disabled>Categorie</option>
-                                            @forelse ($categories as $category)
-                                            <option value="{{ $category->id }}">{{ $category->name }}</option>
-                                            @empty
-                                            @endforelse
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="col-lg-3 col-md-3 col-12 p-0">
-                                    <div class="search-input">
-                                        <label for="location"><i class="lni lni-map-marker theme-color"></i></label>
-                                        <select name="location" id="location">
-                                            <option value="" selected disabled>Locazione</option>
-                                            <option value="none">New York</option>
-                                            <option value="none">California</option>
-                                            <option value="none">Washington</option>
-                                            <option value="none">Birmingham</option>
-                                            <option value="none">Chicago</option>
-                                            <option value="none">Phoenix</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="col-lg-2 col-md-2 col-12 p-0">
-                                    <div class="search-btn button">
-                                        <button class="btn"><i class="lni lni-search-alt"></i> Cerca</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div> --}}
-                        <!-- End Search Form -->
                     </div>
                 </div>
             </div>
@@ -177,8 +133,7 @@
                     <div class="section-title align-center gray-bg">
                         <h2 class="wow fadeInUp" data-wow-delay=".4s">{{ __('ui.Cosa dicono di Noi!') }}</h2>
                         <p class="wow fadeInUp" data-wow-delay=".6s">
-                            {{ __('ui.Esistono molte varianti dei passaggi di TheLovendo disponibile, ma la maggior
-                            parte ha subito alterazioni in qualche forma.') }}
+                            {{ __('ui.Esistono molte varianti dei passaggi di TheLovendo disponibile, ma la maggior parte ha subito alterazioni in qualche forma.') }}
                         </p>
                     </div>
                 </div>
@@ -191,7 +146,7 @@
                             <i class="lni lni-quotation"></i>
                         </div>
                         <div class="author">
-                            <img src="https://via.placeholder.com/300x300" alt="#">
+                            <img src="{{asset('assets/images/placeholder/200x200.png')}}" alt="#">
                             <h4 class="name">
                                 Jane Anderson
                                 <span class="deg">Founder & CEO</span>
@@ -213,7 +168,7 @@
                             <i class="lni lni-quotation"></i>
                         </div>
                         <div class="author">
-                            <img src="https://via.placeholder.com/300x300" alt="#">
+                            <img src="{{asset('assets/images/placeholder/200x200.png')}}" alt="#">
                             <h4 class="name">
                                 Devid Samuyel
                                 <span class="deg">Web Developer</span>
@@ -235,7 +190,7 @@
                             <i class="lni lni-quotation"></i>
                         </div>
                         <div class="author">
-                            <img src="https://via.placeholder.com/300x300" alt="#">
+                            <img src="{{asset('assets/images/placeholder/200x200.png')}}" alt="#">
                             <h4 class="name">
                                 Jully Sulli
                                 <span class="deg">Ui/Ux Designer</span>

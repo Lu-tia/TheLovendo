@@ -135,5 +135,6 @@ return [
     'Inserisci la tua città' => 'Inserisci la tua città',
     'Inserisci la tua età' => 'Inserisci la tua età',
     'Visualizza articolo' => 'Visualizza articolo',
+    "Esistono molte varianti dei passaggi di TheLovendo disponibile, ma la maggior parte ha subito alterazioni in qualche forma." => "Esistono molte varianti dei passaggi di TheLovendo disponibile, ma la maggior parte ha subito alterazioni in qualche forma.",
 
 ];
