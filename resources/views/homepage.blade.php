@@ -179,7 +179,7 @@
                             <i class="lni lni-quotation"></i>
                         </div>
                         <div class="author">
-                            <img src="{{ asset('assets/images/placeholder/Nicola.jpeg') }}" alt="#">
+                            <img src="{{ asset('assets/images/placeholder/Nicola.jpg') }}" alt="#">
                             <h4 class="name">
                                 Nicola Alò
                                 <span class="deg">Frontend Developer</span>
